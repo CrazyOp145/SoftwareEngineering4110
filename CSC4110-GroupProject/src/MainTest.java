@@ -1,4 +1,9 @@
+import Profiles.LoginValidation;
+import csvFiles.WriteToCSVs;
+
 import java.util.Scanner;
+
+
 
 public class MainTest {
     public static void main(String[] args){
@@ -6,6 +11,8 @@ public class MainTest {
         String vName;
 
         Scanner scanner = new Scanner(System.in);
+        LoginValidation.createUserProfiles();
+
 
         System.out.println("Please input a name for the Vendor: ");
         vName = scanner.nextLine();
