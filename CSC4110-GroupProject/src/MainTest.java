@@ -1,16 +1,13 @@
-import java.util.Scanner;
+import Profiles.LoginValidation;
 
 public class MainTest {
     public static void main(String[] args){
+        LoginValidation.createUserProfiles();
 
-        String vName;
-
-        Scanner scanner = new Scanner(System.in);
-
-        System.out.println("Please input a name for the Vendor: ");
-        vName = scanner.nextLine();
-        vName = characterLimit(20, vName);
-        System.out.println("You inputted: " + vName);
+        //System.out.println("Please input a name for the Vendor: ");
+        //vName = scanner.nextLine();
+        //vName = characterLimit(20, vName);
+        //System.out.println("You inputted: " + vName);
 
     }
 
