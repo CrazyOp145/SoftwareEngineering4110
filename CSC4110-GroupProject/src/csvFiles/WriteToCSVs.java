@@ -1,28 +1,26 @@
 package csvFiles;
 
-import com.opencsv.CSVWriter;
-import java.io.File;
+import org.apache.commons.csv.CSVFormat;
+import org.apache.commons.csv.CSVPrinter;
+
 import java.io.FileWriter;
 import java.io.IOException;
 
 public class WriteToCSVs {
     public static void csvWriter(String filePath, String[] data){
-        File file = new File(filePath);
+        try {
+            // CSV Printer
+            CSVPrinter printer = new CSVPrinter(new FileWriter(filePath), CSVFormat.DEFAULT);
 
-        try{
-            FileWriter output = new FileWriter(file);
-            CSVWriter writer = new CSVWriter(output , ',',
-                                            CSVWriter.NO_QUOTE_CHARACTER,
-                                            CSVWriter.DEFAULT_ESCAPE_CHARACTER,
-                                            CSVWriter.DEFAULT_LINE_END);
+            // Header Row
+            printer.printRecord("Last Name", "First Name", "User ID", "Password", "User Role");
 
-            String[] header = {"Last Name", "First Name", "User ID", "Password", "User Role"};
-            writer.writeNext(header);
+            // Input Data
+            printer.printRecord(data);
 
-            writer.writeNext(data);
-            writer.close();
-        }
-        catch (IOException e){
+            printer.flush();
+            printer.close();
+        } catch (IOException e) {
             e.printStackTrace();
         }
     }
