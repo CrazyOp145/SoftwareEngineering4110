@@ -1,7 +1,5 @@
 package Profiles;
-
-public class VendorProfile {
-    public class vendorProfile extends UserProfiles{
+public class VendorProfile extends UserProfiles{
         String vendorName;
         String street, city;
         char state;
@@ -9,8 +7,10 @@ public class VendorProfile {
         double balance, lPaidAmount;
         String lOrderDate, discountStartDate;
 
+        public VendorProfile(){
 
-        public vendorProfile(String vendorName, String vendorID, String password, String street, String city, char state,
+        }
+        public VendorProfile(String vendorName, String vendorID, String password, String street, String city, char state,
                              String phone, double balance, double lPaidAmount, String lOrderDate, String discountStartDate){
             super(null,null,vendorID,password);
             this.vendorName = vendorName;
@@ -59,5 +59,4 @@ public class VendorProfile {
         public void setDiscountStartDate(String discountStartDate) {
             this.discountStartDate = discountStartDate;
         }
-    }
 }

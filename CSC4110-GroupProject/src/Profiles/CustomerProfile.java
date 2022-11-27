@@ -10,7 +10,9 @@ public class CustomerProfile extends UserProfiles{
     private double balance = 0;
     private double lastPaidAmount = 0;
     private String lastOrderDate = "";
+    public CustomerProfile(){
 
+    }
     public CustomerProfile(String customerID, String fullName, String streetAddress, String city, String state,
                            String phone){
         this.customerID = customerID;
