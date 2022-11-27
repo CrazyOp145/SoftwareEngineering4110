@@ -5,17 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="3b941ea0-61b1-4331-a59f-9f59433fc7fd" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/CSC4110-GroupProject/src/Profiles/Accountant.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/CSC4110-GroupProject/src/Profiles/Administrator.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/CSC4110-GroupProject/src/Profiles/InventoryManager.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/CSC4110-GroupProject/src/Profiles/Owner.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/CSC4110-GroupProject/src/Profiles/Purchaser.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/CSC4110-GroupProject/src/Profiles/Salesperson.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/CSC4110-GroupProject/src/csvFiles/WriteToCustomerProfileCSV.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/CSC4110-GroupProject/src/MainTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/CSC4110-GroupProject/src/MainTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/CSC4110-GroupProject/src/Profiles/CustomerProfile.java" beforeDir="false" afterPath="$PROJECT_DIR$/CSC4110-GroupProject/src/Profiles/CustomerProfile.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/CSC4110-GroupProject/src/Profiles/ProfilesFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/CSC4110-GroupProject/src/Profiles/ProfilesFactory.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CSC4110-GroupProject/src/Profiles/VendorProfile.java" beforeDir="false" afterPath="$PROJECT_DIR$/CSC4110-GroupProject/src/Profiles/VendorProfile.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -47,6 +41,20 @@
     &quot;settings.editor.selected.configurable&quot;: &quot;vcs.Git&quot;
   }
 }</component>
+  <component name="RunManager">
+    <configuration name="MainTest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="MainTest" />
+      <module name="SoftwareEngineering4110" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.MainTest" />
+      </list>
+    </recent_temporary>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">

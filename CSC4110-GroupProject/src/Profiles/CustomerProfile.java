@@ -2,7 +2,7 @@ package Profiles;
 
 public class CustomerProfile extends UserProfiles{
     private String customerID;
-    private String fullName;
+    private String companyName;
     private String city;
     private String streetAddress;
     private String state;
@@ -13,10 +13,10 @@ public class CustomerProfile extends UserProfiles{
     public CustomerProfile(){
 
     }
-    public CustomerProfile(String customerID, String fullName, String streetAddress, String city, String state,
+    public CustomerProfile(String customerID, String companyName, String streetAddress, String city, String state,
                            String phone){
         this.customerID = customerID;
-        this.fullName = fullName;
+        this.companyName = companyName;
         this.streetAddress = streetAddress;
         this.city = city;
         this.state = state;
@@ -32,12 +32,12 @@ public class CustomerProfile extends UserProfiles{
         this.customerID = customerID;
     }
 
-    public String getFullName() {
-        return fullName;
+    public String getCompanyName() {
+        return companyName;
     }
 
-    public void setFullName(String fullName) {
-        this.fullName = fullName;
+    public void setCompanyName(String fullName) {
+        this.companyName = companyName;
     }
 
     public String getCity() {
@@ -96,6 +96,7 @@ public class CustomerProfile extends UserProfiles{
         this.lastOrderDate = lastOrderDate;
     }
     public String toString(){
-        return (customerID+ fullName+ streetAddress+city+ state+phone);
+        return (customerID +" "+ companyName+" " +streetAddress+ " "+city+" " +state+" "+ phone + " "
+                + balance +" "+ lastPaidAmount + " " +lastOrderDate);
     }
 }
