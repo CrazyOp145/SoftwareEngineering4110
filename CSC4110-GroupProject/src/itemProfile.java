@@ -24,6 +24,9 @@ public abstract class itemProfile {
     }
 
     public void setItemName(String itemName) {
+        while(itemName.length() > 20){
+            System.out.println("Item name is too long, renter the name...");
+        }
         this.itemName = itemName;
     }
 
@@ -40,6 +43,9 @@ public abstract class itemProfile {
     }
 
     public void setSellingPrice(double sellingPrice) {
+        while(sellingPrice < 0){
+            System.out.println("Enter a selling price greater than 0");
+        }
         this.sellingPrice = sellingPrice;
     }
 
@@ -48,6 +54,9 @@ public abstract class itemProfile {
     }
 
     public void setPurchasePrice(double purchasePrice) {
+        while(purchasePrice < 0){
+            System.out.println("Enter a purchase price greater than 0");
+        }
         this.purchasePrice = purchasePrice;
     }
 
@@ -64,6 +73,7 @@ public abstract class itemProfile {
     }
 
     public void setDate(Date date) {
+        //check date if it's a past date
         this.date = date;
     }
 
@@ -72,6 +82,9 @@ public abstract class itemProfile {
     }
 
     public void setQuantity(double quantity) {
+        while(quantity < 0){
+            System.out.println("Enter a quantity greater than 0");
+        }
         this.quantity = quantity;
     }
 }
