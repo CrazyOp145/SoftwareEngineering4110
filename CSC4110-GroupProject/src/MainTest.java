@@ -1,12 +1,14 @@
 import Profiles.*;
+import com.opencsv.exceptions.CsvException;
 import csvFiles.WriteToCustomerProfileCSV;
 
+import java.io.IOException;
 import java.util.Random;
 import java.util.Scanner;
 import java.util.regex.Pattern;
 
 public class MainTest {
-    public static void main(String[] args) {
+    public static void main(String[] args) throws IOException, CsvException {
         Owner currentUser = new Owner();
         //LoginValidation.createUserProfiles();
         //File customerProfilesFile = new File("CustomerProfiles.csv");
@@ -81,6 +83,18 @@ public class MainTest {
                 System.out.println("User type incorrect: Now an Owner.");
             }
         }
+        Scanner scan = new Scanner(System.in);
+        System.out.println("Please enter the Customer Profile ID or Company Name you are searching for: ");
+        String customerProfileSearch = scan.nextLine();
+       String[] testing =  SearchCustomerProfile.SearchCustomerProfile(customerProfileSearch);
+       if(testing == null){
+           System.out.println("Customer Profile not found.");
+       }
+       else{
+           for(int i = 0; i < testing.length; i++){
+               System.out.println(testing[i]);
+           }
+       }
     }
 
     //public static String characterLimit(int limit, String stringToLimit) {
