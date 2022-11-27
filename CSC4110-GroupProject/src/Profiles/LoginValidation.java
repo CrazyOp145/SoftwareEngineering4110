@@ -1,6 +1,6 @@
 package Profiles;
 
-import csvFiles.WriteToCSVs;
+import csvFiles.ToCSV;
 import java.util.Scanner;
 import static Profiles.checkLength.*;
 
@@ -22,8 +22,9 @@ public class LoginValidation {
         setUserRole(cUserProfile.nextLine());
 
         String[] data = {getLastName(), getFirstName(), getUserID(), getPassword(), getUserRole()};
-        WriteToCSVs.csvWriter("UserData.csv", data);
-        //WriteToCSVs.addToCsvWriter("UserData.csv", data);
+        String[] header={"LastName", "FirstName", "UserID", "Password", "UserRole"};
+        //ToCSV.createCsv("UserData.csv",header);
+        ToCSV.addToUserData("UserData.csv", data);
     }
 
 

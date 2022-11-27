@@ -1,9 +1,9 @@
 import Profiles.LoginValidation;
-import csvFiles.ReadFromCSVs;
+import csvFiles.ToCSV;
 
 public class MainTest {
     public static void main(String[] args){
-        ReadFromCSVs.readCSV("UserData.csv");
+        ToCSV.readUserData("UserData.csv");
         LoginValidation.createUserProfiles();
     }
 }
