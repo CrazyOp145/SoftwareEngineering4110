@@ -16,13 +16,14 @@ public class LoginValidation {
         Scanner cUserProfile = new Scanner(System.in);
         setLastName(checkNameInput(cUserProfile, "Enter in Last Name (Max 15 Characters):"));
         setFirstName(checkNameInput(cUserProfile, "Enter in First Name (Max 15 Characters):"));
-        setUserID(checkUserIDInput(cUserProfile, "Enter in UserID (Max 6 Characters:"));
+        setUserID(checkUserIDInput(cUserProfile, "Enter in UserID (Max 6 Characters):"));
         setPassword(checkPasswordInput(cUserProfile,"Enter in Password (Min 8 Characters & Max 16 Characters):"));
         System.out.println("Enter in User Role:");
         setUserRole(cUserProfile.nextLine());
 
         String[] data = {getLastName(), getFirstName(), getUserID(), getPassword(), getUserRole()};
         WriteToCSVs.csvWriter("UserData.csv", data);
+        //WriteToCSVs.addToCsvWriter("UserData.csv", data);
     }
 
 
