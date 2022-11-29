@@ -11,15 +11,20 @@ import javafx.scene.control.TextField;
 import javafx.stage.Stage;
 
 
-
+import javax.swing.*;
 import java.awt.*;
+import java.io.BufferedWriter;
+import java.io.FileWriter;
 import java.io.IOException;
+import java.io.PrintWriter;
 import java.net.URL;
 import java.time.LocalDate;
 import java.util.Date;
 import java.util.ResourceBundle;
 
 public class CreateItemProfileController implements Initializable {
+
+    String filePath = "ItemProfile.csv";
 
     @FXML
     private TextField itemName;
@@ -72,7 +77,19 @@ public class CreateItemProfileController implements Initializable {
         item.setDate(expireDateC);
         item.setUnit(unitC);
 
-        System.out.println(item.getItemID());
+        try{
+            FileWriter fw = new FileWriter(filePath,true);
+            BufferedWriter bw = new BufferedWriter(fw);
+            PrintWriter pw = new PrintWriter(bw);
+            pw.println(item.getItemID()+","+item.getItemName()+","+item.getItemCategory()+","+item.getQuantity()+","+
+                    item.getSellingPrice()+","+item.getPurchasePrice()+","+item.getDate()+","+item.getUnit());
+            pw.flush();
+            pw.close();
+            JOptionPane.showMessageDialog(null, "Your item has been created!");
+        }catch(Exception e){
+            JOptionPane.showMessageDialog(null, "Unable to save the record...");
+        }
+
 
 
 
