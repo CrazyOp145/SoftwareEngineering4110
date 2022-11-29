@@ -1,7 +1,6 @@
 public class UpdateItemProfile {
-    String currentUser;
     //system shall allow purchaser users to update any item profiles.
-    public void UpdateItemProfile() {
+    public void UpdateItemProfile(String currentUser) {
         if (currentUser == "PurchaserUsers" || currentUser == "OwnerUser") {
 
         }

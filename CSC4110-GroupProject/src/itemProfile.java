@@ -1,3 +1,4 @@
+import java.time.LocalDate;
 import java.util.Date;
 
 public abstract class itemProfile {
@@ -7,16 +8,31 @@ public abstract class itemProfile {
     private double sellingPrice;
     private double purchasePrice;
     private String itemCategory;
-    private Date date;
+    private LocalDate date;
     private double quantity;
+
+    private String unit;
+
+    public void setItemID(int itemID) {
+        this.itemID = itemID;
+    }
+
+    public String getUnit() {
+        return unit;
+    }
+
+    public void setUnit(String unit) {
+        this.unit = unit;
+    }
+
+    public itemProfile() {}
 
     public int getItemID() {
         return itemID;
     }
 
-    public void setItemID(int itemID) {
-
-        this.itemID = itemID;
+    public void setItemID() {
+        this.itemID = IdProvider.getInstance().getUniqueId();
     }
 
     public String getItemName() {
@@ -68,11 +84,11 @@ public abstract class itemProfile {
         this.itemCategory = itemCategory;
     }
 
-    public Date getDate() {
+    public LocalDate getDate() {
         return date;
     }
 
-    public void setDate(Date date) {
+    public void setDate(LocalDate date) {
         //check date if it's a past date
         this.date = date;
     }
