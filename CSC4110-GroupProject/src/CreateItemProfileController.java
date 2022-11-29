@@ -12,14 +12,12 @@ import javafx.stage.Stage;
 
 
 import javax.swing.*;
-import java.awt.*;
 import java.io.BufferedWriter;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.net.URL;
 import java.time.LocalDate;
-import java.util.Date;
 import java.util.ResourceBundle;
 
 public class CreateItemProfileController implements Initializable {
@@ -55,7 +53,7 @@ public class CreateItemProfileController implements Initializable {
     }
 
     public void create(javafx.event.ActionEvent actionEvent){
-        itemProfileFactory itemFactory = new itemProfileFactory();
+        ItemProfileFactory itemFactory = new ItemProfileFactory();
         String itemNameC = itemName.getText();
         int quantityC = Integer.parseInt(quantity.getText());
         double sellingPriceC = Double.parseDouble(sellingPrice.getText());
@@ -65,7 +63,7 @@ public class CreateItemProfileController implements Initializable {
         LocalDate expireDateC = expireDate.getValue();
         //String itemCategoryC = getCategory(actionEvent);
 
-        itemProfile item = null;
+        ItemProfile item = null;
 
         item = itemFactory.createItemProfile(itemCategoryC);
         item.setItemID();
@@ -81,8 +79,8 @@ public class CreateItemProfileController implements Initializable {
             FileWriter fw = new FileWriter(filePath,true);
             BufferedWriter bw = new BufferedWriter(fw);
             PrintWriter pw = new PrintWriter(bw);
-            pw.println(item.getItemID()+","+item.getItemName()+","+item.getItemCategory()+","+item.getQuantity()+","+
-                    item.getSellingPrice()+","+item.getPurchasePrice()+","+item.getDate()+","+item.getUnit());
+            pw.println(item.getItemID()+","+item.getItemName()+","+item.getQuantity()+","+ item.getSellingPrice()
+                    +","+item.getPurchasePrice()+","+item.getDate()+","+ item.getItemCategory() +","+item.getUnit());
             pw.flush();
             pw.close();
             JOptionPane.showMessageDialog(null, "Your item has been created!");

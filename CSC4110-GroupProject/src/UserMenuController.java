@@ -20,12 +20,12 @@ public class UserMenuController {
         Stage.show();
     }
 
-//    public void switchToUserMenuScene(javafx.event.ActionEvent event) throws IOException {
-//        Root = FXMLLoader.load(getClass().getResource("UserMenuController.fxml"));
-//        Stage = (Stage)((Node)event.getSource()).getScene().getWindow();
-//        Scene = new Scene(Root);
-//        Stage.setScene(Scene);
-//        Stage.show();
-//    }
+    public void switchToSearchItem(javafx.event.ActionEvent event) throws IOException {
+        Root = FXMLLoader.load(getClass().getResource("SearchItemProfile.fxml"));
+        Stage = (Stage)((Node)event.getSource()).getScene().getWindow();
+        Scene = new Scene(Root);
+        Stage.setScene(Scene);
+        Stage.show();
+    }
 
 }

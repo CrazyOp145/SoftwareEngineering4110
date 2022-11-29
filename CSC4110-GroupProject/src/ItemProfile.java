@@ -1,7 +1,6 @@
 import java.time.LocalDate;
-import java.util.Date;
 
-public abstract class itemProfile {
+public abstract class ItemProfile {
     private int itemID;
     private String itemName;
     private int vendorID;
@@ -12,6 +11,9 @@ public abstract class itemProfile {
     private double quantity;
 
     private String unit;
+
+    public ItemProfile() {}
+
 
     public void setItemID(int itemID) {
         this.itemID = itemID;
@@ -24,8 +26,6 @@ public abstract class itemProfile {
     public void setUnit(String unit) {
         this.unit = unit;
     }
-
-    public itemProfile() {}
 
     public int getItemID() {
         return itemID;

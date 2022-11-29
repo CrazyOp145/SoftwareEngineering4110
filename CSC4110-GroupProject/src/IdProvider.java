@@ -8,7 +8,7 @@ public class IdProvider {
         return instance;
     }
 
-    private int nextId = 0;
+    private int nextId = 100000;
 
     public int getUniqueId(){
         if(nextId < 0){

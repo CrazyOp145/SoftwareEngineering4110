@@ -27,7 +27,6 @@ public class CreateItemProfile extends Application{
         createItemStage.setTitle("WSU Inc. Wholesale Food Distribution");
         createItemStage.setScene(scene);
         createItemStage.show();
-        
     }
 
 

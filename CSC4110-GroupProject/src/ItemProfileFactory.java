@@ -1,24 +1,24 @@
-public class itemProfileFactory {
-    public itemProfile createItemProfile(String newItemType){
-        itemProfile newItem = null;
+public class ItemProfileFactory {
+    public ItemProfile createItemProfile(String newItemType){
+        ItemProfile newItem = null;
         if(newItemType.equals("Vegetables")){
-            return new vegetables();
+            return new Vegetables();
         }else if(newItemType.equals("Fruits")){
-            return new fruits();
+            return new Fruits();
         }else if(newItemType.equals("Dairy")){
-            return new dairy();
+            return new Dairy();
         }else if(newItemType.equals("Meat")){
-            return new meat();
+            return new Meat();
         }else if(newItemType.equals("Juice")){
-            return new juice();
+            return new Juice();
         }else if(newItemType.equals("Nuts")){
-            return new nuts();
+            return new Nuts();
         }else if(newItemType.equals("Snacks")){
-            return new snacks();
+            return new Snacks();
         }else if(newItemType.equals("Soda")){
-            return new soda();
+            return new Soda();
         }else if(newItemType.equals("Bakery")) {
-            return new bakeryProducts();
+            return new BakeryProducts();
         }
         else return null;
     }
