@@ -46,31 +46,33 @@ public class SearchItemController implements Initializable {
 
     private ObservableList<ItemList> dataList = FXCollections.observableArrayList();
 
-    public void initList(){
-        String filePath = "itemProfile.csv";
-        File file = new File(filePath);
+//    public void initList(){
+//        String filePath = "itemProfile.csv";
+//        File file = new File(filePath);
+//
+//        try {
+//            Scanner input = new Scanner(file);
+//            while((input.hasNext())){
+//                String data = input.next();
+//                Object[] values = data.split(",");
+//                Object[] valuesLine = data.split("\n");
+//
+//
+//                dataList.add(new ItemList(String.valueOf(values[0]),String.valueOf(values[1]),String.valueOf(values[2])
+//                        ,String.valueOf(values[3]),String.valueOf(values[4]),String.valueOf(values[5])));
+//            }
+//
+//        } catch (FileNotFoundException e) {
+//            throw new RuntimeException(e);
+//        }
+//    }
 
-        try {
-            Scanner input = new Scanner(file);
-            while((input.hasNext())){
-                String data = input.next();
-                Object[] values = data.split(",");
-                Object[] valuesLine = data.split("\n");
-
-
-                dataList.add(new ItemList(String.valueOf(values[0]),String.valueOf(values[1]),String.valueOf(values[2])
-                        ,String.valueOf(values[3]),String.valueOf(values[4]),String.valueOf(values[5])));
-            }
-
-        } catch (FileNotFoundException e) {
-            throw new RuntimeException(e);
-        }
-    }
+    ReadItemProfile readItemProfile = new ReadItemProfile();
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
 
-        initList();
+        dataList = readItemProfile.initList();
         itemId.setCellValueFactory(new PropertyValueFactory<>("itemId"));
         itemName.setCellValueFactory(new PropertyValueFactory<>("itemName"));
         quantity.setCellValueFactory(new PropertyValueFactory<>("quantity"));
@@ -78,9 +80,6 @@ public class SearchItemController implements Initializable {
         purchasePrice.setCellValueFactory(new PropertyValueFactory<>("purchasePrice"));
         expireDate.setCellValueFactory(new PropertyValueFactory<>("expireDate"));
         tableView.setItems(dataList);
-
-
-
 
         FilteredList<ItemList> filteredData = new FilteredList<>(dataList, b -> true);
 
