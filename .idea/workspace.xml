@@ -5,7 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="3b941ea0-61b1-4331-a59f-9f59433fc7fd" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/opencsv_5_7_1.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/opencsv_5_7_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/CSC4110-GroupProject/src/CreateCustomerProfile.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/CSC4110-GroupProject/src/CreateCustomerProfileController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -16,6 +18,7 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="FxmlFile" />
         <option value="Class" />
       </list>
     </option>
@@ -39,11 +42,12 @@
     "Repository.Attach.Sources": "false",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "last_opened_file_path": "C:/Users/Paulo/Downloads/openjfx-19_windows-x64_bin-sdk/javafx-sdk-19/lib",
     "project.structure.last.edited": "Libraries",
     "project.structure.proportion": "0.15",
     "project.structure.side.proportion": "0.2",
-    "settings.editor.selected.configurable": "preferences.pluginManager"
+    "settings.editor.selected.configurable": "preferences.JavaFX"
   }
 }]]></component>
   <component name="RunManager" selected="Application.MainGUI">
@@ -94,5 +98,9 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
   </component>
 </project>
