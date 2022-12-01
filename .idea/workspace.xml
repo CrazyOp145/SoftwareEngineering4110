@@ -5,8 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="3b941ea0-61b1-4331-a59f-9f59433fc7fd" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/opencsv_5_7_1.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/opencsv_5_7_1.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SoftwareEngineering4110.iml" beforeDir="false" afterPath="$PROJECT_DIR$/SoftwareEngineering4110.iml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -40,7 +40,7 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "last_opened_file_path": "C:/Users/Paulo/Downloads/openjfx-19_windows-x64_bin-sdk/javafx-sdk-19/lib",
-    "project.structure.last.edited": "Modules",
+    "project.structure.last.edited": "Libraries",
     "project.structure.proportion": "0.15",
     "project.structure.side.proportion": "0.2",
     "settings.editor.selected.configurable": "preferences.pluginManager"
@@ -50,6 +50,7 @@
     <configuration name="MainGUI" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="MainGUI" />
       <module name="SoftwareEngineering4110" />
+      <option name="VM_PARAMETERS" value="--module-path &quot;C:\Users\Paulo\Downloads\openjfx-19_windows-x64_bin-sdk\javafx-sdk-19\lib&quot; --add-modules javafx.controls,javafx.fxml" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -61,6 +62,10 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <list>
+      <item itemvalue="Application.MainGUI" />
+      <item itemvalue="Application.MainTest" />
+    </list>
     <recent_temporary>
       <list>
         <item itemvalue="Application.MainGUI" />
