@@ -1,0 +1,9 @@
+.root{
+    -fx-background-color:"white";
+}
+
+.label{
+    -fx-font-size: 16;
+    -fx-font-family: "";
+    -fx-text-fill: "Black";
+}
