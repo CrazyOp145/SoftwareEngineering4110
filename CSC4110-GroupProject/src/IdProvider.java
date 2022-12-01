@@ -11,7 +11,7 @@ public class IdProvider {
     private int nextId = 100000;
 
     public int getUniqueId(){
-        if(nextId < 0){
+        if(nextId > 999999){
             throw new IllegalStateException("Out if IDs!");
         }
         int uniqueId = nextId;

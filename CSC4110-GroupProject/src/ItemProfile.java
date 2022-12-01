@@ -14,11 +14,6 @@ public abstract class ItemProfile {
 
     public ItemProfile() {}
 
-
-    public void setItemID(int itemID) {
-        this.itemID = itemID;
-    }
-
     public String getUnit() {
         return unit;
     }

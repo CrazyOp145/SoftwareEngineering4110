@@ -56,7 +56,7 @@
             <items>
                   <MenuItem mnemonicParsing="false" text="User profile" />
                   <MenuItem mnemonicParsing="false" text="Vendor profile" />
-                  <MenuItem mnemonicParsing="false" text="Item profile" />
+                  <MenuItem mnemonicParsing="false" onAction="#switchToUpdateItemMenuBar" text="Item profile" />
             </items>
           </Menu>
             <Menu mnemonicParsing="false" text="Help">
