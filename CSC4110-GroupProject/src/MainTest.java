@@ -1,7 +1,7 @@
+
 import Profiles.*;
 import com.opencsv.exceptions.CsvException;
 import csvFiles.WriteToCustomerProfileCSV;
-
 import java.io.IOException;
 import java.util.Random;
 import java.util.Scanner;
@@ -16,7 +16,7 @@ public class MainTest {
         // String vName = Scanner.nextLine();
         //vName = characterLimit(20, vName);
         //System.out.println("You inputted: " + vName);
-
+        
         String customer = "Customer Profile";
         UserProfiles profile1 = ProfilesFactory.createProfile(customer);
         if(profile1 instanceof CustomerProfile) {
