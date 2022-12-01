@@ -69,9 +69,7 @@ public class SearchItemController implements Initializable {
 
     ReadItemProfile readItemProfile = new ReadItemProfile();
 
-    @Override
-    public void initialize(URL url, ResourceBundle resourceBundle) {
-
+    public void updateList(){
         dataList = readItemProfile.initList();
         itemId.setCellValueFactory(new PropertyValueFactory<>("itemId"));
         itemName.setCellValueFactory(new PropertyValueFactory<>("itemName"));
@@ -80,6 +78,12 @@ public class SearchItemController implements Initializable {
         purchasePrice.setCellValueFactory(new PropertyValueFactory<>("purchasePrice"));
         expireDate.setCellValueFactory(new PropertyValueFactory<>("expireDate"));
         tableView.setItems(dataList);
+    }
+
+    @Override
+    public void initialize(URL url, ResourceBundle resourceBundle) {
+
+        updateList();
 
         FilteredList<ItemList> filteredData = new FilteredList<>(dataList, b -> true);
 

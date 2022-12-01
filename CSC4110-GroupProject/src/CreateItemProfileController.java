@@ -88,14 +88,7 @@ public class CreateItemProfileController implements Initializable {
             JOptionPane.showMessageDialog(null, "Unable to save the record...");
         }
 
-
-
-
     }
-    public void cancel(javafx.event.ActionEvent actionEvent){
-        System.out.println("Cancel create go to previous window");
-    }
-
 
     public void switchToUserMenuScene(javafx.event.ActionEvent event) throws IOException {
         //FXMLLoader loader = new FXMLLoader(getClass().getResource(""))
