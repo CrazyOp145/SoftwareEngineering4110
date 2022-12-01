@@ -1,5 +1,6 @@
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
@@ -58,6 +59,7 @@ public class UpdateItemController implements Initializable {
     private TableColumn<ItemList, String> expireDate;
 
     String filePath = "ItemProfile.csv";
+    String temp = "temp.csv";
 
     private ObservableList<ItemList> dataList = FXCollections.observableArrayList();
 
@@ -66,8 +68,8 @@ public class UpdateItemController implements Initializable {
     UpdateItemProfile updateItemProfile = new UpdateItemProfile();
 
 
-    File oldFile = new File("ItemProfile.csv");
-    File newFile = new File("temp.csv");
+    File oldFile = new File(filePath);
+    File newFile = new File(temp);
 
     public void updateProfile() {
         updateItemProfile.updateItemProfile(filePath,newItemId.getText(),newItemId.getText(),newItemName.getText(),
@@ -93,6 +95,10 @@ public class UpdateItemController implements Initializable {
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
         updateList();
+        newItemCategory.getItems().addAll(Category);
+        newItemCategory.setOnAction(this::getCategory);
+        newUnit.getItems().addAll(unitCategory);
+        newUnit.setOnAction(this::getUnitCategory);
     }
 
     public void switchToUserMenu(javafx.event.ActionEvent event) throws IOException {
@@ -101,6 +107,16 @@ public class UpdateItemController implements Initializable {
         Scene = new Scene(Root);
         Stage.setScene(Scene);
         Stage.show();
+    }
+
+    public String getCategory(ActionEvent event){
+        String category = newItemCategory.getValue();
+        return category;
+    }
+
+    public String getUnitCategory(ActionEvent event){
+        String unitCategory = newUnit.getValue();
+        return unitCategory;
     }
 }
 

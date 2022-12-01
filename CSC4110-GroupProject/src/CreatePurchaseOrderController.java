@@ -1,12 +1,12 @@
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
-import javafx.collections.transformation.FilteredList;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.control.DatePicker;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.TextField;
@@ -18,7 +18,7 @@ import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
 
-public class DeleteItemController implements Initializable {
+public class CreatePurchaseOrderController implements Initializable {
     private javafx.stage.Stage Stage;
     private javafx.scene.Scene Scene;
     private Parent Root;
@@ -37,7 +37,9 @@ public class DeleteItemController implements Initializable {
     @FXML
     private TableColumn<ItemList, String>  expireDate;
     @FXML
-    private TextField deleteItemBar;
+    private TextField purchaseQuantity;
+    @FXML
+    private DatePicker needDate;
     String filePath = "ItemProfile.csv";
     String temp = "temp.csv";
 
@@ -47,18 +49,8 @@ public class DeleteItemController implements Initializable {
 
     DeleteItemProfile deleteItemProfile = new DeleteItemProfile();
 
-
     File oldFile = new File(filePath);
     File newFile = new File(temp);
-    public void deleteProfile(){
-        deleteItemProfile.deleteItemProfile(filePath,deleteItemBar.getText());
-        oldFile.delete();
-        File dump = new File(filePath);
-        newFile.renameTo(dump);
-        tableView.setItems(dataList);
-        clearList();
-        updateList();
-    }
 
     public void clearList(){
         dataList.clear();
@@ -80,11 +72,10 @@ public class DeleteItemController implements Initializable {
 
     public void switchToUserMenu(javafx.event.ActionEvent event) throws IOException {
         Root = FXMLLoader.load(getClass().getResource("UserMenu.fxml"));
-        Stage = (Stage)((Node)event.getSource()).getScene().getWindow();
+        Stage = (javafx.stage.Stage)((Node)event.getSource()).getScene().getWindow();
         Scene = new Scene(Root);
         Stage.setScene(Scene);
         Stage.show();
     }
-
 
 }
