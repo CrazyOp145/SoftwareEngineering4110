@@ -3,8 +3,8 @@ import java.util.Scanner;
 public class ItemProfileTest {
     public static void main(String args[]){
         //Create factory object
-        itemProfileFactory itemFactory = new itemProfileFactory();
-        itemProfile theItem = null;
+        ItemProfileFactory itemFactory = new ItemProfileFactory();
+        ItemProfile theItem = null;
 
         Scanner input = new Scanner(System.in);
         System.out.print("Enter type of item to create: ");
