@@ -1,14 +1,13 @@
 package csvFiles;
 
-import org.apache.commons.csv.CSVFormat;
-import org.apache.commons.csv.CSVParser;
-import org.apache.commons.csv.CSVPrinter;
-import org.apache.commons.csv.CSVRecord;
+import org.apache.commons.csv.*;
 
 import java.io.*;
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
+import java.util.*;
+
+/**
+ * @author David Her
+ */
 
 public class ToCSV {
     public static void createCsv(String filePath,String[] header){
@@ -28,29 +27,28 @@ public class ToCSV {
 
     public static void addToUserData(String filePath, String[] data){
         try {
-            //CSV Parser
-            CSVParser csvParser = new CSVParser(new FileReader(filePath), CSVFormat.DEFAULT);
-
-            List<String> recordList = new ArrayList<>();
-
-            // Print From CSV
-            for(CSVRecord record : csvParser){
-
-                String line = record.get(0) + "," + record.get(1) + "," + record.get(2) + "," + record.get(3) + "," + record.get(4);
-                System.out.println(line);
-
-                recordList.add(record.get(0));
-                recordList.add(record.get(1));
-                recordList.add(record.get(2));
-                recordList.add(record.get(3));
-                recordList.add(record.get(4));
+            Scanner userData = new Scanner(new File(filePath));
+            userData.useDelimiter(",");
+            String[][] arr = new String[1000][1000];
+            List<String> oldData = new ArrayList<>();
+            int row = 0;
+            int column = 0;
+            while(userData.hasNext()){
+                while(userData.hasNext()) {
+                    String oldUserData = "";
+                    oldUserData = userData.next();
+                    arr[row][column] = oldUserData;
+                    oldData.add(arr[row][column]);
+                    column++;
+                }
+                row++;
             }
-
+            System.out.println(oldData);
             // CSV Printer
             CSVPrinter printer = new CSVPrinter(new FileWriter(filePath), CSVFormat.DEFAULT);
 
             //Add Data
-            printer.printRecord(recordList);
+            printer.printRecord(oldData);
             printer.printRecord((Object[]) data);
 
             //Close printer

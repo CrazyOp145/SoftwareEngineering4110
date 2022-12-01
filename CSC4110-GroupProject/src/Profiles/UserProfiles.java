@@ -6,6 +6,9 @@ public abstract class UserProfiles {
     private String ID;
     private String password;
 
+    UserProfiles(){
+    }
+
     public UserProfiles(String firstName, String lastName, String ID, String password){
         this.firstName = firstName;
         this.lastName = lastName;

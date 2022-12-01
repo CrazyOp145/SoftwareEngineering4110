@@ -2,7 +2,11 @@ package Profiles;
 
 import csvFiles.ToCSV;
 import java.util.Scanner;
-import static Profiles.checkLength.*;
+import static Profiles.CheckInputs.*;
+
+/**
+ * @author David Her
+ */
 
 public class LoginValidation {
     private static String userID;
@@ -14,20 +18,18 @@ public class LoginValidation {
     // Enable Owner and Administrator users to create User Profiles
     public static void createUserProfiles(){
         Scanner cUserProfile = new Scanner(System.in);
+        setUserID(checkUserIDInput(cUserProfile, "Enter in UserID (Max 6 Characters):"));
         setLastName(checkNameInput(cUserProfile, "Enter in Last Name (Max 15 Characters):"));
         setFirstName(checkNameInput(cUserProfile, "Enter in First Name (Max 15 Characters):"));
-        setUserID(checkUserIDInput(cUserProfile, "Enter in UserID (Max 6 Characters):"));
         setPassword(checkPasswordInput(cUserProfile,"Enter in Password (Min 8 Characters & Max 16 Characters):"));
         System.out.println("Enter in User Role:");
         setUserRole(cUserProfile.nextLine());
 
-        String[] data = {getLastName(), getFirstName(), getUserID(), getPassword(), getUserRole()};
-        String[] header={"LastName", "FirstName", "UserID", "Password", "UserRole"};
+        String[] data = {getUserID(), getLastName(), getFirstName(), getPassword(), getUserRole()};
+        String[] header={"UserID", "LastName", "FirstName", "Password", "UserRole"};
         //ToCSV.createCsv("UserData.csv",header);
         ToCSV.addToUserData("UserData.csv", data);
     }
-
-
 
     public static String getLastName() {
         return lastName;

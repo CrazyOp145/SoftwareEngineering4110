@@ -2,7 +2,11 @@ package Profiles;
 
 import java.util.Scanner;
 
-public class checkLength {
+/**
+ * @author David Her
+ */
+
+public class CheckInputs {
 
     // Check the input length for Names
     public static String checkNameInput(Scanner in, String prompt){
