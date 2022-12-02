@@ -12,7 +12,7 @@
 
 <AnchorPane prefHeight="463.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="CreatePurchaseOrderController">
     <children>
-        <TableView fx:id="tableView" layoutX="29.0" layoutY="150.0" prefHeight="269.0" prefWidth="542.0">
+        <TableView fx:id="tableView" layoutX="29.0" layoutY="150.0" onMouseClicked="#selectCell" prefHeight="269.0" prefWidth="542.0">
             <columns>
                 <TableColumn fx:id="itemId" prefWidth="75.0" text="Item ID" />
                 <TableColumn fx:id="itemName" prefWidth="74.0" text="Name" />
@@ -23,7 +23,7 @@
             </columns>
         </TableView>
         <Button fx:id="goBack" layoutX="482.0" layoutY="426.0" mnemonicParsing="false" onAction="#switchToUserMenu" text="Back to menu" />
-      <Button layoutX="383.0" layoutY="426.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="89.0" text="Create Oder" />
+      <Button layoutX="383.0" layoutY="426.0" mnemonicParsing="false" onAction="#createOrder" prefHeight="25.0" prefWidth="89.0" text="Create Oder" />
       <Label layoutX="70.0" layoutY="61.0" text="Quantity :">
          <font>
             <Font size="18.0" />
@@ -50,6 +50,6 @@
             <TableColumn prefWidth="75.0" text="Need Date" />
         </columns>
       </TableView>
-      <Button layoutX="289.0" layoutY="426.0" mnemonicParsing="false" text="Add to order" />
+      <Button layoutX="289.0" layoutY="426.0" mnemonicParsing="false" onAction="#addToOrder" text="Add to order" />
     </children>
 </AnchorPane>

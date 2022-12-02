@@ -14,6 +14,7 @@ import javafx.stage.Stage;
 import java.io.File;
 import java.io.IOException;
 import java.net.URL;
+import java.util.ArrayList;
 import java.util.ResourceBundle;
 
 public class UpdateItemController implements Initializable {
@@ -100,6 +101,12 @@ public class UpdateItemController implements Initializable {
         newUnit.getItems().addAll(unitCategory);
         newUnit.setOnAction(this::getUnitCategory);
     }
+
+    public void selectCell(){
+        ArrayList<ItemList> orderList = new ArrayList<ItemList>();
+        orderList.add(tableView.getSelectionModel().getSelectedItem());
+    }
+
 
     public void switchToUserMenu(javafx.event.ActionEvent event) throws IOException {
         Root = FXMLLoader.load(getClass().getResource("UserMenu.fxml"));
