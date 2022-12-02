@@ -34,13 +34,11 @@ public class ToCSV {
             int row = 0;
             int column = 0;
             while(userData.hasNext()){
-                while(userData.hasNext()) {
-                    String oldUserData = "";
-                    oldUserData = userData.next();
-                    arr[row][column] = oldUserData;
-                    oldData.add(arr[row][column]);
-                    column++;
-                }
+                String oldUserData;
+                oldUserData = userData.next();
+                arr[row][column] = oldUserData;
+                oldData.add(arr[row][column]);
+                column++;
                 row++;
             }
             System.out.println(oldData);
