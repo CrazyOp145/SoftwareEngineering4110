@@ -14,6 +14,7 @@ import javax.swing.*;
 import java.io.*;
 import java.net.URL;
 import java.time.LocalDate;
+import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
 import java.util.ResourceBundle;
 
@@ -43,6 +44,7 @@ public class CreatePurchaseOrderController implements Initializable {
     String filePath = "PurchaseOrder"+ purchaseId +".csv";
     String temp = "temp.csv";
 
+    DateTimeFormatter formatter = DateTimeFormatter.ofPattern("M/d/yyyy");
     int addToOrderCounter = 0;
     private ObservableList<ItemList> dataList = FXCollections.observableArrayList();
     //private ObservableList<PurchaseOrderList> dataList = FXCollections.observableArrayList();
@@ -84,14 +86,26 @@ public class CreatePurchaseOrderController implements Initializable {
     }
 
     public void addToOrder(){
+        if (LocalDate.parse(item.getExpireDate(),formatter).compareTo(LocalDate.now()) < 0){
+            JOptionPane.showMessageDialog(null, "The item you pick has expired.\n Select a another item to add");
+            return;
+        }
+        if(item.needDate == "null"){
+            JOptionPane.showMessageDialog(null, "Add a need by date before continue");
+            return;
+        }else if(item.needQuantity.isEmpty()){
+            JOptionPane.showMessageDialog(null, "Add a need quantity before continue");
+            return;
+        }
         if(addToOrderCounter < 5){
             //purchaseOrderList.add(purchaseItem);
             purchaseOrderList.add(item);
             purchaseQuantity.clear();
             needDate.getEditor().clear();
             addToOrderCounter++;
+            JOptionPane.showMessageDialog(null,item.getItemName()+" added to your order.");
         }else{
-            JOptionPane.showMessageDialog(null,"You can only add 5 item in one order!\n Please add item again...");
+            JOptionPane.showMessageDialog(null,"You can only add 5 item in one order!\n Please add your items again...");
             purchaseOrderList.clear();
             addToOrderCounter = 0;
         }
