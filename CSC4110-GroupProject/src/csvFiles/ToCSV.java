@@ -40,6 +40,7 @@ public class ToCSV {
                 oldData.add(arr[row][column]);
                 column++;
                 row++;
+
             }
             System.out.println(oldData);
             // CSV Printer
