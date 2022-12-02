@@ -1,6 +1,6 @@
-package Profiles;
+package Profiles.Login;
 
-import java.util.Scanner;
+import java.util.*;
 
 /**
  * @author David Her
@@ -27,13 +27,12 @@ public class CheckInputs {
     public static String checkUserIDInput(Scanner in, String prompt){
         System.out.println(prompt);
         String output;
-
         while(true){
             output = in.nextLine();
             if(output.length() <= 6 && output.length() != 0){
                 break;
             }
-            System.out.println("Error: Invalid Character Length, Please " + prompt);
+            System.out.println("Error: Invalid UserID, Please " + prompt);
         }
         return output;
     }

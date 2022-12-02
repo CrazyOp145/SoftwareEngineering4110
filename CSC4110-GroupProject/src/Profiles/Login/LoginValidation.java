@@ -1,8 +1,8 @@
-package Profiles;
+package Profiles.Login;
 
 import csvFiles.ToCSV;
 import java.util.Scanner;
-import static Profiles.CheckInputs.*;
+import static Profiles.Login.CheckInputs.*;
 
 /**
  * @author David Her

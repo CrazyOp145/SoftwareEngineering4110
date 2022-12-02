@@ -1,4 +1,4 @@
-import Profiles.LoginValidation;
+import Profiles.Login.LoginValidation;
 import csvFiles.ToCSV;
 
 public class MainTest {
