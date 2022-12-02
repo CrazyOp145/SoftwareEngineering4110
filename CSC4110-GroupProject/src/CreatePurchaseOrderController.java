@@ -72,6 +72,11 @@ public class CreatePurchaseOrderController implements Initializable {
         item.setNeedDate(String.valueOf(needDate.getValue()));
     }
 
+    public void vendorList(){
+
+        updateList();
+    }
+
     public void addToOrder(){
         //purchaseOrderList.add(purchaseItem);
         purchaseOrderList.add(item);
