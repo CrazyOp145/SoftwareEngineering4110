@@ -29,30 +29,23 @@ public class ToCSV {
         try {
             Scanner userData = new Scanner(new File(filePath));
             userData.useDelimiter(",");
-            String[][] arr = new String[1000][1000];
+            Object[] arr;
             List<String> oldData = new ArrayList<>();
-            int row = 0;
-            int column = 0;
             while(userData.hasNext()){
-                String oldUserData;
-                oldUserData = userData.next();
-                arr[row][column] = oldUserData;
-                oldData.add(arr[row][column]);
-                column++;
-                row++;
-
+                String oldUserData = userData.next();
+                arr = oldUserData.split(",");
+                oldData.add(String.valueOf(arr[0]));
             }
-            System.out.println(oldData);
-            // CSV Printer
-            CSVPrinter printer = new CSVPrinter(new FileWriter(filePath), CSVFormat.DEFAULT);
 
-            //Add Data
-            printer.printRecord(oldData);
-            printer.printRecord((Object[]) data);
+            FileWriter file = new FileWriter(filePath);
+            BufferedWriter bufferedWriter = new BufferedWriter(file);
+            PrintWriter printWriter = new PrintWriter(bufferedWriter);
 
-            //Close printer
-            printer.flush();
-            printer.close();
+            printWriter.print(oldData.toString().substring(1,oldData.toString().length()-1).replaceAll(" ", ""));
+            printWriter.println(Arrays.toString(data).substring(1,Arrays.toString(data).length()-1).replaceAll(" ", ""));
+
+            printWriter.flush();
+            printWriter.close();
         } catch (IOException e) {
             e.printStackTrace();
         }
@@ -60,16 +53,12 @@ public class ToCSV {
 
     public static void readUserData(String filePath){
         try{
-            //CSV Parser
-            CSVParser csvParser = new CSVParser(new FileReader(filePath), CSVFormat.DEFAULT);
-
-            // Print From CSV
-            for(CSVRecord record : csvParser){
-                System.out.println(record.get(0) + "," + record.get(1) + "," + record.get(2) + "," + record.get(3) + "," + record.get(4));
+            Scanner userData = new Scanner(new File(filePath));
+            userData.useDelimiter(",");
+            while (userData.hasNext()) {
+                System.out.print(userData.next() + ",");
             }
 
-            // Close CSV Parser
-            csvParser.close();
         }
         catch (IOException e){
             e.printStackTrace();
