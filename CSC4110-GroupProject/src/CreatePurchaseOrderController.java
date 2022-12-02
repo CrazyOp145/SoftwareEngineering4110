@@ -38,17 +38,17 @@ public class CreatePurchaseOrderController implements Initializable {
     private TextField purchaseQuantity;
     @FXML
     private DatePicker needDate;
-    String purchaseId = "";
-    int purchaseId2 = 0;
-    String filePath = "PurchaseOrder"+ purchaseId2 +".csv";
+    int purchaseId = PurchaseIdProvider.getInstance().getUniqueId();;
+    String filePath = "PurchaseOrder"+ purchaseId +".csv";
     String temp = "temp.csv";
 
     private ObservableList<ItemList> dataList = FXCollections.observableArrayList();
-    private ArrayList<ItemList> orderList = new ArrayList<ItemList>();
+    //private ObservableList<PurchaseOrderList> dataList = FXCollections.observableArrayList();
+    //private ArrayList<PurchaseOrderList> purchaseOrderList = new ArrayList<PurchaseOrderList>();
+    private ArrayList<ItemList> purchaseOrderList = new ArrayList<ItemList>();
     ReadItemProfile readItemProfile = new ReadItemProfile();
+    PurchaseOrderList purchaseItem;
     ItemList item;
-
-    DeleteItemProfile deleteItemProfile = new DeleteItemProfile();
 
     File oldFile = new File(filePath);
     File newFile = new File(temp);
@@ -68,19 +68,25 @@ public class CreatePurchaseOrderController implements Initializable {
     }
     public void selectCell(){
         item = tableView.getSelectionModel().getSelectedItem();
+        item.setNeedQuantity(purchaseQuantity.getText());
+        item.setNeedDate(String.valueOf(needDate.getValue()));
     }
+
     public void addToOrder(){
-        orderList.add(item);
+        //purchaseOrderList.add(purchaseItem);
+        purchaseOrderList.add(item);
+        purchaseQuantity.clear();
+        needDate.getEditor().clear();
     }
     public void createOrder(){
-        for (ItemList item: orderList
+        for (ItemList purchaseItem: purchaseOrderList
         ) {
             try{
                 FileWriter fw = new FileWriter(filePath,true);
                 BufferedWriter bw = new BufferedWriter(fw);
                 PrintWriter pw = new PrintWriter(bw);
-                pw.println(item.getItemId()+","+item.getItemName()+","+item.getQuantity()+","+ item.getSellingPrice()
-                        +","+item.getPurchasePrice()+","+item.getExpireDate());
+                pw.println(purchaseItem.getItemId()+","+purchaseItem.getItemName()+","+purchaseItem.getPurchasePrice()
+                        +","+purchaseItem.getExpireDate() +","+purchaseItem.needQuantity+","+purchaseItem.needDate);
                 pw.flush();
                 pw.close();
             }catch(Exception e){

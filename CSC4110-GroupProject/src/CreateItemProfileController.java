@@ -43,6 +43,7 @@ public class CreateItemProfileController implements Initializable {
     private String[] unitCategory = {"Pounds", "Gallon", "Dozen", "Ounce", "bunch"};
     @FXML
     private ComboBox VendorID;
+    private String[] vendorIdCategory = {""};
 
     private Stage Stage;
     private Scene Scene;
