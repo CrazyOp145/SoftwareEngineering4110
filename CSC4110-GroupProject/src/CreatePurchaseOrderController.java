@@ -93,8 +93,8 @@ public class CreatePurchaseOrderController implements Initializable {
         if(item.needDate == "null"){
             JOptionPane.showMessageDialog(null, "Add a need by date before continue");
             return;
-        }else if(item.needQuantity.isEmpty()){
-            JOptionPane.showMessageDialog(null, "Add a need quantity before continue");
+        }else if(item.needQuantity.isEmpty() || Integer.parseInt(item.needQuantity) <= 0){
+            JOptionPane.showMessageDialog(null, "Modify your quantity value before continue");
             return;
         }
         if(addToOrderCounter < 5){
