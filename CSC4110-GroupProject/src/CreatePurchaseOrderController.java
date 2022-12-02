@@ -13,6 +13,7 @@ import javafx.stage.Stage;
 import javax.swing.*;
 import java.io.*;
 import java.net.URL;
+import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.ResourceBundle;
 
@@ -42,10 +43,11 @@ public class CreatePurchaseOrderController implements Initializable {
     String filePath = "PurchaseOrder"+ purchaseId +".csv";
     String temp = "temp.csv";
 
+    int addToOrderCounter = 0;
     private ObservableList<ItemList> dataList = FXCollections.observableArrayList();
     //private ObservableList<PurchaseOrderList> dataList = FXCollections.observableArrayList();
     //private ArrayList<PurchaseOrderList> purchaseOrderList = new ArrayList<PurchaseOrderList>();
-    private ArrayList<ItemList> purchaseOrderList = new ArrayList<ItemList>();
+    private ArrayList<ItemList> purchaseOrderList = new ArrayList<>();
     ReadItemProfile readItemProfile = new ReadItemProfile();
     PurchaseOrderList purchaseItem;
     ItemList item;
@@ -66,6 +68,10 @@ public class CreatePurchaseOrderController implements Initializable {
         expireDate.setCellValueFactory(new PropertyValueFactory<>("expireDate"));
         tableView.setItems(dataList);
     }
+
+    public void updateOrderList(){
+
+    }
     public void selectCell(){
         item = tableView.getSelectionModel().getSelectedItem();
         item.setNeedQuantity(purchaseQuantity.getText());
@@ -78,32 +84,56 @@ public class CreatePurchaseOrderController implements Initializable {
     }
 
     public void addToOrder(){
-        //purchaseOrderList.add(purchaseItem);
-        purchaseOrderList.add(item);
-        purchaseQuantity.clear();
-        needDate.getEditor().clear();
+        if(addToOrderCounter < 5){
+            //purchaseOrderList.add(purchaseItem);
+            purchaseOrderList.add(item);
+            purchaseQuantity.clear();
+            needDate.getEditor().clear();
+            addToOrderCounter++;
+        }else{
+            JOptionPane.showMessageDialog(null,"You can only add 5 item in one order!\n Please add item again...");
+            purchaseOrderList.clear();
+            addToOrderCounter = 0;
+        }
     }
     public void createOrder(){
-        for (ItemList purchaseItem: purchaseOrderList
-        ) {
-            try{
-                FileWriter fw = new FileWriter(filePath,true);
-                BufferedWriter bw = new BufferedWriter(fw);
-                PrintWriter pw = new PrintWriter(bw);
-                pw.println(purchaseItem.getItemId()+","+purchaseItem.getItemName()+","+purchaseItem.getPurchasePrice()
-                        +","+purchaseItem.getExpireDate() +","+purchaseItem.needQuantity+","+purchaseItem.needDate);
-                pw.flush();
-                pw.close();
-            }catch(Exception e){
-                JOptionPane.showMessageDialog(null, "Unable to create purchase order...");
+        if(purchaseOrderList.isEmpty()){
+            JOptionPane.showMessageDialog(null,"You should add at least one item to your order!");
+        }else{
+            for (ItemList purchaseItem: purchaseOrderList
+            ) {
+                try{
+                    FileWriter fw = new FileWriter(filePath,true);
+                    BufferedWriter bw = new BufferedWriter(fw);
+                    PrintWriter pw = new PrintWriter(bw);
+                    pw.println(purchaseItem.getItemId()+","+purchaseItem.getItemName()+","+purchaseItem.getPurchasePrice()
+                            +","+purchaseItem.getExpireDate() +","+purchaseItem.needQuantity+","+purchaseItem.needDate);
+                    pw.flush();
+                    pw.close();
+                }catch(Exception e){
+                    JOptionPane.showMessageDialog(null, "Unable to create purchase order...");
+                }
             }
+            JOptionPane.showMessageDialog(null, "Your purchase order has been created!");
+
         }
-        JOptionPane.showMessageDialog(null, "Your purchase order has been created!");
     }
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
         updateList();
+        datePicker();
+
+    }
+
+    public void datePicker(){
+        needDate.setDayCellFactory(param -> new DateCell() {
+            @Override
+            public void updateItem(LocalDate date, boolean empty) {
+                super.updateItem(date, empty);
+                setDisable(empty || date.compareTo(LocalDate.now()) < 0 );
+            }
+        });
     }
 
     public void switchToUserMenu(javafx.event.ActionEvent event) throws IOException {
