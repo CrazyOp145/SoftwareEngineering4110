@@ -6,75 +6,23 @@
   <component name="ChangeListManager">
     <list default="true" id="e4486989-fc5b-474b-afaf-e7dea797b27f" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CSC4110-GroupProject/out/production/CSC4110-GroupProject/ItemProfileTest.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CSC4110-GroupProject/out/production/CSC4110-GroupProject/MainTest.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CSC4110-GroupProject/out/production/CSC4110-GroupProject/Profiles/CustomerProfile.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CSC4110-GroupProject/out/production/CSC4110-GroupProject/Profiles/LoginValidation.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CSC4110-GroupProject/out/production/CSC4110-GroupProject/Profiles/ProfilesFactory.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CSC4110-GroupProject/out/production/CSC4110-GroupProject/Profiles/UserProfiles.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CSC4110-GroupProject/out/production/CSC4110-GroupProject/Profiles/VendorProfile$vendorProfile.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CSC4110-GroupProject/out/production/CSC4110-GroupProject/Profiles/VendorProfile.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CSC4110-GroupProject/out/production/CSC4110-GroupProject/UnitofMeasurement.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CSC4110-GroupProject/out/production/CSC4110-GroupProject/bakeryProducts.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CSC4110-GroupProject/out/production/CSC4110-GroupProject/csvFiles/ReadFromCSVs.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CSC4110-GroupProject/out/production/CSC4110-GroupProject/csvFiles/WriteToCSVs.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CSC4110-GroupProject/out/production/CSC4110-GroupProject/csvFiles/opencsv-5.7.1.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CSC4110-GroupProject/out/production/CSC4110-GroupProject/dairy.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CSC4110-GroupProject/out/production/CSC4110-GroupProject/fruits.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CSC4110-GroupProject/out/production/CSC4110-GroupProject/itemCategory.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CSC4110-GroupProject/out/production/CSC4110-GroupProject/itemProfile.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CSC4110-GroupProject/out/production/CSC4110-GroupProject/itemProfileFactory.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CSC4110-GroupProject/out/production/CSC4110-GroupProject/juice.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CSC4110-GroupProject/out/production/CSC4110-GroupProject/meat.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CSC4110-GroupProject/out/production/CSC4110-GroupProject/nuts.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CSC4110-GroupProject/out/production/CSC4110-GroupProject/snacks.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CSC4110-GroupProject/out/production/CSC4110-GroupProject/soda.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CSC4110-GroupProject/out/production/CSC4110-GroupProject/vegetables.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CSC4110-GroupProject/src/vendorProfile.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/SoftwareEngineering4110/CreateItemProfileController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/SoftwareEngineering4110/DeleteItemController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/SoftwareEngineering4110/DeleteItemProfile.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/SoftwareEngineering4110/DisplayItemProfile.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/SoftwareEngineering4110/IdProvider.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/SoftwareEngineering4110/ItemList.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/SoftwareEngineering4110/ItemProfileTest.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/SoftwareEngineering4110/MainGUI.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/SoftwareEngineering4110/MainTest.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/SoftwareEngineering4110/Profiles/Accountant.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/SoftwareEngineering4110/Profiles/Administrator.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/SoftwareEngineering4110/Profiles/CustomerOrder.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/SoftwareEngineering4110/Profiles/CustomerProfile.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/SoftwareEngineering4110/Profiles/InventoryManager.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/SoftwareEngineering4110/Profiles/LoginValidation.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/SoftwareEngineering4110/Profiles/Owner.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/SoftwareEngineering4110/Profiles/ProfilesFactory.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/SoftwareEngineering4110/Profiles/Purchaser.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/SoftwareEngineering4110/Profiles/Salesperson.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/SoftwareEngineering4110/Profiles/SearchCustomerProfile.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/SoftwareEngineering4110/Profiles/UserProfiles.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/SoftwareEngineering4110/Profiles/VendorProfile.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/SoftwareEngineering4110/ReadItemProfile.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/SoftwareEngineering4110/SearchItemController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/SoftwareEngineering4110/SearchItemProfile.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/SoftwareEngineering4110/UnitofMeasurement.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/SoftwareEngineering4110/UpdateItemController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/SoftwareEngineering4110/UpdateItemProfile.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/SoftwareEngineering4110/UserMenuController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/SoftwareEngineering4110/bakeryProducts.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/SoftwareEngineering4110/csvFiles/ReadFromCSVs.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/SoftwareEngineering4110/csvFiles/WriteToCSVs.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/SoftwareEngineering4110/csvFiles/WriteToCustomerProfileCSV.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/SoftwareEngineering4110/dairy.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/SoftwareEngineering4110/fruits.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/SoftwareEngineering4110/itemCategory.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/SoftwareEngineering4110/itemProfile.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/SoftwareEngineering4110/itemProfileFactory.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/SoftwareEngineering4110/juice.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/SoftwareEngineering4110/meat.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/SoftwareEngineering4110/nuts.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/SoftwareEngineering4110/snacks.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/SoftwareEngineering4110/soda.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/SoftwareEngineering4110/vegetables.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CSC4110-GroupProject/src/CreateCustomerProfile.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/CSC4110-GroupProject/src/CreateCustomerProfile.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CSC4110-GroupProject/src/CreateCustomerProfileController.java" beforeDir="false" afterPath="$PROJECT_DIR$/CSC4110-GroupProject/src/CreateCustomerProfileController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CSC4110-GroupProject/src/UserMenu.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/CSC4110-GroupProject/src/UserMenu.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CSC4110-GroupProject/src/UserMenuController.java" beforeDir="false" afterPath="$PROJECT_DIR$/CSC4110-GroupProject/src/UserMenuController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CustomerProfiles.csv" beforeDir="false" afterPath="$PROJECT_DIR$/CustomerProfiles.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SoftwareEngineering4110/CreateCustomerProfile.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SoftwareEngineering4110/CreateCustomerProfile.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SoftwareEngineering4110/CreateCustomerProfileController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SoftwareEngineering4110/CreateCustomerProfileController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SoftwareEngineering4110/CreateItemProfileController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SoftwareEngineering4110/CreateItemProfileController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SoftwareEngineering4110/DeleteItemController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SoftwareEngineering4110/DeleteItemController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SoftwareEngineering4110/ItemList.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SoftwareEngineering4110/ItemList.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SoftwareEngineering4110/MainGUI.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SoftwareEngineering4110/MainGUI.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SoftwareEngineering4110/ReadItemProfile.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SoftwareEngineering4110/ReadItemProfile.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SoftwareEngineering4110/SearchItemController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SoftwareEngineering4110/SearchItemController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SoftwareEngineering4110/UpdateItemController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SoftwareEngineering4110/UpdateItemController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SoftwareEngineering4110/UpdateItemProfile.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SoftwareEngineering4110/UpdateItemProfile.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SoftwareEngineering4110/UserMenu.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SoftwareEngineering4110/UserMenu.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SoftwareEngineering4110/UserMenuController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SoftwareEngineering4110/UserMenuController.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
