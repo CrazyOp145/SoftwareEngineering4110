@@ -2,7 +2,11 @@ import javax.swing.*;
 import java.io.*;
 import java.time.LocalDate;
 import java.util.Scanner;
-
+/**
+ *
+ * @author Shijie DU  HG5241
+ *
+ */
 public class DeleteItemProfile {
     private Scanner input;
     public void deleteItemProfile(String filePath, String removeTerm){
@@ -25,17 +29,29 @@ public class DeleteItemProfile {
             input.useDelimiter("[,\n]");
 
             while(input.hasNext()){
-                itemId = input.next();
-                itemName = input.next();
-                quantity = input.next();
-                sellingPrice = input.next();
-                purchasePrice = input.next();
-                expireDate = input.next();
-                category = input.next();
-                unit = input.next();
+                String data = input.nextLine();
+                Object[] values = data.split(",");
+                Object[] valuesLine = data.split("\n");
+
+                itemId = String.valueOf(values[0]);
+                itemName = String.valueOf(values[1]);
+                quantity = String.valueOf(values[2]);
+                sellingPrice = String.valueOf(values[3]);
+                purchasePrice = String.valueOf(values[4]);
+                expireDate = String.valueOf(values[5]);
+                category = String.valueOf(values[6]);
+                unit = String.valueOf(values[7]);
+//                itemId = input.next();
+//                itemName = input.next();
+//                quantity = input.next();
+//                sellingPrice = input.next();
+//                purchasePrice = input.next();
+//                expireDate = input.next();
+//                category = input.next();
+//                unit = input.next();
 
                 if(!itemId.equals(removeTerm)){
-                    pw.print(itemId + ","+itemName+","+quantity+","+sellingPrice
+                    pw.println(itemId + ","+itemName+","+quantity+","+sellingPrice
                             +","+purchasePrice+","+expireDate+","+category+","+unit);
                 }
             }

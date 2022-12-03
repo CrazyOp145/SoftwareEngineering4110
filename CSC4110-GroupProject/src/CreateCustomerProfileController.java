@@ -1,6 +1,6 @@
 
 import Profiles.CustomerProfile;
-import csvFiles.WriteToCustomerProfileCSV;
+//import csvFiles.WriteToCustomerProfileCSV;
 import javafx.collections.FXCollections;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -101,7 +101,7 @@ public class CreateCustomerProfileController implements Initializable {
             String[] CustomerProfileData = {newProfile.getCustomerID(), newProfile.getCompanyName(), newProfile.getCity(),
                 newProfile.getState(), newProfile.getStreetAddress(), newProfile.getPhone(), Double.toString(newProfile.getBalance()),
                 Double.toString(newProfile.getLastPaidAmount()), newProfile.getLastOrderDate()};
-            WriteToCustomerProfileCSV.csvCustomerProfileWriter(CustomerProfileData);
+            //WriteToCustomerProfileCSV.csvCustomerProfileWriter(CustomerProfileData);
         }
     }
     @Override

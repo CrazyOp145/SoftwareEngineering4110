@@ -13,6 +13,11 @@ import java.io.IOException;
 
 
 
+/**
+ *
+ * @author Shijie DU  HG5241
+ *
+ */
 public class UserMenuController {
     @FXML
     private MenuBar myMenuBar;

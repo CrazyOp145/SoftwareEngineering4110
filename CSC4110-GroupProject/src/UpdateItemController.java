@@ -11,12 +11,17 @@ import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.stage.Stage;
 
+import javax.swing.*;
 import java.io.File;
 import java.io.IOException;
 import java.net.URL;
 import java.util.ArrayList;
 import java.util.ResourceBundle;
-
+/**
+ *
+ * @author Shijie DU  HG5241
+ *
+ */
 public class UpdateItemController implements Initializable {
     //New value for update
     @FXML
@@ -58,11 +63,16 @@ public class UpdateItemController implements Initializable {
     private TableColumn<ItemList, String> purchasePrice;
     @FXML
     private TableColumn<ItemList, String> expireDate;
+    @FXML
+    private TableColumn<ItemList, String> tableCategory;
+    @FXML
+    private TableColumn<ItemList, String> tableUnit;
 
     String filePath = "ItemProfile.csv";
     String temp = "temp.csv";
 
     private ObservableList<ItemList> dataList = FXCollections.observableArrayList();
+    private  ItemList item;
 
     ReadItemProfile readItemProfile = new ReadItemProfile();
 
@@ -73,13 +83,17 @@ public class UpdateItemController implements Initializable {
     File newFile = new File(temp);
 
     public void updateProfile() {
-        updateItemProfile.updateItemProfile(filePath,newItemId.getText(),newItemId.getText(),newItemName.getText(),
+        if(item.getItemId() == null){
+            JOptionPane.showMessageDialog(null, "You have to select a item to change.");
+            return;
+        }
+        updateItemProfile.updateItemProfile(filePath,item.getItemId(),newItemId.getText(),newItemName.getText(),
                 newQuantity.getText(),newSellingPrice.getText(),newPurchasePrice.getText(), String.valueOf(newExpireDate.getValue()),
                 newItemCategory.getValue(),newUnit.getValue());
         oldFile.delete();
         File dump = new File(filePath);
         newFile.renameTo(dump);
-        //updateList();
+        updateList();
     }
 
     public void updateList(){
@@ -90,6 +104,8 @@ public class UpdateItemController implements Initializable {
         sellingPrice.setCellValueFactory(new PropertyValueFactory<>("sellingPrice"));
         purchasePrice.setCellValueFactory(new PropertyValueFactory<>("purchasePrice"));
         expireDate.setCellValueFactory(new PropertyValueFactory<>("expireDate"));
+        tableCategory.setCellValueFactory(new PropertyValueFactory<>("itemCategory"));
+        tableUnit.setCellValueFactory(new PropertyValueFactory<>("unit"));
         tableView.setItems(dataList);
     }
 
@@ -103,8 +119,18 @@ public class UpdateItemController implements Initializable {
     }
 
     public void selectCell(){
-        ArrayList<ItemList> orderList = new ArrayList<ItemList>();
-        orderList.add(tableView.getSelectionModel().getSelectedItem());
+        item = tableView.getSelectionModel().getSelectedItem();
+    }
+
+    public void setCell(){
+        newItemId.setText(item.getItemId());
+        newItemName.setText(item.getItemName());
+        newSellingPrice.setText(item.getSellingPrice());
+        newPurchasePrice.setText(item.getPurchasePrice());
+        newQuantity.setText(item.getQuantity());
+        newExpireDate.getEditor().setText(item.getExpireDate());
+        newItemCategory.getEditor().setText(item.getItemCategory());
+        newUnit.getEditor().setText(item.getUnit());
     }
 
 

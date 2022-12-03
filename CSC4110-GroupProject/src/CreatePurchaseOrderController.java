@@ -17,7 +17,11 @@ import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
 import java.util.ResourceBundle;
-
+/**
+ *
+ * @author Shijie DU  HG5241
+ *
+ */
 public class CreatePurchaseOrderController implements Initializable {
     private javafx.stage.Stage Stage;
     private javafx.scene.Scene Scene;
@@ -50,7 +54,7 @@ public class CreatePurchaseOrderController implements Initializable {
     //private ArrayList<PurchaseOrderList> purchaseOrderList = new ArrayList<PurchaseOrderList>();
     private ArrayList<ItemList> purchaseOrderList = new ArrayList<>();
     ReadItemProfile readItemProfile = new ReadItemProfile();
-    PurchaseOrderList purchaseItem;
+    //PurchaseOrderList purchaseItem;
     ItemList item;
 
 
@@ -78,7 +82,6 @@ public class CreatePurchaseOrderController implements Initializable {
     }
 
     public void vendorList(){
-
         updateList();
     }
 
@@ -137,7 +140,6 @@ public class CreatePurchaseOrderController implements Initializable {
     public void initialize(URL url, ResourceBundle resourceBundle) {
         updateList();
         datePicker();
-
     }
 
     public void datePicker(){

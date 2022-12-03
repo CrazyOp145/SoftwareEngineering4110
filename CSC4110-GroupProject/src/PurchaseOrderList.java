@@ -1,5 +1,9 @@
 import javafx.beans.property.SimpleStringProperty;
-
+/**
+ *
+ * @author Shijie DU  HG5241
+ *
+ */
 public class PurchaseOrderList {
         private SimpleStringProperty itemId, itemName, quantity, purchaseP, needDate;
 

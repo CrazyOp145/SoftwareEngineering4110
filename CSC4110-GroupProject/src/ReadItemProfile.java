@@ -4,7 +4,11 @@ import javafx.collections.ObservableList;
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.util.Scanner;
-
+/**
+ *
+ * @author Shijie DU  HG5241
+ *
+ */
 public class ReadItemProfile {
     private ObservableList<ItemList> dataList = FXCollections.observableArrayList();
 
@@ -20,7 +24,8 @@ public class ReadItemProfile {
                 Object[] valuesLine = data.split("\n");
 
                 dataList.add(new ItemList(String.valueOf(values[0]),String.valueOf(values[1]),String.valueOf(values[2])
-                        ,String.valueOf(values[3]),String.valueOf(values[4]),String.valueOf(values[5])));
+                        ,String.valueOf(values[3]),String.valueOf(values[4]),String.valueOf(values[5])
+                        ,String.valueOf(values[6]),String.valueOf(values[7])));
             }
 
         } catch (FileNotFoundException e) {
