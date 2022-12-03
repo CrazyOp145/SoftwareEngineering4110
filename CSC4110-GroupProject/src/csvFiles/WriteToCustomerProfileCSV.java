@@ -15,9 +15,6 @@ public class WriteToCustomerProfileCSV{
                     CSVWriter.DEFAULT_ESCAPE_CHARACTER,
                     CSVWriter.DEFAULT_LINE_END);
 
-            String[] header = {"Last Name", "First Name", "User ID", "Password", "User Role"};
-            writer.writeNext(header);
-
             writer.writeNext(data);
             writer.close();
         }

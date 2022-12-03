@@ -9,7 +9,7 @@ public class ReadItemProfile {
     private ObservableList<ItemList> dataList = FXCollections.observableArrayList();
 
     public ObservableList<ItemList> initList(){
-        String filePath = "itemProfile.csv";
+        String filePath = "ItemProfile.csv";
         File file = new File(filePath);
 
         try {

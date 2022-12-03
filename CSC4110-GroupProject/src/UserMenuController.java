@@ -56,6 +56,30 @@ public class UserMenuController {
         Stage.show();
     }
 
+    public void switchToPurchaseOrderMenuBar(javafx.event.ActionEvent event) throws IOException {
+        Root = FXMLLoader.load(getClass().getResource("CreatePurchaseOrder.fxml"));
+        //Stage = (Stage)((Node)event.getSource()).getScene().getWindow();
+        Stage = (Stage)myMenuBar.getScene().getWindow();
+        Scene = new Scene(Root);
+        Stage.setScene(Scene);
+        Stage.show();
+    }
+    public void switchCreateCustomerProfile(javafx.event.ActionEvent event) throws IOException {
+        Root = FXMLLoader.load(getClass().getResource("CreateCustomerProfile.fxml"));
+        //Stage = (Stage)((Node)event.getSource()).getScene().getWindow();
+        Stage = (Stage)myMenuBar.getScene().getWindow();
+        Scene = new Scene(Root);
+        Stage.setScene(Scene);
+        Stage.show();
+    }
+    public void switchSearchCustomerProfile(javafx.event.ActionEvent event) throws IOException {
+        Root = FXMLLoader.load(getClass().getResource("SearchCustomerProfile.fxml"));
+        //Stage = (Stage)((Node)event.getSource()).getScene().getWindow();
+        Stage = (Stage)myMenuBar.getScene().getWindow();
+        Scene = new Scene(Root);
+        Stage.setScene(Scene);
+        Stage.show();
+    }
     public void switchToCreateItemProfileScene(ActionEvent event) throws IOException {
         Root = FXMLLoader.load(getClass().getResource("CreateItemProfile.fxml"));
         Stage = (Stage)((Node)event.getSource()).getScene().getWindow();

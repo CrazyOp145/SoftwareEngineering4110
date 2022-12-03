@@ -38,7 +38,8 @@ public class DeleteItemController implements Initializable {
     private TableColumn<ItemList, String>  expireDate;
     @FXML
     private TextField deleteItemBar;
-    String filePath = "itemProfile.csv";
+    String filePath = "ItemProfile.csv";
+    String temp = "temp.csv";
 
     private ObservableList<ItemList> dataList = FXCollections.observableArrayList();
 
@@ -47,18 +48,22 @@ public class DeleteItemController implements Initializable {
     DeleteItemProfile deleteItemProfile = new DeleteItemProfile();
 
 
-    File oldFile = new File("ItemProfile.csv");
-    File newFile = new File("temp.csv");
+    File oldFile = new File(filePath);
+    File newFile = new File(temp);
     public void deleteProfile(){
         deleteItemProfile.deleteItemProfile(filePath,deleteItemBar.getText());
         oldFile.delete();
         File dump = new File(filePath);
         newFile.renameTo(dump);
         tableView.setItems(dataList);
+        clearList();
+        updateList();
     }
 
-    @Override
-    public void initialize(URL url, ResourceBundle resourceBundle) {
+    public void clearList(){
+        dataList.clear();
+    }
+    public void updateList(){
         dataList = readItemProfile.initList();
         itemId.setCellValueFactory(new PropertyValueFactory<>("itemId"));
         itemName.setCellValueFactory(new PropertyValueFactory<>("itemName"));
@@ -67,6 +72,10 @@ public class DeleteItemController implements Initializable {
         purchasePrice.setCellValueFactory(new PropertyValueFactory<>("purchasePrice"));
         expireDate.setCellValueFactory(new PropertyValueFactory<>("expireDate"));
         tableView.setItems(dataList);
+    }
+    @Override
+    public void initialize(URL url, ResourceBundle resourceBundle) {
+        updateList();
     }
 
     public void switchToUserMenu(javafx.event.ActionEvent event) throws IOException {

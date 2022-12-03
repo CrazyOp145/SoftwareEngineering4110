@@ -12,7 +12,6 @@ public class MainGUI extends Application{
     }
     @Override
     public void start(Stage createItemStage) throws Exception {
-        //Parent root = FXMLLoader.load(getClass().getResource("CreateItemProfile.fxml"));
         Parent root = FXMLLoader.load(getClass().getResource("UserMenu.fxml"));
         //Stage stage = new Stage();
         Scene scene = new Scene(root, 600,400);
@@ -22,6 +21,7 @@ public class MainGUI extends Application{
         createItemStage.setTitle("WSU Inc. Wholesale Food Distribution");
         createItemStage.setScene(scene);
         createItemStage.show();
+
     }
 
 

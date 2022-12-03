@@ -33,16 +33,17 @@
             </Menu>
             <Menu mnemonicParsing="false" text="Search">
                <items>
-                  <MenuItem mnemonicParsing="false" text="User profile" />
+                  <MenuItem mnemonicParsing="false" onAction="#switchSearchCustomerProfile" text="Customer Profile" />
                   <MenuItem mnemonicParsing="false" text="Vendor profile" />
                   <MenuItem mnemonicParsing="false" onAction="#switchToSearchItemMenuBar" text="Item profile" />
                </items>
             </Menu>
           <Menu mnemonicParsing="false" text="Create">
             <items>
-              <MenuItem mnemonicParsing="false" text="User profile" />
+              <MenuItem mnemonicParsing="false" onAction="#switchCreateCustomerProfile" text="Customer Profile" />
                   <MenuItem mnemonicParsing="false" text="Vendor profile" />
                   <MenuItem mnemonicParsing="false" onAction="#switchToCreateItemProfileSceneMenuBar" text="Item profile" />
+                  <MenuItem mnemonicParsing="false" onAction="#switchToPurchaseOrderMenuBar" text="Purchase order" />
             </items>
           </Menu>
             <Menu mnemonicParsing="false" text="Delete">

@@ -7,9 +7,9 @@ public class CustomerProfile extends UserProfiles{
     private String streetAddress;
     private String state;
     private String phone;
-    private double balance = 0;
-    private double lastPaidAmount = 0;
-    private String lastOrderDate = "";
+    private double balance;
+    private double lastPaidAmount;
+    private String lastOrderDate;
     public CustomerProfile(){
 
     }
@@ -21,7 +21,9 @@ public class CustomerProfile extends UserProfiles{
         this.city = city;
         this.state = state;
         this.phone = phone;
-        this.balance = balance;
+        this.balance = 0;
+        this.lastPaidAmount = 0;
+        this.lastOrderDate = "None";
     }
 
     public String getCustomerID() {
