@@ -1,3 +1,5 @@
+import javafx.beans.value.ChangeListener;
+import javafx.beans.value.ObservableValue;
 import javafx.collections.FXCollections;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -85,10 +87,22 @@ public class CreateItemProfileController implements Initializable {
             pw.flush();
             pw.close();
             JOptionPane.showMessageDialog(null, "Your item has been created!");
+            emptyTextField();
         }catch(Exception e){
             JOptionPane.showMessageDialog(null, "Unable to save the record...");
         }
 
+    }
+
+    public void emptyTextField(){
+        itemName.clear();
+        itemCategory.getItems().clear();
+        quantity.clear();
+        sellingPrice.clear();
+        purchasePrice.clear();
+        expireDate.getEditor().clear();
+        unit.getItems().clear();
+        VendorID.getItems().clear();
     }
 
     public void switchToUserMenuScene(javafx.event.ActionEvent event) throws IOException {
@@ -106,6 +120,11 @@ public class CreateItemProfileController implements Initializable {
         itemCategory.setOnAction(this::getCategory);
         unit.getItems().addAll(unitCategory);
         unit.setOnAction(this::getUnitCategory);
+        datePicker();
+        TextLengthLimiter(itemName,20);
+        TextTypeLimiter(quantity);
+        TextTypeLimiter(sellingPrice);
+        TextTypeLimiter(purchasePrice);
     }
 
     public String getCategory(ActionEvent event){
@@ -117,4 +136,37 @@ public class CreateItemProfileController implements Initializable {
         String unitCategory = unit.getValue();
         return unitCategory;
     }
+    public void datePicker(){
+        expireDate.setDayCellFactory(param -> new DateCell() {
+            @Override
+            public void updateItem(LocalDate date, boolean empty) {
+                super.updateItem(date, empty);
+                setDisable(empty || date.compareTo(LocalDate.now()) < 0 );
+            }
+        });
+    }
+
+    public void TextLengthLimiter(final TextField tf, final int maxLength){
+        tf.textProperty().addListener(new ChangeListener<String>() {
+            @Override
+            public void changed(final ObservableValue<? extends String> ov, final String oldValue, final String newValue) {
+                if (tf.getText().length() > maxLength) {
+                    String s = tf.getText().substring(0, maxLength);
+                    tf.setText(s);
+                }
+            }
+        });
+    }
+
+    public void TextTypeLimiter(final TextField tf){
+        tf.textProperty().addListener(new ChangeListener<String>() {
+            @Override
+            public void changed(ObservableValue<? extends String> observable, String oldValue, String newValue) {
+                if (!newValue.matches("\\d*\\.\\d*")) {
+                    tf.setText(newValue.replaceAll("\\D", ""));
+                }
+            }
+        });
+    }
+
 }
