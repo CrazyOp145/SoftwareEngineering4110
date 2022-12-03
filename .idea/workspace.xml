@@ -6,41 +6,8 @@
   <component name="ChangeListManager">
     <list default="true" id="3b941ea0-61b1-4331-a59f-9f59433fc7fd" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CSC4110-GroupProject/src/BakeryProducts.java" beforeDir="false" afterPath="$PROJECT_DIR$/CSC4110-GroupProject/src/ItemProfiles/BakeryProducts.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CSC4110-GroupProject/src/CreateCustomerProfile.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/CSC4110-GroupProject/src/GUIs/CreateCustomerProfile.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CSC4110-GroupProject/src/CreateCustomerProfileController.java" beforeDir="false" afterPath="$PROJECT_DIR$/CSC4110-GroupProject/src/GUIControllers/CreateCustomerProfileController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CSC4110-GroupProject/src/CreateItemProfile.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/CSC4110-GroupProject/src/GUIs/CreateItemProfile.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CSC4110-GroupProject/src/CreateItemProfileController.java" beforeDir="false" afterPath="$PROJECT_DIR$/CSC4110-GroupProject/src/GUIControllers/CreateItemProfileController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CSC4110-GroupProject/src/Dairy.java" beforeDir="false" afterPath="$PROJECT_DIR$/CSC4110-GroupProject/src/ItemProfiles/Dairy.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CSC4110-GroupProject/src/DeleteItemController.java" beforeDir="false" afterPath="$PROJECT_DIR$/CSC4110-GroupProject/src/GUIControllers/DeleteItemController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CSC4110-GroupProject/src/DeleteItemProfile.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/CSC4110-GroupProject/src/GUIs/DeleteItemProfile.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CSC4110-GroupProject/src/DeleteItemProfile.java" beforeDir="false" afterPath="$PROJECT_DIR$/CSC4110-GroupProject/src/ItemProfiles/DeleteItemProfile.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CSC4110-GroupProject/src/DisplayItemProfile.java" beforeDir="false" afterPath="$PROJECT_DIR$/CSC4110-GroupProject/src/ItemProfiles/DisplayItemProfile.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CSC4110-GroupProject/src/Fruits.java" beforeDir="false" afterPath="$PROJECT_DIR$/CSC4110-GroupProject/src/ItemProfiles/Fruits.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CSC4110-GroupProject/src/ItemList.java" beforeDir="false" afterPath="$PROJECT_DIR$/CSC4110-GroupProject/src/ItemProfiles/ItemList.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CSC4110-GroupProject/src/ItemProfile.java" beforeDir="false" afterPath="$PROJECT_DIR$/CSC4110-GroupProject/src/ItemProfiles/ItemProfile.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CSC4110-GroupProject/src/ItemProfileFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/CSC4110-GroupProject/src/ItemProfiles/ItemProfileFactory.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CSC4110-GroupProject/src/ItemProfileTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/CSC4110-GroupProject/src/ItemProfiles/ItemProfileTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CSC4110-GroupProject/src/Juice.java" beforeDir="false" afterPath="$PROJECT_DIR$/CSC4110-GroupProject/src/ItemProfiles/Juice.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CSC4110-GroupProject/src/MainGUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/CSC4110-GroupProject/src/MainGUI.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CSC4110-GroupProject/src/Meat.java" beforeDir="false" afterPath="$PROJECT_DIR$/CSC4110-GroupProject/src/ItemProfiles/Meat.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CSC4110-GroupProject/src/Nuts.java" beforeDir="false" afterPath="$PROJECT_DIR$/CSC4110-GroupProject/src/ItemProfiles/Nuts.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CSC4110-GroupProject/src/ReadItemProfile.java" beforeDir="false" afterPath="$PROJECT_DIR$/CSC4110-GroupProject/src/ItemProfiles/ReadItemProfile.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CSC4110-GroupProject/src/SearchItemController.java" beforeDir="false" afterPath="$PROJECT_DIR$/CSC4110-GroupProject/src/GUIControllers/SearchItemController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CSC4110-GroupProject/src/SearchItemProfile.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/CSC4110-GroupProject/src/GUIs/SearchItemProfile.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CSC4110-GroupProject/src/SearchItemProfile.java" beforeDir="false" afterPath="$PROJECT_DIR$/CSC4110-GroupProject/src/ItemProfiles/SearchItemProfile.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CSC4110-GroupProject/src/Snacks.java" beforeDir="false" afterPath="$PROJECT_DIR$/CSC4110-GroupProject/src/ItemProfiles/Snacks.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CSC4110-GroupProject/src/Soda.java" beforeDir="false" afterPath="$PROJECT_DIR$/CSC4110-GroupProject/src/Profiles/Soda.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CSC4110-GroupProject/src/UnitofMeasurement.java" beforeDir="false" afterPath="$PROJECT_DIR$/CSC4110-GroupProject/src/ItemProfiles/UnitofMeasurement.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CSC4110-GroupProject/src/UpdateItemController.java" beforeDir="false" afterPath="$PROJECT_DIR$/CSC4110-GroupProject/src/GUIControllers/UpdateItemController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CSC4110-GroupProject/src/UpdateItemProfile.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/CSC4110-GroupProject/src/GUIs/UpdateItemProfile.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CSC4110-GroupProject/src/UpdateItemProfile.java" beforeDir="false" afterPath="$PROJECT_DIR$/CSC4110-GroupProject/src/ItemProfiles/UpdateItemProfile.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CSC4110-GroupProject/src/UserMenu.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/CSC4110-GroupProject/src/GUIs/UserMenu.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CSC4110-GroupProject/src/UserMenuController.java" beforeDir="false" afterPath="$PROJECT_DIR$/CSC4110-GroupProject/src/GUIControllers/UserMenuController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CSC4110-GroupProject/src/Vegetables.java" beforeDir="false" afterPath="$PROJECT_DIR$/CSC4110-GroupProject/src/ItemProfiles/Vegetables.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CSC4110-GroupProject/src/application.css" beforeDir="false" afterPath="$PROJECT_DIR$/CSC4110-GroupProject/src/GUIs/application.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CSC4110-GroupProject/src/itemCategory.java" beforeDir="false" afterPath="$PROJECT_DIR$/CSC4110-GroupProject/src/ItemProfiles/itemCategory.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CSC4110-GroupProject/src/vendorProfile.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CSC4110-GroupProject/src/CreateCustomerProfile.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/CSC4110-GroupProject/src/CreateCustomerProfile.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CSC4110-GroupProject/src/CreateCustomerProfileController.java" beforeDir="false" afterPath="$PROJECT_DIR$/CSC4110-GroupProject/src/CreateCustomerProfileController.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -82,11 +49,6 @@
     &quot;settings.editor.selected.configurable&quot;: &quot;preferences.JavaFX&quot;
   }
 }</component>
-  <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\Paulo\eclipse-workspace\databaseProject\SoftwareEngineering4110\CSC4110-GroupProject\src\GUIs" />
-    </key>
-  </component>
   <component name="RunManager" selected="Application.MainGUI">
     <configuration name="MainGUI" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="MainGUI" />
