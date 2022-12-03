@@ -1,0 +1,19 @@
+Index: src/Profiles.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>public abstract class Profiles {\r\n    private String firstName;\r\n    private String lastName;\r\n    private String ID;\r\n    private String password;\r\n\r\n    public Profiles(String firstName, String lastName, String ID, String password){\r\n        this.firstName = firstName;\r\n        this.lastName = lastName;\r\n        this.ID = ID;\r\n        this.password = password;\r\n    }\r\n\r\n    public String getFirstName() {\r\n        return firstName;\r\n    }\r\n\r\n    public String getLastName() {\r\n        return lastName;\r\n    }\r\n\r\n    public String getID() {\r\n        return ID;\r\n    }\r\n\r\n    public String getPassword() {\r\n        return password;\r\n    }\r\n}
+===================================================================
+diff --git a/src/Profiles.java b/src/Profiles.java
+--- a/src/Profiles.java	
++++ b/src/Profiles.java	
+@@ -4,6 +4,10 @@
+     private String ID;
+     private String password;
+ 
++    public Profiles(){
++
++    }
++
+     public Profiles(String firstName, String lastName, String ID, String password){
+         this.firstName = firstName;
+         this.lastName = lastName;
