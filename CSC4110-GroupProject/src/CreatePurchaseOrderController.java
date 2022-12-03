@@ -40,8 +40,7 @@ public class CreatePurchaseOrderController implements Initializable {
     private TextField purchaseQuantity;
     @FXML
     private DatePicker needDate;
-    int purchaseId = PurchaseIdProvider.getInstance().getUniqueId();;
-    String filePath = "PurchaseOrder"+ purchaseId +".csv";
+
     String temp = "temp.csv";
 
     DateTimeFormatter formatter = DateTimeFormatter.ofPattern("M/d/yyyy");
@@ -54,8 +53,6 @@ public class CreatePurchaseOrderController implements Initializable {
     PurchaseOrderList purchaseItem;
     ItemList item;
 
-    File oldFile = new File(filePath);
-    File newFile = new File(temp);
 
     public void clearList(){
         dataList.clear();
@@ -110,10 +107,13 @@ public class CreatePurchaseOrderController implements Initializable {
             addToOrderCounter = 0;
         }
     }
+
     public void createOrder(){
         if(purchaseOrderList.isEmpty()){
             JOptionPane.showMessageDialog(null,"You should add at least one item to your order!");
         }else{
+            int purchaseId = PurchaseIdProvider.getInstance().getUniqueId();;
+            String filePath = "PurchaseOrder"+ purchaseId +".csv";
             for (ItemList purchaseItem: purchaseOrderList
             ) {
                 try{
@@ -129,7 +129,7 @@ public class CreatePurchaseOrderController implements Initializable {
                 }
             }
             JOptionPane.showMessageDialog(null, "Your purchase order has been created!");
-
+            purchaseOrderList.clear();
         }
     }
 
