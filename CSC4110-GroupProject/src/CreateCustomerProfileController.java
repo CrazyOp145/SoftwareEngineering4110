@@ -59,7 +59,7 @@ public class CreateCustomerProfileController implements Initializable {
                 "OK", "OR", "PA", "RI", "SC", "SD", "TN", "TX", "UT", "UT", "VT", "VA", "WA", "WV", "WI", "WY"));
         stateCB.getItems();
     }
-    public void submitCustomerProfile(ActionEvent event) {
+    public void submitCustomerProfile(ActionEvent event) throws IOException {
         validityChecker = true;
         Random randID = new Random();
         String customerID = String.valueOf(randID.nextInt(999999));
@@ -98,10 +98,14 @@ public class CreateCustomerProfileController implements Initializable {
         if (validityChecker){
             CustomerProfile newProfile = new CustomerProfile(customerID, companyName, address, city, state, phoneNumber);
             System.out.println(newProfile.toString());
-            String[] CustomerProfileData = {newProfile.getCustomerID(), newProfile.getCompanyName(), newProfile.getCity(),
-                newProfile.getState(), newProfile.getStreetAddress(), newProfile.getPhone(), Double.toString(newProfile.getBalance()),
-                Double.toString(newProfile.getLastPaidAmount()), newProfile.getLastOrderDate()};
-            WriteToCustomerProfileCSV.csvCustomerProfileWriter(CustomerProfileData);
+            FileWriter fw = new FileWriter("CustomerProfiles.csv",true);
+            BufferedWriter bw = new BufferedWriter(fw);
+            PrintWriter pw = new PrintWriter(bw);
+            pw.println(newProfile.getCustomerID() +"," +newProfile.getCompanyName() +","+ newProfile.getStreetAddress()+"," +
+                    newProfile.getCity()+"," + newProfile.getState() +","+ newProfile.getPhone()+"," + Double.toString(newProfile.getBalance()) +","+
+                    Double.toString(newProfile.getLastPaidAmount()) +","+ newProfile.getLastOrderDate());
+            pw.flush();
+            pw.close();
         }
     }
     @Override

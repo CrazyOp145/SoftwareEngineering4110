@@ -1,3 +1,4 @@
+import Profiles.CustomerList;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.collections.transformation.FilteredList;
@@ -30,71 +31,74 @@ public class SearchCustomerProfileController implements Initializable {
     private Parent Root;
 
     @FXML
-    private TextField searchItemBar;
+    private TextField searchCustomerBar;
     @FXML
-    private TableView<ItemList> tableView;
+    private TableView<CustomerList> tableView;
     @FXML
-    private TableColumn<ItemList, String> customerID;
+    private TableColumn<CustomerList, String> customerID;
     @FXML
-    private TableColumn<ItemList, String> companyName;
+    private TableColumn<CustomerList, String> companyName;
     @FXML
-    private TableColumn<ItemList, String>  streetAddress;
+    private TableColumn<CustomerList, String>  streetAddress;
     @FXML
-    private TableColumn<ItemList, String>  city;
+    private TableColumn<CustomerList, String>  city;
     @FXML
-    private TableColumn<ItemList, String>  state;
+    private TableColumn<CustomerList, String>  state;
     @FXML
-    private TableColumn<ItemList, String>  balance;
+    private TableColumn<CustomerList, String>  phoneNumber;
     @FXML
-    private TableColumn<ItemList, String>  lastPaidAmount;
+    private TableColumn<CustomerList, String>  balance;
     @FXML
-    private TableColumn<ItemList, String>  lastOrderDate;
-    private ObservableList<ItemList> dataList = FXCollections.observableArrayList();
+    private TableColumn<CustomerList, String>  lastPaidAmount;
+    @FXML
+    private TableColumn<CustomerList, String>  lastOrderDate;
+    private ObservableList<CustomerList> dataList = FXCollections.observableArrayList();
 
 
-    ReadItemProfile readItemProfile = new ReadItemProfile();
+    ReadCustomerProfile readCustomerProfile = new ReadCustomerProfile();
 
     public void updateList(){
-        dataList = readItemProfile.initList();
+        dataList = ReadCustomerProfile.initList();
         customerID.setCellValueFactory(new PropertyValueFactory<>("customerID"));
         companyName.setCellValueFactory(new PropertyValueFactory<>("companyName"));
         streetAddress.setCellValueFactory(new PropertyValueFactory<>("streetAddress"));
         city.setCellValueFactory(new PropertyValueFactory<>("city"));
         state.setCellValueFactory(new PropertyValueFactory<>("state"));
-        purchasePrice.setCellValueFactory(new PropertyValueFactory<>("purchasePrice"));
-        expireDate.setCellValueFactory(new PropertyValueFactory<>("expireDate"));
+        phoneNumber.setCellValueFactory(new PropertyValueFactory<>("phoneNumber"));
+        balance.setCellValueFactory(new PropertyValueFactory<>("balance"));
+        lastPaidAmount.setCellValueFactory(new PropertyValueFactory<>("lastPaidAmount"));
+        lastOrderDate.setCellValueFactory(new PropertyValueFactory<>("lastOrderDate"));
         tableView.setItems(dataList);
     }
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
         updateList();
-        FilteredList<ItemList> filteredData = new FilteredList<>(dataList, b -> true);
-        searchItemBar.textProperty().addListener((observable, oldValue, newValue) -> {
-            filteredData.setPredicate(ItemList -> {
+        FilteredList<CustomerList> filteredData = new FilteredList<>(dataList, b -> true);
+        searchCustomerBar.textProperty().addListener((observable, oldValue, newValue) -> {
+            filteredData.setPredicate(CustomerList -> {
                 // If filter text is empty, display all persons.
                 if (newValue == null || newValue.isEmpty()) {
                     return true;
                 }
                 // Compare first name and last name of every person with filter text.
                 String lowerCaseFilter = newValue.toLowerCase();
-                if (ItemList.getItemId().toString().indexOf(lowerCaseFilter) > -1 ) {
+                if (CustomerList.getCustomerID().toString().indexOf(lowerCaseFilter) > -1 ) {
                     return true; // Filter matches first name.
-                } else if (ItemList.getItemName().toLowerCase().indexOf(lowerCaseFilter) > -1) {
+                } else if (CustomerList.getCompanyName().toLowerCase().indexOf(lowerCaseFilter) > -1) {
                     return true; // Filter matches last name.
                 }
-                else if (String.valueOf(ItemList.getExpireDate()).indexOf(lowerCaseFilter) > -1)
-                    return true;
                 else
                     return false; // Does not match.
             });
-            tableView.setPlaceholder(new Label("The Item "+ newValue +" profile is not found"));
+            tableView.setPlaceholder(new Label("The Customer "+ newValue +" profile is not found"));
         });
-        SortedList<ItemList> sortedData = new SortedList<>(filteredData);
+        SortedList<CustomerList> sortedData = new SortedList<>(filteredData);
         sortedData.comparatorProperty().bind(tableView.comparatorProperty());
         tableView.setItems(sortedData);
 
     }
+
 
     public void switchToUserMenu(javafx.event.ActionEvent event) throws IOException {
         Root = FXMLLoader.load(getClass().getResource("UserMenu.fxml"));
