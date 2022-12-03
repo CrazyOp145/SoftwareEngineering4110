@@ -2,7 +2,19 @@ import javafx.beans.property.SimpleStringProperty;
 
 public class ItemList {
     private SimpleStringProperty itemId, itemName, quantity, sellingP, purchaseP, expireDate;
+    String needDate, needQuantity;
 
+    public void setNeedQuantity(String needQuantity) {
+        this.needQuantity = needQuantity;
+    }
+    public void setNeedDate(String needDate) {this.needDate = needDate;
+    }
+    public String getNeedQuantity() {
+        return needQuantity;
+    }
+    public String getNeedDate() {
+        return needDate;
+    }
     public String getItemId() {
         return itemId.get();
     }
@@ -26,6 +38,7 @@ public class ItemList {
     public String getExpireDate() {
         return expireDate.get();
     }
+
 
     ItemList(String itemId, String itemName, String quantity, String sellingP, String purchaseP, String expireDate) {
         this.itemId = new SimpleStringProperty(itemId);
