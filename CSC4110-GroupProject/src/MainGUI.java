@@ -13,7 +13,7 @@ public class MainGUI extends Application{
     @Override
     public void start(Stage createItemStage) throws Exception {
         //Parent root = FXMLLoader.load(getClass().getResource("CreateItemProfile.fxml"));
-        Parent root = FXMLLoader.load(getClass().getResource("UserMenu.fxml"));
+        Parent root = FXMLLoader.load(getClass().getResource("GUIs/UserMenu.fxml"));
         //Stage stage = new Stage();
         Scene scene = new Scene(root, 600,400);
         //scene.getStylesheets().add(getClass().getResource("application.css").toExternalForm());
