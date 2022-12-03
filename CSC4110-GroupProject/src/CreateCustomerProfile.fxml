@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
-
 
 <AnchorPane prefHeight="476.0" prefWidth="474.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="CreateCustomerProfileController">
    <children>
@@ -13,7 +13,6 @@
       <TextField fx:id="companyNameTF" layoutX="287.0" layoutY="99.0" />
       <TextField fx:id="addressTF" layoutX="287.0" layoutY="163.0" />
       <TextField fx:id="cityTF" layoutX="287.0" layoutY="226.0" />
-      <TextField fx:id="stateTF" layoutX="287.0" layoutY="281.0" />
       <TextField fx:id="phoneNumberTF" layoutX="287.0" layoutY="337.0" />
       <Label layoutX="85.0" layoutY="103.0" text="Company Name:" />
       <Label layoutX="85.0" layoutY="167.0" text="Address:" />
@@ -26,5 +25,6 @@
          </font>
       </Label>
       <Label fx:id="errorMessage" layoutX="14.0" layoutY="405.0" prefHeight="35.0" prefWidth="264.0" />
+      <ChoiceBox fx:id="stateCB" layoutX="286.0" layoutY="281.0" prefWidth="150.0" />
    </children>
 </AnchorPane>
