@@ -69,6 +69,15 @@ public class UserMenuController {
         Stage.setScene(Scene);
         Stage.show();
     }
+
+    public void switchToPurchaseOrderViewMenuBar(javafx.event.ActionEvent event) throws IOException {
+        Root = FXMLLoader.load(getClass().getResource("PurchaseOrderView.fxml"));
+        //Stage = (Stage)((Node)event.getSource()).getScene().getWindow();
+        Stage = (Stage)myMenuBar.getScene().getWindow();
+        Scene = new Scene(Root);
+        Stage.setScene(Scene);
+        Stage.show();
+    }
     public void switchCreateCustomerProfile(javafx.event.ActionEvent event) throws IOException {
         Root = FXMLLoader.load(getClass().getResource("CreateCustomerProfile.fxml"));
         //Stage = (Stage)((Node)event.getSource()).getScene().getWindow();

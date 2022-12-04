@@ -4,10 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e4486989-fc5b-474b-afaf-e7dea797b27f" name="Changes" comment="add subtotal for CreatePurchaseOrderController-- cj du hg5241">
-      <change afterPath="$PROJECT_DIR$/CSC4110-GroupProject/src/PurchaseOrderView.fxml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/CSC4110-GroupProject/src/PurchaseOrderView.java" afterDir="false" />
+    <list default="true" id="e4486989-fc5b-474b-afaf-e7dea797b27f" name="Changes" comment="add view PurchaseOrderView, CalculatePurchaseOrderTotalCost wait for implement-- cj du hg5241">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CSC4110-GroupProject/src/CalculatePurchaseOrderTotalCost.java" beforeDir="false" afterPath="$PROJECT_DIR$/CSC4110-GroupProject/src/CalculatePurchaseOrderTotalCost.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CSC4110-GroupProject/src/UserMenu.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/CSC4110-GroupProject/src/UserMenu.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CSC4110-GroupProject/src/UserMenuController.java" beforeDir="false" afterPath="$PROJECT_DIR$/CSC4110-GroupProject/src/UserMenuController.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -17,8 +18,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Class" />
         <option value="FxmlFile" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -60,7 +61,14 @@
       <recent name="C:\Users\dsj51\SoftwareEngineering4110\CSC4110-GroupProject\src\Profiles" />
     </key>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Application.MainGUI">
+    <configuration name="CalculatePurchaseOrderTotalCost" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="CalculatePurchaseOrderTotalCost" />
+      <module name="SoftwareEngineering4110" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="MainGUI" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="ALTERNATIVE_JRE_PATH" value="18" />
       <option name="MAIN_CLASS_NAME" value="MainGUI" />
@@ -70,9 +78,14 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <list>
+      <item itemvalue="Application.CalculatePurchaseOrderTotalCost" />
+      <item itemvalue="Application.MainGUI" />
+    </list>
     <recent_temporary>
       <list>
         <item itemvalue="Application.MainGUI" />
+        <item itemvalue="Application.CalculatePurchaseOrderTotalCost" />
       </list>
     </recent_temporary>
   </component>
@@ -106,7 +119,14 @@
       <option name="project" value="LOCAL" />
       <updated>1670121553469</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="add view PurchaseOrderView, CalculatePurchaseOrderTotalCost wait for implement-- cj du hg5241">
+      <created>1670124015166</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1670124015166</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -151,7 +171,8 @@
     <MESSAGE value="Bug fixed, clear the output directory, moved it to under main file as default. -- cj du hg5241" />
     <MESSAGE value="add ItemProfile.csv -- cj du hg5241" />
     <MESSAGE value="add subtotal for CreatePurchaseOrderController-- cj du hg5241" />
-    <option name="LAST_COMMIT_MESSAGE" value="add subtotal for CreatePurchaseOrderController-- cj du hg5241" />
+    <MESSAGE value="add view PurchaseOrderView, CalculatePurchaseOrderTotalCost wait for implement-- cj du hg5241" />
+    <option name="LAST_COMMIT_MESSAGE" value="add view PurchaseOrderView, CalculatePurchaseOrderTotalCost wait for implement-- cj du hg5241" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
