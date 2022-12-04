@@ -1,6 +1,6 @@
 package Profiles;
 
-public class Salesperson extends UserProfiles{
+public class Salesperson implements UserProfiles{
     private String firstName;
     private String lastName;
     private String ID;
@@ -18,44 +18,57 @@ public class Salesperson extends UserProfiles{
         this.password = password;
     }
 
-    @Override
     public String getFirstName() {
         return firstName;
     }
 
+    @Override
     public void setFirstName(String firstName) {
         this.firstName = firstName;
     }
-
-    @Override
     public String getLastName() {
         return lastName;
     }
 
+    @Override
     public void setLastName(String lastName) {
         this.lastName = lastName;
     }
-
-    @Override
     public String getID() {
         return ID;
     }
 
+    @Override
     public void setID(String ID) {
         this.ID = ID;
     }
 
-    @Override
     public String getPassword() {
         return password;
     }
 
+    @Override
     public void setPassword(String password) {
         this.password = password;
     }
 
     public String getUserType() {
         return userType;
+    }
+
+    @Override
+    public void setStreet(String street) {
+        street = null;
+    }
+
+    @Override
+    public void setState(String state) {
+        state = null;
+    }
+
+    @Override
+    public void setCity(String city) {
+        city = null;
     }
 
     public void setUserType(String userType) {

@@ -1,6 +1,6 @@
 package Profiles;
 
-public class CustomerProfile extends UserProfiles{
+public class CustomerProfile implements UserProfiles{
     private String customerID;
     private String companyName;
     private String city;
@@ -10,6 +10,7 @@ public class CustomerProfile extends UserProfiles{
     private double balance = 0;
     private double lastPaidAmount = 0;
     private String lastOrderDate = "";
+    private String pw = null;
     public CustomerProfile(){
 
     }
@@ -23,45 +24,26 @@ public class CustomerProfile extends UserProfiles{
         this.phone = phone;
         this.balance = balance;
     }
+    public String getCompanyName(){return companyName;}
 
     public String getCustomerID() {
         return customerID;
     }
 
-    public void setCustomerID(String customerID) {
-        this.customerID = customerID;
-    }
-
-    public String getCompanyName() {
-        return companyName;
-    }
-
-    public void setCompanyName(String fullName) {
-        this.companyName = companyName;
-    }
+    //public void setCompanyName(String fullName) {
+    //    this.companyName = companyName;
+    //}
 
     public String getCity() {
         return city;
-    }
-
-    public void setCity(String city) {
-        this.city = city;
     }
 
     public String getStreetAddress() {
         return streetAddress;
     }
 
-    public void setStreetAddress(String streetAddress) {
-        this.streetAddress = streetAddress;
-    }
-
     public String getState() {
         return state;
-    }
-
-    public void setState(String state) {
-        this.state = state;
     }
 
     public String getPhone() {
@@ -98,5 +80,45 @@ public class CustomerProfile extends UserProfiles{
     public String toString(){
         return (customerID +" "+ companyName+" " +streetAddress+ " "+city+" " +state+" "+ phone + " "
                 + balance +" "+ lastPaidAmount + " " +lastOrderDate);
+    }
+
+    @Override
+    public void setFirstName(String fName) {
+        companyName = fName;
+    }
+
+    @Override
+    public void setLastName(String lName) {
+        lName = null;
+    }
+
+    @Override
+    public void setID(String id) {
+        customerID = id;
+    }
+
+    @Override
+    public void setPassword(String pw) {
+        this.pw = pw;
+    }
+
+    @Override
+    public String getUserType() {
+        return "Customer";
+    }
+
+    @Override
+    public void setStreet(String street) {
+        this.streetAddress = street;
+    }
+
+    @Override
+    public void setState(String state) {
+        this.state = state;
+    }
+
+    @Override
+    public void setCity(String city) {
+        this.city = city;
     }
 }

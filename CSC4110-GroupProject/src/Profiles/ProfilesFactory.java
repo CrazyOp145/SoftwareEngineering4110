@@ -20,7 +20,7 @@ public class ProfilesFactory {
                 return new Accountant();
             case "SALESPERSON":
                 return new Salesperson();
-            case "VENDOR PROFILE":
+            case "VENDOR":
                 return new VendorProfile();
             default:
                 throw new IllegalArgumentException("Unknown profile type "+ profileType);

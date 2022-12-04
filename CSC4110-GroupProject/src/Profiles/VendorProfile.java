@@ -1,18 +1,15 @@
 package Profiles;
-public class VendorProfile extends UserProfiles{
-        String vendorName;
-        String street, city;
-        char state;
-        String phone;
-        double balance, lPaidAmount;
-        String lOrderDate, discountStartDate;
+public class VendorProfile implements UserProfiles{
+        private String vendorName, vendorID, vendorPW;
+        private String street, city, state;
+        private String phone;
+        private double balance, lPaidAmount;
+        private String lOrderDate, discountStartDate;
 
         public VendorProfile(){
-
         }
-        public VendorProfile(String vendorName, String vendorID, String password, String street, String city, char state,
+        public VendorProfile(String vendorName, String street, String city, String state,
                              String phone, double balance, double lPaidAmount, String lOrderDate, String discountStartDate){
-            super(null,null,vendorID,password);
             this.vendorName = vendorName;
             this.street = street;
             this.city = city;
@@ -24,20 +21,44 @@ public class VendorProfile extends UserProfiles{
             this.discountStartDate = discountStartDate;
         }
 
-        public void setVendorName(String vendorName) {
-            this.vendorName = vendorName;
+        @Override
+        public void setFirstName(String firstName) {
+            vendorName = firstName;
         }
 
+        @Override
+        public void setLastName(String lName) {
+            lName = null;
+        }
+
+        @Override
+        public void setID(String id) {
+            vendorID = id;
+        }
+
+        @Override
+        public void setPassword(String pw) {
+            vendorPW = pw;
+        }
+
+        @Override
+        public String getUserType() {
+            return "Vendor";
+        }
+
+        @Override
         public void setStreet(String street) {
             this.street = street;
         }
 
-        public void setCity(String city) {
-            this.city = city;
+        @Override
+        public void setState(String state) {
+            this.state = state;
         }
 
-        public void setState(char state) {
-            this.state = state;
+        @Override
+        public void setCity(String city) {
+            this.city = city;
         }
 
         public void setBalance(double balance) {
