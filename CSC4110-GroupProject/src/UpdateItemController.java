@@ -83,7 +83,7 @@ public class UpdateItemController implements Initializable {
     File newFile = new File(temp);
 
     public void updateProfile() {
-        if(item.getItemId() == null){
+        if(this.item == null){
             JOptionPane.showMessageDialog(null, "You have to select a item to change.");
             return;
         }

@@ -58,4 +58,19 @@ public class Owner implements UserProfiles{
     public String getUserType() {
         return userType;
     }
+
+    @Override
+    public void setStreet(String street) {
+        setStreet(null);
+    }
+
+    @Override
+    public void setState(String state) {
+        setStreet(null);
+    }
+
+    @Override
+    public void setCity(String city) {
+        setCity(null);
+    }
 }

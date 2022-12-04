@@ -120,11 +120,14 @@ public class CreatePurchaseOrderController implements Initializable {
             for (ItemList purchaseItem: purchaseOrderList
             ) {
                 try{
+                    double subtotalPrice = Double.parseDouble(purchaseItem.getPurchasePrice());
+                    double subtotalQuantity = Double.parseDouble(purchaseItem.getNeedQuantity());
+                    double subtotal = subtotalQuantity * subtotalPrice;
                     FileWriter fw = new FileWriter(filePath,true);
                     BufferedWriter bw = new BufferedWriter(fw);
                     PrintWriter pw = new PrintWriter(bw);
                     pw.println(purchaseItem.getItemId()+","+purchaseItem.getItemName()+","+purchaseItem.getPurchasePrice()
-                            +","+purchaseItem.getExpireDate() +","+purchaseItem.needQuantity+","+purchaseItem.needDate);
+                            +","+purchaseItem.getExpireDate() +","+purchaseItem.needQuantity+","+purchaseItem.needDate+","+subtotal);
                     pw.flush();
                     pw.close();
                 }catch(Exception e){
