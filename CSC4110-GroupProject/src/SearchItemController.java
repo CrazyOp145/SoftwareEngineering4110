@@ -8,19 +8,25 @@ import javafx.fxml.Initializable;
 import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.control.Label;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.TextField;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.stage.Stage;
 
+import javax.swing.*;
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
 import java.util.Scanner;
-
+/**
+ *
+ * @author Shijie DU  HG5241
+ *
+ */
 public class SearchItemController implements Initializable {
 
     private Stage Stage;
@@ -46,32 +52,10 @@ public class SearchItemController implements Initializable {
 
     private ObservableList<ItemList> dataList = FXCollections.observableArrayList();
 
-//    public void initList(){
-//        String filePath = "itemProfile.csv";
-//        File file = new File(filePath);
-//
-//        try {
-//            Scanner input = new Scanner(file);
-//            while((input.hasNext())){
-//                String data = input.next();
-//                Object[] values = data.split(",");
-//                Object[] valuesLine = data.split("\n");
-//
-//
-//                dataList.add(new ItemList(String.valueOf(values[0]),String.valueOf(values[1]),String.valueOf(values[2])
-//                        ,String.valueOf(values[3]),String.valueOf(values[4]),String.valueOf(values[5])));
-//            }
-//
-//        } catch (FileNotFoundException e) {
-//            throw new RuntimeException(e);
-//        }
-//    }
 
     ReadItemProfile readItemProfile = new ReadItemProfile();
 
-    @Override
-    public void initialize(URL url, ResourceBundle resourceBundle) {
-
+    public void updateList(){
         dataList = readItemProfile.initList();
         itemId.setCellValueFactory(new PropertyValueFactory<>("itemId"));
         itemName.setCellValueFactory(new PropertyValueFactory<>("itemName"));
@@ -80,21 +64,20 @@ public class SearchItemController implements Initializable {
         purchasePrice.setCellValueFactory(new PropertyValueFactory<>("purchasePrice"));
         expireDate.setCellValueFactory(new PropertyValueFactory<>("expireDate"));
         tableView.setItems(dataList);
+    }
 
+    @Override
+    public void initialize(URL url, ResourceBundle resourceBundle) {
+        updateList();
         FilteredList<ItemList> filteredData = new FilteredList<>(dataList, b -> true);
-
         searchItemBar.textProperty().addListener((observable, oldValue, newValue) -> {
             filteredData.setPredicate(ItemList -> {
                 // If filter text is empty, display all persons.
-
                 if (newValue == null || newValue.isEmpty()) {
                     return true;
                 }
-
                 // Compare first name and last name of every person with filter text.
                 String lowerCaseFilter = newValue.toLowerCase();
-
-
                 if (ItemList.getItemId().toString().indexOf(lowerCaseFilter) > -1 ) {
                     return true; // Filter matches first name.
                 } else if (ItemList.getItemName().toLowerCase().indexOf(lowerCaseFilter) > -1) {
@@ -105,14 +88,13 @@ public class SearchItemController implements Initializable {
                 else
                     return false; // Does not match.
             });
+            tableView.setPlaceholder(new Label("The Item "+ newValue +" profile is not found"));
         });
-
         SortedList<ItemList> sortedData = new SortedList<>(filteredData);
         sortedData.comparatorProperty().bind(tableView.comparatorProperty());
         tableView.setItems(sortedData);
 
     }
-
 
     public void switchToUserMenu(javafx.event.ActionEvent event) throws IOException {
         Root = FXMLLoader.load(getClass().getResource("UserMenu.fxml"));

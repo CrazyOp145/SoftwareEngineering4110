@@ -1,8 +1,8 @@
 package Profiles;
 
-import com.opencsv.exceptions.CsvException;
-import csvFiles.ReadFromCSVs;
-import com.opencsv.CSVReader;
+//import com.opencsv.exceptions.CsvException;
+//import csvFiles.ReadFromCSVs;
+//import com.opencsv.CSVReader;
 
 import java.io.File;
 import java.io.FileNotFoundException;
@@ -13,7 +13,7 @@ import java.util.List;
 import java.util.Scanner;
 
 public class SearchCustomerProfile {
-    public static String[] SearchCustomerProfile(String searchTerm) throws IOException, CsvException {
+    public static String[] SearchCustomerProfile(String searchTerm) throws IOException {
         Scanner customerInfo = new Scanner(new File("CustomerProfiles.csv"));
         customerInfo.useDelimiter(",");
         while (customerInfo.hasNext()){

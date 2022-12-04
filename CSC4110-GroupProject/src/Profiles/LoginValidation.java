@@ -1,6 +1,6 @@
 package Profiles;
 
-import csvFiles.WriteToCSVs;
+//import csvFiles.WriteToCSVs;
 import java.util.Scanner;
 
 public class LoginValidation {
@@ -21,7 +21,7 @@ public class LoginValidation {
         setUserRole(cUserProfile.nextLine());
 
         String[] data = {getLastName(), getFirstName(), getUserID(), getPassword(), getUserRole()};
-        WriteToCSVs.csvWriter("UserData.csv", data);
+        //WriteToCSVs.csvWriter("UserData.csv", data);
     }
 
     // Check the input length for Names

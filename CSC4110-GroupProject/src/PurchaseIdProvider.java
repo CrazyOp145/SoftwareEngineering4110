@@ -3,17 +3,17 @@
  * @author Shijie DU  HG5241
  *
  */
-public class IdProvider {
-    private static IdProvider instance = null;
+public class PurchaseIdProvider {
+    private static PurchaseIdProvider instance = null;
 
-    public static IdProvider getInstance() {
+    public static PurchaseIdProvider getInstance() {
         if(instance == null){
-            instance = new IdProvider();
+            instance = new PurchaseIdProvider();
         }
         return instance;
     }
 
-    private int nextId = 100000;
+    private int nextId = 500000;
 
     public int getUniqueId(){
         if(nextId > 999999){
