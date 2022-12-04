@@ -8,9 +8,10 @@ import java.util.Scanner;
  *
  */
 public class CalculatePurchaseOrderTotalCost {
-    public double calculatePurchaseOrderTotalCost(){
+    public double calculatePurchaseOrderTotalCost(String filepath){
         double totalCost = 0;
-        String filePath = "PurchaseOrder500001.csv";
+        double michiganTaxRate = 1.06;
+        String filePath = filepath;
         File file = new File(filePath);
 
         try {
@@ -28,7 +29,7 @@ public class CalculatePurchaseOrderTotalCost {
             throw new RuntimeException(e);
         }
 
-        return totalCost;
+        return totalCost*michiganTaxRate;
     }
 
 //    public static void main(String[] args) {

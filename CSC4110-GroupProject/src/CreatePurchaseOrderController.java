@@ -45,8 +45,7 @@ public class CreatePurchaseOrderController implements Initializable {
     @FXML
     private DatePicker needDate;
 
-    String temp = "temp.csv";
-
+    CalculatePurchaseOrderTotalCost calculatePurchaseOrderTotalCost = new CalculatePurchaseOrderTotalCost();
     DateTimeFormatter formatter = DateTimeFormatter.ofPattern("M/d/yyyy");
     int addToOrderCounter = 0;
     private ObservableList<ItemList> dataList = FXCollections.observableArrayList();
@@ -72,9 +71,6 @@ public class CreatePurchaseOrderController implements Initializable {
         tableView.setItems(dataList);
     }
 
-    public void updateOrderList(){
-
-    }
     public void selectCell(){
         item = tableView.getSelectionModel().getSelectedItem();
         item.setNeedQuantity(purchaseQuantity.getText());
@@ -135,7 +131,10 @@ public class CreatePurchaseOrderController implements Initializable {
                 }
             }
             JOptionPane.showMessageDialog(null, "Your purchase order has been created!");
+            //update the vendor balance
+            calculatePurchaseOrderTotalCost.calculatePurchaseOrderTotalCost(filePath);
             purchaseOrderList.clear();
+
         }
     }
 

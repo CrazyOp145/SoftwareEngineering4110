@@ -4,11 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e4486989-fc5b-474b-afaf-e7dea797b27f" name="Changes" comment="add view PurchaseOrderView, CalculatePurchaseOrderTotalCost wait for implement-- cj du hg5241">
+    <list default="true" id="e4486989-fc5b-474b-afaf-e7dea797b27f" name="Changes" comment="CalculatePurchaseOrderTotalCost implemented-- cj du hg5241">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/CSC4110-GroupProject/src/CalculatePurchaseOrderTotalCost.java" beforeDir="false" afterPath="$PROJECT_DIR$/CSC4110-GroupProject/src/CalculatePurchaseOrderTotalCost.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CSC4110-GroupProject/src/UserMenu.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/CSC4110-GroupProject/src/UserMenu.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CSC4110-GroupProject/src/UserMenuController.java" beforeDir="false" afterPath="$PROJECT_DIR$/CSC4110-GroupProject/src/UserMenuController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CSC4110-GroupProject/src/CreatePurchaseOrderController.java" beforeDir="false" afterPath="$PROJECT_DIR$/CSC4110-GroupProject/src/CreatePurchaseOrderController.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -126,7 +125,14 @@
       <option name="project" value="LOCAL" />
       <updated>1670124015166</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="CalculatePurchaseOrderTotalCost implemented-- cj du hg5241">
+      <created>1670132949226</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1670132949226</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -172,7 +178,8 @@
     <MESSAGE value="add ItemProfile.csv -- cj du hg5241" />
     <MESSAGE value="add subtotal for CreatePurchaseOrderController-- cj du hg5241" />
     <MESSAGE value="add view PurchaseOrderView, CalculatePurchaseOrderTotalCost wait for implement-- cj du hg5241" />
-    <option name="LAST_COMMIT_MESSAGE" value="add view PurchaseOrderView, CalculatePurchaseOrderTotalCost wait for implement-- cj du hg5241" />
+    <MESSAGE value="CalculatePurchaseOrderTotalCost implemented-- cj du hg5241" />
+    <option name="LAST_COMMIT_MESSAGE" value="CalculatePurchaseOrderTotalCost implemented-- cj du hg5241" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
