@@ -22,51 +22,46 @@ public class LoginValidation {
     public static boolean loginCheck(String userID, String password){
         //Read User Data
         try {
-            Scanner userData = new Scanner(new File("UserData.csv"));
-            userData.useDelimiter(",");
+            FileReader fr = new FileReader("UserData.csv");
+            BufferedReader br = new BufferedReader(fr);
 
-            List<String[]> data = new ArrayList<>();
-            while(userData.hasNextLine()){
-                data.add(userData.next().replaceAll("[,\n]","").split(","));
-            }
+            String line;
+            String[] data;
 
-            int index1 = 0;
-            for(int i = 0; i < data.size(); i++) {
-                //Check if Index1 is larger than data size
-                if(index1 < data.size()) {
-                    //Check if UserID matches data
-                    if (userID.equals(Arrays.toString(data.get(index1)).replaceAll("[\\[\\]\n]", ""))) {
-                        System.out.println(Arrays.toString(data.get(index1)).replaceAll("[\\[\\]\n]", ""));
-                        System.out.println("USER ID MATCH");
-
-                        int index2 = index1 + 3;    //Index of where password for UserID is
-                        //Check if Password matches UserPass
-                        if (password.equals(Arrays.toString(data.get(index2)).replaceAll("[\\[\\]\n]", ""))) {
-                            System.out.println("PASSWORD MATCH");
-                            return true;
-                        }
-                        else {
-                            System.out.println(Arrays.toString(data.get(index2)).replaceAll("[\\[\\]\n]", ""));
-                            System.out.println("Password Does Not Match");
-                            return false;
-                        }
-                    }
-                    else {
-                        System.out.println(Arrays.toString(data.get(index1)).replaceAll("[\\[\\]\n]", ""));
-                        System.out.println("UserID Not Found");
-                        index1 += 5;
-                    }
-
+            while((line = br.readLine()) != null){
+                data = line.split(",");
+                if(data[0].equals(userID) && data[3].equals(password)){
+                    return true;
                 }
-                //Break out of loop
-                else
-                    break;
             }
 
-        } catch (FileNotFoundException e) {
+        } catch (IOException e) {
             e.printStackTrace();
         }
         return false;
+    }
+
+    //Login Role
+    public static String loginCheckRole(String userID){
+        //Read User Data
+        try {
+            FileReader fr = new FileReader("UserData.csv");
+            BufferedReader br = new BufferedReader(fr);
+
+            String line;
+            String[] data;
+
+            while((line = br.readLine()) != null){
+                data = line.split(",");
+                if(data[0].equals(userID)){
+                    return data[4];
+                }
+            }
+
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        return null;
     }
 
     // Enable Owner and Administrator users to create User Profiles

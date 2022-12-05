@@ -1,7 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
   <component name="ChangeListManager">
-    <list default="true" id="0fca64ac-1e40-4203-a543-24a4216197c3" name="Changes" comment="Vendor Profile added to code.&#10;&#10;-- Mahz Alam gw1637" />
+    <list default="true" id="0fca64ac-1e40-4203-a543-24a4216197c3" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/lib.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_11_26_2022_5_29_PM__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_11_26_2022_5_29_PM__Changes_.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_11_26_2022_5_36_PM__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_11_26_2022_5_36_PM__Changes_.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/UserData.csv" beforeDir="false" afterPath="$PROJECT_DIR$/UserData.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/CSC4110-GroupProject/MainTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/CSC4110-GroupProject/MainTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/MainTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/MainTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Profiles/Login/LoginController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Profiles/Login/LoginController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Profiles/Login/LoginValidation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Profiles/Login/LoginValidation.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Profiles/Login/LoginValidationGUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Profiles/Login/LoginValidationGUI.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -34,7 +49,9 @@
     </file-type-list>
   </component>
   <component name="ProjectId" id="2H8UeyrQiCYbg4uY5vgTD0ngEjK" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -42,12 +59,43 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-    <property name="project.structure.last.edited" value="Project" />
-    <property name="project.structure.proportion" value="0.0" />
-    <property name="project.structure.side.proportion" value="0.0" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/javafx-sdk-19/lib" />
+    <property name="project.structure.last.edited" value="Libraries" />
+    <property name="project.structure.proportion" value="0.15917969" />
+    <property name="project.structure.side.proportion" value="0.2" />
+    <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Application.LoginValidationGUI">
+    <configuration name="ItemProfileTest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="ItemProfileTest" />
+      <module name="CSC4110-GroupProject" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="LoginValidationGUI" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Profiles.Login.LoginValidationGUI" />
+      <module name="CSC4110-GroupProject" />
+      <option name="VM_PARAMETERS" value="--module-path &quot;C:\Users\David\Documents\GitHub\SoftwareEngineering4110\CSC4110-GroupProject\src\javafx-sdk-19\lib&quot; --add-modules javafx.controls,javafx.fxml" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="Profiles.Login.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="MainGUI" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="MainGUI" />
+      <module name="CSC4110-GroupProject" />
+      <option name="VM_PARAMETERS" value="--module-path &quot;C:\Users\David\Documents\GitHub\SoftwareEngineering4110\CSC4110-GroupProject\src\javafx-sdk-19\lib&quot; --add-modules javafx.controls,javafx.fxml" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="MainTest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="MainTest" />
       <module name="CSC4110-GroupProject" />
@@ -55,9 +103,18 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <list>
+      <item itemvalue="Application.MainTest" />
+      <item itemvalue="Application.MainGUI" />
+      <item itemvalue="Application.LoginValidationGUI" />
+      <item itemvalue="Application.ItemProfileTest" />
+    </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.LoginValidationGUI" />
+        <item itemvalue="Application.MainGUI" />
         <item itemvalue="Application.MainTest" />
+        <item itemvalue="Application.ItemProfileTest" />
         <item itemvalue="Application.MainTest" />
       </list>
     </recent_temporary>
