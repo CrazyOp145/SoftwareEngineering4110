@@ -1,7 +1,7 @@
 package Profiles;
 
-public abstract class UserProfiles {
-    private String firstName;
+public interface UserProfiles {
+   /* private String firstName;
     private String lastName;
     private String ID;
     private String password;
@@ -14,21 +14,21 @@ public abstract class UserProfiles {
         this.lastName = lastName;
         this.ID = ID;
         this.password = password;
-    }
+    }*/
 
-    public String getFirstName() {
-        return firstName;
-    }
+    public void setFirstName(String fName);
 
-    public String getLastName() {
-        return lastName;
-    }
+    public void setLastName(String lName);
 
-    public String getID() {
-        return ID;
-    }
+    public void setID(String id);
 
-    public String getPassword() {
-        return password;
-    }
+    public void setPassword(String pw);
+
+    public String getUserType();
+
+    public void setStreet(String street);
+
+    public void setState(String state);
+
+    public void setCity(String city);
 }

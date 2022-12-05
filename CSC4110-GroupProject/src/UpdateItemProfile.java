@@ -2,6 +2,13 @@ import javax.swing.*;
 import java.io.*;
 import java.time.LocalDate;
 import java.util.Scanner;
+import java.io.File;
+import java.io.FileNotFoundException;
+/**
+ *
+ * @author Shijie DU  HG5241
+ *
+ */
 public class UpdateItemProfile {
 
     private Scanner input;
@@ -20,6 +27,7 @@ public class UpdateItemProfile {
         //LocalDate expireDate;
 
         FileWriter fw = null;
+
         try {
             fw = new FileWriter(tempFile, true);
             BufferedWriter bw = new BufferedWriter(fw);
@@ -28,19 +36,32 @@ public class UpdateItemProfile {
             input.useDelimiter("[,\n]");
 
             while (input.hasNext()) {
-                itemId = input.next();
-                itemName = input.next();
-                quantity = input.next();
-                sellingPrice = input.next();
-                purchasePrice = input.next();
-                expireDate = input.next();
-                category = input.next();
-                unit = input.next();
+                String data = input.nextLine();
+                input.useDelimiter(",");
+                Object[] values = data.split(",");
+                Object[] valuesLine = data.split("\n");
+
+                itemId = String.valueOf(values[0]);
+                itemName = String.valueOf(values[1]);
+                quantity = String.valueOf(values[2]);
+                sellingPrice = String.valueOf(values[3]);
+                purchasePrice = String.valueOf(values[4]);
+                expireDate = String.valueOf(values[5]);
+                category = String.valueOf(values[6]);
+                unit = String.valueOf(values[7]);
+//                itemId = input.next();
+//                itemName = input.next();
+//                quantity = input.next();
+//                sellingPrice = input.next();
+//                purchasePrice = input.next();
+//                expireDate = input.next();
+//                category = input.next();
+//                unit = input.next();
 
                 if (!itemId.equals(updateTerm)) {
-                    pw.print(itemId + "," + itemName + "," + quantity + "," + sellingPrice
+                    pw.println(itemId + "," + itemName + "," + quantity + "," + sellingPrice
                             + "," + purchasePrice + "," + expireDate + "," + category + "," + unit);
-                }else{pw.print(newItemId + "," + newItemName + "," + newQuantity + "," + newSellingPrice
+                }else{pw.println(newItemId + "," + newItemName + "," + newQuantity + "," + newSellingPrice
                         + "," + newPurchasePrice + "," + newExpireDate + "," + newCategory + "," + newUnit);
                 }
             }
