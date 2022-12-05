@@ -98,20 +98,24 @@ public class CreateCustomerProfileController implements Initializable {
             System.out.println("Phone Number format incorrect. Please enter a valid phone number.");
         }
         if (validityChecker){
-            CustomerProfile newProfile = new CustomerProfile(customerID, companyName, address, city, state, phoneNumber);
-            UserProfiles newProfileTest = ProfilesFactory.createProfile("Customer Profile");
-
-            System.out.println(newProfile.toString());
-            String[] CustomerProfileData = {newProfile.getCustomerID(), newProfile.getCompanyName(), newProfile.getCity(),
-                newProfile.getState(), newProfile.getStreetAddress(), newProfile.getPhone(), Double.toString(newProfile.getBalance()),
-                Double.toString(newProfile.getLastPaidAmount()), newProfile.getLastOrderDate()};
-            FileWriter fw = new FileWriter(filePath,true);
-            BufferedWriter bw = new BufferedWriter(fw);
-            PrintWriter pw = new PrintWriter(bw);
-            pw.println(newProfile.getCustomerID()+","+newProfile.getCompanyName()+","+newProfile.getStreetAddress()+","+ newProfile.getCity()
-                    +","+newProfile.getState()+","+newProfile.getPhone()+","+ newProfile.getBalance() +","+newProfile.getLastPaidAmount()+","+newProfile.getLastOrderDate());
-            pw.flush();
-            pw.close();
+            UserProfiles newProfileTemp = ProfilesFactory.createProfile("Customer Profile");
+            if(newProfileTemp instanceof CustomerProfile) {
+                CustomerProfile newProfile = new CustomerProfile();
+                newProfile.setFirstName(companyName);
+                newProfile.setID(customerID);
+                newProfile.setCity(city);
+                newProfile.setState(state);
+                newProfile.setStreet(address);
+                newProfile.setPhone(phoneNumber);
+                System.out.println(newProfile.toString());
+                FileWriter fw = new FileWriter(filePath, true);
+                BufferedWriter bw = new BufferedWriter(fw);
+                PrintWriter pw = new PrintWriter(bw);
+                pw.println(newProfile.getCustomerID() + "," + newProfile.getCompanyName() + "," + newProfile.getStreetAddress() + "," + newProfile.getCity()
+                        + "," + newProfile.getState() + "," + newProfile.getPhone() + "," + newProfile.getBalance() + "," + newProfile.getLastPaidAmount() + "," + newProfile.getLastOrderDate());
+                pw.flush();
+                pw.close();
+            }
         }
     }
     @Override

@@ -5,9 +5,27 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e4486989-fc5b-474b-afaf-e7dea797b27f" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/CSC4110-GroupProject/src/CreateCustomerProfileController.java" beforeDir="false" afterPath="$PROJECT_DIR$/CSC4110-GroupProject/src/CreateCustomerProfileController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CSC4110-GroupProject/src/Profiles/CustomerProfile.java" beforeDir="false" afterPath="$PROJECT_DIR$/CSC4110-GroupProject/src/Profiles/CustomerProfile.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CSC4110-GroupProject/src/Profiles/UserProfiles.java" beforeDir="false" afterPath="$PROJECT_DIR$/CSC4110-GroupProject/src/Profiles/UserProfiles.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CSC4110-GroupProject/src/Profiles/Accountant.java" beforeDir="false" afterPath="$PROJECT_DIR$/CSC4110-GroupProject/src/Profiles/Accountant.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CSC4110-GroupProject/src/Profiles/Administrator.java" beforeDir="false" afterPath="$PROJECT_DIR$/CSC4110-GroupProject/src/Profiles/Administrator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CSC4110-GroupProject/src/Profiles/InventoryManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/CSC4110-GroupProject/src/Profiles/InventoryManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CSC4110-GroupProject/src/Profiles/Owner.java" beforeDir="false" afterPath="$PROJECT_DIR$/CSC4110-GroupProject/src/Profiles/Owner.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CSC4110-GroupProject/src/Profiles/Purchaser.java" beforeDir="false" afterPath="$PROJECT_DIR$/CSC4110-GroupProject/src/Profiles/Purchaser.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CSC4110-GroupProject/src/Profiles/Salesperson.java" beforeDir="false" afterPath="$PROJECT_DIR$/CSC4110-GroupProject/src/Profiles/Salesperson.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CSC4110-GroupProject/src/Profiles/VendorProfile.java" beforeDir="false" afterPath="$PROJECT_DIR$/CSC4110-GroupProject/src/Profiles/VendorProfile.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CSC4110-GroupProject/src/SearchCustomerProfileController.java" beforeDir="false" afterPath="$PROJECT_DIR$/CSC4110-GroupProject/src/SearchCustomerProfileController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CustomerProfiles.csv" beforeDir="false" afterPath="$PROJECT_DIR$/CustomerProfiles.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SoftwareEngineering4110/CreateCustomerProfileController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SoftwareEngineering4110/CreateCustomerProfileController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SoftwareEngineering4110/Profiles/Accountant.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SoftwareEngineering4110/Profiles/Accountant.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SoftwareEngineering4110/Profiles/Administrator.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SoftwareEngineering4110/Profiles/Administrator.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SoftwareEngineering4110/Profiles/CustomerProfile.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SoftwareEngineering4110/Profiles/CustomerProfile.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SoftwareEngineering4110/Profiles/InventoryManager.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SoftwareEngineering4110/Profiles/InventoryManager.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SoftwareEngineering4110/Profiles/Owner.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SoftwareEngineering4110/Profiles/Owner.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SoftwareEngineering4110/Profiles/Purchaser.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SoftwareEngineering4110/Profiles/Purchaser.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SoftwareEngineering4110/Profiles/Salesperson.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SoftwareEngineering4110/Profiles/Salesperson.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SoftwareEngineering4110/Profiles/UserProfiles.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SoftwareEngineering4110/Profiles/UserProfiles.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SoftwareEngineering4110/Profiles/VendorProfile.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SoftwareEngineering4110/Profiles/VendorProfile.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

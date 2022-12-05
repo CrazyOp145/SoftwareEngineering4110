@@ -23,6 +23,71 @@ public class Purchaser implements UserProfiles{
     }
 
     @Override
+    public String getCompanyName() {
+        return null;
+    }
+
+    @Override
+    public String getCustomerID() {
+        return null;
+    }
+
+    @Override
+    public String getCity() {
+        return null;
+    }
+
+    @Override
+    public String getStreetAddress() {
+        return null;
+    }
+
+    @Override
+    public String getState() {
+        return null;
+    }
+
+    @Override
+    public String getPhone() {
+        return null;
+    }
+
+    @Override
+    public void setPhone(String phone) {
+
+    }
+
+    @Override
+    public double getBalance() {
+        return 0;
+    }
+
+    @Override
+    public void setBalance(double balance) {
+
+    }
+
+    @Override
+    public double getLastPaidAmount() {
+        return 0;
+    }
+
+    @Override
+    public void setLastPaidAmount(double lastPaidAmount) {
+
+    }
+
+    @Override
+    public String getLastOrderDate() {
+        return null;
+    }
+
+    @Override
+    public void setLastOrderDate(String lastOrderDate) {
+
+    }
+
+    @Override
     public void setFirstName(String firstName) {
         this.firstName = firstName;
     }
