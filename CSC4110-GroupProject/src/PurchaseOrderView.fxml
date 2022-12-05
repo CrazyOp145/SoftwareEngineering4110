@@ -15,7 +15,7 @@
                 <Font size="18.0" />
             </font>
         </Label>
-        <TextField fx:id="searchOrderBar" layoutX="194.0" layoutY="43.0" prefHeight="25.0" prefWidth="357.0" />
+        <TextField fx:id="searchOrderBar" layoutX="194.0" layoutY="43.0" prefHeight="25.0" prefWidth="337.0" />
         <TableView fx:id="tableView" layoutX="26.0" layoutY="94.0" prefHeight="269.0" prefWidth="615.0">
             <columns>
                 <TableColumn fx:id="itemId" prefWidth="75.0" text="Item ID" />
@@ -24,9 +24,10 @@
                 <TableColumn fx:id="expireDate" prefWidth="120.0" text="Expiring Date" />
                 <TableColumn fx:id="quantity" prefWidth="63.0" text="Quantity" />
             <TableColumn fx:id="needDate" prefWidth="107.0" text="Need by Date" />
-            <TableColumn fx:id="Subtotal" prefWidth="93.0" text="Subtotal" />
+            <TableColumn fx:id="subtotal" prefWidth="93.0" text="Subtotal" />
             </columns>
         </TableView>
         <Button fx:id="goBack" layoutX="552.0" layoutY="368.0" mnemonicParsing="false" onAction="#switchToUserMenu" text="Back to menu" />
+      <Button fx:id="searchButton" layoutX="552.0" layoutY="43.0" mnemonicParsing="false" onAction="#updateList" prefHeight="25.0" prefWidth="89.0" text="Search" />
     </children>
 </AnchorPane>

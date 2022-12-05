@@ -5,7 +5,7 @@ import javafx.beans.property.SimpleStringProperty;
  *
  */
 public class PurchaseOrderList {
-        private SimpleStringProperty itemId, itemName, quantity, purchaseP, needDate;
+        private SimpleStringProperty itemId, itemName, purchaseP, expireDate,quantity, needDate,subtotal;
 
         public String getItemId() {
             return itemId.get();
@@ -26,13 +26,22 @@ public class PurchaseOrderList {
         public String getNeedDate() {
             return needDate.get();
         }
+        public String getSubtotal() {
+        return subtotal.get();
+    }
+        public String getExpireDate() {
+        return expireDate.get();
+    }
 
-    PurchaseOrderList( String itemId, String itemName, String quantity, String purchaseP, String needDate) {
+    PurchaseOrderList( String itemId, String itemName, String purchaseP,String expireDate,
+                       String quantity, String needDate,String subtotal) {
             this.itemId = new SimpleStringProperty(itemId);
             this.itemName = new SimpleStringProperty(itemName);
-            this.quantity = new SimpleStringProperty(quantity);
             this.purchaseP = new SimpleStringProperty(purchaseP);
+            this.expireDate = new SimpleStringProperty(expireDate);
+            this.quantity = new SimpleStringProperty(quantity);
             this.needDate = new SimpleStringProperty(needDate);
+            this.subtotal = new SimpleStringProperty(subtotal);
         }
 
 
