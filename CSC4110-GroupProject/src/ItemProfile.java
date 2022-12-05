@@ -1,5 +1,9 @@
 import java.time.LocalDate;
-
+/**
+ *
+ * @author Shijie DU  HG5241
+ *
+ */
 public abstract class ItemProfile {
     private int itemID;
     private String itemName;

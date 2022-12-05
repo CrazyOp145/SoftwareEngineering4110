@@ -17,7 +17,11 @@ import java.io.File;
 import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
-
+/**
+ *
+ * @author Shijie DU  HG5241
+ *
+ */
 public class DeleteItemController implements Initializable {
     private javafx.stage.Stage Stage;
     private javafx.scene.Scene Scene;
@@ -52,10 +56,14 @@ public class DeleteItemController implements Initializable {
     File newFile = new File(temp);
     public void deleteProfile(){
         deleteItemProfile.deleteItemProfile(filePath,deleteItemBar.getText());
+
         oldFile.delete();
         File dump = new File(filePath);
         newFile.renameTo(dump);
-        tableView.setItems(dataList);
+        dump.exists();
+
+
+        //tableView.setItems(dataList);
         clearList();
         updateList();
     }

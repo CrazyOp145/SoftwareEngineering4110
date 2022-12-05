@@ -17,7 +17,11 @@ import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
 import java.util.ResourceBundle;
-
+/**
+ *
+ * @author Shijie DU  HG5241
+ *
+ */
 public class CreatePurchaseOrderController implements Initializable {
     private javafx.stage.Stage Stage;
     private javafx.scene.Scene Scene;
@@ -41,8 +45,7 @@ public class CreatePurchaseOrderController implements Initializable {
     @FXML
     private DatePicker needDate;
 
-    String temp = "temp.csv";
-
+    CalculatePurchaseOrderTotalCost calculatePurchaseOrderTotalCost = new CalculatePurchaseOrderTotalCost();
     DateTimeFormatter formatter = DateTimeFormatter.ofPattern("M/d/yyyy");
     int addToOrderCounter = 0;
     private ObservableList<ItemList> dataList = FXCollections.observableArrayList();
@@ -50,7 +53,7 @@ public class CreatePurchaseOrderController implements Initializable {
     //private ArrayList<PurchaseOrderList> purchaseOrderList = new ArrayList<PurchaseOrderList>();
     private ArrayList<ItemList> purchaseOrderList = new ArrayList<>();
     ReadItemProfile readItemProfile = new ReadItemProfile();
-    PurchaseOrderList purchaseItem;
+    //PurchaseOrderList purchaseItem;
     ItemList item;
 
 
@@ -68,9 +71,6 @@ public class CreatePurchaseOrderController implements Initializable {
         tableView.setItems(dataList);
     }
 
-    public void updateOrderList(){
-
-    }
     public void selectCell(){
         item = tableView.getSelectionModel().getSelectedItem();
         item.setNeedQuantity(purchaseQuantity.getText());
@@ -78,7 +78,6 @@ public class CreatePurchaseOrderController implements Initializable {
     }
 
     public void vendorList(){
-
         updateList();
     }
 
@@ -117,11 +116,14 @@ public class CreatePurchaseOrderController implements Initializable {
             for (ItemList purchaseItem: purchaseOrderList
             ) {
                 try{
+                    double subtotalPrice = Double.parseDouble(purchaseItem.getPurchasePrice());
+                    double subtotalQuantity = Double.parseDouble(purchaseItem.getNeedQuantity());
+                    double subtotal = subtotalQuantity * subtotalPrice;
                     FileWriter fw = new FileWriter(filePath,true);
                     BufferedWriter bw = new BufferedWriter(fw);
                     PrintWriter pw = new PrintWriter(bw);
                     pw.println(purchaseItem.getItemId()+","+purchaseItem.getItemName()+","+purchaseItem.getPurchasePrice()
-                            +","+purchaseItem.getExpireDate() +","+purchaseItem.needQuantity+","+purchaseItem.needDate);
+                            +","+purchaseItem.getExpireDate() +","+purchaseItem.needQuantity+","+purchaseItem.needDate+","+subtotal);
                     pw.flush();
                     pw.close();
                 }catch(Exception e){
@@ -129,7 +131,10 @@ public class CreatePurchaseOrderController implements Initializable {
                 }
             }
             JOptionPane.showMessageDialog(null, "Your purchase order has been created!");
+            //update the vendor balance
+            calculatePurchaseOrderTotalCost.calculatePurchaseOrderTotalCost(filePath);
             purchaseOrderList.clear();
+
         }
     }
 
@@ -137,7 +142,6 @@ public class CreatePurchaseOrderController implements Initializable {
     public void initialize(URL url, ResourceBundle resourceBundle) {
         updateList();
         datePicker();
-
     }
 
     public void datePicker(){
