@@ -48,7 +48,7 @@ public class ToCSV {
 
             //Write Data into File
             printWriter.print(oldData.toString().substring(1,oldData.toString().length()-1).replaceAll(" ", ""));
-            printWriter.println(Arrays.toString(data).substring(1,Arrays.toString(data).length()-1).replaceAll(" ", ""));
+            printWriter.println(Arrays.toString(data).substring(1,Arrays.toString(data).length()-1).replaceAll(" ", "") + ",");
 
             //Close Writers
             printWriter.flush();

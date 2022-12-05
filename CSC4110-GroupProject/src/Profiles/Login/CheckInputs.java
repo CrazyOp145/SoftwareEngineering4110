@@ -14,7 +14,7 @@ public class CheckInputs {
         String output;
 
         while(true){
-            output = in.nextLine();
+            output = in.next();
             if(output.length() <= 15 && output.length() != 0){
                 break;
             }
@@ -28,7 +28,7 @@ public class CheckInputs {
         System.out.println(prompt);
         String output;
         while(true){
-            output = in.nextLine();
+            output = in.next();
             if(output.length() <= 6 && output.length() != 0){
                 break;
             }
@@ -43,7 +43,7 @@ public class CheckInputs {
         String output;
 
         while(true){
-            output = in.nextLine();
+            output = in.next();
             if(output.length() >= 8 && output.length() <= 16){
                 break;
             }
