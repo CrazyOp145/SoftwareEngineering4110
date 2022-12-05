@@ -9,7 +9,7 @@ public class CustomerProfile implements UserProfiles{
     private String phone;
     private double balance = 0;
     private double lastPaidAmount = 0;
-    private String lastOrderDate = "";
+    private String lastOrderDate = "None";
     private String pw = null;
     public CustomerProfile(){
 
