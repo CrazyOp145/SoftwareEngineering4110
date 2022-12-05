@@ -96,10 +96,7 @@ public class SearchCustomerProfileController implements Initializable {
         SortedList<CustomerList> sortedData = new SortedList<>(filteredData);
         sortedData.comparatorProperty().bind(tableView.comparatorProperty());
         tableView.setItems(sortedData);
-
     }
-
-
     public void switchToUserMenu(javafx.event.ActionEvent event) throws IOException {
         Root = FXMLLoader.load(getClass().getResource("UserMenu.fxml"));
         Stage = (Stage)((Node)event.getSource()).getScene().getWindow();

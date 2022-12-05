@@ -3,22 +3,10 @@ public class VendorProfile implements UserProfiles{
         private String vendorName, vendorID, vendorPW;
         private String street, city, state;
         private String phone;
-        private double balance, lPaidAmount;
-        private String lOrderDate, discountStartDate;
+        private double balance, lastPaidAmount;
+        private String lastOrderDate, discountStartDate;
 
         public VendorProfile(){
-        }
-        public VendorProfile(String vendorName, String street, String city, String state,
-                             String phone, double balance, double lPaidAmount, String lOrderDate, String discountStartDate){
-            this.vendorName = vendorName;
-            this.street = street;
-            this.city = city;
-            this.state = state;
-            this.phone = phone;
-            this.balance = balance;
-            this.lPaidAmount = lPaidAmount;
-            this.lOrderDate = lOrderDate;
-            this.discountStartDate = discountStartDate;
         }
 
         @Override
@@ -64,19 +52,63 @@ public class VendorProfile implements UserProfiles{
         public void setBalance(double balance) {
             this.balance = balance;
         }
-
-        public void setlPaidAmount(double lPaidAmount) {
-            this.lPaidAmount = lPaidAmount;
+        @Override
+        public double getLastPaidAmount() {
+            return 0;
         }
 
-        public void setPhone(String phone) {
+        @Override
+        public void setLastPaidAmount(double lastPaidAmount) {
+            this.lastPaidAmount = lastPaidAmount;
+        }
+
+        @Override
+        public String getLastOrderDate() {
+            return lastOrderDate;
+        }
+
+        @Override
+        public void setLastOrderDate(String lastOrderDate) {
+            this.lastOrderDate = lastOrderDate;
+        }
+        @Override
+        public String getCompanyName() {
+            return null;
+        }
+
+        @Override
+        public String getCustomerID() {
+            return null;
+        }
+
+        @Override
+        public String getCity() {
+            return null;
+        }
+
+        @Override
+        public String getStreetAddress() {
+            return null;
+        }
+
+        @Override
+        public String getState() {
+            return null;
+        }
+
+        @Override
+        public String getPhone() {
+            return null;
+        }
+
+         public void setPhone(String phone) {
             this.phone = phone;
         }
 
-        public void setlOrderDate(String lOrderDate) {
-            this.lOrderDate = lOrderDate;
+        @Override
+        public double getBalance() {
+            return 0;
         }
-
         public void setDiscountStartDate(String discountStartDate) {
             this.discountStartDate = discountStartDate;
         }
