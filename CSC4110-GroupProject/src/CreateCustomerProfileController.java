@@ -1,6 +1,8 @@
 
 import Profiles.CustomerProfile;
 //import csvFiles.WriteToCustomerProfileCSV;
+import Profiles.ProfilesFactory;
+import Profiles.UserProfiles;
 import javafx.collections.FXCollections;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -97,6 +99,8 @@ public class CreateCustomerProfileController implements Initializable {
         }
         if (validityChecker){
             CustomerProfile newProfile = new CustomerProfile(customerID, companyName, address, city, state, phoneNumber);
+            UserProfiles newProfileTest = ProfilesFactory.createProfile("Customer Profile");
+
             System.out.println(newProfile.toString());
             String[] CustomerProfileData = {newProfile.getCustomerID(), newProfile.getCompanyName(), newProfile.getCity(),
                 newProfile.getState(), newProfile.getStreetAddress(), newProfile.getPhone(), Double.toString(newProfile.getBalance()),
