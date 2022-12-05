@@ -1,3 +1,8 @@
+/**
+ *
+ * @author Shijie DU  HG5241
+ *
+ */
 public class ItemProfileFactory {
     public ItemProfile createItemProfile(String newItemType){
         ItemProfile newItem = null;

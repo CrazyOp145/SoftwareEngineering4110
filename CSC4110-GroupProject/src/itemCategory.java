@@ -1,3 +1,8 @@
+/**
+ *
+ * @author Shijie DU  HG5241
+ *
+ */
 public enum itemCategory {
     vegetables,
     fruits,

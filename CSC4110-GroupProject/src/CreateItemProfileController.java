@@ -21,7 +21,11 @@ import java.io.PrintWriter;
 import java.net.URL;
 import java.time.LocalDate;
 import java.util.ResourceBundle;
-
+/**
+ *
+ * @author Shijie DU  HG5241
+ *
+ */
 public class CreateItemProfileController implements Initializable {
 
     String filePath = "ItemProfile.csv";
@@ -64,7 +68,7 @@ public class CreateItemProfileController implements Initializable {
         String unitC = unit.getValue();
         String itemCategoryC = itemCategory.getValue();
         LocalDate expireDateC = expireDate.getValue();
-        //String itemCategoryC = getCategory(actionEvent);
+
 
         ItemProfile item = null;
 

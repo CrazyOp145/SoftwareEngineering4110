@@ -1,5 +1,9 @@
 import java.util.Scanner;
-
+/**
+ *
+ * @author Shijie DU  HG5241
+ *
+ */
 public class ItemProfileTest {
     public static void main(String args[]){
         //Create factory object
