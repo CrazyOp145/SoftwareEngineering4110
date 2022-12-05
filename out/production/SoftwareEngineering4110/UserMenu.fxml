@@ -36,6 +36,7 @@
                   <MenuItem mnemonicParsing="false" onAction="#switchSearchCustomerProfile" text="Customer Profile" />
                   <MenuItem mnemonicParsing="false" text="Vendor profile" />
                   <MenuItem mnemonicParsing="false" onAction="#switchToSearchItemMenuBar" text="Item profile" />
+                  <MenuItem mnemonicParsing="false" onAction="#switchToPurchaseOrderViewMenuBar" text="Purchase Order" />
                </items>
             </Menu>
           <Menu mnemonicParsing="false" text="Create">

@@ -16,6 +16,35 @@ public interface UserProfiles {
         this.password = password;
     }*/
 
+    String getCompanyName();
+
+    String getCustomerID();
+
+    //public void setCompanyName(String fullName) {
+    //    this.companyName = companyName;
+    //}
+    String getCity();
+
+    String getStreetAddress();
+
+    String getState();
+
+    String getPhone();
+
+    void setPhone(String phone);
+
+    double getBalance();
+
+    void setBalance(double balance);
+
+    double getLastPaidAmount();
+
+    void setLastPaidAmount(double lastPaidAmount);
+
+    String getLastOrderDate();
+
+    void setLastOrderDate(String lastOrderDate);
+
     public void setFirstName(String fName);
 
     public void setLastName(String lName);
