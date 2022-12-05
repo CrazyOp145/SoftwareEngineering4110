@@ -4,13 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e4486989-fc5b-474b-afaf-e7dea797b27f" name="Changes" comment="add michigan tax rate, deleted some code no in use-- cj du hg5241">
-      <change afterPath="$PROJECT_DIR$/CSC4110-GroupProject/src/ReadPurchaseOrder.java" afterDir="false" />
+    <list default="true" id="e4486989-fc5b-474b-afaf-e7dea797b27f" name="Changes" comment="implement feature to view purchase order with selected purchase order-- cj du hg5241">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/CSC4110-GroupProject/src/PurchaseOrderList.java" beforeDir="false" afterPath="$PROJECT_DIR$/CSC4110-GroupProject/src/PurchaseOrderList.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CSC4110-GroupProject/src/PurchaseOrderView.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/CSC4110-GroupProject/src/PurchaseOrderView.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/CSC4110-GroupProject/src/PurchaseOrderViewController.java" beforeDir="false" afterPath="$PROJECT_DIR$/CSC4110-GroupProject/src/PurchaseOrderViewController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ItemProfile.csv" beforeDir="false" afterPath="$PROJECT_DIR$/ItemProfile.csv" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -142,7 +139,14 @@
       <option name="project" value="LOCAL" />
       <updated>1670134655203</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="implement feature to view purchase order with selected purchase order-- cj du hg5241">
+      <created>1670214894532</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1670214894532</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -190,7 +194,8 @@
     <MESSAGE value="add view PurchaseOrderView, CalculatePurchaseOrderTotalCost wait for implement-- cj du hg5241" />
     <MESSAGE value="CalculatePurchaseOrderTotalCost implemented-- cj du hg5241" />
     <MESSAGE value="add michigan tax rate, deleted some code no in use-- cj du hg5241" />
-    <option name="LAST_COMMIT_MESSAGE" value="add michigan tax rate, deleted some code no in use-- cj du hg5241" />
+    <MESSAGE value="implement feature to view purchase order with selected purchase order-- cj du hg5241" />
+    <option name="LAST_COMMIT_MESSAGE" value="implement feature to view purchase order with selected purchase order-- cj du hg5241" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -204,16 +209,6 @@
           <url>file://$PROJECT_DIR$/CSC4110-GroupProject/src/ReadPurchaseOrder.java</url>
           <line>25</line>
           <option name="timeStamp" value="3" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/CSC4110-GroupProject/src/PurchaseOrderList.java</url>
-          <line>41</line>
-          <option name="timeStamp" value="10" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/CSC4110-GroupProject/src/PurchaseOrderList.java</url>
-          <line>42</line>
-          <option name="timeStamp" value="11" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
