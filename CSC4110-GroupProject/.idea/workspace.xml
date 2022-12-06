@@ -1,7 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="0fca64ac-1e40-4203-a543-24a4216197c3" name="Changes" comment="Vendor Profile added to code.&#10;&#10;-- Mahz Alam gw1637" />
+    <list default="true" id="0fca64ac-1e40-4203-a543-24a4216197c3" name="Changes" comment="Vendor Profile added to code.&#10;&#10;-- Mahz Alam gw1637">
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_11_26_2022_5_29_PM__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_11_26_2022_5_29_PM__Changes_.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_11_26_2022_5_36_PM_[Changes]/shelved.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_11_26_2022_5_36_PM__Changes_.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CSC4110-GroupProject.iml" beforeDir="false" afterPath="$PROJECT_DIR$/CSC4110-GroupProject.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/CreateVendorProfile.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/CreateVendorProfile.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/CreateVendorProfile.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/CreateVendorProfile.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/UserMenu.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/UserMenu.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/UserMenuController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/UserMenuController.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -42,23 +53,23 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-    <property name="project.structure.last.edited" value="Project" />
-    <property name="project.structure.proportion" value="0.0" />
-    <property name="project.structure.side.proportion" value="0.0" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../../../../../../../Program Files/Java/javafx-19/javafx-sdk-19/lib" />
+    <property name="project.structure.last.edited" value="Libraries" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.2" />
   </component>
   <component name="RunManager">
-    <configuration name="MainTest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="MainTest" />
+    <configuration name="MainGUI" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="MainGUI" />
       <module name="CSC4110-GroupProject" />
+      <option name="VM_PARAMETERS" value="--module-path &quot;C:\Program Files\Java\javafx-19\javafx-sdk-19\lib&quot; --add-modules javafx.controls,javafx.fxml " />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.MainTest" />
-        <item itemvalue="Application.MainTest" />
+        <item itemvalue="Application.MainGUI" />
       </list>
     </recent_temporary>
   </component>

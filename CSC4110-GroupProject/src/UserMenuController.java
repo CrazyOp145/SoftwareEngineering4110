@@ -86,6 +86,13 @@ public class UserMenuController {
         Stage.setScene(Scene);
         Stage.show();
     }
+    public void switchToVendorProfile(javafx.event.ActionEvent event) throws IOException {
+        Root = FXMLLoader.load(getClass().getResource("CreateVendorProfile.fxml"));
+        Stage = (Stage)myMenuBar.getScene().getWindow();
+        Scene = new Scene(Root);
+        Stage.setScene(Scene);
+        Stage.show();
+    }
     public void switchSearchCustomerProfile(javafx.event.ActionEvent event) throws IOException {
         Root = FXMLLoader.load(getClass().getResource("SearchCustomerProfile.fxml"));
         //Stage = (Stage)((Node)event.getSource()).getScene().getWindow();
