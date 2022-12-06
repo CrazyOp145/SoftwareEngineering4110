@@ -4,10 +4,62 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e4486989-fc5b-474b-afaf-e7dea797b27f" name="Changes" comment="">
+    <list default="true" id="e4486989-fc5b-474b-afaf-e7dea797b27f" name="Changes" comment="fixing main branch and add restriction for decimal place of view purchase order. --hg5241 cj du.">
+      <change afterPath="$PROJECT_DIR$/out/production/SoftwareEngineering4110/CalculatePurchaseOrderTotalCost.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/SoftwareEngineering4110/CreateVendorProfile.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/SoftwareEngineering4110/CreateVendorProfile.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/SoftwareEngineering4110/PurchaseOrderView.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/SoftwareEngineering4110/PurchaseOrderViewController.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/SoftwareEngineering4110/ReadPurchaseOrder.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/SoftwareEngineering4110/engineering.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CSC4110-GroupProject/src/CreateCustomerProfileController.java" beforeDir="false" afterPath="$PROJECT_DIR$/CSC4110-GroupProject/src/CreateCustomerProfileController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CSC4110-GroupProject/src/Profiles/Accountant.java" beforeDir="false" afterPath="$PROJECT_DIR$/CSC4110-GroupProject/src/Profiles/Accountant.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CSC4110-GroupProject/src/Profiles/Administrator.java" beforeDir="false" afterPath="$PROJECT_DIR$/CSC4110-GroupProject/src/Profiles/Administrator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CSC4110-GroupProject/src/Profiles/CustomerProfile.java" beforeDir="false" afterPath="$PROJECT_DIR$/CSC4110-GroupProject/src/Profiles/CustomerProfile.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CSC4110-GroupProject/src/Profiles/InventoryManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/CSC4110-GroupProject/src/Profiles/InventoryManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CSC4110-GroupProject/src/Profiles/Owner.java" beforeDir="false" afterPath="$PROJECT_DIR$/CSC4110-GroupProject/src/Profiles/Owner.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CSC4110-GroupProject/src/Profiles/Purchaser.java" beforeDir="false" afterPath="$PROJECT_DIR$/CSC4110-GroupProject/src/Profiles/Purchaser.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CSC4110-GroupProject/src/Profiles/Salesperson.java" beforeDir="false" afterPath="$PROJECT_DIR$/CSC4110-GroupProject/src/Profiles/Salesperson.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CSC4110-GroupProject/src/Profiles/UserProfiles.java" beforeDir="false" afterPath="$PROJECT_DIR$/CSC4110-GroupProject/src/Profiles/UserProfiles.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CSC4110-GroupProject/src/Profiles/VendorProfile.java" beforeDir="false" afterPath="$PROJECT_DIR$/CSC4110-GroupProject/src/Profiles/VendorProfile.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CSC4110-GroupProject/src/SearchCustomerProfileController.java" beforeDir="false" afterPath="$PROJECT_DIR$/CSC4110-GroupProject/src/SearchCustomerProfileController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CSC4110-GroupProject/src/UserMenu.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/CSC4110-GroupProject/src/UserMenu.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CSC4110-GroupProject/src/UserMenuController.java" beforeDir="false" afterPath="$PROJECT_DIR$/CSC4110-GroupProject/src/UserMenuController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/CSC4110-GroupProject/src/csvFiles/ReadFromCSVs.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/CSC4110-GroupProject/src/csvFiles/WriteToCSVs.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/CSC4110-GroupProject/src/csvFiles/WriteToCustomerProfileCSV.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CSC4110-GroupProject/src/csvFiles/opencsv-5.7.1.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CustomerProfiles.csv" beforeDir="false" afterPath="$PROJECT_DIR$/CustomerProfiles.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SoftwareEngineering4110/CreateCustomerProfileController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SoftwareEngineering4110/CreateCustomerProfileController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SoftwareEngineering4110/MainTest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SoftwareEngineering4110/Profiles/Accountant.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SoftwareEngineering4110/Profiles/Accountant.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SoftwareEngineering4110/Profiles/Administrator.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SoftwareEngineering4110/Profiles/Administrator.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SoftwareEngineering4110/Profiles/CustomerProfile.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SoftwareEngineering4110/Profiles/CustomerProfile.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SoftwareEngineering4110/Profiles/InventoryManager.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SoftwareEngineering4110/Profiles/InventoryManager.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SoftwareEngineering4110/Profiles/Owner.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SoftwareEngineering4110/Profiles/Owner.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SoftwareEngineering4110/Profiles/Purchaser.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SoftwareEngineering4110/Profiles/Purchaser.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SoftwareEngineering4110/Profiles/Salesperson.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SoftwareEngineering4110/Profiles/Salesperson.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SoftwareEngineering4110/Profiles/UserProfiles.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SoftwareEngineering4110/Profiles/UserProfiles.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SoftwareEngineering4110/Profiles/VendorProfile.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SoftwareEngineering4110/Profiles/VendorProfile.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SoftwareEngineering4110/SearchCustomerProfileController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SoftwareEngineering4110/SearchCustomerProfileController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SoftwareEngineering4110/UserMenu.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SoftwareEngineering4110/UserMenu.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SoftwareEngineering4110/UserMenuController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SoftwareEngineering4110/UserMenuController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SoftwareEngineering4110/bakeryProducts.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SoftwareEngineering4110/bakeryProducts.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SoftwareEngineering4110/csvFiles/ReadFromCSVs.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SoftwareEngineering4110/csvFiles/WriteToCSVs.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SoftwareEngineering4110/csvFiles/WriteToCustomerProfileCSV.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SoftwareEngineering4110/csvFiles/opencsv-5.7.1.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SoftwareEngineering4110/dairy.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SoftwareEngineering4110/dairy.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SoftwareEngineering4110/fruits.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SoftwareEngineering4110/fruits.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SoftwareEngineering4110/itemProfile.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SoftwareEngineering4110/itemProfile.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SoftwareEngineering4110/itemProfileFactory.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SoftwareEngineering4110/itemProfileFactory.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SoftwareEngineering4110/juice.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SoftwareEngineering4110/juice.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SoftwareEngineering4110/meat.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SoftwareEngineering4110/meat.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SoftwareEngineering4110/nuts.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SoftwareEngineering4110/nuts.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SoftwareEngineering4110/snacks.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SoftwareEngineering4110/snacks.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SoftwareEngineering4110/soda.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SoftwareEngineering4110/soda.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SoftwareEngineering4110/vegetables.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SoftwareEngineering4110/vegetables.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -34,27 +86,27 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Downloaded.Files.Path.Enabled": "false",
-    "Repository.Attach.Annotations": "false",
-    "Repository.Attach.JavaDocs": "false",
-    "Repository.Attach.Sources": "false",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "last_opened_file_path": "C:/Users/Paulo/Downloads/openjfx-19_windows-x64_bin-sdk/javafx-sdk-19/lib",
-    "project.structure.last.edited": "Libraries",
-    "project.structure.proportion": "0.15",
-    "project.structure.side.proportion": "0.2",
-    "settings.editor.selected.configurable": "preferences.JavaFX"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Downloaded.Files.Path.Enabled&quot;: &quot;false&quot;,
+    &quot;Repository.Attach.Annotations&quot;: &quot;false&quot;,
+    &quot;Repository.Attach.JavaDocs&quot;: &quot;false&quot;,
+    &quot;Repository.Attach.Sources&quot;: &quot;false&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/dsj51/openjfx-19_windows-x64_bin-sdk/javafx-sdk-19/lib&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Libraries&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.JavaFX&quot;
   }
-}]]></component>
+}</component>
   <component name="RunManager" selected="Application.MainGUI">
     <configuration name="MainGUI" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="MainGUI" />
       <module name="SoftwareEngineering4110" />
-      <option name="VM_PARAMETERS" value="--module-path &quot;C:\Users\Paulo\Downloads\openjfx-19_windows-x64_bin-sdk\javafx-sdk-19\lib&quot; --add-modules javafx.controls,javafx.fxml" />
+      <option name="VM_PARAMETERS" value="--module-path &quot;C:\Program Files\Java\openjfx-19_windows-x64_bin-sdk\javafx-sdk-19\lib&quot; --add-modules javafx.controls,javafx.fxml" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -86,6 +138,14 @@
       <option name="presentableId" value="Default" />
       <updated>1669422451320</updated>
     </task>
+    <task id="LOCAL-00001" summary="fixing main branch and add restriction for decimal place of view purchase order. --hg5241 cj du.">
+      <created>1670283683734</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1670283683734</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -98,6 +158,10 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="fixing main branch and add restriction for decimal place of view purchase order. --hg5241 cj du." />
+    <option name="LAST_COMMIT_MESSAGE" value="fixing main branch and add restriction for decimal place of view purchase order. --hg5241 cj du." />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

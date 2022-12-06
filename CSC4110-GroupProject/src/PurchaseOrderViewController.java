@@ -6,6 +6,7 @@ import javafx.fxml.Initializable;
 import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.control.TableCell;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.TextField;
@@ -72,6 +73,20 @@ public class PurchaseOrderViewController implements Initializable {
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
+        setTableColumnDecimalPlace();
+    }
 
+    public void setTableColumnDecimalPlace(){
+        subtotal.setCellFactory(c -> new TableCell<>() {
+            @Override
+            protected void updateItem(String subtotal, boolean empty) {
+                super.updateItem(subtotal, empty);
+                if (subtotal == null || empty) {
+                    setText(null);
+                } else {
+                    setText(String.format("%.2f", Double.parseDouble(subtotal)));
+                }
+            }
+        });
     }
 }
