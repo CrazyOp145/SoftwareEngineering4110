@@ -110,4 +110,20 @@ public class UserMenuController {
         Stage.show();
     }
 
+    public void switchToCreateUserProfile(ActionEvent event) throws IOException {
+        Root = FXMLLoader.load(getClass().getResource("Profiles/Login/CreateUserProfile.fxml"));
+        Stage = (Stage)((Node)event.getSource()).getScene().getWindow();
+        Scene = new Scene(Root);
+        Stage.setScene(Scene);
+        Stage.show();
+    }
+
+    public void switchToLoginValidation(ActionEvent event) throws IOException {
+        Root = FXMLLoader.load(getClass().getResource("Profiles/Login/Login.fxml"));
+        Stage = (Stage)((Node)event.getSource()).getScene().getWindow();
+        Scene = new Scene(Root);
+        Stage.setScene(Scene);
+        Stage.show();
+    }
+
 }

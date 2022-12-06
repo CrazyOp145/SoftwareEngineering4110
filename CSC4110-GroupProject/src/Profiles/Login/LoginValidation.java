@@ -65,17 +65,17 @@ public class LoginValidation {
     }
 
     // Enable Owner and Administrator users to create User Profiles
-    public static void createUserProfiles(){
-        Scanner cUserProfile = new Scanner(System.in);
-        setUserID(checkUserIDInput(cUserProfile, "Enter in UserID (Max 6 Characters):"));
-        setLastName(checkNameInput(cUserProfile, "Enter in Last Name (Max 15 Characters):"));
-        setFirstName(checkNameInput(cUserProfile, "Enter in First Name (Max 15 Characters):"));
-        setPassword(checkPasswordInput(cUserProfile,"Enter in Password (Min 8 Characters & Max 16 Characters):"));
-        System.out.println("Enter in User Role:");
-        setUserRole(cUserProfile.nextLine());
+    public static void createUserProfiles(String userID, String lastName, String firstName, String password, String userRole){
+        //Scanner cUserProfile = new Scanner(System.in);
+        //setUserID(checkUserIDInput(cUserProfile, "Enter in UserID (Max 6 Characters):"));
+        //setLastName(checkNameInput(cUserProfile, "Enter in Last Name (Max 15 Characters):"));
+        //setFirstName(checkNameInput(cUserProfile, "Enter in First Name (Max 15 Characters):"));
+        //setPassword(checkPasswordInput(cUserProfile,"Enter in Password (Min 8 Characters & Max 16 Characters):"));
+        //System.out.println("Enter in User Role:");
+        //setUserRole(cUserProfile.nextLine());
 
-        String[] data = {getUserID(), getLastName(), getFirstName(), getPassword(), getUserRole()};
-        String[] header={"UserID", "LastName", "FirstName", "Password", "UserRole"};
+        String[] data = {userID, lastName, firstName, password, userRole};
+        //String[] header={"UserID", "LastName", "FirstName", "Password", "UserRole"};
         //ToCSV.createCsv("UserData.csv",header);
         ToCSV.addToUserData("UserData.csv", data);
     }

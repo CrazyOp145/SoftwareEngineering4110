@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="UserMenuController">
+   <children>
+      <Button fx:id="confirmButton" layoutX="187.0" layoutY="323.0" mnemonicParsing="false" prefHeight="38.0" prefWidth="90.0" text="Confirm" />
+      <Button fx:id="cancelButton" layoutX="324.0" layoutY="323.0" mnemonicParsing="false" prefHeight="38.0" prefWidth="90.0" text="Cancel" />
+      <TextField fx:id="userIDTextField" layoutX="293.0" layoutY="84.0" />
+      <Text layoutX="160.0" layoutY="100.0" strokeType="OUTSIDE" strokeWidth="0.0" text="UserID:">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Text>
+      <TextField fx:id="lastNameTextField" layoutX="293.0" layoutY="117.0" />
+      <Text layoutX="160.0" layoutY="133.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Last Name:">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Text>
+      <TextField fx:id="firstNameTextField" layoutX="293.0" layoutY="151.0" />
+      <Text layoutX="160.0" layoutY="167.0" strokeType="OUTSIDE" strokeWidth="0.0" text="First Name:">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Text>
+      <TextField fx:id="passwordTextField" layoutX="293.0" layoutY="185.0" />
+      <Text layoutX="160.0" layoutY="201.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Password:">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Text>
+      <ChoiceBox fx:id="userRoleChoiceBox" layoutX="292.0" layoutY="217.0" prefWidth="150.0" />
+      <Text layoutX="159.0" layoutY="235.0" strokeType="OUTSIDE" strokeWidth="0.0" text="User Role:">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Text>
+   </children>
+</AnchorPane>
