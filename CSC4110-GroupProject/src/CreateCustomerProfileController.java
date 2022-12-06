@@ -91,7 +91,7 @@ public class CreateCustomerProfileController implements Initializable {
             errorMessage.setText("Error: Please Select A State");
             System.out.println("State too long please enter a state that is less than 20 characters.");
         }
-        if (phoneNumber.matches(phonePattern.pattern())) {
+        if (phoneNumber.matches(phonePattern.pattern()) && phoneNumber != null) {
         } else {
             validityChecker = false;
             errorMessage.setText("Error: Phone number format incorrect");
