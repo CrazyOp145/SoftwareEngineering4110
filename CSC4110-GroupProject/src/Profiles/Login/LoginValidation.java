@@ -65,64 +65,64 @@ public class LoginValidation {
     }
 
     // Enable Owner and Administrator users to create User Profiles
-    public static void createUserProfiles(){
-        Scanner cUserProfile = new Scanner(System.in);
-        setUserID(checkUserIDInput(cUserProfile, "Enter in UserID (Max 6 Characters):"));
-        setLastName(checkNameInput(cUserProfile, "Enter in Last Name (Max 15 Characters):"));
-        setFirstName(checkNameInput(cUserProfile, "Enter in First Name (Max 15 Characters):"));
-        setPassword(checkPasswordInput(cUserProfile,"Enter in Password (Min 8 Characters & Max 16 Characters):"));
-        System.out.println("Enter in User Role:");
-        setUserRole(cUserProfile.nextLine());
+    public static void createUserProfiles(String userID, String lastName, String firstName, String password, String userRole){
+        //Scanner cUserProfile = new Scanner(System.in);
+        //setUserID(checkUserIDInput(cUserProfile, "Enter in UserID (Max 6 Characters):"));
+        //setLastName(checkNameInput(cUserProfile, "Enter in Last Name (Max 15 Characters):"));
+        //setFirstName(checkNameInput(cUserProfile, "Enter in First Name (Max 15 Characters):"));
+        //setPassword(checkPasswordInput(cUserProfile,"Enter in Password (Min 8 Characters & Max 16 Characters):"));
+        //System.out.println("Enter in User Role:");
+        //setUserRole(cUserProfile.nextLine());
 
-        String[] data = {getUserID(), getLastName(), getFirstName(), getPassword(), getUserRole()};
-        String[] header={"UserID", "LastName", "FirstName", "Password", "UserRole"};
+        String[] data = {userID, lastName, firstName, password, userRole};
+        //String[] header={"UserID", "LastName", "FirstName", "Password", "UserRole"};
         //ToCSV.createCsv("UserData.csv",header);
         ToCSV.addToUserData("UserData.csv", data);
     }
 
     //Delete User Profile
-    public static void deleteUserProfile(){
-        Scanner dUserProfile = new Scanner(System.in);
-        String deleteUserInput = checkUserIDInput(dUserProfile, "Enter in User ID to Delete:");
-        try {
-            //Scanner
-            Scanner userData = new Scanner(new File("UserData.csv"));
-            userData.useDelimiter("[,\n]");
-            List<String> oldData = new ArrayList<>();
-            String userID,lName,fName,pass,uRole;
-
-            //Put Old Data into List
-            while(userData.hasNext()){
-                userID = userData.next();
-                lName = userData.next();
-                fName = userData.next();
-                pass = userData.next();
-                uRole = userData.next();
-
-                if(!userID.equals(deleteUserInput)) {
-                    oldData.add(userID);
-                    oldData.add(lName);
-                    oldData.add(fName);
-                    oldData.add(pass);
-                    oldData.add(uRole);
-                }
-            }
-
-            //FileWriters
-            FileWriter file = new FileWriter("UserData.csv");
-            BufferedWriter bufferedWriter = new BufferedWriter(file);
-            PrintWriter printWriter = new PrintWriter(bufferedWriter);
-
-            //Write Data into File
-            printWriter.print(oldData.toString().substring(1,oldData.toString().length()-1).replaceAll(" ", ""));
-
-            //Close Writers
-            printWriter.flush();
-            printWriter.close();
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-    }
+//    public static void deleteUserProfile(){
+//        Scanner dUserProfile = new Scanner(System.in);
+//        String deleteUserInput = checkUserIDInput(dUserProfile, "Enter in User ID to Delete:");
+//        try {
+//            //Scanner
+//            Scanner userData = new Scanner(new File("UserData.csv"));
+//            userData.useDelimiter("[,\n]");
+//            List<String> oldData = new ArrayList<>();
+//            String userID,lName,fName,pass,uRole;
+//
+//            //Put Old Data into List
+//            while(userData.hasNext()){
+//                userID = userData.next();
+//                lName = userData.next();
+//                fName = userData.next();
+//                pass = userData.next();
+//                uRole = userData.next();
+//
+//                if(!userID.equals(deleteUserInput)) {
+//                    oldData.add(userID);
+//                    oldData.add(lName);
+//                    oldData.add(fName);
+//                    oldData.add(pass);
+//                    oldData.add(uRole);
+//                }
+//            }
+//
+//            //FileWriters
+//            FileWriter file = new FileWriter("UserData.csv");
+//            BufferedWriter bufferedWriter = new BufferedWriter(file);
+//            PrintWriter printWriter = new PrintWriter(bufferedWriter);
+//
+//            //Write Data into File
+//            printWriter.print(oldData.toString().substring(1,oldData.toString().length()-1).replaceAll(" ", ""));
+//
+//            //Close Writers
+//            printWriter.flush();
+//            printWriter.close();
+//        } catch (IOException e) {
+//            e.printStackTrace();
+//        }
+//    }
 
     public static String getLastName() {
         return lastName;
