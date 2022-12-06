@@ -11,7 +11,7 @@ public class DeleteCustomerProfile {
     private Scanner input;
     public void deleteCustomerProfile(String filePath, String removeTerm){
 
-        String tempFile = "temp.csv";
+        String tempFile = "tempCustomerProfiles.csv";
         File oldFile = new File(filePath);
         File newFile = new File(tempFile);
         String customerID;
