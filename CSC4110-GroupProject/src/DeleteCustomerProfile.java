@@ -48,16 +48,18 @@ public class DeleteCustomerProfile {
                 lastOrderDate = String.valueOf(values[8]);
 
                 if(!customerID.equals(removeTerm)){
-                    pw.println(customerID + ","+companyName+","+address+","+city
-                            +","+state+","+phoneNumber+","+balance+","+lastPaidAmount+","+lastOrderDate);
+                    if(balance != "0") {
+                        pw.println(customerID + "," + companyName + "," + address + "," + city
+                                + "," + state + "," + phoneNumber + "," + balance + "," + lastPaidAmount + "," + lastOrderDate);
+                    }
                 }
             }
             input.close();
             pw.flush();
             pw.close();
-            JOptionPane.showMessageDialog(null,"The item has been deleted");
+            JOptionPane.showMessageDialog(null,"The Customer Profile has been deleted");
         } catch (IOException e) {
-            JOptionPane.showMessageDialog(null,"Fail to delete item");
+            JOptionPane.showMessageDialog(null,"Fail to delete Customer Profile");
         }
 
 

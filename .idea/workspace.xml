@@ -7,8 +7,6 @@
     <list default="true" id="e4486989-fc5b-474b-afaf-e7dea797b27f" name="Changes" comment="fixing main branch and add restriction for decimal place of view purchase order. --hg5241 cj du.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/CSC4110-GroupProject/src/DeleteCustomerProfile.java" beforeDir="false" afterPath="$PROJECT_DIR$/CSC4110-GroupProject/src/DeleteCustomerProfile.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/SoftwareEngineering4110/DeleteCustomerProfileController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SoftwareEngineering4110/DeleteCustomerProfileController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/temp.csv" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
