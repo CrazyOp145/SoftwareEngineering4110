@@ -100,6 +100,23 @@ public class UserMenuController implements Initializable {
         Stage.setScene(Scene);
         Stage.show();
     }
+
+    public void switchToCreateUserProfile(javafx.event.ActionEvent event) throws IOException {
+        Root = FXMLLoader.load(getClass().getResource("Profiles/Login/CreateUserProfile.fxml"));
+        //Stage = (Stage)((Node)event.getSource()).getScene().getWindow();
+        Stage = (Stage)myMenuBar.getScene().getWindow();
+        Scene = new Scene(Root);
+        Stage.setScene(Scene);
+        Stage.show();
+    }
+
+    public void switchToLoginValidation(javafx.event.ActionEvent event) throws IOException {
+        Root = FXMLLoader.load(getClass().getResource("Profiles/Login/Login.fxml"));
+        Stage = (Stage)((Node)event.getSource()).getScene().getWindow();
+        Scene = new Scene(Root);
+        Stage.setScene(Scene);
+        Stage.show();
+    }
     public void switchToCreateItemProfileScene(ActionEvent event) throws IOException {
         Root = FXMLLoader.load(getClass().getResource("CreateItemProfile.fxml"));
         Stage = (Stage)((Node)event.getSource()).getScene().getWindow();
@@ -119,7 +136,7 @@ public class UserMenuController implements Initializable {
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
         LoginValidation.loginCheckRole(LoginValidation.getUserID());
-        System.out.println(currentUserType);
+        //System.out.println(currentUserType);
         if(currentUserType == "owner"){
             CreatePurchaseOrderButton.setDisable(true);
         }
