@@ -5,7 +5,18 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e4486989-fc5b-474b-afaf-e7dea797b27f" name="Changes" comment="fixing main branch and add restriction for decimal place of view purchase order. --hg5241 cj du.">
-      <change beforePath="$PROJECT_DIR$/CSC4110-GroupProject/src/CreateCustomerProfileController.java" beforeDir="false" afterPath="$PROJECT_DIR$/CSC4110-GroupProject/src/CreateCustomerProfileController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/CSC4110-GroupProject/src/UpdateCustomerProfile.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/CSC4110-GroupProject/src/UpdateCustomerProfile.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/CSC4110-GroupProject/src/UpdateCustomerProfileController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CSC4110-GroupProject/src/UserMenu.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/CSC4110-GroupProject/src/UserMenu.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CSC4110-GroupProject/src/UserMenuController.java" beforeDir="false" afterPath="$PROJECT_DIR$/CSC4110-GroupProject/src/UserMenuController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CustomerProfiles.csv" beforeDir="false" afterPath="$PROJECT_DIR$/CustomerProfiles.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SoftwareEngineering4110/CreateCustomerProfileController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SoftwareEngineering4110/CreateCustomerProfileController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SoftwareEngineering4110/DeleteCustomerProfile.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SoftwareEngineering4110/DeleteCustomerProfile.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SoftwareEngineering4110/UserMenu.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SoftwareEngineering4110/UserMenu.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SoftwareEngineering4110/UserMenuController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SoftwareEngineering4110/UserMenuController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tempCustomerProfiles.csv" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -48,6 +59,11 @@
     "settings.editor.selected.configurable": "preferences.JavaFX"
   }
 }]]></component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Paulo\eclipse-workspace\databaseProject\SoftwareEngineering4110\CSC4110-GroupProject\src" />
+    </key>
+  </component>
   <component name="RunManager" selected="Application.MainGUI">
     <configuration name="MainGUI" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="MainGUI" />
