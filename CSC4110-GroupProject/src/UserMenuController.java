@@ -7,7 +7,6 @@ import javafx.scene.Scene;
 import javafx.scene.control.MenuBar;
 import javafx.scene.image.Image;
 import javafx.stage.Stage;
-
 import javax.swing.text.html.ImageView;
 import java.io.IOException;
 
@@ -112,7 +111,7 @@ public class UserMenuController {
 
     public void switchToCreateUserProfile(ActionEvent event) throws IOException {
         Root = FXMLLoader.load(getClass().getResource("Profiles/Login/CreateUserProfile.fxml"));
-        Stage = (Stage)((Node)event.getSource()).getScene().getWindow();
+        Stage = (Stage)myMenuBar.getScene().getWindow();
         Scene = new Scene(Root);
         Stage.setScene(Scene);
         Stage.show();
