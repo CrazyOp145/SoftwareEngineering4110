@@ -1,5 +1,6 @@
-package Profiles.Login;
+package Profiles.Users;
 
+import Profiles.Login.LoginValidation;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;

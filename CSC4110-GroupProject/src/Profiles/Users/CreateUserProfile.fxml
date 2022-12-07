@@ -7,10 +7,10 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Profiles.Login.CreateUserProfileController">
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Profiles.Users.CreateUserProfileController">
    <children>
       <Button fx:id="confirmButton" layoutX="187.0" layoutY="323.0" mnemonicParsing="false" onAction="#confirmButtonOnAction" prefHeight="38.0" prefWidth="90.0" text="Confirm" />
-      <Button fx:id="cancelButton" layoutX="324.0" layoutY="323.0" mnemonicParsing="false" onAction="#cancelButtonOnAction" prefHeight="38.0" prefWidth="90.0" text="Cancel" />
+      <Button fx:id="cancelButton" layoutX="324.0" layoutY="323.0" mnemonicParsing="false" onAction="#cancelButtonOnAction" prefHeight="38.0" prefWidth="90.0" text="Back" />
       <TextField fx:id="userIDTextField" layoutX="293.0" layoutY="84.0" />
       <Text layoutX="110.0" layoutY="102.0" strokeType="OUTSIDE" strokeWidth="0.0" text="UserID (Max 6 characters):">
          <font>
