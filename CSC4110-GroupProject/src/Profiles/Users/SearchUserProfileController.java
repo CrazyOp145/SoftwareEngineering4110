@@ -2,8 +2,6 @@ package Profiles.Users;
 
 import Profiles.ReadUserData;
 import Profiles.UserList;
-import Profiles.UserProfiles;
-import csvFiles.ToUserDataCSV;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.collections.transformation.FilteredList;
@@ -58,21 +56,24 @@ public class SearchUserProfileController implements Initializable {
         userIDInput.textProperty().addListener((observable, oldValue, newValue) -> {
             filteredData.setPredicate(UserList -> {
                 // If filter text is empty, display all
-                if (newValue == null || newValue.isEmpty()) return true;
-
-                // Compare every column with the
+                if (newValue == null || newValue.isEmpty()) {
+                    return true;
+                }
+                // Compare first name and last name of every person with filter text.
                 String lowerCaseFilter = newValue.toLowerCase();
-
-                if (UserList.getUserID().contains(lowerCaseFilter))
-                    return true; // Filter matches userID
-
-                else if (UserList.getLastName().toLowerCase().contains(lowerCaseFilter))
+                if (UserList.getUserID().toLowerCase().indexOf(lowerCaseFilter) > -1) {
+                    return true; // Filter matches userID name
+                }
+                else if (UserList.getLastName().toLowerCase().indexOf(lowerCaseFilter) > -1) {
                     return true; // Filter matches last name
-
-                else if (UserList.getFirstName().toLowerCase().contains(lowerCaseFilter))
+                }
+                else if (UserList.getFirstName().toLowerCase().indexOf(lowerCaseFilter) > -1) {
                     return true; // Filter matches first name
-
-                else return String.valueOf(UserList.getUserRole()).contains(lowerCaseFilter); // Filter matches user Role
+                }
+                else if(UserList.getUserRole().toLowerCase().indexOf(lowerCaseFilter) > -1)
+                    return true; // Filter matches user role
+                else
+                    return false;
             });
             table.setPlaceholder(new Label("The User "+ newValue +" was not found"));
         });
