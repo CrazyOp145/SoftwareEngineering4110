@@ -14,11 +14,9 @@ public class PurchaseOrderList {
         public String getItemName() {
             return itemName.get();
         }
-
-        public String getPurchaseQuantity() {
-            return quantity.get();
-        }
-
+        public String getQuantity() {
+        return quantity.get();
+    }
         public String getPurchasePrice() {
             return purchaseP.get();
         }

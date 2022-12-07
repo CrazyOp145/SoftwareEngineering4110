@@ -6,9 +6,9 @@ public interface UserProfiles {
     private String ID;
     private String password;
 
-    public UserProfiles(){
-
+    UserProfiles(){
     }
+
     public UserProfiles(String firstName, String lastName, String ID, String password){
         this.firstName = firstName;
         this.lastName = lastName;

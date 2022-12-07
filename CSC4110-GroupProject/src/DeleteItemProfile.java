@@ -58,9 +58,9 @@ public class DeleteItemProfile {
             input.close();
             pw.flush();
             pw.close();
-            //oldFile.delete();
-            //File dump = new File(filePath);
-            //newFile.renameTo(dump);
+//            oldFile.delete();
+//            File dump = new File(filePath);
+//            newFile.renameTo(dump);
             JOptionPane.showMessageDialog(null,"The item has been deleted");
         } catch (IOException e) {
             JOptionPane.showMessageDialog(null,"Fail to delete item");

@@ -4,10 +4,19 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e4486989-fc5b-474b-afaf-e7dea797b27f" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/CSC4110-GroupProject/src/csvFiles/ReadFromCSVs.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CSC4110-GroupProject/src/csvFiles/WriteToCSVs.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CSC4110-GroupProject/src/csvFiles/WriteToCustomerProfileCSV.java" beforeDir="false" />
+    <list default="true" id="e4486989-fc5b-474b-afaf-e7dea797b27f" name="Changes" comment="fixing main branch and add restriction for decimal place of view purchase order. --hg5241 cj du.">
+      <change afterPath="$PROJECT_DIR$/CSC4110-GroupProject/src/UpdateCustomerProfile.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/CSC4110-GroupProject/src/UpdateCustomerProfile.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/CSC4110-GroupProject/src/UpdateCustomerProfileController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CSC4110-GroupProject/src/UserMenu.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/CSC4110-GroupProject/src/UserMenu.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CSC4110-GroupProject/src/UserMenuController.java" beforeDir="false" afterPath="$PROJECT_DIR$/CSC4110-GroupProject/src/UserMenuController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CustomerProfiles.csv" beforeDir="false" afterPath="$PROJECT_DIR$/CustomerProfiles.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SoftwareEngineering4110/CreateCustomerProfileController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SoftwareEngineering4110/CreateCustomerProfileController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SoftwareEngineering4110/DeleteCustomerProfile.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SoftwareEngineering4110/DeleteCustomerProfile.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SoftwareEngineering4110/UserMenu.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SoftwareEngineering4110/UserMenu.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SoftwareEngineering4110/UserMenuController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SoftwareEngineering4110/UserMenuController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tempCustomerProfiles.csv" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -50,11 +59,16 @@
     "settings.editor.selected.configurable": "preferences.JavaFX"
   }
 }]]></component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Paulo\eclipse-workspace\databaseProject\SoftwareEngineering4110\CSC4110-GroupProject\src" />
+    </key>
+  </component>
   <component name="RunManager" selected="Application.MainGUI">
     <configuration name="MainGUI" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="MainGUI" />
       <module name="SoftwareEngineering4110" />
-      <option name="VM_PARAMETERS" value="--module-path &quot;C:\Users\Paulo\Downloads\openjfx-19_windows-x64_bin-sdk\javafx-sdk-19\lib&quot; --add-modules javafx.controls,javafx.fxml" />
+      <option name="VM_PARAMETERS" value="--module-path &quot;C:\Program Files\Java\openjfx-19_windows-x64_bin-sdk\javafx-sdk-19\lib&quot; --add-modules javafx.controls,javafx.fxml" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -86,6 +100,14 @@
       <option name="presentableId" value="Default" />
       <updated>1669422451320</updated>
     </task>
+    <task id="LOCAL-00001" summary="fixing main branch and add restriction for decimal place of view purchase order. --hg5241 cj du.">
+      <created>1670283683734</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1670283683734</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -98,6 +120,10 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="fixing main branch and add restriction for decimal place of view purchase order. --hg5241 cj du." />
+    <option name="LAST_COMMIT_MESSAGE" value="fixing main branch and add restriction for decimal place of view purchase order. --hg5241 cj du." />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

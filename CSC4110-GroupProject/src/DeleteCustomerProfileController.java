@@ -2,36 +2,31 @@ import Profiles.CustomerList;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.collections.transformation.FilteredList;
-import javafx.collections.transformation.SortedList;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
-import javafx.scene.control.Label;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.TextField;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.stage.Stage;
 
-import javax.swing.*;
 import java.io.File;
-import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
-import java.util.Scanner;
-
-public class SearchCustomerProfileController implements Initializable {
-
-    private Stage Stage;
-    private Scene Scene;
+/**
+ *
+ * @author Paulo Burgess GN7231
+ *
+ */
+public class DeleteCustomerProfileController implements Initializable {
+    private javafx.stage.Stage Stage;
+    private javafx.scene.Scene Scene;
     private Parent Root;
-
-    @FXML
-    private TextField searchCustomerBar;
     @FXML
     private TableView<CustomerList> tableView;
     @FXML
@@ -52,10 +47,34 @@ public class SearchCustomerProfileController implements Initializable {
     private TableColumn<CustomerList, String>  lastPaidAmount;
     @FXML
     private TableColumn<CustomerList, String>  lastOrderDate;
+    @FXML
+    private TextField deleteCustomerBar;
+    String filePath = "CustomerProfiles.csv";
+    String temp = "temp.csv";
+
     private ObservableList<CustomerList> dataList = FXCollections.observableArrayList();
 
-
     ReadCustomerProfile readCustomerProfile = new ReadCustomerProfile();
+
+    DeleteCustomerProfile deleteCustomerProfile = new DeleteCustomerProfile();
+
+
+    File oldFile = new File(filePath);
+    File newFile = new File(temp);
+    public void deleteProfile(){
+        deleteCustomerProfile.deleteCustomerProfile(filePath,deleteCustomerBar.getText());
+
+        oldFile.delete();
+        File dump = new File(filePath);
+        newFile.renameTo(dump);
+        dump.exists();
+
+
+        //tableView.setItems(dataList);
+        clearList();
+        updateList();
+    }
+
     public void clearList(){
         dataList.clear();
     }
@@ -72,33 +91,11 @@ public class SearchCustomerProfileController implements Initializable {
         lastOrderDate.setCellValueFactory(new PropertyValueFactory<>("lastOrderDate"));
         tableView.setItems(dataList);
     }
-
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
         updateList();
-        FilteredList<CustomerList> filteredData = new FilteredList<>(dataList, b -> true);
-        searchCustomerBar.textProperty().addListener((observable, oldValue, newValue) -> {
-            filteredData.setPredicate(CustomerList -> {
-                // If filter text is empty, display all persons.
-                if (newValue == null || newValue.isEmpty()) {
-                    return true;
-                }
-                // Compare first name and last name of every person with filter text.
-                String lowerCaseFilter = newValue.toLowerCase();
-                if (CustomerList.getCustomerID().toString().indexOf(lowerCaseFilter) > -1 ) {
-                    return true; // Filter matches first name.
-                } else if (CustomerList.getCompanyName().toLowerCase().indexOf(lowerCaseFilter) > -1) {
-                    return true; // Filter matches last name.
-                }
-                else
-                    return false; // Does not match.
-            });
-            tableView.setPlaceholder(new Label("The Customer "+ newValue +" profile is not found"));
-        });
-        SortedList<CustomerList> sortedData = new SortedList<>(filteredData);
-        sortedData.comparatorProperty().bind(tableView.comparatorProperty());
-        tableView.setItems(sortedData);
     }
+
     public void switchToUserMenu(javafx.event.ActionEvent event) throws IOException {
         clearList();
         Root = FXMLLoader.load(getClass().getResource("UserMenu.fxml"));
