@@ -1,5 +1,9 @@
 package Oberver;
-
+/**
+ *
+ * @author Shijie DU  HG5241
+ *
+ */
 import java.util.ArrayList;
 
 public class Behavior implements ISubject{
