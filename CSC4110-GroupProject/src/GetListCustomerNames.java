@@ -13,7 +13,7 @@ import java.util.Scanner;
  */
 public class GetListCustomerNames {
     public static String[] getListCustomerNames(){
-        String[] customerNameList = new String[20];
+        List<String> customerNameList = new ArrayList<String>();
         int counter = 0;
         String filePath = "CustomerProfiles.csv";
         File file = new File(filePath);
@@ -24,13 +24,12 @@ public class GetListCustomerNames {
                 Object[] values = data.split(",");
                 Object[] valuesLine = data.split("\n");
 
-                customerNameList[counter] = (String.valueOf(values[1]));
-                counter++;
+                customerNameList.add(String.valueOf(values[1]));
             }
-
         } catch (FileNotFoundException e) {
             throw new RuntimeException(e);
         }
-        return customerNameList;
+        String[] customerNamesArray = new String[customerNameList.size()];
+        return customerNameList.toArray(customerNamesArray);
     }
 }

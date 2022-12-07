@@ -94,3 +94,5 @@ out/production/SoftwareEngineering4110/CreateCustomerOrder.fxml
 out/production/SoftwareEngineering4110/CalculatePurchaseOrderTotalCost.class
 out/production/SoftwareEngineering4110/CalculateCustomerOrderTotal.class
 out/production/SoftwareEngineering4110/BakeryProducts.class
+out/production/SoftwareEngineering4110/Profiles/Accountant.class
+out/production/SoftwareEngineering4110/Profiles/Administrator.class
