@@ -67,7 +67,7 @@ public class CreateVendorProfile implements Initializable {
     public void createVendorProfile(ActionEvent actionEvent) throws IOException {
         ProfilesFactory profFactory = new ProfilesFactory();
         Random random = new Random(); //Random functionality borrowed from David Her
-        String vendID = String.valueOf((random.nextInt(999999)));
+        String vendID = "v" + String.valueOf((random.nextInt(99999)));
         String vendName = vendorName.getText();
         String str = street.getText();
         String c = city.getText();
