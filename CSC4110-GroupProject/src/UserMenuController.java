@@ -118,7 +118,7 @@ public class UserMenuController implements Initializable {
     }
 
     public void switchToCreateUserProfile(javafx.event.ActionEvent event) throws IOException {
-        Root = FXMLLoader.load(getClass().getResource("Profiles/Login/CreateUserProfile.fxml"));
+        Root = FXMLLoader.load(getClass().getResource("Profiles/Users/CreateUserProfile.fxml"));
         //Stage = (Stage)((Node)event.getSource()).getScene().getWindow();
         Stage = (Stage)myMenuBar.getScene().getWindow();
         Scene = new Scene(Root);
@@ -133,6 +133,25 @@ public class UserMenuController implements Initializable {
         Stage.setScene(Scene);
         Stage.show();
     }
+
+    public void switchToSearchUserProfile(javafx.event.ActionEvent event) throws IOException {
+        Root = FXMLLoader.load(getClass().getResource("Profiles/Users/SearchUserProfile.fxml"));
+        //Stage = (Stage)((Node)event.getSource()).getScene().getWindow();
+        Stage = (Stage)myMenuBar.getScene().getWindow();
+        Scene = new Scene(Root);
+        Stage.setScene(Scene);
+        Stage.show();
+    }
+
+    public void switchToDeleteUserProfile(javafx.event.ActionEvent event) throws IOException {
+        Root = FXMLLoader.load(getClass().getResource("Profiles/Users/DeleteUserProfile.fxml"));
+        //Stage = (Stage)((Node)event.getSource()).getScene().getWindow();
+        Stage = (Stage)myMenuBar.getScene().getWindow();
+        Scene = new Scene(Root);
+        Stage.setScene(Scene);
+        Stage.show();
+    }
+
     public void switchToCreateItemProfileScene(ActionEvent event) throws IOException {
         Root = FXMLLoader.load(getClass().getResource("CreateItemProfile.fxml"));
         Stage = (Stage)((Node)event.getSource()).getScene().getWindow();
