@@ -11,7 +11,7 @@
 <?import javafx.scene.text.Font?>
 
 <?import javafx.scene.control.ChoiceBox?>
-<AnchorPane prefHeight="463.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="CreatePurchaseOrderController">
+<AnchorPane prefHeight="463.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="CreateCustomerOrderController">
     <children>
         <TableView fx:id="tableView" layoutX="29.0" layoutY="150.0" onMouseClicked="#selectCell" prefHeight="269.0" prefWidth="542.0">
             <columns>

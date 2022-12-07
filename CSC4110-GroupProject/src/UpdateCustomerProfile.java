@@ -6,7 +6,7 @@ import java.io.File;
 import java.io.FileNotFoundException;
 /**
  *
- * @author Shijie DU  HG5241
+ * @author Paulo Burgess GN7231
  *
  */
 public class UpdateCustomerProfile {

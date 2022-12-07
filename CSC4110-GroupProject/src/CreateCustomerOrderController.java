@@ -53,11 +53,6 @@ public class CreateCustomerOrderController implements Initializable {
     private ArrayList<ItemList> customerOrderList = new ArrayList<>();
     ReadItemProfile readItemProfile = new ReadItemProfile();
     ItemList item;
-
-    public CreateCustomerOrderController(){
-        customer = new ChoiceBox<>(FXCollections.observableArrayList(GetListCustomerNames.getListCustomerNames()));
-        customer.getItems();
-    }
     public void clearList(){
         dataList.clear();
     }

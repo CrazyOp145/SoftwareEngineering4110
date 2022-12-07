@@ -5,7 +5,11 @@ import javafx.collections.ObservableList;
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.util.Scanner;
-
+/**
+ *
+ * @author Paulo Burgess GN7231
+ *
+ */
 public class ReadCustomerProfile {
     private static ObservableList<CustomerList> dataList = FXCollections.observableArrayList();
 

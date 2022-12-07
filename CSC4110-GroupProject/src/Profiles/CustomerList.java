@@ -1,6 +1,10 @@
 package Profiles;
 import javafx.beans.property.SimpleStringProperty;
-
+/**
+ *
+ * @author Paulo Burgess GN7231
+ *
+ */
 public class CustomerList {
     private SimpleStringProperty customerID, companyName,streetAddress, city, state, phoneNumber,balance,lastPaidAmount, lastOrderDate;
     public String getCustomerID() {

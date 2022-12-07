@@ -2,7 +2,11 @@ package Profiles;
 
 import java.util.*;
 import java.util.regex.Pattern;
-
+/**
+ *
+ * @author Paulo Burgess GN7231
+ *
+ */
 public class ProfilesFactory {
     public static UserProfiles createProfile(String profileType){
         switch (profileType.toUpperCase()) {

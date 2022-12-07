@@ -27,6 +27,11 @@ import java.util.Random;
 import java.util.ResourceBundle;
 import java.util.regex.Pattern;
 
+/**
+ *
+ * @author Paulo Burgess GN7231
+ *
+ */
 public class CreateCustomerProfileController implements Initializable {
     String filePath = "CustomerProfiles.csv";
     @FXML

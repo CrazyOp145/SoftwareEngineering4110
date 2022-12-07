@@ -6,10 +6,14 @@ import javafx.collections.ObservableList;
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.util.Scanner;
-
+/**
+ *
+ * @author Paulo Burgess GN7231
+ *
+ */
 public class GetListCustomerNames {
     public static String[] getListCustomerNames(){
-        String[] customerNameList = new String[50];
+        String[] customerNameList = new String[20];
         int counter = 0;
         String filePath = "CustomerProfiles.csv";
         File file = new File(filePath);

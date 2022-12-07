@@ -1,4 +1,5 @@
 package Profiles;
+
 public class VendorProfile implements UserProfiles{
         private String vendorName, vendorID, vendorPW;
         private String street, city, state;
