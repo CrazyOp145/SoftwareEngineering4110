@@ -7,16 +7,13 @@ import java.util.*;
  * @author David Her
  */
 
-public class ToCSV {
-    public static void createCsv(String filePath,String[] header){
+public class ToUserDataCSV {
+    public static void createCsv(String filePath){
         try {
             //FileWriters
             FileWriter file = new FileWriter(filePath);
             BufferedWriter bufferedWriter = new BufferedWriter(file);
             PrintWriter printWriter = new PrintWriter(bufferedWriter);
-
-            //Header Row
-            printWriter.print(Arrays.toString(header));
 
             printWriter.flush();
             printWriter.close();
@@ -58,19 +55,20 @@ public class ToCSV {
         }
     }
 
-    public static void readUserData(String filePath){
+    public static String[] readUserData(String filePath){
+        String line;
+        String[] data = new String[]{};
         try{
-            //Scanner
-            Scanner userData = new Scanner(new File(filePath));
-            userData.useDelimiter(",");
+            FileReader fr = new FileReader("UserData.csv");
+            BufferedReader br = new BufferedReader(fr);
 
-            //Read Data
-            while (userData.hasNext()) {
-                System.out.print(userData.next() + ",");
+            while((line = br.readLine()) != null){
+                data = line.split(",");
             }
         }
         catch (IOException e){
             e.printStackTrace();
         }
+        return data;
     }
 }

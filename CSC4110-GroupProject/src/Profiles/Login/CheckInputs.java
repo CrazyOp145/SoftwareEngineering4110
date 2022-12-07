@@ -13,7 +13,7 @@ public class CheckInputs {
 
     // Check the input length for Names
     public static boolean checkNameInput(String input){
-        return input.length() <= 15 && input.length() != 0;
+        return input.length() <= 15 && input.length() != 0 && input.matches("[a-zA-Z]+");
     }
 
     // Check the input length for UserIDs

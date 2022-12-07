@@ -86,7 +86,6 @@ public class UserMenuController implements Initializable {
     }
     public void switchCreateCustomerProfile(javafx.event.ActionEvent event) throws IOException {
         Root = FXMLLoader.load(getClass().getResource("CreateCustomerProfile.fxml"));
-        //Stage = (Stage)((Node)event.getSource()).getScene().getWindow();
         Stage = (Stage)myMenuBar.getScene().getWindow();
         Scene = new Scene(Root);
         Stage.setScene(Scene);
@@ -94,7 +93,6 @@ public class UserMenuController implements Initializable {
     }
     public void switchSearchCustomerProfile(javafx.event.ActionEvent event) throws IOException {
         Root = FXMLLoader.load(getClass().getResource("SearchCustomerProfile.fxml"));
-        //Stage = (Stage)((Node)event.getSource()).getScene().getWindow();
         Stage = (Stage)myMenuBar.getScene().getWindow();
         Scene = new Scene(Root);
         Stage.setScene(Scene);
@@ -102,7 +100,6 @@ public class UserMenuController implements Initializable {
     }
     public void switchDeleteCustomerProfile(javafx.event.ActionEvent event) throws IOException {
         Root = FXMLLoader.load(getClass().getResource("DeleteCustomerProfile.fxml"));
-        //Stage = (Stage)((Node)event.getSource()).getScene().getWindow();
         Stage = (Stage)myMenuBar.getScene().getWindow();
         Scene = new Scene(Root);
         Stage.setScene(Scene);
