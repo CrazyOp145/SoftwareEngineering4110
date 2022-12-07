@@ -73,32 +73,32 @@ public class VendorProfile implements UserProfiles{
         }
         @Override
         public String getCompanyName() {
-            return null;
+            return vendorName;
         }
 
         @Override
         public String getCustomerID() {
-            return null;
+            return vendorID;
         }
 
         @Override
         public String getCity() {
-            return null;
+            return city;
         }
 
         @Override
         public String getStreetAddress() {
-            return null;
+            return street;
         }
 
         @Override
         public String getState() {
-            return null;
+            return state;
         }
 
         @Override
         public String getPhone() {
-            return null;
+            return phone;
         }
 
          public void setPhone(String phone) {
@@ -107,7 +107,7 @@ public class VendorProfile implements UserProfiles{
 
         @Override
         public double getBalance() {
-            return 0;
+            return balance;
         }
         public void setDiscountStartDate(String discountStartDate) {
             this.discountStartDate = discountStartDate;

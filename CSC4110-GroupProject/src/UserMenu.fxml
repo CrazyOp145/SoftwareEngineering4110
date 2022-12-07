@@ -42,7 +42,7 @@
           <Menu mnemonicParsing="false" text="Create">
             <items>
               <MenuItem mnemonicParsing="false" onAction="#switchCreateCustomerProfile" text="Customer Profile" />
-                  <MenuItem mnemonicParsing="false" onAction="#switchToVendorProfile" text="Vendor profile" />
+                  <MenuItem mnemonicParsing="false" onAction="#switchToCreateVendorProfile" text="Vendor profile" />
                   <MenuItem mnemonicParsing="false" onAction="#switchToCreateItemProfileSceneMenuBar" text="Item profile" />
                   <MenuItem mnemonicParsing="false" onAction="#switchToPurchaseOrderMenuBar" text="Purchase order" />
             </items>

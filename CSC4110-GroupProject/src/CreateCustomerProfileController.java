@@ -65,7 +65,7 @@ public class CreateCustomerProfileController implements Initializable {
         validityChecker = true;
         Random randID = new Random();
         String customerID = String.valueOf(randID.nextInt(999999));
-        Pattern phonePattern = Pattern.compile("^([0-9]{3}-){2}[0-9]{4}$");
+        Pattern phonePattern = Pattern.compile("^(\\d{3}[- .]?){2}\\d{4}$");
         companyName = companyNameTF.getText();
         address = addressTF.getText();
         city = cityTF.getText();
