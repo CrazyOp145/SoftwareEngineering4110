@@ -1,5 +1,9 @@
 package Profiles;
-
+/**
+ *
+ * @author Paulo Burgess GN7231
+ *
+ */
 public class Salesperson implements UserProfiles{
     private String firstName;
     private String lastName;

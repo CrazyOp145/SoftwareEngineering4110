@@ -11,7 +11,11 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
-
+/**
+ *
+ * @author Paulo Burgess GN7231
+ *
+ */
 public class SearchCustomerProfile {
     public static String[] SearchCustomerProfile(String searchTerm) throws IOException {
         Scanner customerInfo = new Scanner(new File("CustomerProfiles.csv"));

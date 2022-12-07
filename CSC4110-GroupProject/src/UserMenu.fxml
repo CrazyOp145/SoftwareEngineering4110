@@ -48,6 +48,7 @@
                   <MenuItem mnemonicParsing="false" onAction="#switchToCreateItemProfileSceneMenuBar" text="Item profile" />
                   <MenuItem mnemonicParsing="false" onAction="#switchToPurchaseOrderMenuBar" text="Purchase order" />
                   <MenuItem mnemonicParsing="false" onAction="#switchToCreateUserProfile" text="User profile" />
+                  <MenuItem mnemonicParsing="false" onAction="#switchCreateCustomerOrder" text="Customer Order" />
             </items>
           </Menu>
             <Menu mnemonicParsing="false" text="Delete">

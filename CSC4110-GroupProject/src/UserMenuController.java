@@ -113,6 +113,14 @@ public class UserMenuController implements Initializable {
         Stage.setScene(Scene);
         Stage.show();
     }
+    public void switchCreateCustomerOrder(javafx.event.ActionEvent event) throws IOException {
+        Root = FXMLLoader.load(getClass().getResource("CreateCustomerOrder.fxml"));
+        //Stage = (Stage)((Node)event.getSource()).getScene().getWindow();
+        Stage = (Stage)myMenuBar.getScene().getWindow();
+        Scene = new Scene(Root);
+        Stage.setScene(Scene);
+        Stage.show();
+    }
 
     public void switchToCreateUserProfile(javafx.event.ActionEvent event) throws IOException {
         Root = FXMLLoader.load(getClass().getResource("Profiles/Users/CreateUserProfile.fxml"));
