@@ -18,7 +18,9 @@ import java.net.URL;
 import java.util.ResourceBundle;
 
 import static Profiles.Login.CheckInputs.*;
-
+/**
+ * @author David Her
+ */
 public class CreateUserProfileController implements Initializable {
     @FXML private TextField userIDTextField;
     @FXML private TextField lastNameTextField;
