@@ -1,7 +1,8 @@
-100002,Patato,100,0.89,0.29,12/16/2022,Vegetables,Pounds
-100003,Tamato,300,3.89,2.29,12/16/2022,Vegetables,Pounds
-100004,egg,100,3.99,1.99,12/16/2022,Dairy,Dozen
-100005,Milk,90,5.99,2.99,12/6/2022,Dairy,Gallon
-100006,Lettce,170,1.99,0.99,12/16/2022,Vegetables,Pounds
-100007,Celery,60,0.99,0.39,12/16/2022,Vegetables,Pounds
-100008,Onion,700,1.29,0.59,12/16/2022,Vegetables,Pounds
+100002,Patato,100,0.89,0.29,12/16/2022,Vegetables,Pounds,300002
+100003,Tamato,300,3.89,2.29,12/16/2022,Vegetables,Pounds,300002
+100004,egg,100,3.99,1.99,12/16/2022,Dairy,Dozen,300002
+100005,Milk,90,5.99,2.99,12/6/2022,Dairy,Gallon,300003
+100006,Lettce,170,1.99,0.99,12/16/2022,Vegetables,Pounds,300001
+100007,Celery,60,0.99,0.39,12/16/2022,Vegetables,Pounds,300002
+100001,bbb,100,5.99,4.99,12/22/2022,Fruits,Pounds,300002
+100000,aaa,100,8,5,12/29/2022,Nuts,Pounds,300002

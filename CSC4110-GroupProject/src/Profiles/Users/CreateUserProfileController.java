@@ -31,7 +31,7 @@ public class CreateUserProfileController implements Initializable {
     @FXML private Text passwordChecks;
     @FXML private Text userRoleChecks;
     private String[] role =
-            {"administrator", "owner", "customer", "vendor", "inventoryManager"};
+            {"vendor", "inventoryManager", "purchaser", "salesPerson","accountant"};
 
     @Override
     public void initialize(URL arg0, ResourceBundle arg1) {
@@ -39,7 +39,7 @@ public class CreateUserProfileController implements Initializable {
     }
 
     public void cancelButtonOnAction(ActionEvent event) throws IOException {
-        Parent Root = FXMLLoader.load(getClass().getResource("../../UserMenu.fxml"));
+        Parent Root = FXMLLoader.load(getClass().getResource("../UserMenu.fxml"));
         Stage stage = (Stage)((Node)event.getSource()).getScene().getWindow();
         Scene scene = new Scene(Root);
         stage.setScene(scene);
@@ -78,18 +78,38 @@ public class CreateUserProfileController implements Initializable {
         }
         else if(!userIDCheck){
             userIDChecks.setText("Error: Invalid User ID");
+            lastNameChecks.setText("");
+            firstNameChecks.setText("");
+            passwordChecks.setText("");
+            userRoleChecks.setText("");
         }
         else if(!lastNameCheck){
             lastNameChecks.setText("Error: Invalid Last Name");
+            userIDChecks.setText("");
+            firstNameChecks.setText("");
+            passwordChecks.setText("");
+            userRoleChecks.setText("");
         }
         else if(!firstNameCheck){
             firstNameChecks.setText("Error: Invalid First Name");
+            userIDChecks.setText("");
+            lastNameChecks.setText("");
+            passwordChecks.setText("");
+            userRoleChecks.setText("");
         }
         else if(!passwordCheck){
             passwordChecks.setText("Error: Invalid Password");
+            userIDChecks.setText("");
+            lastNameChecks.setText("");
+            firstNameChecks.setText("");
+            userRoleChecks.setText("");
         }
         else if(userRoleInput == null){
             userRoleChecks.setText("Error: Invalid User Role");
+            userIDChecks.setText("");
+            lastNameChecks.setText("");
+            firstNameChecks.setText("");
+            passwordChecks.setText("");
         }
     }
 }
