@@ -1,5 +1,7 @@
 package Profiles.Items;
 
+import javafx.beans.value.ChangeListener;
+import javafx.beans.value.ObservableValue;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
@@ -16,6 +18,8 @@ import javax.swing.*;
 import java.io.File;
 import java.io.IOException;
 import java.net.URL;
+import java.time.LocalDate;
+import java.util.List;
 import java.util.ResourceBundle;
 import Profiles.Items.Categories.*;
 import Profiles.Items.*;
@@ -25,6 +29,7 @@ import Profiles.Items.*;
  *
  */
 public class UpdateItemController implements Initializable {
+    ReadVendorId RVI = new ReadVendorId();
     //New value for update
     @FXML
     private TextField newItemId;
@@ -45,8 +50,10 @@ public class UpdateItemController implements Initializable {
     @FXML
     private ComboBox<String> newUnit;
     private String[] unitCategory = {"Pounds", "Gallon", "Dozen", "Ounce", "bunch"};
+
+    private List<String> vendorList = RVI.initList();
     @FXML
-    private ComboBox newVendorId;
+    private ComboBox<String> newVendorId;
     private javafx.stage.Stage Stage;
     private javafx.scene.Scene Scene;
     private Parent Root;
@@ -91,7 +98,7 @@ public class UpdateItemController implements Initializable {
         }
         updateItemProfile.updateItemProfile(filePath,item.getItemId(),newItemId.getText(),newItemName.getText(),
                 newQuantity.getText(),newSellingPrice.getText(),newPurchasePrice.getText(), String.valueOf(newExpireDate.getValue()),
-                newItemCategory.getValue(),newUnit.getValue());
+                newItemCategory.getValue(),newUnit.getValue(),newVendorId.getValue());
         oldFile.delete();
         File dump = new File(filePath);
         newFile.renameTo(dump);
@@ -108,16 +115,26 @@ public class UpdateItemController implements Initializable {
         expireDate.setCellValueFactory(new PropertyValueFactory<>("expireDate"));
         tableCategory.setCellValueFactory(new PropertyValueFactory<>("itemCategory"));
         tableUnit.setCellValueFactory(new PropertyValueFactory<>("unit"));
+
         tableView.setItems(dataList);
     }
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
+        TextLengthLimiter(newItemName,20);
+        TextTypeLimiter(newQuantity);
+        TextTypeLimiter(newSellingPrice);
+        TextTypeLimiter(newPurchasePrice);
+        TextLengthLimiter(newItemId,6);
+        TextTypeLimiter(newItemId);
+        datePicker();
         updateList();
         newItemCategory.getItems().addAll(Category);
         newItemCategory.setOnAction(this::getCategory);
         newUnit.getItems().addAll(unitCategory);
         newUnit.setOnAction(this::getUnitCategory);
+        newVendorId.getItems().addAll(vendorList);
+        newVendorId.setOnAction(this::getVendorCategory);
     }
 
     public void selectCell(){
@@ -152,6 +169,42 @@ public class UpdateItemController implements Initializable {
     public String getUnitCategory(ActionEvent event){
         String unitCategory = newUnit.getValue();
         return unitCategory;
+    }
+
+    public String getVendorCategory(ActionEvent event){
+        String vendorCategory = newVendorId.getValue();
+        return vendorCategory;
+    }
+    public void datePicker(){
+        newExpireDate.setDayCellFactory(param -> new DateCell() {
+            @Override
+            public void updateItem(LocalDate date, boolean empty) {
+                super.updateItem(date, empty);
+                setDisable(empty || date.compareTo(LocalDate.now()) < 0 );
+            }
+        });
+    }
+    public void TextLengthLimiter(final TextField tf, final int maxLength){
+        tf.textProperty().addListener(new ChangeListener<String>() {
+            @Override
+            public void changed(final ObservableValue<? extends String> ov, final String oldValue, final String newValue) {
+                if (tf.getText().length() > maxLength) {
+                    String s = tf.getText().substring(0, maxLength);
+                    tf.setText(s);
+                }
+            }
+        });
+    }
+
+    public void TextTypeLimiter(final TextField tf){
+        tf.textProperty().addListener(new ChangeListener<String>() {
+            @Override
+            public void changed(ObservableValue<? extends String> observable, String oldValue, String newValue) {
+                if (!newValue.matches("\\d*\\.\\d*")) {
+                    tf.setText(newValue.replaceAll("\\D", ""));
+                }
+            }
+        });
     }
 }
 
