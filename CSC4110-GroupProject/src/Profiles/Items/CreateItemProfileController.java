@@ -22,6 +22,7 @@ import java.io.IOException;
 import java.io.PrintWriter;
 import java.net.URL;
 import java.time.LocalDate;
+import java.util.List;
 import java.util.ResourceBundle;
 /**
  *
@@ -29,9 +30,8 @@ import java.util.ResourceBundle;
  *
  */
 public class CreateItemProfileController implements Initializable {
-
+    ReadVendorId RVI = new ReadVendorId();
     String filePath = "ItemProfile.csv";
-
     @FXML
     private TextField itemName;
     @FXML
@@ -50,8 +50,9 @@ public class CreateItemProfileController implements Initializable {
     private ComboBox<String> unit;
     private String[] unitCategory = {"Pounds", "Gallon", "Dozen", "Ounce", "bunch"};
     @FXML
-    private ComboBox VendorID;
-    private String[] vendorIdCategory = {""};
+    private ComboBox<String> vendorId;
+    //private String[] vendorIdCategory = RVI.initList().toArray(new String[0]);
+    private List<String> vendorList = RVI.initList();
 
     private Stage Stage;
     private Scene Scene;
@@ -70,6 +71,7 @@ public class CreateItemProfileController implements Initializable {
         String unitC = unit.getValue();
         String itemCategoryC = itemCategory.getValue();
         LocalDate expireDateC = expireDate.getValue();
+        int vendorIdC = Integer.parseInt(vendorId.getValue());
 
 
         ItemProfile item = null;
@@ -83,13 +85,15 @@ public class CreateItemProfileController implements Initializable {
         item.setPurchasePrice(purchasePriceC);
         item.setDate(expireDateC);
         item.setUnit(unitC);
+        item.setVendorID(vendorIdC);
 
         try{
             FileWriter fw = new FileWriter(filePath,true);
             BufferedWriter bw = new BufferedWriter(fw);
             PrintWriter pw = new PrintWriter(bw);
-            pw.println(item.getItemID()+","+item.getItemName()+","+item.getQuantity()+","+ item.getSellingPrice()
-                    +","+item.getPurchasePrice()+","+item.getDate()+","+ item.getItemCategory() +","+item.getUnit());
+            pw.println(item.getItemID()+","+item.getItemName()+","+item.getQuantity()+","+
+                    item.getSellingPrice() +","+item.getPurchasePrice()+","+item.getDate()+","+
+                    item.getItemCategory() +","+item.getUnit()+","+item.getVendorID());
             pw.flush();
             pw.close();
             JOptionPane.showMessageDialog(null, "Your item has been created!");
@@ -108,7 +112,7 @@ public class CreateItemProfileController implements Initializable {
         purchasePrice.clear();
         expireDate.getEditor().clear();
         unit.getItems().clear();
-        VendorID.getItems().clear();
+        vendorId.getItems().clear();
     }
 
     public void switchToUserMenuScene(javafx.event.ActionEvent event) throws IOException {
@@ -122,6 +126,8 @@ public class CreateItemProfileController implements Initializable {
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
+        vendorId.getItems().addAll(vendorList);
+        vendorId.setOnAction(this::getVendorCategory);
         itemCategory.getItems().addAll(Category);
         itemCategory.setOnAction(this::getCategory);
         unit.getItems().addAll(unitCategory);
@@ -141,6 +147,11 @@ public class CreateItemProfileController implements Initializable {
     public String getUnitCategory(ActionEvent event){
         String unitCategory = unit.getValue();
         return unitCategory;
+    }
+
+    public String getVendorCategory(ActionEvent event){
+        String vendorCategory = vendorId.getValue();
+        return vendorCategory;
     }
     public void datePicker(){
         expireDate.setDayCellFactory(param -> new DateCell() {
