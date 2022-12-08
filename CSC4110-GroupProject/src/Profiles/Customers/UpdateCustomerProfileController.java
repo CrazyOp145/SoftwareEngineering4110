@@ -16,6 +16,7 @@ import javax.swing.*;
 import java.io.File;
 import java.io.IOException;
 import java.net.URL;
+import java.time.LocalDate;
 import java.util.ResourceBundle;
 import java.util.regex.Pattern;
 
@@ -184,6 +185,7 @@ public class UpdateCustomerProfileController implements Initializable {
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
         updateList();
+        datePicker();
         stateCB.getItems().addAll(stateArray);
     }
 
@@ -200,6 +202,15 @@ public class UpdateCustomerProfileController implements Initializable {
         Scene = new Scene(Root);
         Stage.setScene(Scene);
         Stage.show();
+    }
+    public void datePicker(){
+        lastPurchaseDateDP.setDayCellFactory(param -> new DateCell() {
+            @Override
+            public void updateItem(LocalDate date, boolean empty) {
+                super.updateItem(date, empty);
+                setDisable(empty || date.compareTo(LocalDate.now()) < 0 );
+            }
+        });
     }
 }
 

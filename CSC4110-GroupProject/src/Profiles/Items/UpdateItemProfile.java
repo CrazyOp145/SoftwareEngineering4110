@@ -12,11 +12,11 @@ import java.io.File;
  */
 public class UpdateItemProfile {
 
-    private Scanner input;
+    private static Scanner input;
 
-    public void updateItemProfile(String filePath, String updateTerm,
-                                  String newItemId, String newItemName, String newQuantity, String newSellingPrice,
-                                  String newPurchasePrice, String newExpireDate,String newCategory,String newUnit, String newVendorId) {
+    public static void updateItemProfile(String filePath, String updateTerm,
+                                         String newItemId, String newItemName, String newQuantity, String newSellingPrice,
+                                         String newPurchasePrice, String newExpireDate, String newCategory, String newUnit, String newVendorId) {
 
         String tempFile = "temp.csv";
         File oldFile = new File(filePath);

@@ -2,6 +2,7 @@ package Profiles.Customers;
 
 import Profiles.Items.ItemList;
 import Profiles.Items.ReadItemProfile;
+import Profiles.Items.UpdateItemProfile;
 import Profiles.PurchaseOrder.PurchaseIdProvider;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
@@ -52,7 +53,7 @@ public class CreateCustomerOrderController implements Initializable {
     @FXML
     private DatePicker needDate;
     CalculateCustomerOrderTotal calculateCustomerOrderTotal = new CalculateCustomerOrderTotal();
-    DateTimeFormatter formatter = DateTimeFormatter.ofPattern("MM/dd/yyyy");
+    DateTimeFormatter formatter = DateTimeFormatter.ofPattern("M/d/yyyy");
     int addToOrderCounter = 0;
     private ObservableList<ItemList> dataList = FXCollections.observableArrayList();
     private ArrayList<ItemList> customerOrderList = new ArrayList<>();
@@ -81,6 +82,10 @@ public class CreateCustomerOrderController implements Initializable {
         if (Double.parseDouble(item.getQuantity()) < Double.parseDouble(purchaseQuantity.getText())){
             JOptionPane.showMessageDialog(null, "We do not have enough of that item.\n " +
                     "Select a another item to add or less of that item");
+            return;
+        }
+        if (LocalDate.parse(item.getExpireDate(),formatter).compareTo(LocalDate.now()) < 0){
+            JOptionPane.showMessageDialog(null, "The item you pick has expired.\n Select a another item to add");
             return;
         }
         if(item.needDate == "null"){
@@ -132,13 +137,17 @@ public class CreateCustomerOrderController implements Initializable {
                     BufferedWriter bw = new BufferedWriter(fw);
                     PrintWriter pw = new PrintWriter(bw);
                     pw.println(purchaseItem.getItemId()+","+purchaseItem.getItemName()+","+purchaseItem.getPurchasePrice()
-                            +","+purchaseItem.getExpireDate() +","+purchaseItem.needQuantity+","+purchaseItem.needDate+","+subtotal);
+                            +","+purchaseItem.getSellingPrice() +","+purchaseItem.needQuantity+","+purchaseItem.needDate+","+subtotal);
                     pw.flush();
                     pw.close();
+                    UpdateItemQuantity.updateItemQuantity("ItemProfile.csv",purchaseItem.getItemId(),
+                           purchaseItem.needQuantity);
                     orderSubtotal += subtotal;
                 }catch(Exception e){
                     JOptionPane.showMessageDialog(null, "Unable to make customer order...");
                 }
+                clearList();
+                updateList();
             }
             try{
                 FileWriter fw = new FileWriter(filePath,true);
