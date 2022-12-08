@@ -2,6 +2,7 @@ package Profiles.Customers;
 
 import Profiles.Items.ItemList;
 import Profiles.Items.ReadItemProfile;
+import Profiles.Items.UpdateItemProfile;
 import Profiles.PurchaseOrder.PurchaseIdProvider;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
@@ -132,13 +133,17 @@ public class CreateCustomerOrderController implements Initializable {
                     BufferedWriter bw = new BufferedWriter(fw);
                     PrintWriter pw = new PrintWriter(bw);
                     pw.println(purchaseItem.getItemId()+","+purchaseItem.getItemName()+","+purchaseItem.getPurchasePrice()
-                            +","+purchaseItem.getExpireDate() +","+purchaseItem.needQuantity+","+purchaseItem.needDate+","+subtotal);
+                            +","+purchaseItem.getSellingPrice() +","+purchaseItem.needQuantity+","+purchaseItem.needDate+","+subtotal);
                     pw.flush();
                     pw.close();
+                    UpdateItemQuantity.updateItemQuantity("ItemProfile.csv",purchaseItem.getItemId(),
+                           purchaseItem.needQuantity);
                     orderSubtotal += subtotal;
                 }catch(Exception e){
                     JOptionPane.showMessageDialog(null, "Unable to make customer order...");
                 }
+                clearList();
+                updateList();
             }
             try{
                 FileWriter fw = new FileWriter(filePath,true);
