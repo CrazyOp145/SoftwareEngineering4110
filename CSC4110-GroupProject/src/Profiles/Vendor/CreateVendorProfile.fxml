@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<?import javafx.scene.text.Font?>
+<AnchorPane xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="Profiles.Vendor.CreateVendorProfile"
+            prefHeight="400.0" prefWidth="600.0">
+
+    <children>
+        <Button layoutX="143.0" layoutY="402.0" mnemonicParsing="false" onAction="#create" prefHeight="25.0" prefWidth="100.0" text="Create" />
+        <Button layoutX="389.0" layoutY="402.0" mnemonicParsing="false" onAction="#switchToUserMenuScene" prefHeight="25.0" prefWidth="100.0" text="Cancel" />
+        <Label layoutX="100.0" layoutY="34.0" text="Item Name :" AnchorPane.leftAnchor="100.0">
+            <font>
+                <Font size="16.0" />
+            </font></Label>
+        <Label layoutX="100.0" layoutY="75.0" text="Item Category :" AnchorPane.leftAnchor="100.0">
+            <font>
+                <Font size="16.0" />
+            </font></Label>
+        <Label layoutX="100.0" layoutY="119.0" text="Quantity :" AnchorPane.leftAnchor="100.0">
+            <font>
+                <Font size="16.0" />
+            </font></Label>
+        <Label layoutX="100.0" layoutY="163.0" text="Selling Price :" AnchorPane.leftAnchor="100.0">
+            <font>
+                <Font size="16.0" />
+            </font></Label>
+        <Label layoutX="100.0" layoutY="204.0" text="Purchase Price :" AnchorPane.leftAnchor="100.0">
+            <font>
+                <Font size="16.0" />
+            </font></Label>
+        <Label layoutX="100.0" layoutY="246.0" text="Expire Date :" AnchorPane.leftAnchor="100.0">
+            <font>
+                <Font size="16.0" />
+            </font></Label>
+        <Label layoutX="100.0" layoutY="335.0" text="Vendor ID :" AnchorPane.leftAnchor="100.0">
+            <font>
+                <Font size="16.0" />
+            </font></Label>
+        <TextField fx:id="itemName" layoutX="379.0" layoutY="34.0" />
+        <TextField fx:id="sellingPrice" layoutX="379.0" layoutY="163.0" />
+        <TextField fx:id="quantity" layoutX="379.0" layoutY="119.0" />
+        <TextField fx:id="purchasePrice" layoutX="379.0" layoutY="204.0" />
+        <ComboBox fx:id="itemCategory" layoutX="379.0" layoutY="75.0" prefWidth="150.0" />
+        <ComboBox fx:id="vendorId" layoutX="382.0" layoutY="335.0" prefHeight="25.0" prefWidth="149.0" />
+        <DatePicker fx:id="expireDate" layoutX="380.0" layoutY="246.0" prefHeight="25.0" prefWidth="150.0" />
+        <Label layoutX="117.0" layoutY="291.0" text="Unit :">
+            <font>
+                <Font size="16.0" />
+            </font>
+        </Label>
+        <ComboBox fx:id="unit" layoutX="381.0" layoutY="291.0" prefWidth="150.0" />
+    </children>
+
+</AnchorPane>

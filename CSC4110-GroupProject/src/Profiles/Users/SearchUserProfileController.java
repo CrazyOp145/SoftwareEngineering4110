@@ -83,7 +83,7 @@ public class SearchUserProfileController implements Initializable {
     }
 
     public void switchBackToMenuButton(ActionEvent e) throws IOException {
-        Parent Root = FXMLLoader.load(getClass().getResource("../../UserMenu.fxml"));
+        Parent Root = FXMLLoader.load(getClass().getResource("../UserMenu.fxml"));
         Stage stage = (Stage)((Node)e.getSource()).getScene().getWindow();
         Scene scene = new Scene(Root);
         stage.setScene(scene);

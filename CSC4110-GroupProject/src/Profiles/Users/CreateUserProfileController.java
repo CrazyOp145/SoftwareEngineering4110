@@ -39,7 +39,7 @@ public class CreateUserProfileController implements Initializable {
     }
 
     public void cancelButtonOnAction(ActionEvent event) throws IOException {
-        Parent Root = FXMLLoader.load(getClass().getResource("../../UserMenu.fxml"));
+        Parent Root = FXMLLoader.load(getClass().getResource("../UserMenu.fxml"));
         Stage stage = (Stage)((Node)event.getSource()).getScene().getWindow();
         Scene scene = new Scene(Root);
         stage.setScene(scene);

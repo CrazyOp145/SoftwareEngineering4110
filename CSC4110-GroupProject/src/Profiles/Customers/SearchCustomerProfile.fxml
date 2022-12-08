@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Profiles.Customers.SearchCustomerProfileController">
+    <children>
+        <Label layoutX="57.0" layoutY="42.0" text="Search Customer :">
+            <font>
+                <Font size="18.0" />
+            </font>
+        </Label>
+        <TextField fx:id="searchCustomerBar" layoutX="194.0" layoutY="43.0" prefHeight="25.0" prefWidth="357.0" />
+        <TableView fx:id="tableView" layoutX="31.0" layoutY="94.0" prefHeight="269.0" prefWidth="542.0">
+            <columns>
+                <TableColumn fx:id="customerID" prefWidth="75.0" text="Customer ID" />
+                <TableColumn fx:id="companyName" prefWidth="74.0" text="Company Name" />
+                <TableColumn fx:id="streetAddress" prefWidth="76.0" text="Street Address" />
+                <TableColumn fx:id="city" prefWidth="75.0" text="City" />
+                <TableColumn fx:id="state" prefWidth="92.0" text="State" />
+                <TableColumn fx:id="phoneNumber" prefWidth="149.0" text="Phone" />
+                <TableColumn fx:id="balance" prefWidth="149.0" text="Balance" />
+                <TableColumn fx:id="lastPaidAmount" prefWidth="149.0" text="Last Paid Amount" />
+                <TableColumn fx:id="lastOrderDate" prefWidth="149.0" text="Last Order Date" />
+            </columns>
+        </TableView>
+        <Button fx:id="goBack" layoutX="485.0" layoutY="367.0" mnemonicParsing="false" onAction="#switchToUserMenu" text="Back to menu" />
+    </children>
+</AnchorPane>
