@@ -1,10 +1,13 @@
 package Profiles;
+
+import java.time.LocalDate;
+
 public class VendorProfile implements UserProfiles{
         private String vendorName, vendorID, vendorPW;
         private String street, city, state;
         private String phone;
         private double balance, lastPaidAmount;
-        private String lastOrderDate, discountStartDate;
+        private LocalDate lastOrderDate, discountStartDate;
 
         public VendorProfile(){
         }
@@ -63,12 +66,12 @@ public class VendorProfile implements UserProfiles{
         }
 
         @Override
-        public String getLastOrderDate() {
+        public LocalDate getLastOrderDate() {
             return lastOrderDate;
         }
 
         @Override
-        public void setLastOrderDate(String lastOrderDate) {
+        public void setLastOrderDate(LocalDate lastOrderDate) {
             this.lastOrderDate = lastOrderDate;
         }
         @Override
@@ -78,6 +81,10 @@ public class VendorProfile implements UserProfiles{
 
         @Override
         public String getCustomerID() {
+            return null;
+        }
+
+        public String getID(){
             return vendorID;
         }
 
@@ -109,7 +116,12 @@ public class VendorProfile implements UserProfiles{
         public double getBalance() {
             return balance;
         }
-        public void setDiscountStartDate(String discountStartDate) {
+
+        public void setDiscountStartDate(LocalDate discountStartDate) {
             this.discountStartDate = discountStartDate;
+        }
+
+        public LocalDate getDiscountStartDate(){
+            return discountStartDate;
         }
 }

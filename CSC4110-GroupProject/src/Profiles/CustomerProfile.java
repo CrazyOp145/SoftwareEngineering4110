@@ -1,5 +1,7 @@
 package Profiles;
 
+import java.time.LocalDate;
+
 public class CustomerProfile implements UserProfiles{
     private String customerID;
     private String companyName;
@@ -9,7 +11,7 @@ public class CustomerProfile implements UserProfiles{
     private String phone;
     private double balance = 0;
     private double lastPaidAmount = 0;
-    private String lastOrderDate = "None";
+    private LocalDate lastOrderDate;
     private String pw = null;
     public CustomerProfile(){
 
@@ -61,11 +63,11 @@ public class CustomerProfile implements UserProfiles{
         this.lastPaidAmount = lastPaidAmount;
     }
     @Override
-    public String getLastOrderDate() {
+    public LocalDate getLastOrderDate() {
         return lastOrderDate;
     }
     @Override
-    public void setLastOrderDate(String lastOrderDate) {
+    public void setLastOrderDate(LocalDate lastOrderDate) {
         this.lastOrderDate = lastOrderDate;
     }
     @Override

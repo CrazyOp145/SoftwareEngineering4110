@@ -23,7 +23,7 @@
                 <TableColumn fx:id="streetAddress" prefWidth="76.0" text="Street Address" />
                 <TableColumn fx:id="city" prefWidth="75.0" text="City" />
                 <TableColumn fx:id="state" prefWidth="92.0" text="State" />
-                <TableColumn fx:id="phone" prefWidth="149.0" text="Phone" />
+                <TableColumn fx:id="phoneNumber" prefWidth="149.0" text="Phone" />
                 <TableColumn fx:id="balance" prefWidth="149.0" text="Balance" />
                 <TableColumn fx:id="lastPaidAmount" prefWidth="149.0" text="Last Paid Amount" />
                 <TableColumn fx:id="lastOrderDate" prefWidth="149.0" text="Last Order Date" />

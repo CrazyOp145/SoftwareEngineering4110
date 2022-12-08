@@ -1,6 +1,8 @@
 import Profiles.ProfilesFactory;
 import Profiles.VendorProfile;
 import Profiles.UserProfiles;
+import javafx.beans.value.ChangeListener;
+import javafx.beans.value.ObservableValue;
 import javafx.collections.FXCollections;
 import javafx.fxml.Initializable;
 import javafx.event.ActionEvent;
@@ -9,21 +11,15 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
-import javafx.scene.control.ChoiceBox;
-import javafx.scene.control.ComboBox;
-import javafx.scene.control.Label;
-import javafx.scene.control.TextField;
+import javafx.scene.control.*;
 import javafx.stage.Stage;
 
 
 import javax.swing.*;
-import java.io.BufferedWriter;
-import java.io.FileWriter;
-import java.io.IOException;
-import java.io.PrintWriter;
+import java.io.*;
 import java.net.URL;
-import java.util.Random;
-import java.util.ResourceBundle;
+import java.time.LocalDate;
+import java.util.*;
 import java.util.regex.Pattern;
 
 // @author Mahz Alam
@@ -45,11 +41,13 @@ public class CreateVendorProfile implements Initializable {
     @FXML
     private ChoiceBox<String> state;
     @FXML
-    private TextField balance;
+    private  TextField balance;
     @FXML
     private TextField phone;
     @FXML
     private Label errorMessage;
+    @FXML
+    private DatePicker date;
 
 
     private Stage Stage;
@@ -73,66 +71,107 @@ public class CreateVendorProfile implements Initializable {
         String c = city.getText();
         String ste = state.getValue();
         String ph = phone.getText();
-        //double bal = balance.getText();
+        LocalDate seasonalDisc = date.getValue();
+        String bal = balance.getText();
+
+        String truBal = bal.replaceAll("[^0-9]", "");
 
 
-        boolean correct = false;
+        boolean correct = true;
 
         Pattern phonePattern = Pattern.compile("^(\\d{3}[- .]?){2}\\d{4}$");
 
-       /* int incorrectCount = 0;
-        if (vendName.length() > 20 || vendName.length() == 0) {
-            incorrectCount++;
-            errorM.setText("Company Name Invalid, must be between 1 to 20 Characters");
-        }else{
-            incorrectCount--;
-        }
-        if(str.length() > 20 || str.length() == 0){
-            incorrectCount++;
-            errorM.setText("Street Invalid, must be between 1 to 20 Characters");
-        }else{
-            incorrectCount--;
-        }
-        if(ph.matches(phonePattern.pattern())){
-            incorrectCount--;
-        }else{
-            incorrectCount++;
-        }
-*/
-        UserProfiles vendorTemp = profFactory.createProfile("VENDOR");
-        if(vendorTemp instanceof VendorProfile) {
-            VendorProfile vendor = new VendorProfile();
-
-            vendor.setID(vendID);
-            vendor.setFirstName(vendName);
-            vendor.setStreet(str);
-            vendor.setCity(c);
-            vendor.setState(ste);
-            vendor.setPhone(ph);
-
-            FileWriter fileWrite = new FileWriter(filePath, true);
-            BufferedWriter bufferWrite = new BufferedWriter(fileWrite);
-            PrintWriter printW = new PrintWriter(bufferWrite);
-            printW.println(vendor.getCustomerID() + "," + vendor.getCompanyName() + "," + vendor.getStreetAddress()
-                    + "," + vendor.getCity() + "," + vendor.getState() + ",");
-            System.out.println(vendor.getState());
-            printW.flush();
-            printW.close();
-            JOptionPane.showMessageDialog(null, "Vendor Account Created");
+        if(checkVendorName(vendName)){
+            errorMessage.setText("Name already taken.");
+            correct = false;
         }
 
+        if ((vendName.length() > 20 || vendName.length() == 0)) {
+            errorMessage.setText("Error: Vendor Name too Long");
+            System.out.println("Name too long please enter a name that is less than 20 characters.");
+            correct = false;
+        }
+        if (str.length() > 20 || str.length() == 0) {
+            errorMessage.setText("Error: Street Address too Long");
+            System.out.println("Address did not meet requirements.");
+            correct = false;
+        }
+        if (c.length() > 20 || c.length() == 0) {
+            errorMessage.setText("Error: City Name too Long");
+            System.out.println("City name did not meet requirements.");
+            correct = false;
+        }
+        if (state == null) {
+            errorMessage.setText("Error: Please Select A State");
+            System.out.println("State does not have an input.");
+            correct = false;
+        }
+        if (ph.matches(phonePattern.pattern()) && ph != null) {
+        } else {
+            correct = false;
+            errorMessage.setText("Error: Phone number format incorrect, please input as xxx xxx xxxx");
+            System.out.println("Phone Number format incorrect.");
+        }
+
+
+        if(correct) {
+            UserProfiles vendorTemp = profFactory.createProfile("VENDOR");
+            if (vendorTemp instanceof VendorProfile) {
+                VendorProfile vendor = new VendorProfile();
+
+                vendor.setID(vendID);
+                vendor.setFirstName(vendName);
+                vendor.setStreet(str);
+                vendor.setCity(c);
+                vendor.setState(ste);
+                vendor.setPhone(ph);
+                vendor.setDiscountStartDate(seasonalDisc);
+                vendor.setBalance(Double.parseDouble(truBal));
+
+                FileWriter fileWrite = new FileWriter(filePath, true);
+                BufferedWriter bufferWrite = new BufferedWriter(fileWrite);
+                PrintWriter printW = new PrintWriter(bufferWrite);
+                printW.println(vendor.getID() + "," + vendor.getCompanyName() + "," + vendor.getStreetAddress()
+                        + "," + vendor.getCity() + "," + vendor.getState() + "," + vendor.getDiscountStartDate()
+                        + "," + vendor.getBalance() + ",");
+                System.out.println(vendor.getState());
+                printW.flush();
+                printW.close();
+                JOptionPane.showMessageDialog(null, "Vendor Account Created");
+            }
+        }
     }
 
-    public void switchToUserMenuScene(javafx.event.ActionEvent event) throws IOException {
-        Root = FXMLLoader.load(getClass().getResource("UserMenu.fxml"));
-        Stage = (Stage)((Node)event.getSource()).getScene().getWindow();
-        Scene = new Scene(Root);
-        Stage.setScene(Scene);
-        Stage.show();
-    }
-
+        public void switchToUserMenuScene (javafx.event.ActionEvent event) throws IOException {
+            Root = FXMLLoader.load(getClass().getResource("UserMenu.fxml"));
+            Stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+            Scene = new Scene(Root);
+            Stage.setScene(Scene);
+            Stage.show();
+        }
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
         state.getItems().addAll(stateArray);
+    }
+
+    public static boolean checkVendorName(String input) {
+        try {
+            FileReader fileRead = new FileReader("VendorFile.csv");
+            BufferedReader bufferRead = new BufferedReader(fileRead);
+
+            String line;
+            String[] data;
+
+            while ((line = bufferRead.readLine()) != null) {
+                data = line.split(",");
+                if (data[1].equals(input)) {
+                    return false;
+                }
+            }
+
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        return input.length() <= 20 && input.length() != 0;
     }
 }

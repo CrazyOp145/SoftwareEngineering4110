@@ -1,5 +1,7 @@
 package Profiles;
 
+import java.time.LocalDate;
+
 public class Accountant implements UserProfiles {
     private String firstName;
     private String lastName;
@@ -78,12 +80,12 @@ public class Accountant implements UserProfiles {
     }
 
     @Override
-    public String getLastOrderDate() {
+    public LocalDate getLastOrderDate() {
         return null;
     }
 
     @Override
-    public void setLastOrderDate(String lastOrderDate) {
+    public void setLastOrderDate(LocalDate lastOrderDate) {
 
     }
 

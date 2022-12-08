@@ -1,4 +1,9 @@
 package Profiles;
+/*
+@author Mahz Alam and Paulo Burgess and David Her
+ */
+
+import java.time.LocalDate;
 
 public interface UserProfiles {
    /* private String firstName;
@@ -41,9 +46,9 @@ public interface UserProfiles {
 
     void setLastPaidAmount(double lastPaidAmount);
 
-    String getLastOrderDate();
+    LocalDate getLastOrderDate();
 
-    void setLastOrderDate(String lastOrderDate);
+    void setLastOrderDate(LocalDate lastOrderDate);
 
     public void setFirstName(String fName);
 
