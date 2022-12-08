@@ -1,5 +1,6 @@
 package Profiles;
 
+import Profiles.Items.CheckTwoExpired;
 import Profiles.Login.LoginValidation;
 import Profiles.Login.LoginValidationGUI;
 import javafx.event.ActionEvent;
@@ -13,6 +14,7 @@ import javafx.scene.control.MenuBar;
 import javafx.scene.control.MenuItem;
 import javafx.stage.Stage;
 
+import javax.swing.*;
 import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
@@ -185,6 +187,12 @@ public class UserMenuController implements Initializable {
     public void initialize(URL url, ResourceBundle resourceBundle) {
         LoginValidation.loginCheckRole(LoginValidation.getUserID());
         //System.out.println(currentUserType);
+        if(LoginValidationGUI.currentUserType.toUpperCase().equals("SALESPERSON")) {
+            Boolean twoExpired = CheckTwoExpired.checkTwoExpired();
+            if (twoExpired) {
+                JOptionPane.showMessageDialog(null, "Two Or More Items are Expired.");
+            }
+        }
         if(currentUserType == "owner"){
             CreatePurchaseOrderButton.setDisable(true);
         }
