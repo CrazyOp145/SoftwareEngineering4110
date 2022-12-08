@@ -30,6 +30,8 @@ public class LoginValidation {
 
             while((line = br.readLine()) != null){
                 data = line.split(",");
+                System.out.println(data[0]);
+                System.out.println(data[3]);
                 if(data[0].equals(userID) && data[3].equals(password)){
                     return true;
                 }

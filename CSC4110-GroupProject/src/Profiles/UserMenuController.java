@@ -1,6 +1,7 @@
 package Profiles;
 
 import Profiles.Login.LoginValidation;
+import Profiles.Login.LoginValidationGUI;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -23,8 +24,7 @@ import java.util.ResourceBundle;
  *
  */
 public class UserMenuController implements Initializable {
-    String currentUserType;
-
+    String currentUserType = LoginValidationGUI.currentUserType;
     @FXML
     MenuItem CreatePurchaseOrderButton;
     @FXML
@@ -87,11 +87,17 @@ public class UserMenuController implements Initializable {
         Stage.show();
     }
     public void switchCreateCustomerProfile(javafx.event.ActionEvent event) throws IOException {
-        Root = FXMLLoader.load(getClass().getResource("Customers/CreateCustomerProfile.fxml"));
-        Stage = (Stage)myMenuBar.getScene().getWindow();
-        Scene = new Scene(Root);
-        Stage.setScene(Scene);
-        Stage.show();
+        if(currentUserType.toUpperCase().equals("OWNER")) {
+            Root = FXMLLoader.load(getClass().getResource("Customers/CreateCustomerProfile.fxml"));
+            Stage = (Stage) myMenuBar.getScene().getWindow();
+            Scene = new Scene(Root);
+            Stage.setScene(Scene);
+            Stage.show();
+        }
+        else{
+            System.out.println("Incorrect User Type Access Denied");
+            System.out.println(currentUserType);
+        }
     }
     public void switchSearchCustomerProfile(javafx.event.ActionEvent event) throws IOException {
         Root = FXMLLoader.load(getClass().getResource("Customers/SearchCustomerProfile.fxml"));

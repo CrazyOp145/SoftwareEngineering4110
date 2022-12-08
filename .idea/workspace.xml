@@ -5,8 +5,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e4486989-fc5b-474b-afaf-e7dea797b27f" name="Changes" comment="fixing main branch and add restriction for decimal place of view purchase order. --hg5241 cj du.">
-      <change beforePath="$PROJECT_DIR$/CSC4110-GroupProject/src/Profiles/Customers/DeleteCustomerProfile.java" beforeDir="false" afterPath="$PROJECT_DIR$/CSC4110-GroupProject/src/Profiles/Customers/DeleteCustomerProfile.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CSC4110-GroupProject/src/Profiles/Login/LoginController.java" beforeDir="false" afterPath="$PROJECT_DIR$/CSC4110-GroupProject/src/Profiles/Login/LoginController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CSC4110-GroupProject/src/Profiles/Login/LoginValidation.java" beforeDir="false" afterPath="$PROJECT_DIR$/CSC4110-GroupProject/src/Profiles/Login/LoginValidation.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CSC4110-GroupProject/src/Profiles/Login/LoginValidationGUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/CSC4110-GroupProject/src/Profiles/Login/LoginValidationGUI.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CSC4110-GroupProject/src/Profiles/UserMenuController.java" beforeDir="false" afterPath="$PROJECT_DIR$/CSC4110-GroupProject/src/Profiles/UserMenuController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CustomerOrders.csv" beforeDir="false" afterPath="$PROJECT_DIR$/CustomerOrders.csv" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/CustomerProfiles.csv" beforeDir="false" afterPath="$PROJECT_DIR$/CustomerProfiles.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/UserData.csv" beforeDir="false" afterPath="$PROJECT_DIR$/UserData.csv" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -54,7 +60,21 @@
       <recent name="C:\Users\Paulo\eclipse-workspace\databaseProject\SoftwareEngineering4110\CSC4110-GroupProject\src" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.MainGUI">
+  <component name="RunManager" selected="Application.LoginValidationGUI">
+    <configuration name="LoginValidationGUI" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Profiles.Login.LoginValidationGUI" />
+      <module name="SoftwareEngineering4110" />
+      <option name="VM_PARAMETERS" value="--module-path &quot;C:\Users\Paulo\Downloads\openjfx-19_windows-x64_bin-sdk\javafx-sdk-19\lib&quot; --add-modules javafx.controls,javafx.fxml" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="Profiles.Login.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="MainGUI" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="MainGUI" />
       <module name="SoftwareEngineering4110" />
@@ -71,11 +91,13 @@
       </method>
     </configuration>
     <list>
+      <item itemvalue="Application.LoginValidationGUI" />
       <item itemvalue="Application.MainGUI" />
       <item itemvalue="Application.MainTest" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.LoginValidationGUI" />
         <item itemvalue="Application.MainGUI" />
         <item itemvalue="Application.MainTest" />
       </list>

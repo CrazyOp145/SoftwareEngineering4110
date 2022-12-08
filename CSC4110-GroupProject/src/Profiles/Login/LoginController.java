@@ -34,6 +34,7 @@ public class LoginController {
 
         boolean LoginCheck = LoginValidation.loginCheck(userIDInput,passwordInput);
         if(LoginCheck){
+            LoginValidationGUI.currentUserType = LoginValidation.loginCheckRole(userIDInput);
             loginMessageLabel.setText("Login Successful");
             Parent root = FXMLLoader.load(getClass().getResource("../UserMenu.fxml"));
             Stage stage = (Stage) ((Node)event.getSource()).getScene().getWindow();
