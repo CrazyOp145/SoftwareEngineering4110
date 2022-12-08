@@ -4,5 +4,5 @@
 100005,Milk,90,5.99,2.99,12/6/2022,Dairy,Gallon
 100006,Lettce,170,1.99,0.99,12/16/2022,Vegetables,Pounds
 100007,Celery,60,0.99,0.39,12/16/2022,Vegetables,Pounds
-100008,Onion,700,1.29,0.59,12/16/2022,Vegetables,Pounds
-100000,aaa,355.0,5.0,3.0,2022-12-14,Dairy,Ounce,300002
+100001,bbb,100,5.99,4.99,2022-12-22,Fruits,Pounds
+100000,aaa,100.0,8.0,5.0,2022-12-29,Nuts,Pounds,300002

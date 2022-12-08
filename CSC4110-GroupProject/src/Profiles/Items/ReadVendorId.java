@@ -1,3 +1,5 @@
+package Profiles.Items;
+
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 

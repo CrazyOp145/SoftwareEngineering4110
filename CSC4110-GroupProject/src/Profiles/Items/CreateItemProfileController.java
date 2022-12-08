@@ -44,8 +44,7 @@ public class CreateItemProfileController implements Initializable {
     private DatePicker expireDate;
     @FXML
     private ComboBox<String> itemCategory;
-    private String[] Category = {"Profiles.Items.Categories.Vegetables", "Profiles.Items.Categories.Fruits", "Profiles.Items.Categories.Nuts", "Profiles.Items.Categories.Dairy",
-            "Profiles.Items.Categories.Meat", "Profiles.Items.Categories.Snacks", "Profiles.Items.Categories.Soda", "Profiles.Items.Categories.Juice", "Bakery"};
+    private String[] Category = {"Vegetables", "Fruits", "Nuts", "Dairy", "Meat", "Snacks", "Soda", "Juice", "Bakery"};
     @FXML
     private ComboBox<String> unit;
     private String[] unitCategory = {"Pounds", "Gallon", "Dozen", "Ounce", "bunch"};
