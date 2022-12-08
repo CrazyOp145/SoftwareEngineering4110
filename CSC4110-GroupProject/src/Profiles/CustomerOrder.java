@@ -1,5 +1,9 @@
 package Profiles;
-
+/**
+ *
+ * @author Paulo Burgess GN7231
+ *
+ */
 public class CustomerOrder {
     private String OrderID;
     private String[] OrderItems;
