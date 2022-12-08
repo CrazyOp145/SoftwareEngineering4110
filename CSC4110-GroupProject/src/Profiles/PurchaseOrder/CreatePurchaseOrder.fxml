@@ -36,20 +36,13 @@
             <Font size="18.0" />
          </font>
       </Label>
-      <ComboBox fx:id="vendorId" layoutX="152.0" layoutY="110.0" prefHeight="25.0" prefWidth="117.0" />
+      <ComboBox fx:id="vendorId" layoutX="152.0" layoutY="110.0" onMousePressed="#vendorList" prefHeight="25.0" prefWidth="117.0" />
         <Label layoutX="31.0" layoutY="14.0" text="Need by date :">
             <font>
                 <Font size="18.0" />
             </font>
         </Label>
-      <TableView layoutX="310.0" layoutY="9.0" prefHeight="133.0" prefWidth="260.0">
-        <columns>
-          <TableColumn prefWidth="75.0" text="Item ID" />
-          <TableColumn prefWidth="75.0" text="Item Name" />
-            <TableColumn prefWidth="75.0" text="Quantity" />
-            <TableColumn prefWidth="75.0" text="Need Date" />
-        </columns>
-      </TableView>
       <Button layoutX="289.0" layoutY="426.0" mnemonicParsing="false" onAction="#addToOrder" text="Add to order" />
+      <Button fx:id="showInventory" layoutX="361.0" layoutY="37.0" mnemonicParsing="false" onAction="#vendorList" prefHeight="76.0" prefWidth="150.0" text="Show vendor inventory" />
     </children>
 </AnchorPane>

@@ -16,13 +16,13 @@ public class UpdateItemProfile {
 
     public void updateItemProfile(String filePath, String updateTerm,
                                   String newItemId, String newItemName, String newQuantity, String newSellingPrice,
-                                  String newPurchasePrice, String newExpireDate,String newCategory,String newUnit) {
+                                  String newPurchasePrice, String newExpireDate,String newCategory,String newUnit, String newVendorId) {
 
         String tempFile = "temp.csv";
         File oldFile = new File(filePath);
         File newFile = new File(tempFile);
         String itemId = "", itemName = "", category = "", unit = "", quantity = "", sellingPrice = "",
-                purchasePrice = "", expireDate = "";
+                purchasePrice = "", expireDate = "", vendorId;
         //int quantity = "";
         //double sellingPrice = 0.0, purchasePrice = 0.0;
         //LocalDate expireDate;
@@ -50,6 +50,7 @@ public class UpdateItemProfile {
                 expireDate = String.valueOf(values[5]);
                 category = String.valueOf(values[6]);
                 unit = String.valueOf(values[7]);
+                vendorId = String.valueOf(values[8]);
 //                itemId = input.next();
 //                itemName = input.next();
 //                quantity = input.next();
@@ -61,9 +62,9 @@ public class UpdateItemProfile {
 
                 if (!itemId.equals(updateTerm)) {
                     pw.println(itemId + "," + itemName + "," + quantity + "," + sellingPrice
-                            + "," + purchasePrice + "," + expireDate + "," + category + "," + unit);
+                            + "," + purchasePrice + "," + expireDate + "," + category + "," + unit+ "," +vendorId);
                 }else{pw.println(newItemId + "," + newItemName + "," + newQuantity + "," + newSellingPrice
-                        + "," + newPurchasePrice + "," + newExpireDate + "," + newCategory + "," + newUnit);
+                        + "," + newPurchasePrice + "," + newExpireDate + "," + newCategory + "," + newUnit+ "," + newVendorId);
                 }
             }
             input.close();

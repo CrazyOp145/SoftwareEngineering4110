@@ -1,4 +1,5 @@
 package Profiles.PurchaseOrder;
+import Profiles.Items.ReadItemProfileVendorFilter;
 import Profiles.Items.ReadVendorId;
 import Profiles.Items.ItemList;
 import Profiles.Items.ReadItemProfile;
@@ -62,7 +63,8 @@ public class CreatePurchaseOrderController implements Initializable {
     //private ObservableList<PurchaseOrderList> dataList = FXCollections.observableArrayList();
     //private ArrayList<PurchaseOrderList> purchaseOrderList = new ArrayList<PurchaseOrderList>();
     private ArrayList<ItemList> purchaseOrderList = new ArrayList<>();
-    ReadItemProfile readItemProfile = new ReadItemProfile();
+    ReadItemProfileVendorFilter RI = new ReadItemProfileVendorFilter();
+    //ReadItemProfile readItemProfile = new ReadItemProfile();
     //PurchaseOrderList purchaseItem;
     ItemList item;
 
@@ -71,7 +73,8 @@ public class CreatePurchaseOrderController implements Initializable {
         dataList.clear();
     }
     public void updateList(){
-        dataList = readItemProfile.initList();
+        //dataList = readItemProfile.initList();
+        dataList = RI.initList(vendorId.getValue());
         itemId.setCellValueFactory(new PropertyValueFactory<>("itemId"));
         itemName.setCellValueFactory(new PropertyValueFactory<>("itemName"));
         quantity.setCellValueFactory(new PropertyValueFactory<>("quantity"));
@@ -88,6 +91,7 @@ public class CreatePurchaseOrderController implements Initializable {
     }
 
     public void vendorList(){
+        tableView.getItems().clear();
         updateList();
     }
 
@@ -150,7 +154,7 @@ public class CreatePurchaseOrderController implements Initializable {
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
-        updateList();
+        //updateList();
         datePicker();
         vendorId.getItems().addAll(vendorList);
         vendorId.setOnAction(this::getVendorCategory);
