@@ -77,13 +77,8 @@ public class DeleteCustomerProfile {
                 balance = String.valueOf(values[6]);
                 lastPaidAmount = String.valueOf(values[7]);
                 lastOrderDate = String.valueOf(values[8]);
-
-                if(!customerID.equals(removeTerm)){
-                    if(balance != "0") {
-                        pw2.println(customerID + "," + companyName + "," + address + "," + city
-                                + "," + state + "," + phoneNumber + "," + balance + "," + lastPaidAmount + "," + lastOrderDate);
-                    }
-                }
+                pw2.println(customerID + "," + companyName + "," + address + "," + city
+                        + "," + state + "," + phoneNumber + "," + balance + "," + lastPaidAmount + "," + lastOrderDate);
             }
             tempFileInput.close();
             pw2.flush();
