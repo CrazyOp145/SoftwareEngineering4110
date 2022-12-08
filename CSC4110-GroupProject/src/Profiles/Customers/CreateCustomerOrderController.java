@@ -20,6 +20,7 @@ import java.net.URL;
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
+import java.util.Random;
 import java.util.ResourceBundle;
 /**
  *
@@ -76,11 +77,6 @@ public class CreateCustomerOrderController implements Initializable {
         item.setNeedQuantity(purchaseQuantity.getText());
         item.setNeedDate(String.valueOf(needDate.getValue()));
     }
-
-    public void vendorList(){
-        updateList();
-    }
-
     public void addToOrder(){
         if (Double.parseDouble(item.getQuantity()) < Double.parseDouble(purchaseQuantity.getText())){
             JOptionPane.showMessageDialog(null, "We do not have enough of that item.\n " +
@@ -108,11 +104,24 @@ public class CreateCustomerOrderController implements Initializable {
     }
 
     public void createOrder(){
+        double orderSubtotal = 0;
         if(customerOrderList.isEmpty()){
             JOptionPane.showMessageDialog(null,"You need at least one item to your order!");
         }else{
-            int customerOrderID = PurchaseIdProvider.getInstance().getUniqueId();;
+            Random randID = new Random();
+            String customerOrderID = String.valueOf(randID.nextInt(999999));
             String filePath = "CustomerOrders.csv";
+            try{
+                FileWriter fw = new FileWriter(filePath,true);
+                BufferedWriter bw = new BufferedWriter(fw);
+                PrintWriter pw = new PrintWriter(bw);
+                pw.println("Customer Name:"+","+customer.getValue());
+                pw.println("Order Number:"+","+customerOrderID);
+                pw.flush();
+                pw.close();
+            } catch (IOException e) {
+                JOptionPane.showMessageDialog(null, "Unable to make customer order...");
+            }
             for (ItemList purchaseItem: customerOrderList
             ) {
                 try{
@@ -126,9 +135,21 @@ public class CreateCustomerOrderController implements Initializable {
                             +","+purchaseItem.getExpireDate() +","+purchaseItem.needQuantity+","+purchaseItem.needDate+","+subtotal);
                     pw.flush();
                     pw.close();
+                    orderSubtotal += subtotal;
                 }catch(Exception e){
-                    JOptionPane.showMessageDialog(null, "Unable to customer order...");
+                    JOptionPane.showMessageDialog(null, "Unable to make customer order...");
                 }
+            }
+            try{
+                FileWriter fw = new FileWriter(filePath,true);
+                BufferedWriter bw = new BufferedWriter(fw);
+                PrintWriter pw = new PrintWriter(bw);
+                pw.println("Order Subtotal:"+","+orderSubtotal);
+                pw.println("\n");
+                pw.flush();
+                pw.close();
+            } catch (IOException e) {
+                JOptionPane.showMessageDialog(null, "Unable to make customer order...");
             }
             JOptionPane.showMessageDialog(null, "Customer order has been created!");
             //update the vendor balance

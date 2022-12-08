@@ -22,13 +22,18 @@ public class CalculateCustomerOrderTotal {
                 String data = input.next();
                 Object[] values = data.split(",");
                 Object[] valuesLine = data.split("\n");
-                double value = Double.parseDouble(String.valueOf( values[6]));
-                totalCost += value;
+                try {
+                    double value = Double.parseDouble(String.valueOf(values[6]));
+                    totalCost += value;
+                }
+                catch (Exception e){
+                    System.out.println("Header or Footer of the Order. Has no subtotal");
+                }
                 System.out.println(totalCost);
             }
 
         } catch (FileNotFoundException e) {
-            throw new RuntimeException(e);
+            System.out.println(e);
         }
 
         return totalCost*michiganTaxRate;
