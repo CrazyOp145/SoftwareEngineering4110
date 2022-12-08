@@ -115,7 +115,6 @@ public class UserMenuController implements Initializable {
     }
     public void switchUpdateCustomerProfile(javafx.event.ActionEvent event) throws IOException {
         Root = FXMLLoader.load(getClass().getResource("Customers/UpdateCustomerProfile.fxml"));
-        //Stage = (Stage)((Node)event.getSource()).getScene().getWindow();
         Stage = (Stage)myMenuBar.getScene().getWindow();
         Scene = new Scene(Root);
         Stage.setScene(Scene);
@@ -123,7 +122,6 @@ public class UserMenuController implements Initializable {
     }
     public void switchCreateCustomerOrder(javafx.event.ActionEvent event) throws IOException {
         Root = FXMLLoader.load(getClass().getResource("Customers/CreateCustomerOrder.fxml"));
-        //Stage = (Stage)((Node)event.getSource()).getScene().getWindow();
         Stage = (Stage)myMenuBar.getScene().getWindow();
         Scene = new Scene(Root);
         Stage.setScene(Scene);
@@ -149,7 +147,6 @@ public class UserMenuController implements Initializable {
 
     public void switchToSearchUserProfile(javafx.event.ActionEvent event) throws IOException {
         Root = FXMLLoader.load(getClass().getResource("Users/SearchUserProfile.fxml"));
-        //Stage = (Stage)((Node)event.getSource()).getScene().getWindow();
         Stage = (Stage)myMenuBar.getScene().getWindow();
         Scene = new Scene(Root);
         Stage.setScene(Scene);
@@ -158,7 +155,14 @@ public class UserMenuController implements Initializable {
 
     public void switchToDeleteUserProfile(javafx.event.ActionEvent event) throws IOException {
         Root = FXMLLoader.load(getClass().getResource("Users/DeleteUserProfile.fxml"));
-        //Stage = (Stage)((Node)event.getSource()).getScene().getWindow();
+        Stage = (Stage)myMenuBar.getScene().getWindow();
+        Scene = new Scene(Root);
+        Stage.setScene(Scene);
+        Stage.show();
+    }
+
+    public void switchToUpdateUserProfile(javafx.event.ActionEvent event) throws IOException {
+        Root = FXMLLoader.load(getClass().getResource("Users/UpdateUserProfile.fxml"));
         Stage = (Stage)myMenuBar.getScene().getWindow();
         Scene = new Scene(Root);
         Stage.setScene(Scene);
@@ -188,9 +192,5 @@ public class UserMenuController implements Initializable {
         if(currentUserType == "owner"){
             CreatePurchaseOrderButton.setDisable(true);
         }
-    }
-
-    public void getUsertype(String user){
-        currentUserType = user;
     }
 }

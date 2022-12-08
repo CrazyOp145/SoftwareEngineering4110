@@ -1,7 +1,6 @@
 package Profiles.Users;
 
 import Profiles.ReadUserData;
-import Profiles.UserList;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.collections.transformation.FilteredList;

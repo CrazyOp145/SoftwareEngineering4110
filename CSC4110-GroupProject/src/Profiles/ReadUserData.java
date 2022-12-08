@@ -1,5 +1,6 @@
 package Profiles;
 
+import Profiles.Users.UserList;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 
@@ -23,6 +24,7 @@ public class ReadUserData {
                 dataList.add(new UserList(String.valueOf(dataLine[0]),
                         String.valueOf(dataLine[1]),
                         String.valueOf(dataLine[2]),
+                        String.valueOf(dataLine[3]),
                         String.valueOf(dataLine[4])));
             }
         } catch (FileNotFoundException e) {

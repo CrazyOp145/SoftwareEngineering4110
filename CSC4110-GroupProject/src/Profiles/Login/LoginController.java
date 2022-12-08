@@ -30,8 +30,6 @@ public class LoginController {
         String userIDInput = userIDTextField.getText();
         String passwordInput = passwordTextField.getText();
 
-
-
         boolean LoginCheck = LoginValidation.loginCheck(userIDInput,passwordInput);
         if(LoginCheck){
             LoginValidationGUI.currentUserType = LoginValidation.loginCheckRole(userIDInput);

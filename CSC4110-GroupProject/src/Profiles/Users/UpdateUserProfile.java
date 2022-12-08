@@ -3,14 +3,18 @@ package Profiles.Users;
 import javax.swing.*;
 import java.io.*;
 import java.util.Scanner;
+
 /**
  * @author David Her
- * Used code from Shijie Du's DeleteItemProfile
+ * Used code from Paulo and Shijie's Update files
  */
-public class DeleteUserProfile {
+public class UpdateUserProfile {
     private Scanner in;
-    public void delProfile(String userInput){
-        String userID = "", lName = "", fName = "", pass = "", userRole = "";
+    public void updateProfile(String userID, String lastName,
+                                     String firstName, String password, String userRole){
+
+        String uID = "", lName = "", fName = "", pass = "", uRole = "";
+
         FileWriter fW = null;
         try{
             fW = new FileWriter("UserDataTemp.csv", true);
@@ -24,14 +28,17 @@ public class DeleteUserProfile {
                 String data = in.nextLine();
                 Object[] values = data.split(",");
 
-                userID = String.valueOf(values[0]);
+                uID = String.valueOf(values[0]);
                 lName = String.valueOf(values[1]);
                 fName = String.valueOf(values[2]);
                 pass = String.valueOf(values[3]);
-                userRole = String.valueOf(values[4]);
+                uRole = String.valueOf(values[4]);
 
-                if(!userID.equals(userInput)){
-                    pW.println(userID + "," + lName + "," + fName + "," + pass + "," + userRole + ",");
+                if(userID.equals(uID)){
+                    pW.println(userID + "," + lastName + "," + firstName + "," + password + "," + userRole + ",");
+                }
+                else{
+                    pW.println(uID + "," + lName + "," + fName + "," + pass + "," + uRole + ",");
                 }
             }
             in.close();
