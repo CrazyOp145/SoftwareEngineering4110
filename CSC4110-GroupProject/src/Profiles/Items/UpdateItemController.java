@@ -17,6 +17,8 @@ import java.io.File;
 import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
+import Profiles.Items.Categories.*;
+import Profiles.Items.*;
 /**
  *
  * @author Shijie DU  HG5241
@@ -38,8 +40,8 @@ public class UpdateItemController implements Initializable {
     private DatePicker newExpireDate;
     @FXML
     private ComboBox<String> newItemCategory;
-    private String[] Category = {"Profiles.Items.Categories.Vegetables", "Profiles.Items.Categories.Fruits", "Profiles.Items.Categories.Nuts", "Profiles.Items.Categories.Dairy",
-            "Profiles.Items.Categories.Meat", "Profiles.Items.Categories.Snacks", "Profiles.Items.Categories.Soda", "Profiles.Items.Categories.Juice", "Bakery"};
+    private String[] Category = {"Vegetables", "Fruits", "Nuts", "Dairy",
+            "Meat", "Snacks", "Soda", "Juice", "Bakery"};
     @FXML
     private ComboBox<String> newUnit;
     private String[] unitCategory = {"Pounds", "Gallon", "Dozen", "Ounce", "bunch"};
@@ -104,7 +106,7 @@ public class UpdateItemController implements Initializable {
         sellingPrice.setCellValueFactory(new PropertyValueFactory<>("sellingPrice"));
         purchasePrice.setCellValueFactory(new PropertyValueFactory<>("purchasePrice"));
         expireDate.setCellValueFactory(new PropertyValueFactory<>("expireDate"));
-        tableCategory.setCellValueFactory(new PropertyValueFactory<>("Profiles.Items.itemCategory"));
+        tableCategory.setCellValueFactory(new PropertyValueFactory<>("itemCategory"));
         tableUnit.setCellValueFactory(new PropertyValueFactory<>("unit"));
         tableView.setItems(dataList);
     }
@@ -135,7 +137,7 @@ public class UpdateItemController implements Initializable {
 
 
     public void switchToUserMenu(javafx.event.ActionEvent event) throws IOException {
-        Root = FXMLLoader.load(getClass().getResource("../Profiles/UserMenu.fxml"));
+        Root = FXMLLoader.load(getClass().getResource("../UserMenu.fxml"));
         Stage = (javafx.stage.Stage) ((Node) event.getSource()).getScene().getWindow();
         Scene = new Scene(Root);
         Stage.setScene(Scene);
