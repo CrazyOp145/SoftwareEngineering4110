@@ -1,5 +1,6 @@
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
@@ -16,6 +17,7 @@ import java.net.URL;
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
+import java.util.List;
 import java.util.ResourceBundle;
 /**
  *
@@ -23,6 +25,7 @@ import java.util.ResourceBundle;
  *
  */
 public class CreatePurchaseOrderController implements Initializable {
+    ReadVendorId RVI = new ReadVendorId();
     private javafx.stage.Stage Stage;
     private javafx.scene.Scene Scene;
     private Parent Root;
@@ -44,6 +47,10 @@ public class CreatePurchaseOrderController implements Initializable {
     private TextField purchaseQuantity;
     @FXML
     private DatePicker needDate;
+
+    @FXML
+    private ComboBox<String> vendorId;
+    private List<String> vendorList = RVI.initList();
 
     CalculatePurchaseOrderTotalCost calculatePurchaseOrderTotalCost = new CalculatePurchaseOrderTotalCost();
     DateTimeFormatter formatter = DateTimeFormatter.ofPattern("M/d/yyyy");
@@ -142,6 +149,8 @@ public class CreatePurchaseOrderController implements Initializable {
     public void initialize(URL url, ResourceBundle resourceBundle) {
         updateList();
         datePicker();
+        vendorId.getItems().addAll(vendorList);
+        vendorId.setOnAction(this::getVendorCategory);
     }
 
     public void datePicker(){
@@ -153,6 +162,11 @@ public class CreatePurchaseOrderController implements Initializable {
             }
         });
     }
+    public String getVendorCategory(ActionEvent event){
+        String vendorCategory = vendorId.getValue();
+        return vendorCategory;
+    }
+
 
     public void switchToUserMenu(javafx.event.ActionEvent event) throws IOException {
         Root = FXMLLoader.load(getClass().getResource("UserMenu.fxml"));

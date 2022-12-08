@@ -36,7 +36,7 @@
             <Font size="18.0" />
          </font>
       </Label>
-      <ComboBox fx:id="vendor" layoutX="152.0" layoutY="110.0" prefHeight="25.0" prefWidth="117.0" />
+      <ComboBox fx:id="vendorId" layoutX="152.0" layoutY="110.0" prefHeight="25.0" prefWidth="117.0" />
         <Label layoutX="31.0" layoutY="14.0" text="Need by date :">
             <font>
                 <Font size="18.0" />
