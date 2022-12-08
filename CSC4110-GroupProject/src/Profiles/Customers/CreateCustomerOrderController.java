@@ -84,6 +84,10 @@ public class CreateCustomerOrderController implements Initializable {
                     "Select a another item to add or less of that item");
             return;
         }
+        if (LocalDate.parse(item.getExpireDate(),formatter).compareTo(LocalDate.now()) < 0){
+            JOptionPane.showMessageDialog(null, "The item you pick has expired.\n Select a another item to add");
+            return;
+        }
         if(item.needDate == "null"){
             JOptionPane.showMessageDialog(null, "Add a need by date before continue");
             return;
