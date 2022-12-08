@@ -1,5 +1,6 @@
 package Profiles.Items;
 
+import Profiles.Vendor.ReadVendorId;
 import javafx.beans.value.ChangeListener;
 import javafx.beans.value.ObservableValue;
 import javafx.collections.FXCollections;

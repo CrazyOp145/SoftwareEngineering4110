@@ -2,6 +2,7 @@ package Profiles.PurchaseOrder;
 
 import Profiles.Items.ItemList;
 import Profiles.Items.ReadItemProfile;
+import Profiles.Vendor.ReadVendorId;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
