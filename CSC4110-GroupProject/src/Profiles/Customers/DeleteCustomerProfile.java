@@ -12,7 +12,7 @@ import java.util.Scanner;
 public class DeleteCustomerProfile {
     private Scanner input;
     public void deleteCustomerProfile(String filePath, String removeTerm){
-        System.out.println(removeTerm + "ITs not working" );
+        Boolean searchInFile = false;
         String tempFile = "tempCustomerProfiles.csv";
         String customerID;
         String companyName;
@@ -52,8 +52,17 @@ public class DeleteCustomerProfile {
                     if(balance != "0") {
                         pw.println(customerID + "," + companyName + "," + address + "," + city
                                 + "," + state + "," + phoneNumber + "," + balance + "," + lastPaidAmount + "," + lastOrderDate);
+                        searchInFile = true;
+                        JOptionPane.showMessageDialog(null,"The Customer Profile has been deleted");
+                    }
+                    else{
+                        JOptionPane.showMessageDialog(null, "Customer Does Not Have Balance of 0 \n" +
+                                "cannot delete Customer.");
                     }
                 }
+            }
+            if(!searchInFile){
+                JOptionPane.showMessageDialog(null,"The Customer You Searched for Does not exist.");
             }
             input.close();
             pw.flush();
@@ -84,7 +93,6 @@ public class DeleteCustomerProfile {
             pw2.flush();
             pw2.close();
             newFile.delete();
-            JOptionPane.showMessageDialog(null,"The Customer Profile has been deleted");
         } catch (IOException e) {
             JOptionPane.showMessageDialog(null,"Fail to delete Customer Profile");
         }

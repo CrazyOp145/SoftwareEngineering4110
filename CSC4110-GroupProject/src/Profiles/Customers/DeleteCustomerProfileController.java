@@ -64,7 +64,6 @@ public class DeleteCustomerProfileController implements Initializable {
     File newFile = new File(temp);
     public void deleteProfile(){
         deleteCustomerProfile.deleteCustomerProfile(filePath,deleteCustomerBar.getText());
-        System.out.println(deleteCustomerBar.getText());
         //oldFile.delete();
         File dump = new File(filePath);
         newFile.renameTo(dump);

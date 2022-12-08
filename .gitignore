@@ -171,3 +171,4 @@ out/production/SoftwareEngineering4110/WriteTocsvFiles/ToUserDataCSV.class
 out/production/SoftwareEngineering4110/Profiles/Customers/UpdateItemQuantity.class
 out/production/SoftwareEngineering4110/Profiles/Customers/UpdateCustomerProfileController$1.class
 out/production/SoftwareEngineering4110/Profiles/Items/CheckTwoExpired.class
+out/production/SoftwareEngineering4110/Profiles/Customers/CheckCustomerNameAddress.class

@@ -95,6 +95,7 @@ public class CreateCustomerOrderController implements Initializable {
             JOptionPane.showMessageDialog(null, "Modify your quantity value before continue");
             return;
         }
+
         if(addToOrderCounter < 5){
             customerOrderList.add(item);
             purchaseQuantity.clear();
