@@ -57,11 +57,10 @@ public class DeleteItemController implements Initializable {
     File newFile = new File(temp);
     public void deleteProfile(){
         deleteItemProfile.deleteItemProfile(filePath,deleteItemBar.getText());
-
-
-        oldFile.delete();
+        //oldFile.delete();
         File dump = new File(filePath);
         newFile.renameTo(dump);
+        dump.exists();
         //tableView.setItems(dataList);
         clearList();
         updateList();
