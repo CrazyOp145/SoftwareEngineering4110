@@ -102,9 +102,12 @@ public class UpdateItemController implements Initializable {
         oldFile.delete();
         File dump = new File(filePath);
         newFile.renameTo(dump);
+        clearList();
         updateList();
     }
-
+    public void clearList(){
+        dataList.clear();
+    }
     public void updateList(){
         dataList = readItemProfile.initList();
         itemId.setCellValueFactory(new PropertyValueFactory<>("itemId"));
