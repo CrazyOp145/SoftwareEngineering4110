@@ -39,7 +39,7 @@ public class UpdateCustomerProfile {
             fw = new FileWriter(tempFile, true);
             BufferedWriter bw = new BufferedWriter(fw);
             PrintWriter pw = new PrintWriter(bw);
-            input = new Scanner(new File(filePath));
+            input = new Scanner(oldFile);
             input.useDelimiter("[,\n]");
 
             while (input.hasNext()) {
@@ -68,7 +68,32 @@ public class UpdateCustomerProfile {
             input.close();
             pw.flush();
             pw.close();
+            fw = new FileWriter(filePath);
+            BufferedWriter bw2 = new BufferedWriter(fw);
+            PrintWriter pw2 = new PrintWriter(bw2);
+            Scanner tempFileInput = new Scanner(new File(tempFile));
+            tempFileInput.useDelimiter("[,\n]");
+            while(tempFileInput.hasNext()){
+                String data = tempFileInput.nextLine();
+                Object[] values = data.split(",");
+                Object[] valuesLine = data.split("\n");
 
+                theCustomerID = String.valueOf(values[0]);
+                companyName = String.valueOf(values[1]);
+                address = String.valueOf(values[2]);
+                city = String.valueOf(values[3]);
+                state = String.valueOf(values[4]);
+                phoneNumber = String.valueOf(values[5]);
+                balance = String.valueOf(values[6]);
+                lastPurchasePrice = String.valueOf(values[7]);
+                lastPurchaseDate = String.valueOf(values[8]);
+                pw2.println(customerID + "," + companyName + "," + address + "," + city
+                        + "," + state + "," + phoneNumber + "," + balance + "," + lastPurchasePrice + "," + lastPurchaseDate);
+            }
+            tempFileInput.close();
+            pw2.flush();
+            pw2.close();
+            newFile.delete();
             JOptionPane.showMessageDialog(null, "The item has been Updated");
         } catch (IOException e) {
             JOptionPane.showMessageDialog(null, "Fail to update the item");

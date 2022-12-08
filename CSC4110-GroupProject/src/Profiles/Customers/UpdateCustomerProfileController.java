@@ -161,7 +161,6 @@ public class UpdateCustomerProfileController implements Initializable {
             updateCustomerProfile.updateCustomerProfile(filePath,customer.getCustomerID(),companyName,address,city,state,
                     phoneNumber,balance,lastPurchasePrice,lastPurchaseDate);
         }
-        oldFile.delete();
         File dump = new File(filePath);
         newFile.renameTo(dump);
         clearList();
