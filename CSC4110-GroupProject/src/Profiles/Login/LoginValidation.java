@@ -3,6 +3,9 @@ package Profiles.Login;
 import WriteTocsvFiles.ToUserDataCSV;
 
 import java.io.*;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Scanner;
 
 /**
  * @author David Her
@@ -74,32 +77,33 @@ public class LoginValidation {
     }
 
     //Delete User Profile
-//    public static void deleteUserProfile(){
-//        Scanner dUserProfile = new Scanner(System.in);
-//        String deleteUserInput = checkUserIDInput(dUserProfile, "Enter in User ID to Delete:");
+//    public static void deleteUserProfile(String userID){
+//        //Read User Data
 //        try {
 //            //Scanner
 //            Scanner userData = new Scanner(new File("UserData.csv"));
-//            userData.useDelimiter("[,\n]");
+//            userData.useDelimiter(",");
+//
+//            Object[] arr;
 //            List<String> oldData = new ArrayList<>();
-//            String userID,lName,fName,pass,uRole;
 //
 //            //Put Old Data into List
-//            while(userData.hasNext()){
-//                userID = userData.next();
-//                lName = userData.next();
-//                fName = userData.next();
-//                pass = userData.next();
-//                uRole = userData.next();
+//            while(userData.hasNextLine()){
+//                String oldUserData = userData.nextLine();
+//                arr = oldUserData.split(",");
 //
-//                if(!userID.equals(deleteUserInput)) {
-//                    oldData.add(userID);
-//                    oldData.add(lName);
-//                    oldData.add(fName);
-//                    oldData.add(pass);
-//                    oldData.add(uRole);
+//
+//                if(!String.valueOf(arr[0]).equals(userID)){
+//                    oldData.add(String.valueOf(arr[0]));
+//                    oldData.add(String.valueOf(arr[1]));
+//                    oldData.add(String.valueOf(arr[2]));
+//                    oldData.add(String.valueOf(arr[3]));
+//                    oldData.add(String.valueOf(arr[4]));
+//
 //                }
+//
 //            }
+//            System.out.println(oldData.toString().substring(1,oldData.toString().length()-1).replaceAll(" ", ""));
 //
 //            //FileWriters
 //            FileWriter file = new FileWriter("UserData.csv");
@@ -107,12 +111,13 @@ public class LoginValidation {
 //            PrintWriter printWriter = new PrintWriter(bufferedWriter);
 //
 //            //Write Data into File
-//            printWriter.print(oldData.toString().substring(1,oldData.toString().length()-1).replaceAll(" ", ""));
+//            printWriter.println(oldData.toString().substring(1,oldData.toString().length()-1).replaceAll(" ", ""));
 //
 //            //Close Writers
 //            printWriter.flush();
 //            printWriter.close();
-//        } catch (IOException e) {
+//        }
+//        catch (IOException e) {
 //            e.printStackTrace();
 //        }
 //    }
