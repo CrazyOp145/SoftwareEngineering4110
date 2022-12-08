@@ -87,7 +87,7 @@ public class UpdateCustomerProfile {
                 balance = String.valueOf(values[6]);
                 lastPurchasePrice = String.valueOf(values[7]);
                 lastPurchaseDate = String.valueOf(values[8]);
-                pw2.println(customerID + "," + companyName + "," + address + "," + city
+                pw2.println(theCustomerID + "," + companyName + "," + address + "," + city
                         + "," + state + "," + phoneNumber + "," + balance + "," + lastPurchasePrice + "," + lastPurchaseDate);
             }
             tempFileInput.close();
