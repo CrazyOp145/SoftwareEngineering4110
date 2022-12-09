@@ -5,5 +5,5 @@ package Oberver;
  *
  */
 public enum EnumBehaviors {
-    EXPIRED, OUTSTOCK, INSTOCK
+    EXPIRED, OUTOFSTOCK, INSTOCK
 }

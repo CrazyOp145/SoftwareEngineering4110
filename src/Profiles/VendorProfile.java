@@ -1,11 +1,13 @@
 package Profiles;
 
+import java.time.LocalDate;
+
 public class VendorProfile implements UserProfiles{
         private String vendorName, vendorID, vendorPW;
         private String street, city, state;
         private String phone;
         private double balance, lastPaidAmount;
-        private String lastOrderDate, discountStartDate;
+        private LocalDate lastOrderDate, discountStartDate;
 
         public VendorProfile(){
         }
@@ -64,17 +66,17 @@ public class VendorProfile implements UserProfiles{
         }
 
         @Override
-        public String getLastOrderDate() {
+        public LocalDate getLastOrderDate() {
             return lastOrderDate;
         }
 
         @Override
-        public void setLastOrderDate(String lastOrderDate) {
+        public void setLastOrderDate(LocalDate lastOrderDate) {
             this.lastOrderDate = lastOrderDate;
         }
         @Override
         public String getCompanyName() {
-            return null;
+            return vendorName;
         }
 
         @Override
@@ -82,24 +84,28 @@ public class VendorProfile implements UserProfiles{
             return null;
         }
 
+        public String getID(){
+            return vendorID;
+        }
+
         @Override
         public String getCity() {
-            return null;
+            return city;
         }
 
         @Override
         public String getStreetAddress() {
-            return null;
+            return street;
         }
 
         @Override
         public String getState() {
-            return null;
+            return state;
         }
 
         @Override
         public String getPhone() {
-            return null;
+            return phone;
         }
 
          public void setPhone(String phone) {
@@ -108,9 +114,14 @@ public class VendorProfile implements UserProfiles{
 
         @Override
         public double getBalance() {
-            return 0;
+            return balance;
         }
-        public void setDiscountStartDate(String discountStartDate) {
+
+        public void setDiscountStartDate(LocalDate discountStartDate) {
             this.discountStartDate = discountStartDate;
+        }
+
+        public LocalDate getDiscountStartDate(){
+            return discountStartDate;
         }
 }

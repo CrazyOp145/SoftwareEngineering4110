@@ -1,9 +1,7 @@
 package Profiles;
-/**
- *
- * @author Paulo Burgess GN7231
- *
- */
+
+import java.time.LocalDate;
+
 public class Administrator implements UserProfiles{
     private String firstName;
     private String lastName;
@@ -82,12 +80,12 @@ public class Administrator implements UserProfiles{
     }
 
     @Override
-    public String getLastOrderDate() {
+    public LocalDate getLastOrderDate() {
         return null;
     }
 
     @Override
-    public void setLastOrderDate(String lastOrderDate) {
+    public void setLastOrderDate(LocalDate lastOrderDate) {
 
     }
 
