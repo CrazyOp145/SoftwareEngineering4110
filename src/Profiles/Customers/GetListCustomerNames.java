@@ -1,9 +1,6 @@
 package Profiles.Customers;
 
 import java.util.*;
-import Profiles.CustomerList;
-import javafx.collections.FXCollections;
-import javafx.collections.ObservableList;
 
 import java.io.File;
 import java.io.FileNotFoundException;

@@ -1,7 +1,5 @@
 package Profiles;
 
-import java.util.*;
-import java.util.regex.Pattern;
 /**
  *
  * @author Paulo Burgess GN7231

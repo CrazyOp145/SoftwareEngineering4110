@@ -2,8 +2,6 @@ package Profiles.Customers;
 
 import Profiles.Items.ItemList;
 import Profiles.Items.ReadItemProfile;
-import Profiles.Items.UpdateItemProfile;
-import Profiles.PurchaseOrder.PurchaseIdProvider;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
