@@ -7,11 +7,8 @@ import javafx.scene.control.*;
 import javafx.event.ActionEvent;
 import javafx.scene.text.Text;
 import javafx.stage.*;
-import Profiles.Items.CheckTwoExpired;
-import java.io.IOException;
-import Oberver.Update;
 
-import javax.swing.*;
+import java.io.IOException;
 
 /**
  * @author David Her
