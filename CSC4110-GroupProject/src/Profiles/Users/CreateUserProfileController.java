@@ -33,7 +33,7 @@ public class CreateUserProfileController implements Initializable {
     @FXML private Text passwordChecks;
     @FXML private Text userRoleChecks;
     private String[] role =
-            {UserRoles.owner.name(), UserRoles.administrator.name(), UserRoles.vendor.name(),
+            {UserRoles.owner.name(), UserRoles.administrator.name(),
                     UserRoles.inventoryManager.name(), UserRoles.purchaser.name(),
                     UserRoles.salesperson.name(), UserRoles.accountant.name()};
 

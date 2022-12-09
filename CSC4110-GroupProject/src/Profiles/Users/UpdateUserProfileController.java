@@ -41,7 +41,7 @@ public class UpdateUserProfileController implements Initializable {
     private ObservableList<UserList> dataList = FXCollections.observableArrayList();
     private UserList userList;
     String[] roles =
-            {UserRoles.owner.name(), UserRoles.administrator.name(), UserRoles.vendor.name(),
+            {UserRoles.owner.name(), UserRoles.administrator.name(),
                     UserRoles.inventoryManager.name(), UserRoles.purchaser.name(),
                     UserRoles.salesperson.name(), UserRoles.accountant.name()};
     private String lNameInput,fNameInput,passwordInput,userRoleInput;
