@@ -56,10 +56,10 @@
             </Menu>
           <Menu mnemonicParsing="false" text="Edit">
             <items>
-                  <MenuItem fx:id="editCustomerButton" onAction="#switchUpdateCustomerProfile" text="Customer profile" />
-                  <MenuItem mnemonicParsing="false" onAction="#switchToUpdateVendorProfile" text="Vendor profile" />
-                  <MenuItem fx:id="updateItemButton" mnemonicParsing="false" onAction="#switchToUpdateItemMenuBar" text="Item profile" />
-                  <MenuItem fx:id="updateUserButton" mnemonicParsing="false" onAction="#switchToUpdateUserProfile" text="User profile" />
+                  <MenuItem fx:id="editCustomerButton" disable="true" onAction="#switchUpdateCustomerProfile" text="Customer profile" />
+                  <MenuItem disable="true" mnemonicParsing="false" onAction="#switchToUpdateVendorProfile" text="Vendor profile" />
+                  <MenuItem fx:id="updateItemButton" disable="true" mnemonicParsing="false" onAction="#switchToUpdateItemMenuBar" text="Item profile" />
+                  <MenuItem fx:id="updateUserButton" disable="true" mnemonicParsing="false" onAction="#switchToUpdateUserProfile" text="User profile" />
             </items>
           </Menu>
             <Menu mnemonicParsing="false" text="Help">
