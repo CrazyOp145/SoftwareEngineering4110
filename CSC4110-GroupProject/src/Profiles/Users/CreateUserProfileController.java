@@ -33,7 +33,9 @@ public class CreateUserProfileController implements Initializable {
     @FXML private Text passwordChecks;
     @FXML private Text userRoleChecks;
     private String[] role =
-            {"owner", "administrator", "vendor", "inventoryManager", "purchaser", "salesPerson","accountant"};
+            {UserRoles.owner.name(), UserRoles.administrator.name(), UserRoles.vendor.name(),
+                    UserRoles.inventoryManager.name(), UserRoles.purchaser.name(),
+                    UserRoles.salesperson.name(), UserRoles.accountant.name()};
 
     @Override
     public void initialize(URL arg0, ResourceBundle arg1) {

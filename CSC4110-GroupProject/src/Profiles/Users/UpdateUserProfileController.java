@@ -41,7 +41,9 @@ public class UpdateUserProfileController implements Initializable {
     private ObservableList<UserList> dataList = FXCollections.observableArrayList();
     private UserList userList;
     String[] roles =
-            {"owner", "administrator", "vendor", "inventoryManager", "purchaser", "salesPerson","accountant"};
+            {UserRoles.owner.name(), UserRoles.administrator.name(), UserRoles.vendor.name(),
+                    UserRoles.inventoryManager.name(), UserRoles.purchaser.name(),
+                    UserRoles.salesperson.name(), UserRoles.accountant.name()};
     private String lNameInput,fNameInput,passwordInput,userRoleInput;
 
     File oldFile = new File("UserData.csv");
