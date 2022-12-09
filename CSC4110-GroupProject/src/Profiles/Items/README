@@ -7,11 +7,20 @@ Cancel to go back to user menu.
 Search item profile:
 Select on menu bar 'Search' from drop down menu select 'Item Profile'. 
 All the item you have for all the vendors will display in the table view.
-To search for a specific item, enter either the item id, item name or expire date in the search bar
-if item not found table will display the message
+To search for a specific item, enter either the item id, item name or expire date in the search bar.
+if item not found table will display the message.
+click 'back to menu' to go back to main menu.
 
 Delete item profile:
 Select on menu bar 'Delete' from drop down menu select 'Item Profile'. 
+All the item you have for all the vendors will display in the table view.
+To delete an item from the list, enter this item id in delete item bar and hit delete button.
+The table will update after deletion.
+click 'back to menu' to go back to main menu.
 
 Update item profile:
 Select on menu bar 'Edit' from drop down menu select 'Item Profile'. 
+All the item you have for all the vendors will display in the table view.
+To update an item, first enter all information you want for the new item. After finish select the item you want to change from
+in the table. click 'update' button and the item will be replaced by the new item you've entered.
+click 'back to menu' to go back to main menu.
