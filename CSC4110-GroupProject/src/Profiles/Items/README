@@ -1,0 +1,17 @@
+Create item profile:
+Create item profile is the function to create item profile for given vendor. 
+Select on menu bar 'create' from drop down menu select 'Item Profile'. 
+Entering all the required information of the item to create and click on create button, your item will be created by seeing a pop out window one the screen.
+Cancel to go back to user menu.
+
+Search item profile:
+Select on menu bar 'Search' from drop down menu select 'Item Profile'. 
+All the item you have for all the vendors will display in the table view.
+To search for a specific item, enter either the item id, item name or expire date in the search bar
+if item not found table will display the message
+
+Delete item profile:
+Select on menu bar 'Delete' from drop down menu select 'Item Profile'. 
+
+Update item profile:
+Select on menu bar 'Edit' from drop down menu select 'Item Profile'. 
