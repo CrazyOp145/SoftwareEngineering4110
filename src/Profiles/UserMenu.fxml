@@ -27,11 +27,6 @@
       </Label>
       <MenuBar fx:id="myMenuBar" layoutY="2.0" prefHeight="25.0" prefWidth="601.0">
         <menus>
-            <Menu mnemonicParsing="false" text="File">
-              <items>
-                <MenuItem mnemonicParsing="false" text="Action 1" />
-              </items>
-            </Menu>
             <Menu mnemonicParsing="false" text="Search">
                <items>
                   <MenuItem fx:id="searchCustomerButton" disable="true" mnemonicParsing="false" onAction="#switchSearchCustomerProfile" text="Customer Profile" />
@@ -43,12 +38,12 @@
             </Menu>
           <Menu mnemonicParsing="false" text="Create">
             <items>
-              <MenuItem mnemonicParsing="false" onAction="#switchCreateCustomerProfile" text="Customer Profile" />
-                  <MenuItem mnemonicParsing="false" onAction="#switchToCreateVendorProfile" text="Vendor profile" />
+              <MenuItem fx:id="createCustomerButton" onAction="#switchCreateCustomerProfile" text="Customer Profile" />
+                  <MenuItem onAction="#switchToCreateVendorProfile" text="Vendor profile" />
                   <MenuItem fx:id="createItemButton" mnemonicParsing="false" onAction="#switchToCreateItemProfileSceneMenuBar" text="Item profile" />
                   <MenuItem fx:id="createPurchaseOrderButton" mnemonicParsing="false" onAction="#switchToPurchaseOrderMenuBar" text="Purchase order" />
-                  <MenuItem mnemonicParsing="false" onAction="#switchToCreateUserProfile" text="User profile" />
-                  <MenuItem mnemonicParsing="false" onAction="#switchCreateCustomerOrder" text="Customer Order" />
+                  <MenuItem fx:id="createUserButton" mnemonicParsing="false" onAction="#switchToCreateUserProfile" text="User profile" />
+                  <MenuItem fx:id="createCustomerOrderButton" onAction="#switchCreateCustomerOrder" text="Customer Order" />
             </items>
           </Menu>
             <Menu mnemonicParsing="false" text="Delete">
@@ -61,9 +56,10 @@
             </Menu>
           <Menu mnemonicParsing="false" text="Edit">
             <items>
-                  <MenuItem mnemonicParsing="false" onAction="#switchUpdateCustomerProfile" text="Customer profile" />
+                  <MenuItem fx:id="editCustomerButton" onAction="#switchUpdateCustomerProfile" text="Customer profile" />
                   <MenuItem mnemonicParsing="false" onAction="#switchToUpdateVendorProfile" text="Vendor profile" />
                   <MenuItem fx:id="updateItemButton" mnemonicParsing="false" onAction="#switchToUpdateItemMenuBar" text="Item profile" />
+                  <MenuItem fx:id="updateUserButton" mnemonicParsing="false" onAction="#switchToUpdateUserProfile" text="User profile" />
             </items>
           </Menu>
             <Menu mnemonicParsing="false" text="Help">
