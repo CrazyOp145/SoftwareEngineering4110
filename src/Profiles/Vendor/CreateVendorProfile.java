@@ -27,7 +27,7 @@ import java.util.regex.Pattern;
 // @author Mahz Alam
 
 public class CreateVendorProfile implements Initializable {
-    String filePath = "VendorFile.csv";
+    String filePath = "VendorProfile.csv";
 
     private String[] stateArray = {"AL", "AK", "AZ", "AR", "CA",
             "CO", "CT", "DE", "DC", "FL", "GA", "GU", "HI", "ID", "IL", "IN", "IA", "KS", "KY",
@@ -154,7 +154,7 @@ public class CreateVendorProfile implements Initializable {
 
     public static boolean checkVendorName(String input) {
         try {
-            FileReader fileRead = new FileReader("VendorFile.csv");
+            FileReader fileRead = new FileReader("VendorProfile.csv");
             BufferedReader bufferRead = new BufferedReader(fileRead);
 
             String line;

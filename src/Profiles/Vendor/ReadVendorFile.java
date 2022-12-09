@@ -15,7 +15,7 @@ public class ReadVendorFile {
     private static ObservableList<VendorList> dataList = FXCollections.observableArrayList();
 
     public static ObservableList<VendorList> initList(){
-        String filePath = "VendorFile.csv";
+        String filePath = "VendorProfile.csv";
         File file = new File(filePath);
 
         try {
