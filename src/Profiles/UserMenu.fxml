@@ -38,12 +38,12 @@
             </Menu>
           <Menu mnemonicParsing="false" text="Create">
             <items>
-              <MenuItem fx:id="createCustomerButton" onAction="#switchCreateCustomerProfile" text="Customer Profile" />
-                  <MenuItem onAction="#switchToCreateVendorProfile" text="Vendor profile" />
-                  <MenuItem fx:id="createItemButton" mnemonicParsing="false" onAction="#switchToCreateItemProfileSceneMenuBar" text="Item profile" />
-                  <MenuItem fx:id="createPurchaseOrderButton" mnemonicParsing="false" onAction="#switchToPurchaseOrderMenuBar" text="Purchase order" />
-                  <MenuItem fx:id="createUserButton" mnemonicParsing="false" onAction="#switchToCreateUserProfile" text="User profile" />
-                  <MenuItem fx:id="createCustomerOrderButton" onAction="#switchCreateCustomerOrder" text="Customer Order" />
+              <MenuItem fx:id="createCustomerButton" disable="true" onAction="#switchCreateCustomerProfile" text="Customer Profile" />
+                  <MenuItem disable="true" onAction="#switchToCreateVendorProfile" text="Vendor profile" />
+                  <MenuItem fx:id="createItemButton" disable="true" mnemonicParsing="false" onAction="#switchToCreateItemProfileSceneMenuBar" text="Item profile" />
+                  <MenuItem fx:id="createPurchaseOrderButton" disable="true" mnemonicParsing="false" onAction="#switchToPurchaseOrderMenuBar" text="Purchase order" />
+                  <MenuItem fx:id="createUserButton" disable="true" mnemonicParsing="false" onAction="#switchToCreateUserProfile" text="User profile" />
+                  <MenuItem fx:id="createCustomerOrderButton" disable="true" onAction="#switchCreateCustomerOrder" text="Customer Order" />
             </items>
           </Menu>
             <Menu mnemonicParsing="false" text="Delete">
