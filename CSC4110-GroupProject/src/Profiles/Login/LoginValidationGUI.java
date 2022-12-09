@@ -12,7 +12,7 @@ import java.io.IOException;
  */
 
 public class LoginValidationGUI extends Application {
-    public static String currentUserType;
+    public static String currentUserType = "owner";
     @Override
     public void start(Stage primaryStage) throws IOException {
         Parent root = FXMLLoader.load(getClass().getResource("Login.fxml"));

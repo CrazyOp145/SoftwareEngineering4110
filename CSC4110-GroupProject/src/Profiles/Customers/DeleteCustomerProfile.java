@@ -94,7 +94,7 @@ public class DeleteCustomerProfile {
             pw2.close();
             newFile.delete();
         } catch (IOException e) {
-            JOptionPane.showMessageDialog(null,"Fail to delete Customer Profile");
+            JOptionPane.showMessageDialog(null,"Failed to delete Customer Profile");
         }
 
 

@@ -137,8 +137,9 @@ public class CreateCustomerOrderController implements Initializable {
                     FileWriter fw = new FileWriter(filePath,true);
                     BufferedWriter bw = new BufferedWriter(fw);
                     PrintWriter pw = new PrintWriter(bw);
-                    pw.println(purchaseItem.getItemId()+","+purchaseItem.getItemName()+","+purchaseItem.getPurchasePrice()
-                            +","+purchaseItem.getSellingPrice() +","+purchaseItem.needQuantity+","+purchaseItem.needDate+","+subtotal);
+                    pw.println(purchaseItem.getItemId().replace(" ","")+","+purchaseItem.getItemName().replace(" ","")+","+
+                            purchaseItem.getPurchasePrice().replace(" ","") +","+purchaseItem.getSellingPrice().replace(" ","") +
+                            ","+purchaseItem.needQuantity.replace(" ","")+","+purchaseItem.needDate.replace(" ","")+","+subtotal);
                     pw.flush();
                     pw.close();
                     UpdateItemQuantity.updateItemQuantity("ItemProfile.csv",purchaseItem.getItemId(),

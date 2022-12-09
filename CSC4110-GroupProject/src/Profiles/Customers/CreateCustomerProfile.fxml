@@ -27,5 +27,6 @@
       <Label fx:id="errorMessage" layoutX="14.0" layoutY="405.0" prefHeight="35.0" prefWidth="264.0" text="Click To Submit:" />
       <ChoiceBox fx:id="stateCB" layoutX="286.0" layoutY="281.0" maxHeight="1.7976931348623157E308" prefWidth="150.0" />
       <Button fx:id="cancel" layoutX="298.0" layoutY="440.0" mnemonicParsing="false" onAction="#switchToUserMenuScene" prefHeight="17.0" prefWidth="126.0" text="Cancel" />
+      <Label layoutX="47.0" layoutY="61.0" prefHeight="17.0" prefWidth="429.0" text="All Spaces Entered In the Text Fields will be deleted upon submission." />
    </children>
 </AnchorPane>

@@ -41,6 +41,16 @@ public class UserMenuController implements Initializable {
     @FXML
     MenuItem updateItemButton;
     @FXML
+    MenuItem editCustomerButton;
+    @FXML
+    MenuItem createCustomerButton;
+    @FXML
+    MenuItem createCustomerOrderButton;
+    @FXML
+    MenuItem searchCustomerButton;
+    @FXML
+    MenuItem deleteCustomerButton;
+    @FXML
     Button logoutButton;
     @FXML
     private MenuBar myMenuBar;
@@ -214,6 +224,10 @@ public class UserMenuController implements Initializable {
         switch(currentUserType){
             case "owner":
                 System.out.println("user is owner");
+                createCustomerButton.setDisable(false);
+                editCustomerButton.setDisable(false);
+                deleteCustomerButton.setDisable(false);
+                searchCustomerButton.setDisable(false);
                 createItemButton.setDisable(false);
                 updateItemButton.setDisable(false);
                 deleteItemButton.setDisable(false);
@@ -243,6 +257,7 @@ public class UserMenuController implements Initializable {
                 break;
             case "salesperson":
                 System.out.println("user is salesperson");
+                createCustomerOrderButton.setDisable(false);
                 searchItemButton.setDisable(false);
                 break;
             case "vendor":

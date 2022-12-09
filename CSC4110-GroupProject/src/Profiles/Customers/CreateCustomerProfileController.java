@@ -109,11 +109,11 @@ public class CreateCustomerProfileController implements Initializable {
             UserProfiles newProfileTemp = ProfilesFactory.createProfile("Customer Profile");
             if(newProfileTemp instanceof CustomerProfile) {
                 CustomerProfile newProfile = new CustomerProfile();
-                newProfile.setFirstName(companyName);
-                newProfile.setID(customerID);
-                newProfile.setCity(city);
-                newProfile.setState(state);
-                newProfile.setStreet(address);
+                newProfile.setFirstName(companyName.replace(" ",""));
+                newProfile.setID(customerID.replace(" ",""));
+                newProfile.setCity(city.replace(" ",""));
+                newProfile.setState(state.replace(" ",""));
+                newProfile.setStreet(address.replace(" ",""));
                 newProfile.setPhone(phoneNumber);
                 System.out.println(newProfile.toString());
                 FileWriter fw = new FileWriter(filePath, true);

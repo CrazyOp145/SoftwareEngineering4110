@@ -23,12 +23,14 @@ public class ReadCustomerProfile {
             Scanner input = new Scanner(file);
             while((input.hasNext())){
                 String data = input.next();
+                data.replace(" ","_");
                 Object[] values = data.split(",");
                 Object[] valuesLine = data.split("\n");
 
-                dataList.add(new CustomerList(String.valueOf(values[0]),String.valueOf(values[1]),String.valueOf(values[2])
-                        ,String.valueOf(values[3]),String.valueOf(values[4]),String.valueOf(values[5]),String.valueOf(values[6])
-                ,String.valueOf(values[7]),String.valueOf(values[8])));
+                dataList.add(new CustomerList(String.valueOf(values[0]),String.valueOf(values[1]),
+                        String.valueOf(values[2]),String.valueOf(values[3]),String.valueOf(values[4]),
+                        String.valueOf(values[5]),
+                        String.valueOf(values[6]),String.valueOf(values[7]),String.valueOf(values[8])));
             }
 
         } catch (FileNotFoundException e) {
