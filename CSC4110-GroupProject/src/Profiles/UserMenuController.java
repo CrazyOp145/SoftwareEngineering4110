@@ -10,6 +10,7 @@ import javafx.fxml.Initializable;
 import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.control.Button;
 import javafx.scene.control.MenuBar;
 import javafx.scene.control.MenuItem;
 import javafx.stage.Stage;
@@ -28,7 +29,19 @@ import java.util.ResourceBundle;
 public class UserMenuController implements Initializable {
     String currentUserType = LoginValidationGUI.currentUserType;
     @FXML
-    MenuItem CreatePurchaseOrderButton;
+    MenuItem createPurchaseOrderButton;
+    @FXML
+    MenuItem searchItemButton;
+    @FXML
+    MenuItem searchPurchaseOrderButton;
+    @FXML
+    MenuItem createItemButton;
+    @FXML
+    MenuItem deleteItemButton;
+    @FXML
+    MenuItem updateItemButton;
+    @FXML
+    Button logoutButton;
     @FXML
     private MenuBar myMenuBar;
     private Stage Stage;
@@ -189,16 +202,61 @@ public class UserMenuController implements Initializable {
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
+        //currentUserType = LoginValidation.loginCheckRole(LoginValidation.getUserID());
         LoginValidation.loginCheckRole(LoginValidation.getUserID());
-        //System.out.println(currentUserType);
+        System.out.println(currentUserType);
         if(LoginValidationGUI.currentUserType.toUpperCase().equals("SALESPERSON")) {
             Boolean twoExpired = CheckTwoExpired.checkTwoExpired();
             if (twoExpired) {
                 JOptionPane.showMessageDialog(null, "Two Or More Items are Expired.");
             }
         }
-        if(currentUserType == "owner"){
-            CreatePurchaseOrderButton.setDisable(true);
+        switch(currentUserType){
+            case "owner":
+                System.out.println("user is owner");
+                createItemButton.setDisable(false);
+                updateItemButton.setDisable(false);
+                deleteItemButton.setDisable(false);
+                searchItemButton.setDisable(false);
+                break;
+            case "administrator":
+                System.out.println("user is administrator");
+                searchItemButton.setDisable(false);
+                break;
+            case "inventoryManager":
+                System.out.println("user is inventoryManager");
+                createItemButton.setDisable(false);
+                deleteItemButton.setDisable(false);
+                break;
+            case "purchaser":
+                System.out.println("user is purchaser");
+                createItemButton.setDisable(false);
+                updateItemButton.setDisable(false);
+                deleteItemButton.setDisable(false);
+                searchItemButton.setDisable(false);
+                searchPurchaseOrderButton.setDisable(false);
+                createPurchaseOrderButton.setDisable(false);
+                break;
+            case "accountant":
+                System.out.println("user is accountant");
+                searchItemButton.setDisable(false);
+                break;
+            case "salesperson":
+                System.out.println("user is salesperson");
+                searchItemButton.setDisable(false);
+                break;
+            case "vendor":
+                System.out.println("user is vendor");
+                searchItemButton.setDisable(false);
+                break;
+            case "customer":
+                System.out.println("user is customer");
+                searchItemButton.setDisable(false);
+                break;
+            default:
+
+
         }
+
     }
 }
