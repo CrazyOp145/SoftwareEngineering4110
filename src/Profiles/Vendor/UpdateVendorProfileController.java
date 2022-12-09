@@ -30,7 +30,7 @@ import java.util.regex.Pattern;
 // @author Mahz Alam
 public class UpdateVendorProfileController {
 
-    String filePath = "VendorFile.csv";
+    String filePath = "VendorProfile.csv";
 
     private String[] stateArray = {"AL", "AK", "AZ", "AR", "CA",
             "CO", "CT", "DE", "DC", "FL", "GA", "GU", "HI", "ID", "IL", "IN", "IA", "KS", "KY",
