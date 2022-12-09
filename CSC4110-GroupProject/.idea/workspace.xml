@@ -1,17 +1,74 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="0fca64ac-1e40-4203-a543-24a4216197c3" name="Changes" comment="Vendor Profile added to code.&#10;&#10;-- Mahz Alam gw1637">
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_11_26_2022_5_29_PM__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_11_26_2022_5_29_PM__Changes_.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_11_26_2022_5_36_PM_[Changes]/shelved.patch" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_11_26_2022_5_36_PM__Changes_.xml" beforeDir="false" />
+    <list default="true" id="0fca64ac-1e40-4203-a543-24a4216197c3" name="Changes" comment="Vendor Feature 7 Completed Portions&#10;&#10;-- Mahz Alam gw1637">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CSC4110-GroupProject.iml" beforeDir="false" afterPath="$PROJECT_DIR$/CSC4110-GroupProject.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/CreateVendorProfile.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/CreateVendorProfile.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/CreateVendorProfile.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/CreateVendorProfile.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/UserMenu.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/UserMenu.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/UserMenuController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/UserMenuController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/CSC4110-GroupProject/BakeryProducts.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/CSC4110-GroupProject/CalculatePurchaseOrderTotalCost.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/CSC4110-GroupProject/CreateCustomerProfile.fxml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/CSC4110-GroupProject/CreateCustomerProfileController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/CSC4110-GroupProject/CreateItemProfile.fxml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/CSC4110-GroupProject/CreateItemProfileController$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/CSC4110-GroupProject/CreateItemProfileController$2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/CSC4110-GroupProject/CreateItemProfileController$3.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/CSC4110-GroupProject/CreateItemProfileController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/CSC4110-GroupProject/CreatePurchaseOrder.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/CSC4110-GroupProject/CreatePurchaseOrder.fxml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/CSC4110-GroupProject/CreatePurchaseOrderController$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/CSC4110-GroupProject/CreatePurchaseOrderController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/CSC4110-GroupProject/CreateVendorProfile.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/CSC4110-GroupProject/CreateVendorProfile.fxml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/CSC4110-GroupProject/Dairy.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/CSC4110-GroupProject/DeleteItemController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/CSC4110-GroupProject/DeleteItemProfile.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/CSC4110-GroupProject/DeleteItemProfile.fxml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/CSC4110-GroupProject/DisplayItemProfile.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/CSC4110-GroupProject/Fruits.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/CSC4110-GroupProject/IdProvider.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/CSC4110-GroupProject/ItemList.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/CSC4110-GroupProject/ItemProfile.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/CSC4110-GroupProject/ItemProfileFactory.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/CSC4110-GroupProject/ItemProfileTest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/CSC4110-GroupProject/Juice.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/CSC4110-GroupProject/MainGUI.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/CSC4110-GroupProject/MainGUI.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/CSC4110-GroupProject/Meat.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/CSC4110-GroupProject/Nuts.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/CSC4110-GroupProject/Profiles/Accountant.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/CSC4110-GroupProject/Profiles/Accountant.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/CSC4110-GroupProject/Profiles/Administrator.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/CSC4110-GroupProject/Profiles/Administrator.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/CSC4110-GroupProject/Profiles/CustomerList.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/CSC4110-GroupProject/Profiles/CustomerList.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/CSC4110-GroupProject/Profiles/CustomerOrder.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/CSC4110-GroupProject/Profiles/CustomerOrder.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/CSC4110-GroupProject/Profiles/CustomerProfile.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/CSC4110-GroupProject/Profiles/CustomerProfile.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/CSC4110-GroupProject/Profiles/InventoryManager.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/CSC4110-GroupProject/Profiles/InventoryManager.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/CSC4110-GroupProject/Profiles/LoginValidation.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/CSC4110-GroupProject/Profiles/Owner.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/CSC4110-GroupProject/Profiles/Owner.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/CSC4110-GroupProject/Profiles/ProfilesFactory.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/CSC4110-GroupProject/Profiles/ProfilesFactory.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/CSC4110-GroupProject/Profiles/Purchaser.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/CSC4110-GroupProject/Profiles/Purchaser.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/CSC4110-GroupProject/Profiles/Salesperson.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/CSC4110-GroupProject/Profiles/Salesperson.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/CSC4110-GroupProject/Profiles/SearchCustomerProfile.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/CSC4110-GroupProject/Profiles/SearchCustomerProfile.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/CSC4110-GroupProject/Profiles/UserProfiles.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/CSC4110-GroupProject/Profiles/UserProfiles.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/CSC4110-GroupProject/Profiles/VendorProfile.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/CSC4110-GroupProject/Profiles/VendorProfile.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/CSC4110-GroupProject/PurchaseIdProvider.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/CSC4110-GroupProject/PurchaseOrderList.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/CSC4110-GroupProject/PurchaseOrderView.fxml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/CSC4110-GroupProject/PurchaseOrderViewController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/CSC4110-GroupProject/ReadCustomerProfile.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/CSC4110-GroupProject/ReadItemProfile.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/CSC4110-GroupProject/ReadPurchaseOrder.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/CSC4110-GroupProject/SearchCustomerProfile.fxml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/CSC4110-GroupProject/SearchCustomerProfileController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/CSC4110-GroupProject/SearchItemController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/CSC4110-GroupProject/SearchItemProfile.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/CSC4110-GroupProject/SearchItemProfile.fxml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/CSC4110-GroupProject/Snacks.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/CSC4110-GroupProject/Soda.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/CSC4110-GroupProject/UnitofMeasurement.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/CSC4110-GroupProject/UpdateItemController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/CSC4110-GroupProject/UpdateItemProfile.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/CSC4110-GroupProject/UpdateItemProfile.fxml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/CSC4110-GroupProject/UserMenu.fxml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/CSC4110-GroupProject/UserMenuController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/CSC4110-GroupProject/Vegetables.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/CSC4110-GroupProject/itemCategory.class" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -22,6 +79,7 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Class" />
+        <option value="FxmlFile" />
       </list>
     </option>
   </component>
@@ -57,6 +115,9 @@
     <property name="project.structure.last.edited" value="Libraries" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
+  </component>
+  <component name="ReaderModeSettings">
+    <option name="enabled" value="false" />
   </component>
   <component name="RunManager">
     <configuration name="MainGUI" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
@@ -103,7 +164,28 @@
       <option name="project" value="LOCAL" />
       <updated>1669947274459</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Limitations Added To Vendor&#10;-- Mahz Alam gw1637">
+      <created>1670525903020</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1670525903020</updated>
+    </task>
+    <task id="LOCAL-00005" summary="CreateVendorProfile.fxml is causing merge issues, this will fix it.&#10;&#10;-- Mahz Alam gw1637">
+      <created>1670526175322</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1670526175322</updated>
+    </task>
+    <task id="LOCAL-00006" summary="Vendor Feature 7 Completed Portions&#10;&#10;-- Mahz Alam gw1637">
+      <created>1670614194587</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1670614194587</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -120,6 +202,9 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Vendor Profile added to code.&#10;&#10;-- Mahz Alam gw1637" />
-    <option name="LAST_COMMIT_MESSAGE" value="Vendor Profile added to code.&#10;&#10;-- Mahz Alam gw1637" />
+    <MESSAGE value="Limitations Added To Vendor&#10;-- Mahz Alam gw1637" />
+    <MESSAGE value="CreateVendorProfile.fxml is causing merge issues, this will fix it.&#10;&#10;-- Mahz Alam gw1637" />
+    <MESSAGE value="Vendor Feature 7 Completed Portions&#10;&#10;-- Mahz Alam gw1637" />
+    <option name="LAST_COMMIT_MESSAGE" value="Vendor Feature 7 Completed Portions&#10;&#10;-- Mahz Alam gw1637" />
   </component>
 </project>
