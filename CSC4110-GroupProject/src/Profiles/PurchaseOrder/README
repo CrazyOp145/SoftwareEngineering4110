@@ -1,0 +1,17 @@
+Create Purchase Order
+Select 'Create' on main user menu, select 'Purchase order' to get to the page of creating a new purchase order.
+First select from vendor bar, pick the vendor you want to purchase form. 
+Click 'Show vendor inventory' after select the vendor.
+The item that related to that vendor will show in the table view.
+Then fill 'need by date' and 'quantity' for the item you want to purchase.
+Select the item you want to purchase. 
+Click 'add to order', the pop out window will inform you the item is successfully added to your order.
+continue to add more items, or click 'create order' to create your order. 
+Click 'back to menu' to go back to main user menu.
+
+Search Purchase Order
+Select 'seach' on main user menu, select 'Purchase order' to get to the page of search for a existing purchase order.
+In vendor search bar, enter the order number you want to search for.
+Then click 'search' to display all informations about that order.
+The information will show in the table view of the page.
+Click 'back to menu' to go back to main user menu.
