@@ -1,5 +1,9 @@
 package Profiles;
 
+import Oberver.Behavior;
+import Oberver.CheckExpire;
+import Oberver.EnumBehaviors;
+import Oberver.EnumObserverStates;
 import Profiles.Items.CheckTwoExpired;
 import Profiles.Login.LoginValidationGUI;
 import javafx.event.ActionEvent;
@@ -26,6 +30,8 @@ import java.util.ResourceBundle;
  *
  */
 public class UserMenuController implements Initializable {
+    CheckExpire checkExpire = new CheckExpire();
+    Behavior expireBehave = new Behavior("Item", EnumBehaviors.INSTOCK);
     String currentUserType = LoginValidationGUI.currentUserType;
     @FXML MenuItem createPurchaseOrderButton, searchPurchaseOrderButton;
     @FXML MenuItem searchItemButton, createItemButton, deleteItemButton , updateItemButton;
@@ -204,11 +210,11 @@ public class UserMenuController implements Initializable {
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
-        System.out.println(currentUserType);
+        expireBehave.registerObserver(checkExpire);
         if(LoginValidationGUI.currentUserType.toUpperCase().equals("SALESPERSON")) {
             Boolean twoExpired = CheckTwoExpired.checkTwoExpired();
             if (twoExpired) {
-                JOptionPane.showMessageDialog(null, "Two Or More Items are Expired.");
+                expireBehave.setBehavior(EnumBehaviors.EXPIRED);
             }
         }
         switch(currentUserType){

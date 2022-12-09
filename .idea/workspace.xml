@@ -5,15 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e4486989-fc5b-474b-afaf-e7dea797b27f" name="Changes" comment="fixing main branch and add restriction for decimal place of view purchase order. --hg5241 cj du.">
+      <change afterPath="$PROJECT_DIR$/src/Oberver/CheckExpire.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CSC4110-GroupProject/UserData.csv" beforeDir="false" afterPath="$PROJECT_DIR$/CSC4110-GroupProject/UserData.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CSC4110-GroupProject/src/Profiles/Customers/CreateCustomerOrder.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/CSC4110-GroupProject/src/Profiles/Customers/CreateCustomerOrder.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CSC4110-GroupProject/src/Profiles/Customers/DeleteCustomerProfile.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/CSC4110-GroupProject/src/Profiles/Customers/DeleteCustomerProfile.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CSC4110-GroupProject/src/Profiles/Customers/DeleteCustomerProfile.java" beforeDir="false" afterPath="$PROJECT_DIR$/CSC4110-GroupProject/src/Profiles/Customers/DeleteCustomerProfile.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CSC4110-GroupProject/src/Profiles/Customers/DeleteCustomerProfileController.java" beforeDir="false" afterPath="$PROJECT_DIR$/CSC4110-GroupProject/src/Profiles/Customers/DeleteCustomerProfileController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CustomerOrders.csv" beforeDir="false" afterPath="$PROJECT_DIR$/CustomerOrders.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CustomerProfiles.csv" beforeDir="false" afterPath="$PROJECT_DIR$/CustomerProfiles.csv" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ItemProfile.csv" beforeDir="false" afterPath="$PROJECT_DIR$/ItemProfile.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tempItemProfiles.csv" beforeDir="false" afterPath="$PROJECT_DIR$/tempItemProfiles.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Profiles/UserMenuController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Profiles/UserMenuController.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -61,7 +57,7 @@
       <recent name="C:\Users\Paulo\eclipse-workspace\databaseProject\SoftwareEngineering4110\CSC4110-GroupProject\src" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.MainGUI">
+  <component name="RunManager" selected="Application.LoginValidationGUI">
     <configuration name="LoginValidationGUI" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Profiles.Login.LoginValidationGUI" />
       <module name="SoftwareEngineering4110" />
@@ -98,8 +94,8 @@
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.MainGUI" />
         <item itemvalue="Application.LoginValidationGUI" />
+        <item itemvalue="Application.MainGUI" />
         <item itemvalue="Application.MainTest" />
       </list>
     </recent_temporary>
