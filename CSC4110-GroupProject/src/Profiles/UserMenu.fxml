@@ -35,7 +35,7 @@
             <Menu mnemonicParsing="false" text="Search">
                <items>
                   <MenuItem fx:id="searchCustomerButton" disable="true" mnemonicParsing="false" onAction="#switchSearchCustomerProfile" text="Customer Profile" />
-                  <MenuItem disable="true" mnemonicParsing="false" text="Vendor profile" />
+                  <MenuItem fx:id="searchVendorButton" disable="true" mnemonicParsing="false" onAction="#switchToSearchVendorProfile" text="Vendor profile" />
                   <MenuItem fx:id="searchItemButton" disable="true" mnemonicParsing="false" onAction="#switchToSearchItemMenuBar" text="Item profile" />
                   <MenuItem fx:id="searchPurchaseOrderButton" disable="true" mnemonicParsing="false" onAction="#switchToPurchaseOrderViewMenuBar" text="Purchase Order" />
                   <MenuItem fx:id="searchUserButton" disable="true" mnemonicParsing="false" onAction="#switchToSearchUserProfile" text="User profile" />
@@ -62,7 +62,7 @@
           <Menu mnemonicParsing="false" text="Edit">
             <items>
                   <MenuItem mnemonicParsing="false" onAction="#switchUpdateCustomerProfile" text="Customer profile" />
-                  <MenuItem mnemonicParsing="false" text="Vendor profile" />
+                  <MenuItem mnemonicParsing="false" onAction="#switchToUpdateVendorProfile" text="Vendor profile" />
                   <MenuItem mnemonicParsing="false" onAction="#switchToUpdateItemMenuBar" text="Item profile" />
             </items>
           </Menu>
