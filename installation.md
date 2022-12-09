@@ -3,13 +3,27 @@ For more information on the application, read the README.md file or view the Wik
 
 ## How to install
 
-### Install Java
-The WSU INC. Wholesale Food Distribution applicaion was created using Java Version 18.
-
 ### Install Intellij IDEA
-WSU INC. Wholesale Food Distribution was designed using Intellij IDEA.
+WSU INC. Wholesale Food Distribution was designed using Intellij IDEA, but the application should be able to work with other Java IDEs. 
+To get Intellij's IDE click on the link: [https://www.jetbrains.com/idea/download/#section=windows] to be redirected to the download page.
+Then on the website, download the specified .exe installer for your system. 
+Run the .exe installer and follow along through with all of the prompts until you have successfully installed the IDE.
 
 ### Obtain Source Files
-To obtain the source files head over to the repository page of the 
+To obtain the source files head over to the repository page of the application or click on this link: [https://github.com/CrazyOp145/SoftwareEngineering4110].
+Then, click on the green "Code" button and in the "Local" tab you could either clones the repository or download it as a .zip file.
+
+#### Download using .zip
+
+To download the .zip, Click on the download .zip button, head to where you have specified for the download to save. Then unzip the .zip file by using Window's unzip function or by using a .zip file handler.
+
+#### Clone Repository
+
+To Clone the repo, copy the HTTPS url or copy this link: [https://github.com/CrazyOp145/SoftwareEngineering4110]. Then open up your command line to type or copy and paste the line into the command prompt and hit enter.
+
+```
+git clone https://github.com/CrazyOp145/SoftwareEngineering4110
+```
 
 ### Build Executable
+
