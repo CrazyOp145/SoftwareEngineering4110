@@ -21,9 +21,8 @@ public class ReadItemProfile {
         try {
             Scanner input = new Scanner(file);
             while((input.hasNext())){
-                String data = input.next();
+                String data = input.nextLine();
                 Object[] values = data.split(",");
-                Object[] valuesLine = data.split("\n");
 
                 dataList.add(new ItemList(String.valueOf(values[0]),String.valueOf(values[1]),String.valueOf(values[2])
                         ,String.valueOf(values[3]),String.valueOf(values[4]),String.valueOf(values[5])
