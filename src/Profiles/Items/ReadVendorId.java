@@ -23,7 +23,7 @@ public class ReadVendorId {
             while((input.hasNext())){
                 String data = input.next();
                 Object[] values = data.split(",");
-                Object[] valuesLine = data.split("\n");
+                //Object[] valuesLine = data.split("\n");
                 dataList.add(String.valueOf(values[0]));
             }
         } catch (FileNotFoundException e) {
