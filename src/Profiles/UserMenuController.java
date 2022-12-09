@@ -30,6 +30,7 @@ public class UserMenuController implements Initializable {
     @FXML MenuItem createPurchaseOrderButton, searchPurchaseOrderButton;
     @FXML MenuItem searchItemButton, createItemButton, deleteItemButton , updateItemButton;
     @FXML MenuItem editCustomerButton, createCustomerButton, createCustomerOrderButton, searchCustomerButton ,deleteCustomerButton;
+    @FXML MenuItem searchVendorButton, createdVendorButton, updateVendorButton;
     @FXML MenuItem searchUserButton, createUserButton, deleteUserButton, updateUserButton;
     @FXML Button logoutButton;
     @FXML private MenuBar myMenuBar;
@@ -98,6 +99,23 @@ public class UserMenuController implements Initializable {
         Stage.setScene(Scene);
         Stage.show();
     }
+
+    public void switchToSearchVendorProfile(javafx.event.ActionEvent event) throws IOException {
+        Root = FXMLLoader.load(getClass().getResource("Vendor/SearchVendorProfile.fxml"));
+        Stage = (Stage)myMenuBar.getScene().getWindow();
+        Scene = new Scene(Root);
+        Stage.setScene(Scene);
+        Stage.show();
+    }
+
+    public void switchToUpdateVendorProfile(javafx.event.ActionEvent event) throws IOException {
+        Root = FXMLLoader.load(getClass().getResource("Vendor/UpdateVendorProfile.fxml"));
+        Stage = (Stage)myMenuBar.getScene().getWindow();
+        Scene = new Scene(Root);
+        Stage.setScene(Scene);
+        Stage.show();
+    }
+
     public void switchSearchCustomerProfile(javafx.event.ActionEvent event) throws IOException {
         Root = FXMLLoader.load(getClass().getResource("Customers/SearchCustomerProfile.fxml"));
         Stage = (Stage)myMenuBar.getScene().getWindow();
