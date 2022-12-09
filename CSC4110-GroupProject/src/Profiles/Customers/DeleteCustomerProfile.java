@@ -52,13 +52,15 @@ public class DeleteCustomerProfile {
                     if(balance != "0") {
                         pw.println(customerID + "," + companyName + "," + address + "," + city
                                 + "," + state + "," + phoneNumber + "," + balance + "," + lastPaidAmount + "," + lastOrderDate);
-                        searchInFile = true;
-                        JOptionPane.showMessageDialog(null,"The Customer Profile has been deleted");
                     }
                     else{
                         JOptionPane.showMessageDialog(null, "Customer Does Not Have Balance of 0 \n" +
                                 "cannot delete Customer.");
                     }
+                }
+                else{
+                    searchInFile = true;
+                    JOptionPane.showMessageDialog(null,"The Customer Profile has been deleted");
                 }
             }
             if(!searchInFile){

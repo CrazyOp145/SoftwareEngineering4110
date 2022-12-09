@@ -15,6 +15,7 @@ import javafx.scene.control.TextField;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.stage.Stage;
 
+import javax.swing.*;
 import java.io.File;
 import java.io.IOException;
 import java.net.URL;
@@ -93,6 +94,8 @@ public class DeleteCustomerProfileController implements Initializable {
     }
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
+        JOptionPane.showMessageDialog(null,"When you select Delete you will delete \n" +
+                "all associated invoices. Please only select delete if this is okay.");
         updateList();
     }
 
