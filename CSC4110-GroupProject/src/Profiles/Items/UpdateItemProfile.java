@@ -70,9 +70,32 @@ public class UpdateItemProfile {
             input.close();
             pw.flush();
             pw.close();
-            //oldFile.delete();
-            //File dump = new File(filePath);
-            //newFile.renameTo(dump);
+            fw = new FileWriter(filePath);
+            BufferedWriter nbw = new BufferedWriter(fw);
+            PrintWriter npw = new PrintWriter(nbw);
+            Scanner tempInput = new Scanner(new File(tempFile));
+            while(tempInput.hasNext()){
+                String data = tempInput.nextLine();
+                Object[] values = data.split(",");
+
+                itemId = String.valueOf(values[0]);
+                itemName = String.valueOf(values[1]);
+                quantity = String.valueOf(values[2]);
+                sellingPrice = String.valueOf(values[3]);
+                purchasePrice = String.valueOf(values[4]);
+                expireDate = String.valueOf(values[5]);
+                category = String.valueOf(values[6]);
+                unit = String.valueOf(values[7]);
+                vendorId = String.valueOf(values[8]);
+
+                npw.println(itemId + ","+itemName+","+quantity+","+sellingPrice
+                        +","+purchasePrice+","+expireDate+","+category+","+unit+","+vendorId);
+            }
+            tempInput.close();
+            npw.flush();
+            npw.close();
+            newFile.delete();
+
             JOptionPane.showMessageDialog(null, "The item has been Updated");
         } catch (IOException e) {
             JOptionPane.showMessageDialog(null, "Fail to update the item");

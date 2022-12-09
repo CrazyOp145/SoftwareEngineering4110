@@ -99,7 +99,6 @@ public class UpdateItemController implements Initializable {
         updateItemProfile.updateItemProfile(filePath,item.getItemId(),newItemId.getText(),newItemName.getText(),
                 newQuantity.getText(),newSellingPrice.getText(),newPurchasePrice.getText(), String.valueOf(newExpireDate.getValue()),
                 newItemCategory.getValue(),newUnit.getValue(),newVendorId.getValue());
-        oldFile.delete();
         File dump = new File(filePath);
         newFile.renameTo(dump);
         clearList();
