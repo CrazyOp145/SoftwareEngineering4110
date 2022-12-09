@@ -168,3 +168,12 @@ out/production/SoftwareEngineering4110/Profiles/Users/DeleteUserProfile.class
 out/production/SoftwareEngineering4110/Profiles/Vendor/CreateVendorProfile.class
 out/production/SoftwareEngineering4110/Profiles/Vendor/CreateVendorProfile.fxml
 out/production/SoftwareEngineering4110/WriteTocsvFiles/ToUserDataCSV.class
+out/production/SoftwareEngineering4110/Profiles/Customers/UpdateItemQuantity.class
+out/production/SoftwareEngineering4110/Profiles/Customers/UpdateCustomerProfileController$1.class
+out/production/SoftwareEngineering4110/Profiles/Items/CheckTwoExpired.class
+out/production/SoftwareEngineering4110/Profiles/Customers/CheckCustomerNameAddress.class
+out/production/SoftwareEngineering4110/Profiles/Users/UserList.class
+out/production/SoftwareEngineering4110/Profiles/Users/UpdateUserProfileController.class
+out/production/SoftwareEngineering4110/Profiles/Users/UpdateUserProfile.fxml
+out/production/SoftwareEngineering4110/Profiles/Users/UpdateUserProfile.class
+out/production/SoftwareEngineering4110/Profiles/Items/README

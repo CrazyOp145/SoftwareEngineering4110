@@ -16,6 +16,7 @@ import javafx.scene.control.*;
 import javafx.stage.Stage;
 
 
+import javax.swing.*;
 import java.io.BufferedWriter;
 import java.io.FileWriter;
 import java.io.IOException;
@@ -74,41 +75,45 @@ public class CreateCustomerProfileController implements Initializable {
         city = cityTF.getText();
         phoneNumber = phoneNumberTF.getText();
         state = stateCB.getValue();
-        if ((companyName.length() > 21 && companyName.length() == 0)) {
+        if(CheckCustomerNameAddress.checkCustomerNameAddress(companyName,address)){
+            JOptionPane.showMessageDialog(null, "Error: Company Name And Address Combo /n" +
+                    "already used.");
             validityChecker = false;
-            errorMessage.setText("Error: Company Name too Long");
-            System.out.println("Name too long please enter a name that is less than 20 characters.");
         }
-        if (address.length() > 21 && address.length() == 0) {
+        if ((companyName.length() > 21 || companyName.length() == 0)) {
             validityChecker = false;
-            errorMessage.setText("Error: address too Long");
-            System.out.println("Address did not meet requirements.");
+            JOptionPane.showMessageDialog(null, "Error: Company Name too Long \n" +
+                    "Or Was not entered");
         }
-        if (city.length() > 21 && city.length() == 0) {
+        if (address.length() > 21 || address.length() == 0) {
             validityChecker = false;
-            errorMessage.setText("Error: City name too Long");
-            System.out.println("City name did not meet requirements.");
+            JOptionPane.showMessageDialog(null, "Error: Address too Long \n" +
+                    "or was not entered");
+        }
+        if (city.length() > 21 || city.length() == 0) {
+            validityChecker = false;
+            JOptionPane.showMessageDialog(null, "Error: City too Long \n" +
+                    "or was not entered");
         }
         if (state == null) {
             validityChecker = false;
-            errorMessage.setText("Error: Please Select A State");
-            System.out.println("State too long please enter a state that is less than 20 characters.");
+            JOptionPane.showMessageDialog(null, "Error: Please Select a State");
         }
         if (phoneNumber.matches(phonePattern.pattern()) && phoneNumber != null) {
         } else {
             validityChecker = false;
-            errorMessage.setText("Error: Phone number format incorrect");
-            System.out.println("Phone Number format incorrect. Please enter a valid phone number.");
+            JOptionPane.showMessageDialog(null, "Error: Phone Number format Incorrect \n" +
+                    "try: xxx-xxx-xxxx Dashes Included");
         }
         if (validityChecker){
             UserProfiles newProfileTemp = ProfilesFactory.createProfile("Customer Profile");
             if(newProfileTemp instanceof CustomerProfile) {
                 CustomerProfile newProfile = new CustomerProfile();
-                newProfile.setFirstName(companyName);
-                newProfile.setID(customerID);
-                newProfile.setCity(city);
-                newProfile.setState(state);
-                newProfile.setStreet(address);
+                newProfile.setFirstName(companyName.replace(" ",""));
+                newProfile.setID(customerID.replace(" ",""));
+                newProfile.setCity(city.replace(" ",""));
+                newProfile.setState(state.replace(" ",""));
+                newProfile.setStreet(address.replace(" ",""));
                 newProfile.setPhone(phoneNumber);
                 System.out.println(newProfile.toString());
                 FileWriter fw = new FileWriter(filePath, true);

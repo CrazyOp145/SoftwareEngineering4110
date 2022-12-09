@@ -9,6 +9,7 @@ import javafx.scene.text.Text;
 import javafx.stage.*;
 
 import java.io.IOException;
+
 /**
  * @author David Her
  */
@@ -30,10 +31,9 @@ public class LoginController {
         String userIDInput = userIDTextField.getText();
         String passwordInput = passwordTextField.getText();
 
-
-
         boolean LoginCheck = LoginValidation.loginCheck(userIDInput,passwordInput);
         if(LoginCheck){
+            LoginValidationGUI.currentUserType = LoginValidation.loginCheckRole(userIDInput);
             loginMessageLabel.setText("Login Successful");
             Parent root = FXMLLoader.load(getClass().getResource("../UserMenu.fxml"));
             Stage stage = (Stage) ((Node)event.getSource()).getScene().getWindow();

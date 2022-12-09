@@ -30,6 +30,8 @@ public class LoginValidation {
 
             while((line = br.readLine()) != null){
                 data = line.split(",");
+                System.out.println(data[0]);
+                System.out.println(data[3]);
                 if(data[0].equals(userID) && data[3].equals(password)){
                     return true;
                 }
@@ -75,52 +77,6 @@ public class LoginValidation {
         String[] data = {getUserID(), getLastName(), getFirstName(), getPassword(), getUserRole()};
         ToUserDataCSV.addToUserData("UserData.csv", data);
     }
-
-    //Delete User Profile
-//    public static void deleteUserProfile(String userID){
-//        //Read User Data
-//        try {
-//            //Scanner
-//            Scanner userData = new Scanner(new File("UserData.csv"));
-//            userData.useDelimiter(",");
-//
-//            Object[] arr;
-//            List<String> oldData = new ArrayList<>();
-//
-//            //Put Old Data into List
-//            while(userData.hasNextLine()){
-//                String oldUserData = userData.nextLine();
-//                arr = oldUserData.split(",");
-//
-//
-//                if(!String.valueOf(arr[0]).equals(userID)){
-//                    oldData.add(String.valueOf(arr[0]));
-//                    oldData.add(String.valueOf(arr[1]));
-//                    oldData.add(String.valueOf(arr[2]));
-//                    oldData.add(String.valueOf(arr[3]));
-//                    oldData.add(String.valueOf(arr[4]));
-//
-//                }
-//
-//            }
-//            System.out.println(oldData.toString().substring(1,oldData.toString().length()-1).replaceAll(" ", ""));
-//
-//            //FileWriters
-//            FileWriter file = new FileWriter("UserData.csv");
-//            BufferedWriter bufferedWriter = new BufferedWriter(file);
-//            PrintWriter printWriter = new PrintWriter(bufferedWriter);
-//
-//            //Write Data into File
-//            printWriter.println(oldData.toString().substring(1,oldData.toString().length()-1).replaceAll(" ", ""));
-//
-//            //Close Writers
-//            printWriter.flush();
-//            printWriter.close();
-//        }
-//        catch (IOException e) {
-//            e.printStackTrace();
-//        }
-//    }
 
     public static String getLastName() {
         return lastName;

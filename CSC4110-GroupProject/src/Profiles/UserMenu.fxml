@@ -34,11 +34,11 @@
             </Menu>
             <Menu mnemonicParsing="false" text="Search">
                <items>
-                  <MenuItem mnemonicParsing="false" onAction="#switchSearchCustomerProfile" text="Customer Profile" />
-                  <MenuItem mnemonicParsing="false" text="Vendor profile" />
-                  <MenuItem mnemonicParsing="false" onAction="#switchToSearchItemMenuBar" text="Item profile" />
-                  <MenuItem fx:id="CreatePurchaseOrderButton" mnemonicParsing="false" onAction="#switchToPurchaseOrderViewMenuBar" text="Purchase Order" />
-                  <MenuItem mnemonicParsing="false" onAction="#switchToSearchUserProfile" text="User profile" />
+                  <MenuItem fx:id="searchCustomerButton" disable="true" mnemonicParsing="false" onAction="#switchSearchCustomerProfile" text="Customer Profile" />
+                  <MenuItem disable="true" mnemonicParsing="false" text="Vendor profile" />
+                  <MenuItem fx:id="searchItemButton" disable="true" mnemonicParsing="false" onAction="#switchToSearchItemMenuBar" text="Item profile" />
+                  <MenuItem fx:id="searchPurchaseOrderButton" disable="true" mnemonicParsing="false" onAction="#switchToPurchaseOrderViewMenuBar" text="Purchase Order" />
+                  <MenuItem fx:id="searchUserButton" disable="true" mnemonicParsing="false" onAction="#switchToSearchUserProfile" text="User profile" />
                </items>
             </Menu>
           <Menu mnemonicParsing="false" text="Create">
@@ -53,10 +53,10 @@
           </Menu>
             <Menu mnemonicParsing="false" text="Delete">
               <items>
-                  <MenuItem mnemonicParsing="false" onAction="#switchDeleteCustomerProfile" text="Customer Profile" />
-                  <MenuItem mnemonicParsing="false" text="Vendor profile" />
-                  <MenuItem mnemonicParsing="false" onAction="#switchToDeleteItemMenuBar" text="Item profile" />
-                  <MenuItem mnemonicParsing="false" onAction="#switchToDeleteUserProfile" text="User profile" />
+                  <MenuItem fx:id="deleteCustomerButton" disable="true" mnemonicParsing="false" onAction="#switchDeleteCustomerProfile" text="Customer Profile" />
+                  <MenuItem disable="true" mnemonicParsing="false" text="Vendor profile" />
+                  <MenuItem fx:id="deleteItemButton" disable="true" mnemonicParsing="false" onAction="#switchToDeleteItemMenuBar" text="Item profile" />
+                  <MenuItem fx:id="deleteUserButton" disable="true" mnemonicParsing="false" onAction="#switchToDeleteUserProfile" text="User profile" />
               </items>
             </Menu>
           <Menu mnemonicParsing="false" text="Edit">

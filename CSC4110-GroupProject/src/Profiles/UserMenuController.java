@@ -1,6 +1,8 @@
 package Profiles;
 
+import Profiles.Items.CheckTwoExpired;
 import Profiles.Login.LoginValidation;
+import Profiles.Login.LoginValidationGUI;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -8,10 +10,12 @@ import javafx.fxml.Initializable;
 import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.control.Button;
 import javafx.scene.control.MenuBar;
 import javafx.scene.control.MenuItem;
 import javafx.stage.Stage;
 
+import javax.swing.*;
 import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
@@ -23,19 +27,19 @@ import java.util.ResourceBundle;
  *
  */
 public class UserMenuController implements Initializable {
-    String currentUserType;
-
-    @FXML
-    MenuItem CreatePurchaseOrderButton;
-    @FXML
-    private MenuBar myMenuBar;
+    String currentUserType = LoginValidationGUI.currentUserType;
+    @FXML MenuItem createPurchaseOrderButton, searchPurchaseOrderButton;
+    @FXML MenuItem searchItemButton, createItemButton, deleteItemButton , updateItemButton;
+    @FXML MenuItem editCustomerButton, createCustomerButton, createCustomerOrderButton, searchCustomerButton ,deleteCustomerButton;
+    @FXML MenuItem searchUserButton, createUserButton, deleteUserButton, updateUserButton;
+    @FXML Button logoutButton;
+    @FXML private MenuBar myMenuBar;
     private Stage Stage;
     private Scene Scene;
     private Parent Root;
 
     public void switchToCreateItemProfileSceneMenuBar(ActionEvent event) throws IOException {
         Root = FXMLLoader.load(getClass().getResource("Items/CreateItemProfile.fxml"));
-        //Stage = (Stage)((Node)event.getSource()).getScene().getWindow();
         Stage = (Stage)myMenuBar.getScene().getWindow();
         Scene = new Scene(Root);
         Stage.setScene(Scene);
@@ -44,7 +48,6 @@ public class UserMenuController implements Initializable {
 
     public void switchToSearchItemMenuBar(javafx.event.ActionEvent event) throws IOException {
         Root = FXMLLoader.load(getClass().getResource("Items/SearchItemProfile.fxml"));
-        //Stage = (Stage)((Node)event.getSource()).getScene().getWindow();
         Stage = (Stage)myMenuBar.getScene().getWindow();
         Scene = new Scene(Root);
         Stage.setScene(Scene);
@@ -53,7 +56,6 @@ public class UserMenuController implements Initializable {
 
     public void switchToDeleteItemMenuBar(javafx.event.ActionEvent event) throws IOException {
         Root = FXMLLoader.load(getClass().getResource("Items/DeleteItemProfile.fxml"));
-        //Stage = (Stage)((Node)event.getSource()).getScene().getWindow();
         Stage = (Stage)myMenuBar.getScene().getWindow();
         Scene = new Scene(Root);
         Stage.setScene(Scene);
@@ -62,7 +64,6 @@ public class UserMenuController implements Initializable {
 
     public void switchToUpdateItemMenuBar(javafx.event.ActionEvent event) throws IOException {
         Root = FXMLLoader.load(getClass().getResource("Items/UpdateItemProfile.fxml"));
-        //Stage = (Stage)((Node)event.getSource()).getScene().getWindow();
         Stage = (Stage)myMenuBar.getScene().getWindow();
         Scene = new Scene(Root);
         Stage.setScene(Scene);
@@ -71,7 +72,6 @@ public class UserMenuController implements Initializable {
 
     public void switchToPurchaseOrderMenuBar(javafx.event.ActionEvent event) throws IOException {
         Root = FXMLLoader.load(getClass().getResource("PurchaseOrder/CreatePurchaseOrder.fxml"));
-        //Stage = (Stage)((Node)event.getSource()).getScene().getWindow();
         Stage = (Stage)myMenuBar.getScene().getWindow();
         Scene = new Scene(Root);
         Stage.setScene(Scene);
@@ -80,7 +80,6 @@ public class UserMenuController implements Initializable {
 
     public void switchToPurchaseOrderViewMenuBar(javafx.event.ActionEvent event) throws IOException {
         Root = FXMLLoader.load(getClass().getResource("PurchaseOrder/PurchaseOrderView.fxml"));
-        //Stage = (Stage)((Node)event.getSource()).getScene().getWindow();
         Stage = (Stage)myMenuBar.getScene().getWindow();
         Scene = new Scene(Root);
         Stage.setScene(Scene);
@@ -88,7 +87,7 @@ public class UserMenuController implements Initializable {
     }
     public void switchCreateCustomerProfile(javafx.event.ActionEvent event) throws IOException {
         Root = FXMLLoader.load(getClass().getResource("Customers/CreateCustomerProfile.fxml"));
-        Stage = (Stage)myMenuBar.getScene().getWindow();
+        Stage = (Stage) myMenuBar.getScene().getWindow();
         Scene = new Scene(Root);
         Stage.setScene(Scene);
         Stage.show();
@@ -116,7 +115,6 @@ public class UserMenuController implements Initializable {
     }
     public void switchUpdateCustomerProfile(javafx.event.ActionEvent event) throws IOException {
         Root = FXMLLoader.load(getClass().getResource("Customers/UpdateCustomerProfile.fxml"));
-        //Stage = (Stage)((Node)event.getSource()).getScene().getWindow();
         Stage = (Stage)myMenuBar.getScene().getWindow();
         Scene = new Scene(Root);
         Stage.setScene(Scene);
@@ -124,7 +122,6 @@ public class UserMenuController implements Initializable {
     }
     public void switchCreateCustomerOrder(javafx.event.ActionEvent event) throws IOException {
         Root = FXMLLoader.load(getClass().getResource("Customers/CreateCustomerOrder.fxml"));
-        //Stage = (Stage)((Node)event.getSource()).getScene().getWindow();
         Stage = (Stage)myMenuBar.getScene().getWindow();
         Scene = new Scene(Root);
         Stage.setScene(Scene);
@@ -150,7 +147,6 @@ public class UserMenuController implements Initializable {
 
     public void switchToSearchUserProfile(javafx.event.ActionEvent event) throws IOException {
         Root = FXMLLoader.load(getClass().getResource("Users/SearchUserProfile.fxml"));
-        //Stage = (Stage)((Node)event.getSource()).getScene().getWindow();
         Stage = (Stage)myMenuBar.getScene().getWindow();
         Scene = new Scene(Root);
         Stage.setScene(Scene);
@@ -159,7 +155,14 @@ public class UserMenuController implements Initializable {
 
     public void switchToDeleteUserProfile(javafx.event.ActionEvent event) throws IOException {
         Root = FXMLLoader.load(getClass().getResource("Users/DeleteUserProfile.fxml"));
-        //Stage = (Stage)((Node)event.getSource()).getScene().getWindow();
+        Stage = (Stage)myMenuBar.getScene().getWindow();
+        Scene = new Scene(Root);
+        Stage.setScene(Scene);
+        Stage.show();
+    }
+
+    public void switchToUpdateUserProfile(javafx.event.ActionEvent event) throws IOException {
+        Root = FXMLLoader.load(getClass().getResource("Users/UpdateUserProfile.fxml"));
         Stage = (Stage)myMenuBar.getScene().getWindow();
         Scene = new Scene(Root);
         Stage.setScene(Scene);
@@ -184,14 +187,72 @@ public class UserMenuController implements Initializable {
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
-        LoginValidation.loginCheckRole(LoginValidation.getUserID());
-        //System.out.println(currentUserType);
-        if(currentUserType == "owner"){
-            CreatePurchaseOrderButton.setDisable(true);
+        System.out.println(currentUserType);
+        if(LoginValidationGUI.currentUserType.toUpperCase().equals("SALESPERSON")) {
+            Boolean twoExpired = CheckTwoExpired.checkTwoExpired();
+            if (twoExpired) {
+                JOptionPane.showMessageDialog(null, "Two Or More Items are Expired.");
+            }
         }
-    }
+        switch(currentUserType){
+            case "owner":
+                System.out.println("user is owner");
+                createCustomerButton.setDisable(false);
+                editCustomerButton.setDisable(false);
+                deleteCustomerButton.setDisable(false);
+                searchCustomerButton.setDisable(false);
+                createItemButton.setDisable(false);
+                updateItemButton.setDisable(false);
+                deleteItemButton.setDisable(false);
+                searchItemButton.setDisable(false);
+                createUserButton.setDisable(false);
+                searchUserButton.setDisable(false);
+                deleteUserButton.setDisable(false);
+                updateUserButton.setDisable(false);
+                break;
+            case "administrator":
+                System.out.println("user is administrator");
+                searchItemButton.setDisable(false);
+                createUserButton.setDisable(false);
+                searchUserButton.setDisable(false);
+                deleteUserButton.setDisable(false);
+                updateUserButton.setDisable(false);
+                break;
+            case "inventoryManager":
+                System.out.println("user is inventoryManager");
+                createItemButton.setDisable(false);
+                deleteItemButton.setDisable(false);
+                break;
+            case "purchaser":
+                System.out.println("user is purchaser");
+                createItemButton.setDisable(false);
+                updateItemButton.setDisable(false);
+                deleteItemButton.setDisable(false);
+                searchItemButton.setDisable(false);
+                searchPurchaseOrderButton.setDisable(false);
+                createPurchaseOrderButton.setDisable(false);
+                break;
+            case "accountant":
+                System.out.println("user is accountant");
+                searchItemButton.setDisable(false);
+                break;
+            case "salesperson":
+                System.out.println("user is salesperson");
+                createCustomerOrderButton.setDisable(false);
+                searchItemButton.setDisable(false);
+                break;
+            case "vendor":
+                System.out.println("user is vendor");
+                searchItemButton.setDisable(false);
+                break;
+            case "customer":
+                System.out.println("user is customer");
+                searchItemButton.setDisable(false);
+                break;
+            default:
 
-    public void getUsertype(String user){
-        currentUserType = user;
+
+        }
+
     }
 }
