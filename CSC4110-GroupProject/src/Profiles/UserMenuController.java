@@ -50,6 +50,7 @@ public class UserMenuController implements Initializable {
     MenuItem searchCustomerButton;
     @FXML
     MenuItem deleteCustomerButton;
+    @FXML MenuItem searchUserButton, createUserButton, deleteUserButton, updateUserButton;
     @FXML
     Button logoutButton;
     @FXML
@@ -232,10 +233,18 @@ public class UserMenuController implements Initializable {
                 updateItemButton.setDisable(false);
                 deleteItemButton.setDisable(false);
                 searchItemButton.setDisable(false);
+                createUserButton.setDisable(false);
+                searchUserButton.setDisable(false);
+                deleteUserButton.setDisable(false);
+                updateUserButton.setDisable(false);
                 break;
             case "administrator":
                 System.out.println("user is administrator");
                 searchItemButton.setDisable(false);
+                createUserButton.setDisable(false);
+                searchUserButton.setDisable(false);
+                deleteUserButton.setDisable(false);
+                updateUserButton.setDisable(false);
                 break;
             case "inventoryManager":
                 System.out.println("user is inventoryManager");

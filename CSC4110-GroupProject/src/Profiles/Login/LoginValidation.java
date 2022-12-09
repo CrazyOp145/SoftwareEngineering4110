@@ -22,7 +22,7 @@ public class LoginValidation {
     public static boolean loginCheck(String userID, String password){
         //Read User Data
         try {
-            FileReader fr = new FileReader("CSC4110-GroupProject/UserData.csv");
+            FileReader fr = new FileReader("UserData.csv");
             BufferedReader br = new BufferedReader(fr);
 
             String line;
@@ -47,7 +47,7 @@ public class LoginValidation {
     public static String loginCheckRole(String userID){
         //Read User Data
         try {
-            FileReader fr = new FileReader("CSC4110-GroupProject/UserData.csv");
+            FileReader fr = new FileReader("UserData.csv");
             BufferedReader br = new BufferedReader(fr);
 
             String line;
