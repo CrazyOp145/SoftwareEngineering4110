@@ -28,40 +28,18 @@ import java.util.ResourceBundle;
  */
 public class UserMenuController implements Initializable {
     String currentUserType = LoginValidationGUI.currentUserType;
-    @FXML
-    MenuItem createPurchaseOrderButton;
-    @FXML
-    MenuItem searchItemButton;
-    @FXML
-    MenuItem searchPurchaseOrderButton;
-    @FXML
-    MenuItem createItemButton;
-    @FXML
-    MenuItem deleteItemButton;
-    @FXML
-    MenuItem updateItemButton;
-    @FXML
-    MenuItem editCustomerButton;
-    @FXML
-    MenuItem createCustomerButton;
-    @FXML
-    MenuItem createCustomerOrderButton;
-    @FXML
-    MenuItem searchCustomerButton;
-    @FXML
-    MenuItem deleteCustomerButton;
+    @FXML MenuItem createPurchaseOrderButton, searchPurchaseOrderButton;
+    @FXML MenuItem searchItemButton, createItemButton, deleteItemButton , updateItemButton;
+    @FXML MenuItem editCustomerButton, createCustomerButton, createCustomerOrderButton, searchCustomerButton ,deleteCustomerButton;
     @FXML MenuItem searchUserButton, createUserButton, deleteUserButton, updateUserButton;
-    @FXML
-    Button logoutButton;
-    @FXML
-    private MenuBar myMenuBar;
+    @FXML Button logoutButton;
+    @FXML private MenuBar myMenuBar;
     private Stage Stage;
     private Scene Scene;
     private Parent Root;
 
     public void switchToCreateItemProfileSceneMenuBar(ActionEvent event) throws IOException {
         Root = FXMLLoader.load(getClass().getResource("Items/CreateItemProfile.fxml"));
-        //Stage = (Stage)((Node)event.getSource()).getScene().getWindow();
         Stage = (Stage)myMenuBar.getScene().getWindow();
         Scene = new Scene(Root);
         Stage.setScene(Scene);
@@ -70,7 +48,6 @@ public class UserMenuController implements Initializable {
 
     public void switchToSearchItemMenuBar(javafx.event.ActionEvent event) throws IOException {
         Root = FXMLLoader.load(getClass().getResource("Items/SearchItemProfile.fxml"));
-        //Stage = (Stage)((Node)event.getSource()).getScene().getWindow();
         Stage = (Stage)myMenuBar.getScene().getWindow();
         Scene = new Scene(Root);
         Stage.setScene(Scene);
@@ -79,7 +56,6 @@ public class UserMenuController implements Initializable {
 
     public void switchToDeleteItemMenuBar(javafx.event.ActionEvent event) throws IOException {
         Root = FXMLLoader.load(getClass().getResource("Items/DeleteItemProfile.fxml"));
-        //Stage = (Stage)((Node)event.getSource()).getScene().getWindow();
         Stage = (Stage)myMenuBar.getScene().getWindow();
         Scene = new Scene(Root);
         Stage.setScene(Scene);
@@ -88,7 +64,6 @@ public class UserMenuController implements Initializable {
 
     public void switchToUpdateItemMenuBar(javafx.event.ActionEvent event) throws IOException {
         Root = FXMLLoader.load(getClass().getResource("Items/UpdateItemProfile.fxml"));
-        //Stage = (Stage)((Node)event.getSource()).getScene().getWindow();
         Stage = (Stage)myMenuBar.getScene().getWindow();
         Scene = new Scene(Root);
         Stage.setScene(Scene);
@@ -97,7 +72,6 @@ public class UserMenuController implements Initializable {
 
     public void switchToPurchaseOrderMenuBar(javafx.event.ActionEvent event) throws IOException {
         Root = FXMLLoader.load(getClass().getResource("PurchaseOrder/CreatePurchaseOrder.fxml"));
-        //Stage = (Stage)((Node)event.getSource()).getScene().getWindow();
         Stage = (Stage)myMenuBar.getScene().getWindow();
         Scene = new Scene(Root);
         Stage.setScene(Scene);
@@ -106,24 +80,17 @@ public class UserMenuController implements Initializable {
 
     public void switchToPurchaseOrderViewMenuBar(javafx.event.ActionEvent event) throws IOException {
         Root = FXMLLoader.load(getClass().getResource("PurchaseOrder/PurchaseOrderView.fxml"));
-        //Stage = (Stage)((Node)event.getSource()).getScene().getWindow();
         Stage = (Stage)myMenuBar.getScene().getWindow();
         Scene = new Scene(Root);
         Stage.setScene(Scene);
         Stage.show();
     }
     public void switchCreateCustomerProfile(javafx.event.ActionEvent event) throws IOException {
-        if(currentUserType.toUpperCase().equals("OWNER")) {
-            Root = FXMLLoader.load(getClass().getResource("Customers/CreateCustomerProfile.fxml"));
-            Stage = (Stage) myMenuBar.getScene().getWindow();
-            Scene = new Scene(Root);
-            Stage.setScene(Scene);
-            Stage.show();
-        }
-        else{
-            System.out.println("Incorrect User Type Access Denied");
-            System.out.println(currentUserType);
-        }
+        Root = FXMLLoader.load(getClass().getResource("Customers/CreateCustomerProfile.fxml"));
+        Stage = (Stage) myMenuBar.getScene().getWindow();
+        Scene = new Scene(Root);
+        Stage.setScene(Scene);
+        Stage.show();
     }
     public void switchSearchCustomerProfile(javafx.event.ActionEvent event) throws IOException {
         Root = FXMLLoader.load(getClass().getResource("Customers/SearchCustomerProfile.fxml"));
@@ -213,8 +180,6 @@ public class UserMenuController implements Initializable {
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
-        //currentUserType = LoginValidation.loginCheckRole(LoginValidation.getUserID());
-        LoginValidation.loginCheckRole(LoginValidation.getUserID());
         System.out.println(currentUserType);
         if(LoginValidationGUI.currentUserType.toUpperCase().equals("SALESPERSON")) {
             Boolean twoExpired = CheckTwoExpired.checkTwoExpired();
