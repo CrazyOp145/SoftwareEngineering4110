@@ -1,15 +1,33 @@
 package Profiles;
-/**
- *
- * @author Paulo Burgess GN7231
- *
+/*
+@author Mahz Alam and Paulo Burgess and David Her
  */
+
+import java.time.LocalDate;
+
 public interface UserProfiles {
+   /* private String firstName;
+    private String lastName;
+    private String ID;
+    private String password;
+
+    UserProfiles(){
+    }
+
+    public UserProfiles(String firstName, String lastName, String ID, String password){
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.ID = ID;
+        this.password = password;
+    }*/
 
     String getCompanyName();
 
     String getCustomerID();
 
+    //public void setCompanyName(String fullName) {
+    //    this.companyName = companyName;
+    //}
     String getCity();
 
     String getStreetAddress();
@@ -28,9 +46,9 @@ public interface UserProfiles {
 
     void setLastPaidAmount(double lastPaidAmount);
 
-    String getLastOrderDate();
+    LocalDate getLastOrderDate();
 
-    void setLastOrderDate(String lastOrderDate);
+    void setLastOrderDate(LocalDate lastOrderDate);
 
     public void setFirstName(String fName);
 
