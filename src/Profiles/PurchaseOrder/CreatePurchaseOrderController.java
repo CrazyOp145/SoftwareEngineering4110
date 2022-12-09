@@ -29,6 +29,8 @@ import java.util.ResourceBundle;
  */
 public class CreatePurchaseOrderController implements Initializable {
     ReadVendorId RVI = new ReadVendorId();
+    File newFile = new File("temp.csv");
+    String vendorFilePath = "VendorProfile.csv";
     private javafx.stage.Stage Stage;
     private javafx.scene.Scene Scene;
     private Parent Root;
@@ -145,9 +147,11 @@ public class CreatePurchaseOrderController implements Initializable {
             }
             JOptionPane.showMessageDialog(null, "Your purchase order has been created!");
             //update the vendor balance
-            calculatePurchaseOrderTotalCost.calculatePurchaseOrderTotalCost(filePath);
+            double balanceChange = calculatePurchaseOrderTotalCost.calculatePurchaseOrderTotalCost(filePath);
+            UpdateVendorBalance.updateVendorBalance(vendorFilePath,vendorId.getValue(),balanceChange);
+            File dumpVendor = new File(vendorFilePath);
+            newFile.renameTo(dumpVendor);
             purchaseOrderList.clear();
-
         }
     }
 
