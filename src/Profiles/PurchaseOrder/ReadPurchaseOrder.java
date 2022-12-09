@@ -21,7 +21,7 @@ public class ReadPurchaseOrder {
         try {
             Scanner input = new Scanner(file);
             while((input.hasNext())){
-                String data = input.next();
+                String data = input.nextLine();
                 Object[] values = data.split(",");
                 //Object[] valuesLine = data.split("\n");
                 dataList.add(new PurchaseOrderList(String.valueOf(values[0]),String.valueOf(values[1]),String.valueOf(values[2])

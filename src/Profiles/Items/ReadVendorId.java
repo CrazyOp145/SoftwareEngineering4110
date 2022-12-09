@@ -22,8 +22,7 @@ public class ReadVendorId {
             Scanner input = new Scanner(file);
             while((input.hasNext())){
                 String data = input.nextLine();
-                Object[] values = data.split(",|\\s+");
-                Object[] valuesLine = data.split("\n");
+                Object[] values = data.split(",");
                 dataList.add(String.valueOf(values[0]));
             }
         } catch (FileNotFoundException e) {
