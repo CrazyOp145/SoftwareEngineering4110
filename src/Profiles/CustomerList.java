@@ -6,7 +6,8 @@ import javafx.beans.property.SimpleStringProperty;
  *
  */
 public class CustomerList {
-    private SimpleStringProperty customerID, companyName,streetAddress, city, state, phoneNumber,balance,lastPaidAmount, lastOrderDate;
+    private SimpleStringProperty customerID , itemID, companyName, itemName, streetAddress, city, state, phoneNumber,
+            balance,lastPaidAmount, lastOrderDate, quantity, sellingPrice, purchasePrice, expireDate;
     public String getCustomerID() {
         return customerID.get();
     }
@@ -34,6 +35,12 @@ public class CustomerList {
     public String getLastOrderDate() {
         return lastOrderDate.get();
     }
+    public String getItemID(){return itemID.get();}
+    public String getItemName(){return itemName.get();}
+    public String getQuantity(){return quantity.get();}
+    public String getSellingPrice(){return sellingPrice.get();}
+    public String getPurchasePrice(){return purchasePrice.get();}
+    public String getExpireDate(){return expireDate.get();}
 
 
     public CustomerList(String customerID, String companyName, String address, String city, String state, String phoneNumber,
@@ -47,6 +54,15 @@ public class CustomerList {
         this.balance = new SimpleStringProperty(balance);
         this.lastPaidAmount = new SimpleStringProperty(lastPaidAmount);
         this.lastOrderDate = new SimpleStringProperty(lastOrderDate);
+    }
+
+    public CustomerList(String itemID, String itemName, String quantity, String sellingPrice, String purchasePrice, String expireDate){
+        this.itemID = new SimpleStringProperty(itemID);
+        this.itemName = new SimpleStringProperty(itemName);
+        this.quantity = new SimpleStringProperty(quantity);
+        this.sellingPrice = new SimpleStringProperty(sellingPrice);
+        this.purchasePrice = new SimpleStringProperty(purchasePrice);
+        this.expireDate = new SimpleStringProperty(expireDate);
     }
 
 
