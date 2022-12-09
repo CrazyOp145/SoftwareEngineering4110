@@ -1,3 +1,5 @@
+package Profiles.Vendor;
+
 import Profiles.ProfilesFactory;
 import Profiles.VendorProfile;
 import Profiles.UserProfiles;
@@ -65,7 +67,7 @@ public class CreateVendorProfile implements Initializable {
     public void createVendorProfile(ActionEvent actionEvent) throws IOException {
         ProfilesFactory profFactory = new ProfilesFactory();
         Random random = new Random(); //Random functionality borrowed from David Her
-        String vendID = "v" + String.valueOf((random.nextInt(99999)));
+        String vendID = String.valueOf((random.nextInt(999999)));
         String vendName = vendorName.getText();
         String str = street.getText();
         String c = city.getText();
@@ -80,11 +82,6 @@ public class CreateVendorProfile implements Initializable {
         boolean correct = true;
 
         Pattern phonePattern = Pattern.compile("^(\\d{3}[- .]?){2}\\d{4}$");
-
-        if(checkVendorName(vendName)){
-            errorMessage.setText("Name already taken.");
-            correct = false;
-        }
 
         if ((vendName.length() > 20 || vendName.length() == 0)) {
             errorMessage.setText("Error: Vendor Name too Long");
@@ -132,8 +129,9 @@ public class CreateVendorProfile implements Initializable {
                 BufferedWriter bufferWrite = new BufferedWriter(fileWrite);
                 PrintWriter printW = new PrintWriter(bufferWrite);
                 printW.println(vendor.getID() + "," + vendor.getCompanyName() + "," + vendor.getStreetAddress()
-                        + "," + vendor.getCity() + "," + vendor.getState() + "," + vendor.getDiscountStartDate()
-                        + "," + vendor.getBalance() + ",");
+                        + "," + vendor.getCity() + "," + vendor.getState() + "," + vendor.getLastOrderDate() + "," +
+                        vendor.getLastPaidAmount() + "," + vendor.getDiscountStartDate() + "," + vendor.getBalance()
+                        + ",");
                 System.out.println(vendor.getState());
                 printW.flush();
                 printW.close();

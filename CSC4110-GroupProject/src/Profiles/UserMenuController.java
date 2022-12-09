@@ -94,7 +94,7 @@ public class UserMenuController implements Initializable {
         Stage.show();
     }
     public void switchToCreateVendorProfile(javafx.event.ActionEvent event) throws IOException {
-        Root = FXMLLoader.load(getClass().getResource("CreateVendorProfile.fxml"));
+        Root = FXMLLoader.load(getClass().getResource("Vendor/CreateVendorProfile.fxml"));
         Stage = (Stage)myMenuBar.getScene().getWindow();
         Scene = new Scene(Root);
         Stage.setScene(Scene);
