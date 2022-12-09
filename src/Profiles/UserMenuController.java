@@ -258,10 +258,6 @@ public class UserMenuController implements Initializable {
                 createCustomerOrderButton.setDisable(false);
                 searchItemButton.setDisable(false);
                 break;
-            case "customer":
-                System.out.println("user is customer");
-                searchItemButton.setDisable(false);
-                break;
             default:
 
 
