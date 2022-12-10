@@ -56,7 +56,7 @@ public class CreateCustomerOrderController implements Initializable {
     String pattern = "M/d/yyyy";
     DateTimeFormatter dateFormatter = DateTimeFormatter.ofPattern(pattern);
     CalculateCustomerOrderTotal calculateCustomerOrderTotal = new CalculateCustomerOrderTotal();
-    DateTimeFormatter formatter = DateTimeFormatter.ofPattern("M/d/yyyy");
+    DateTimeFormatter dateFormatter = DateTimeFormatter.ofPattern("M/d/yyyy");
     int addToOrderCounter = 0;
     private ObservableList<ItemList> dataList = FXCollections.observableArrayList();
     private ArrayList<ItemList> customerOrderList = new ArrayList<>();
@@ -87,7 +87,7 @@ public class CreateCustomerOrderController implements Initializable {
                     "Select a another item to add or less of that item");
             return;
         }
-        if (LocalDate.parse(item.getExpireDate(),formatter).compareTo(LocalDate.now()) < 0){
+        if (LocalDate.parse(item.getExpireDate(),dateFormatter).compareTo(LocalDate.now()) < 0){
             JOptionPane.showMessageDialog(null, "The item you pick has expired.\n Select a another item to add");
             return;
         }
