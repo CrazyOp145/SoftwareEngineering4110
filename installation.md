@@ -25,9 +25,9 @@ To Clone the repo, copy the HTTPS url or copy this link: [https://github.com/Cra
 git clone https://github.com/CrazyOp145/SoftwareEngineering4110
 ```
 
-### Run Application from IDE
+### Run Application in Intellij IDEA
 
-Firstly, open the file within the IDE. 
+Firstly, open the file within Intellij IDEA. 
 
 Then open the src folder, open the Profiles folder, then the Login folder.
 
