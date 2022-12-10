@@ -56,7 +56,6 @@ public class CreateCustomerOrderController implements Initializable {
     String pattern = "M/d/yyyy";
     DateTimeFormatter dateFormatter = DateTimeFormatter.ofPattern(pattern);
     CalculateCustomerOrderTotal calculateCustomerOrderTotal = new CalculateCustomerOrderTotal();
-    DateTimeFormatter dateFormatter = DateTimeFormatter.ofPattern("M/d/yyyy");
     int addToOrderCounter = 0;
     private ObservableList<ItemList> dataList = FXCollections.observableArrayList();
     private ArrayList<ItemList> customerOrderList = new ArrayList<>();
