@@ -39,11 +39,13 @@
           <Menu mnemonicParsing="false" text="Create">
             <items>
               <MenuItem fx:id="createCustomerButton" disable="true" onAction="#switchCreateCustomerProfile" text="Customer Profile" />
-                  <MenuItem disable="true" onAction="#switchToCreateVendorProfile" text="Vendor profile" />
+                  <MenuItem fx:id="createdVendorButton" disable="true" onAction="#switchToCreateVendorProfile" text="Vendor profile" />
                   <MenuItem fx:id="createItemButton" disable="true" mnemonicParsing="false" onAction="#switchToCreateItemProfileSceneMenuBar" text="Item profile" />
                   <MenuItem fx:id="createPurchaseOrderButton" disable="true" mnemonicParsing="false" onAction="#switchToPurchaseOrderMenuBar" text="Purchase order" />
                   <MenuItem fx:id="createUserButton" disable="true" mnemonicParsing="false" onAction="#switchToCreateUserProfile" text="User profile" />
                   <MenuItem fx:id="createCustomerOrderButton" disable="true" onAction="#switchCreateCustomerOrder" text="Customer Order" />
+                  <MenuItem fx:id="createCustomerInvoiceButton" disable="true" onAction="#switchCreateCustomerInvoice" text="Customer Invoice" />
+
             </items>
           </Menu>
             <Menu mnemonicParsing="false" text="Delete">
@@ -57,7 +59,7 @@
           <Menu mnemonicParsing="false" text="Edit">
             <items>
                   <MenuItem fx:id="editCustomerButton" disable="true" onAction="#switchUpdateCustomerProfile" text="Customer profile" />
-                  <MenuItem disable="true" mnemonicParsing="false" onAction="#switchToUpdateVendorProfile" text="Vendor profile" />
+                  <MenuItem fx:id="updateVendorButton" disable="true" mnemonicParsing="false" onAction="#switchToUpdateVendorProfile" text="Vendor profile" />
                   <MenuItem fx:id="updateItemButton" disable="true" mnemonicParsing="false" onAction="#switchToUpdateItemMenuBar" text="Item profile" />
                   <MenuItem fx:id="updateUserButton" disable="true" mnemonicParsing="false" onAction="#switchToUpdateUserProfile" text="User profile" />
             </items>

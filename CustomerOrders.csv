@@ -1,34 +1,4 @@
-Customer Name:,comp231
-Order Number:,472884
+CustomerName:,comp231
 100003,Tamato,2.29,12/16/2022,12,2022-12-27,27.48
 100005,Milk,2.99,12/6/2022,11,2022-12-30,32.89
 100006,Lettce,0.99,12/16/2022,15,2022-12-31,14.85
-Order Subtotal:,75.22
-
-
-Customer Name:,ufghfgj
-Order Number:,352742
-100003,Tamato,2.29,3.89,15,2022-12-30,34.35
-Order Subtotal:,34.35
-
-
-Customer Name:,ufghfgj
-Order Number:,533724
-100004,egg,1.99,3.99,22,2022-12-22,43.78
-Order Subtotal:,43.78
-
-
-Customer Name:,ufghfgj
-Order Number:,609415
-100002,Patato,0.29,0.89,23,2022-12-21,6.67
-Order Subtotal:,6.67
-
-
-Customer Name:,Comapynasname
-Order Number:,665292
-100006,Lettce,0.99,1.99,22,2022-12-29,21.78
-100004,egg,1.99,3.99,23,2022-12-24,45.77
-100000,aaa,5,8,2,2022-12-24,10.0
-Order Subtotal:,77.55000000000001
-
-

@@ -36,7 +36,7 @@ public class UserMenuController implements Initializable {
     String currentUserType = LoginValidationGUI.currentUserType;
     @FXML MenuItem createPurchaseOrderButton, searchPurchaseOrderButton;
     @FXML MenuItem searchItemButton, createItemButton, deleteItemButton , updateItemButton;
-    @FXML MenuItem editCustomerButton, createCustomerButton, createCustomerOrderButton, searchCustomerButton ,deleteCustomerButton;
+    @FXML MenuItem editCustomerButton, createCustomerButton, createCustomerOrderButton, createCustomerInvoiceButton, searchCustomerButton ,deleteCustomerButton;
     @FXML MenuItem searchVendorButton, createdVendorButton, updateVendorButton;
     @FXML MenuItem searchUserButton, createUserButton, deleteUserButton, updateUserButton;
     @FXML Button logoutButton;
@@ -152,6 +152,14 @@ public class UserMenuController implements Initializable {
         Stage.show();
     }
 
+    public void switchCreateCustomerInvoice(javafx.event.ActionEvent event) throws IOException {
+        Root = FXMLLoader.load(getClass().getResource("Customers/CreateCustomerInvoice.fxml"));
+        Stage = (Stage)myMenuBar.getScene().getWindow();
+        Scene = new Scene(Root);
+        Stage.setScene(Scene);
+        Stage.show();
+    }
+
     public void switchToCreateUserProfile(javafx.event.ActionEvent event) throws IOException {
         Root = FXMLLoader.load(getClass().getResource("Users/CreateUserProfile.fxml"));
         //Stage = (Stage)((Node)event.getSource()).getScene().getWindow();
@@ -260,6 +268,11 @@ public class UserMenuController implements Initializable {
             case "accountant":
                 System.out.println("user is accountant");
                 searchItemButton.setDisable(false);
+                createCustomerOrderButton.setDisable(false);
+                searchCustomerButton.setDisable(false);
+                createPurchaseOrderButton.setDisable(false);
+                createCustomerInvoiceButton.setDisable(false);
+
                 break;
             case "salesperson":
                 System.out.println("user is salesperson");
