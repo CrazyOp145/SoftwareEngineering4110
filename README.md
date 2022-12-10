@@ -4,6 +4,17 @@
 * For information on the application visit the wiki or click the link: [https://github.com/CrazyOp145/SoftwareEngineering4110/wiki]
 * For a guide on how to install: [https://github.com/CrazyOp145/SoftwareEngineering4110/blob/main/installation.md]
 
+
+## Run Application in Intellij IDEA
+
+Firstly, open the file within Intellij IDEA. 
+
+Then open the src folder, open the Profiles folder, then the Login folder.
+
+Next, open up the LoginValidationGUI.java.
+
+Then at the top of the IDE select Run and Run the LoginValidationGUI.java.
+
 ## SAMPLE LOGIN
 
 User ID: 123456
@@ -11,6 +22,8 @@ User ID: 123456
 Password: Chris1234
 
 User Role: owner
+
+See UserData.csv for more Logins
 
 ## Authors/Contributers
 
