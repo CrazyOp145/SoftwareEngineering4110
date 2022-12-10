@@ -1,6 +1,6 @@
 package Profiles;
 
-import Oberver.Behavior;
+import Oberver.Behaviors;
 import Oberver.CheckExpire;
 import Oberver.EnumBehaviors;
 import Oberver.EnumObserverStates;
@@ -31,7 +31,7 @@ import java.util.ResourceBundle;
  */
 public class UserMenuController implements Initializable {
     CheckExpire checkExpire = new CheckExpire();
-    Behavior expireBehave = new Behavior("Item", EnumBehaviors.INSTOCK);
+    Behaviors expireBehave = new Behaviors("Item", EnumBehaviors.INSTOCK);
     String currentUserType = LoginValidationGUI.currentUserType;
     @FXML MenuItem createPurchaseOrderButton, searchPurchaseOrderButton;
     @FXML MenuItem searchItemButton, createItemButton, deleteItemButton , updateItemButton;

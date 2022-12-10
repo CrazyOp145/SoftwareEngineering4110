@@ -7,7 +7,7 @@ import javax.swing.*;
  * @author Paulo Burgess GN7231
  *
  */
-public class CheckExpire implements IitemOberver{
+public class CheckExpire implements IitemOberverExpire{
 
 
     @Override

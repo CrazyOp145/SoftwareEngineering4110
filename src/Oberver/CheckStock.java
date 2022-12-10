@@ -4,7 +4,7 @@ package Oberver;
  * @author Shijie DU  HG5241
  *
  */
-public class CheckStock implements IitemOberver{
+public class CheckStock implements IitemOberverExpire{
 
 
     @Override
