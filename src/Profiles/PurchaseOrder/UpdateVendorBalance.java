@@ -3,7 +3,11 @@ package Profiles.PurchaseOrder;
 import javax.swing.*;
 import java.io.*;
 import java.util.Scanner;
-
+/**
+ *
+ * @author Shijie DU  HG5241
+ *
+ */
 public class UpdateVendorBalance {
 
     public static void updateVendorBalance(String filePath, String updateTerm, double newBalance)  {

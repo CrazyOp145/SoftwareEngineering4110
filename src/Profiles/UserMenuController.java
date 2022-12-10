@@ -1,5 +1,8 @@
 package Profiles;
 
+import Oberver.ItemGrabber;
+import Oberver.StockObserver;
+import Profiles.Customers.CheckItemOutStock;
 import Profiles.Items.CheckTwoExpired;
 import Profiles.Login.LoginValidationGUI;
 import javafx.event.ActionEvent;
@@ -26,6 +29,10 @@ import java.util.ResourceBundle;
  *
  */
 public class UserMenuController implements Initializable {
+    ItemGrabber ig = new ItemGrabber();
+    StockObserver observer = new StockObserver();
+
+    CheckItemOutStock checkItemOutStock = new CheckItemOutStock();
     String currentUserType = LoginValidationGUI.currentUserType;
     @FXML MenuItem createPurchaseOrderButton, searchPurchaseOrderButton;
     @FXML MenuItem searchItemButton, createItemButton, deleteItemButton , updateItemButton;
@@ -248,6 +255,7 @@ public class UserMenuController implements Initializable {
                 searchItemButton.setDisable(false);
                 searchPurchaseOrderButton.setDisable(false);
                 createPurchaseOrderButton.setDisable(false);
+                ig.registerObserver(observer);
                 break;
             case "accountant":
                 System.out.println("user is accountant");
@@ -260,8 +268,9 @@ public class UserMenuController implements Initializable {
                 break;
             default:
 
-
         }
-
+        if(checkItemOutStock.checkItemOutStock()){
+            ig.notifyObservers();
+        }
     }
 }

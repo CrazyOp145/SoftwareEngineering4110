@@ -27,7 +27,7 @@ public class DeleteCustomerProfile {
         File newFile = new File(tempFile);
         FileWriter fw = null;
         try {
-            fw = new FileWriter(tempFile, true);
+            fw = new FileWriter(tempFile);
             BufferedWriter bw = new BufferedWriter(fw);
             PrintWriter pw = new PrintWriter(bw);
             input = new Scanner(oldFile);
@@ -48,19 +48,22 @@ public class DeleteCustomerProfile {
                 lastPaidAmount = String.valueOf(values[7]);
                 lastOrderDate = String.valueOf(values[8]);
 
-                if(!customerID.equals(removeTerm)){
-                    if(balance != "0") {
-                        pw.println(customerID + "," + companyName + "," + address + "," + city
-                                + "," + state + "," + phoneNumber + "," + balance + "," + lastPaidAmount + "," + lastOrderDate);
+                if(customerID.equals(removeTerm)){
+                    if(balance.equals("0.0")) {
+                        searchInFile = true;
+                        JOptionPane.showMessageDialog(null,"The Customer Profile has been deleted");
+                        DeleteCustomerInvoices.deleteCustomerInvoices(removeTerm);
                     }
                     else{
                         JOptionPane.showMessageDialog(null, "Customer Does Not Have Balance of 0 \n" +
                                 "cannot delete Customer.");
+                        pw.println(customerID + "," + companyName + "," + address + "," + city
+                                + "," + state + "," + phoneNumber + "," + balance + "," + lastPaidAmount + "," + lastOrderDate);
                     }
                 }
                 else{
-                    searchInFile = true;
-                    JOptionPane.showMessageDialog(null,"The Customer Profile has been deleted");
+                    pw.println(customerID + "," + companyName + "," + address + "," + city
+                            + "," + state + "," + phoneNumber + "," + balance + "," + lastPaidAmount + "," + lastOrderDate);
                 }
             }
             if(!searchInFile){

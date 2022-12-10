@@ -6,12 +6,12 @@ package Oberver;
  */
 import java.util.ArrayList;
 
-public class Behavior implements ISubject{
-    private ArrayList<IitemOberver> observers = new ArrayList<>();
+public class Behaviors implements ISubjectExpire{
+    private ArrayList<IitemOberverExpire> observers = new ArrayList<>();
     private EnumBehaviors behavior;
     private String itemName;
 
-    public Behavior(String itemName, EnumBehaviors behaviorType){
+    public Behaviors(String itemName, EnumBehaviors behaviorType){
         this.behavior = behaviorType;
         this.itemName = itemName;
         notifyObservers(EnumObserverStates.NONE);
@@ -26,25 +26,25 @@ public class Behavior implements ISubject{
     }
 
     @Override
-    public void registerObserver(IitemOberver observer) {
+    public void registerObserver(IitemOberverExpire observer) {
         observers.add(observer);
         notifyObservers(EnumObserverStates.REGISTER, observer);
     }
 
     @Override
-    public void removeObserver(IitemOberver observer) {
+    public void removeObserver(IitemOberverExpire observer) {
         notifyObservers(EnumObserverStates.REMOVE, observer);
         observers.remove(observer);
     }
 
     @Override
-    public void notifyObservers(EnumObserverStates observeType, IitemOberver observer) {
+    public void notifyObservers(EnumObserverStates observeType, IitemOberverExpire observer) {
         observer.update(this.itemName, this.behavior, observeType);
     }
 
     @Override
     public void notifyObservers(EnumObserverStates observeType) {
-        for(IitemOberver ob: observers){
+        for(IitemOberverExpire ob: observers){
             ob.update(this.itemName, this.behavior, observeType);
         }
     }
