@@ -1,7 +1,11 @@
 package Profiles;
 
 import java.time.LocalDate;
-
+/**
+ *
+ * @author Paulo Burgess GN7231
+ *
+ */
 public class VendorProfile implements UserProfiles{
         private String vendorName, vendorID, vendorPW;
         private String street, city, state;

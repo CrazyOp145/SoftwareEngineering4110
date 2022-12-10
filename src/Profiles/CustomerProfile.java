@@ -1,7 +1,11 @@
 package Profiles;
 
 import java.time.LocalDate;
-
+/**
+ *
+ * @author Paulo Burgess GN7231
+ *
+ */
 public class CustomerProfile implements UserProfiles{
     private String customerID;
     private String companyName;

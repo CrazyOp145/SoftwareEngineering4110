@@ -6,28 +6,11 @@ package Profiles;
 import java.time.LocalDate;
 
 public interface UserProfiles {
-   /* private String firstName;
-    private String lastName;
-    private String ID;
-    private String password;
-
-    UserProfiles(){
-    }
-
-    public UserProfiles(String firstName, String lastName, String ID, String password){
-        this.firstName = firstName;
-        this.lastName = lastName;
-        this.ID = ID;
-        this.password = password;
-    }*/
 
     String getCompanyName();
 
     String getCustomerID();
 
-    //public void setCompanyName(String fullName) {
-    //    this.companyName = companyName;
-    //}
     String getCity();
 
     String getStreetAddress();

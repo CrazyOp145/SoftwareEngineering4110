@@ -21,7 +21,11 @@ import javafx.stage.Stage;
 import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
-
+/**
+ *
+ * @author Mahz Alam GW1637
+ *
+ */
 public class CreateCustomerInvoiceController implements Initializable {
     @FXML
     private TextField searchCustomerBar;
