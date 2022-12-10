@@ -21,7 +21,16 @@ For feature 6 when a salesperson user logs into the System they will be able to 
 customer order for a customer profile. It will allow them to add 1-5 items to an order for a specific order
 and choose need by dates for all of the items they select as well as the quantity they need. It will automatically update the quantity on hand
 of that item.
+
 ### Shijie Du: Features #4 & #5
+### Feature 4
+The feature 4 is mostly about creating the item profile. As role of a purchase user; owner user; inventory manager user you can create, update 
+delete and search for an item that is in the system. All users should be able to view a list of item in the system. 
+
+### Feature 6
+Feature 6 allow purchaser user to create a purchase order to make a purchase form the chosen vendor. Evertime a new purchse order is 
+created, the vendor will receive a update for their balance as well. All purchaser user should also be able to view the purchase by it's 
+order number. 
 
 ### David Her: Features #1 & #8
 
