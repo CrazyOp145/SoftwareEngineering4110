@@ -190,3 +190,6 @@ out/production/SoftwareEngineering4110/Profiles/Vendor/SearchVendorProfileContro
 out/production/SoftwareEngineering4110/Profiles/Vendor/UpdateVendorProfile.fxml
 out/production/SoftwareEngineering4110/Profiles/Vendor/UpdateVendorProfileController.class
 out/production/SoftwareEngineering4110/Profiles/Vendor/VendorList.class
+out/production/SoftwareEngineering4110/Profiles/PurchaseOrder/UpdateVendorBalance.class
+out/production/SoftwareEngineering4110/Profiles/Customers/DeleteCustomerInvoices.class
+.idea/workspace.xml
