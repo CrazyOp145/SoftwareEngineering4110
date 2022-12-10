@@ -28,6 +28,20 @@ See UserData.csv for more Logins
 ## Authors/Contributers
 
 ### Mahz Alam: Features #3 & #7
+#### Feature 3
+Feature 3 is the vendor profile. The vendor profile shall have it's own id and name. 
+To create a vendor profile you must be travel to the create tab on the user menu and select vendor profile. 
+If the box is not solid then you must sign into a valid account. 
+To be able to update or search for one you must do a similar selection where you can click on the vendor option for the given tabs available.
+Due to scarce time and issues happening at home that my team was aware of, I was unable to fully finish my feature 3
+however I made enough for my team to be able to test.
+
+#### Feature 7
+Although feature 7 was incomplete, the goal was to create an invoice using the customer orders. 
+The customer invoice shall be created by taking the file CustomerOrder.csv and reading information to be able to make a full
+invoice for the specified customer. Due to odd styling of the CustomerOrder.csv, reading the csv file became difficult
+and we decided to make a mock CustomInvoice.csv so my team could properly test their features.
+The logic for feature 7 is still available in the code.
 
 ### Paulo Burgess: Features #2 & #6
 #### Feature 2
