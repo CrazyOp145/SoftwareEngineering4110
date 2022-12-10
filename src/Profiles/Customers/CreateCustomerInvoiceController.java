@@ -57,7 +57,6 @@ public class CreateCustomerInvoiceController implements Initializable {
         dataList.clear();
     }
     public void updateList(){
-        dataList = ReadCustomerOrder.initList();
         itemID.setCellValueFactory(new PropertyValueFactory<>("itemID"));
         itemName.setCellValueFactory(new PropertyValueFactory<>("itemName"));
         quantity.setCellValueFactory(new PropertyValueFactory<>("quantity"));
@@ -96,7 +95,7 @@ public class CreateCustomerInvoiceController implements Initializable {
 
 
     public void switchToUserMenuScene (javafx.event.ActionEvent event) throws IOException {
-        Root = FXMLLoader.load(getClass().getResource("UserMenu.fxml"));
+        Root = FXMLLoader.load(getClass().getResource("../UserMenu.fxml"));
         Stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
         Scene = new Scene(Root);
         Stage.setScene(Scene);
