@@ -196,3 +196,7 @@ out/production/SoftwareEngineering4110/Profiles/Customers/DeleteCustomerInvoices
 out/production/SoftwareEngineering4110/Oberver/Behaviors.class
 out/production/SoftwareEngineering4110/Oberver/IitemOberverExpire.class
 out/production/SoftwareEngineering4110/Oberver/ISubjectExpire.class
+out/production/SoftwareEngineering4110/Profiles/Customers/CheckItemOutStock.class
+out/production/SoftwareEngineering4110/Oberver/StockObserver.class
+out/production/SoftwareEngineering4110/Oberver/ItemGrabber.class
+out/production/SoftwareEngineering4110/Oberver/IitemObserver.class
