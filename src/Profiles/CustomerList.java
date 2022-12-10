@@ -6,7 +6,7 @@ import javafx.beans.property.SimpleStringProperty;
  *
  */
 public class CustomerList {
-    private SimpleStringProperty customerID , itemID, companyName, itemName, streetAddress, city, state, phoneNumber,
+    private SimpleStringProperty customerID, customerName, itemID, companyName, itemName, streetAddress, city, state, phoneNumber,
             balance,lastPaidAmount, lastOrderDate, quantity, sellingPrice, purchasePrice, expireDate;
     public String getCustomerID() {
         return customerID.get();
@@ -41,6 +41,7 @@ public class CustomerList {
     public String getSellingPrice(){return sellingPrice.get();}
     public String getPurchasePrice(){return purchasePrice.get();}
     public String getExpireDate(){return expireDate.get();}
+    public String getCustomerName(){return customerName.get();}
 
 
     public CustomerList(String customerID, String companyName, String address, String city, String state, String phoneNumber,
@@ -56,7 +57,8 @@ public class CustomerList {
         this.lastOrderDate = new SimpleStringProperty(lastOrderDate);
     }
 
-    public CustomerList(String itemID, String itemName, String quantity, String sellingPrice, String purchasePrice, String expireDate){
+    public CustomerList( String customerName, String itemID, String itemName,String purchasePrice, String expireDate, String quantity, String sellingPrice){
+        this.customerName = new SimpleStringProperty(customerName);
         this.itemID = new SimpleStringProperty(itemID);
         this.itemName = new SimpleStringProperty(itemName);
         this.quantity = new SimpleStringProperty(quantity);
