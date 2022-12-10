@@ -6,5 +6,8 @@ package Oberver;
  */
 public interface ISubject {
     void registerObserver(IitemObserver observer);
+
     void removeObserver(IitemObserver observer);
+
     void notifyObservers();
+}
