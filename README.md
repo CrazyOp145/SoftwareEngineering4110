@@ -23,6 +23,8 @@ Password: Chris1234
 
 User Role: owner
 
+See UserData.csv for more Logins
+
 ## Authors/Contributers
 
 ### Mahz Alam: Features #3 & #7
