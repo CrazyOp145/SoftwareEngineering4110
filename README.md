@@ -4,6 +4,14 @@
 * For information on the application visit the wiki or click the link: [https://github.com/CrazyOp145/SoftwareEngineering4110/wiki]
 * For a guide on how to install: [https://github.com/CrazyOp145/SoftwareEngineering4110/blob/main/installation.md]
 
+## SAMPLE LOGIN
+
+User ID: 123456
+
+Password: Chris1234
+
+User Role: owner
+
 ## Authors/Contributers
 
 ### Mahz Alam: Features #3 & #7
