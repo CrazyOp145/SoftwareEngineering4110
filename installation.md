@@ -24,6 +24,17 @@ To Clone the repo, copy the HTTPS url or copy this link: [https://github.com/Cra
 ```
 git clone https://github.com/CrazyOp145/SoftwareEngineering4110
 ```
+### Download Java FX
+The UI for the application utilizes Java FX 19. In order to install the Java FX head over to the link: [https://gluonhq.com/products/javafx/] and download the latest version for your specified system. 
+Then unzip the downloaded file and head inside the IDEA open File and open Project Structure. 
+Then select Libraries and select the "+" symbol and find the where you unzipped the JavaFX file and select the lib folder.
+Then head over to the Run and press edit configurations and then select the LoginValidationGUI file then add VM options.
+Within the VM options add 
+
+``` 
+--module-path "" --add-modules javafx.controls,javafx.fxml
+```
+Within the quotes add the absoulute file path to the lib folder of the JavaFX file.
 
 ### Run Application in Intellij IDEA
 
