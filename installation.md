@@ -27,7 +27,11 @@ git clone https://github.com/CrazyOp145/SoftwareEngineering4110
 
 ### Run Application from IDE
 
-Firstly, open the file within the IDE. Then open the src folder, open the Profiles folder, then the Login folder, to Open up the LoginValidationGUI.java.
+Firstly, open the file within the IDE. 
+
+Then open the src folder, open the Profiles folder, then the Login folder.
+
+Next, open up the LoginValidationGUI.java.
 
 Then at the top of the IDE select Run and Run the LoginValidationGUI.java.
 
