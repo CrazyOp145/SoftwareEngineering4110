@@ -6,7 +6,11 @@ import javafx.collections.ObservableList;
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.util.Scanner;
-
+/**
+ *
+ * @author Shijie DU  HG5241
+ *
+ */
 public class ReadItemProfileVendorFilter {
     private ObservableList<ItemList> dataList = FXCollections.observableArrayList();
 

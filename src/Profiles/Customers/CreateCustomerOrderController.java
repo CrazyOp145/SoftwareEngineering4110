@@ -1,5 +1,7 @@
 package Profiles.Customers;
 
+import Oberver.ItemGrabber;
+import Oberver.StockObserver;
 import Profiles.Items.ItemList;
 import Profiles.Items.ReadItemProfile;
 import javafx.collections.FXCollections;
@@ -27,6 +29,7 @@ import java.util.ResourceBundle;
  *
  */
 public class CreateCustomerOrderController implements Initializable {
+
     private javafx.stage.Stage Stage;
     private javafx.scene.Scene Scene;
     private Parent Root;
