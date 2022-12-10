@@ -25,5 +25,9 @@ To Clone the repo, copy the HTTPS url or copy this link: [https://github.com/Cra
 git clone https://github.com/CrazyOp145/SoftwareEngineering4110
 ```
 
-### Build Executable
+### Run Application from IDE
+
+Firstly, open the file within the IDE. Then open the src folder, open the Profiles folder, then the Login folder, to Open up the LoginValidationGUI.java.
+
+Then at the top of the IDE select Run and Run the LoginValidationGUI.java.
 
