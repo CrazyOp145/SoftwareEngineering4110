@@ -1,5 +1,6 @@
 package Profiles.Items;
 
+import com.sun.media.jfxmedia.events.PlayerStateEvent;
 import javafx.beans.value.ChangeListener;
 import javafx.beans.value.ObservableValue;
 import javafx.collections.FXCollections;
@@ -22,8 +23,11 @@ import java.io.IOException;
 import java.io.PrintWriter;
 import java.net.URL;
 import java.time.LocalDate;
+import java.time.format.DateTimeFormatter;
 import java.util.List;
 import java.util.ResourceBundle;
+import java.util.logging.SimpleFormatter;
+
 /**
  *
  * @author Shijie DU  HG5241
@@ -42,6 +46,8 @@ public class CreateItemProfileController implements Initializable {
     private TextField purchasePrice;
     @FXML
     private DatePicker expireDate;
+    String pattern = "M/d/yyyy";
+    DateTimeFormatter dateFormatter = DateTimeFormatter.ofPattern(pattern);
     @FXML
     private ComboBox<String> itemCategory;
     private String[] Category = {"Vegetables", "Fruits", "Nuts", "Dairy",
@@ -70,7 +76,7 @@ public class CreateItemProfileController implements Initializable {
         double purchasePriceC = Double.parseDouble(purchasePrice.getText());
         String unitC = unit.getValue();
         String itemCategoryC = itemCategory.getValue();
-        LocalDate expireDateC = expireDate.getValue();
+        String expireDateC = String.valueOf(dateFormatter.format(expireDate.getValue()));
         int vendorIdC = Integer.parseInt(vendorId.getValue());
 
 

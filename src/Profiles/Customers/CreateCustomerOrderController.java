@@ -53,6 +53,8 @@ public class CreateCustomerOrderController implements Initializable {
     private TextField purchaseQuantity;
     @FXML
     private DatePicker needDate;
+    String pattern = "M/d/yyyy";
+    DateTimeFormatter dateFormatter = DateTimeFormatter.ofPattern(pattern);
     CalculateCustomerOrderTotal calculateCustomerOrderTotal = new CalculateCustomerOrderTotal();
     DateTimeFormatter formatter = DateTimeFormatter.ofPattern("M/d/yyyy");
     int addToOrderCounter = 0;
@@ -77,7 +79,7 @@ public class CreateCustomerOrderController implements Initializable {
     public void selectCell(){
         item = tableView.getSelectionModel().getSelectedItem();
         item.setNeedQuantity(purchaseQuantity.getText());
-        item.setNeedDate(String.valueOf(needDate.getValue()));
+        item.setNeedDate(String.valueOf(dateFormatter.format(needDate.getValue())));
     }
     public void addToOrder(){
         if (Double.parseDouble(item.getQuantity()) < Double.parseDouble(purchaseQuantity.getText())){

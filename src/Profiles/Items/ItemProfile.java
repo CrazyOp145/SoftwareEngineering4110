@@ -13,7 +13,7 @@ public abstract class ItemProfile {
     private double sellingPrice;
     private double purchasePrice;
     private String itemCategory;
-    private LocalDate date;
+    private String date;
     private double quantity;
 
     private String unit;
@@ -76,11 +76,11 @@ public abstract class ItemProfile {
         this.itemCategory = itemCategory;
     }
 
-    public LocalDate getDate() {
+    public String getDate() {
         return date;
     }
 
-    public void setDate(LocalDate date) {
+    public void setDate(String date) {
         //check date if it's a past date
         this.date = date;
     }

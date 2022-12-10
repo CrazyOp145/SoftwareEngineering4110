@@ -19,6 +19,7 @@ import java.io.File;
 import java.io.IOException;
 import java.net.URL;
 import java.time.LocalDate;
+import java.time.format.DateTimeFormatter;
 import java.util.List;
 import java.util.ResourceBundle;
 
@@ -42,6 +43,8 @@ public class UpdateItemController implements Initializable {
     private TextField newPurchasePrice;
     @FXML
     private DatePicker newExpireDate;
+    String pattern = "M/d/yyyy";
+    DateTimeFormatter dateFormatter = DateTimeFormatter.ofPattern(pattern);
     @FXML
     private ComboBox<String> newItemCategory;
     private String[] Category = {"Vegetables", "Fruits", "Nuts", "Dairy",
@@ -96,7 +99,7 @@ public class UpdateItemController implements Initializable {
             return;
         }
         updateItemProfile.updateItemProfile(filePath,item.getItemId(),newItemId.getText(),newItemName.getText(),
-                newQuantity.getText(),newSellingPrice.getText(),newPurchasePrice.getText(), String.valueOf(newExpireDate.getValue()),
+                newQuantity.getText(),newSellingPrice.getText(),newPurchasePrice.getText(), String.valueOf(dateFormatter.format(newExpireDate.getValue())),
                 newItemCategory.getValue(),newUnit.getValue(),newVendorId.getValue());
         File dump = new File(filePath);
         newFile.renameTo(dump);

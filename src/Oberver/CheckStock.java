@@ -5,8 +5,6 @@ package Oberver;
  *
  */
 public class CheckStock implements IitemOberverExpire{
-
-
     @Override
     public void update(String itemName, EnumBehaviors newBehavior, EnumObserverStates observeType) {
         switch (observeType){
