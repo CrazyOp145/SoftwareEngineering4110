@@ -54,7 +54,7 @@ public class CreateCustomerOrderController implements Initializable {
     @FXML
     private DatePicker needDate;
     CalculateCustomerOrderTotal calculateCustomerOrderTotal = new CalculateCustomerOrderTotal();
-    DateTimeFormatter formatter = DateTimeFormatter.ofPattern("M/d/yyyy");
+    DateTimeFormatter dateFormatter = DateTimeFormatter.ofPattern("M/d/yyyy");
     int addToOrderCounter = 0;
     private ObservableList<ItemList> dataList = FXCollections.observableArrayList();
     private ArrayList<ItemList> customerOrderList = new ArrayList<>();
@@ -77,7 +77,7 @@ public class CreateCustomerOrderController implements Initializable {
     public void selectCell(){
         item = tableView.getSelectionModel().getSelectedItem();
         item.setNeedQuantity(purchaseQuantity.getText());
-        item.setNeedDate(String.valueOf(needDate.getValue()));
+        item.setNeedDate(String.valueOf(dateFormatter.format(needDate.getValue())));
     }
     public void addToOrder(){
         if (Double.parseDouble(item.getQuantity()) < Double.parseDouble(purchaseQuantity.getText())){
@@ -85,7 +85,7 @@ public class CreateCustomerOrderController implements Initializable {
                     "Select a another item to add or less of that item");
             return;
         }
-        if (LocalDate.parse(item.getExpireDate(),formatter).compareTo(LocalDate.now()) < 0){
+        if (LocalDate.parse(item.getExpireDate(),dateFormatter).compareTo(LocalDate.now()) < 0){
             JOptionPane.showMessageDialog(null, "The item you pick has expired.\n Select a another item to add");
             return;
         }

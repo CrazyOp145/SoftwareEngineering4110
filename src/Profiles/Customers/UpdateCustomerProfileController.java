@@ -17,6 +17,7 @@ import java.io.File;
 import java.io.IOException;
 import java.net.URL;
 import java.time.LocalDate;
+import java.time.format.DateTimeFormatter;
 import java.util.ResourceBundle;
 import java.util.regex.Pattern;
 
@@ -90,8 +91,8 @@ public class UpdateCustomerProfileController implements Initializable {
     ReadCustomerProfile readCustomerProfile = new ReadCustomerProfile();
 
     UpdateCustomerProfile updateCustomerProfile = new UpdateCustomerProfile();
-
-
+    String pattern = "M/d/yyyy";
+    DateTimeFormatter dateFormatter = DateTimeFormatter.ofPattern(pattern);
     File oldFile = new File(filePath);
     File newFile = new File(temp);
 
@@ -109,7 +110,7 @@ public class UpdateCustomerProfileController implements Initializable {
         state = stateCB.getValue();
         balance = balanceFT.getText();
         lastPurchasePrice = lastPurchasePriceTF.getText();
-        lastPurchaseDate = String.valueOf(lastPurchaseDateDP.getValue());
+        lastPurchaseDate = String.valueOf(dateFormatter.format(lastPurchaseDateDP.getValue()));
         if ((companyName.length() > 21 && companyName.length() == 0)) {
             validityChecker = false;
             errorMessage.setText("Error: Company Name too Long");

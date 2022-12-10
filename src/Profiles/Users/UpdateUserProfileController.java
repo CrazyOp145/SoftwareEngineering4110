@@ -23,6 +23,7 @@ import javax.swing.*;
 import java.io.File;
 import java.io.IOException;
 import java.net.URL;
+import java.time.format.DateTimeFormatter;
 import java.util.ResourceBundle;
 
 public class UpdateUserProfileController implements Initializable {
@@ -40,6 +41,7 @@ public class UpdateUserProfileController implements Initializable {
     @FXML private TableColumn<UserList, String> userRoleCol;
     private ObservableList<UserList> dataList = FXCollections.observableArrayList();
     private UserList userList;
+
     String[] roles =
             {UserRoles.owner.name(), UserRoles.administrator.name(),
                     UserRoles.inventoryManager.name(), UserRoles.purchaser.name(),
