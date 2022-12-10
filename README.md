@@ -15,7 +15,9 @@ to create a Customer Profile. Once Customer profiles are created the Owner user 
 to search for different customer profiles using their ID's or names. They will also be able to see
 a full list of Customer Profiles. They can also delete or update any customer profiles. Deleting a customer
 profile will also cause the system to delete all linked invoices linked to that profile.
-
+ *NOTE * Feature 7 was not implemented, so I needed to test this feature using sample Invoices it was hard coded in. The hard coded
+file is called "customerInvoicesTest.csv" you can edit the ID in there to match the ID of any customer to ensure that it deletes it
+*NOTE END *
 #### Feature 6
 For feature 6 when a salesperson user logs into the System they will be able to create a
 customer order for a customer profile. It will allow them to add 1-5 items to an order for a specific order

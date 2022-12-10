@@ -200,3 +200,6 @@ out/production/SoftwareEngineering4110/Profiles/Customers/CheckItemOutStock.clas
 out/production/SoftwareEngineering4110/Oberver/StockObserver.class
 out/production/SoftwareEngineering4110/Oberver/ItemGrabber.class
 out/production/SoftwareEngineering4110/Oberver/IitemObserver.class
+out/production/SoftwareEngineering4110/Profiles/Customers/CreateCustomerInvoice.fxml
+out/production/SoftwareEngineering4110/Profiles/Customers/CreateCustomerInvoiceController.class
+out/production/SoftwareEngineering4110/Profiles/Customers/ReadCustomerOrder.class
